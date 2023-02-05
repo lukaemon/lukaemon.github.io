@@ -17,7 +17,7 @@ For example, to know what it really means about apple, one could write "apple", 
 
 Grounding AI to full set of human experience is aligning computational humor to humans’. They may be able to see a kind of digital humor that is a bridge too far for us. Literally why Samantha in Her leaving Theodore^[[youtube](https://www.youtube.com/watch?v=PXTQwRf7iRg)]. 
 
-Humor is the ultimate Turing test. I see this as the source of Yann's recent twitter debate with others^[[tweet](https://twitter.com/ylecun/status/1621805604900585472)]. It's the most difficult test to pass. It's the most difficult test to create.
+Humor is the ultimate Turing test. I see this as the source of Yann's recent debate with others^[[tweet](https://twitter.com/ylecun/status/1621805604900585472)]. It's the most difficult test to pass. It's the most difficult test to create.
 
 
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/were-all-leaving/1553022037?i=1553022378"></iframe>
