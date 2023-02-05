@@ -1,38 +1,38 @@
 [
   {
-    "objectID": "posts/2023-sc-cot/index.html#reasoning-and-natural-language-understanding",
-    "href": "posts/2023-sc-cot/index.html#reasoning-and-natural-language-understanding",
+    "objectID": "posts/2023/humor-ai/index.html",
+    "href": "posts/2023/humor-ai/index.html",
+    "title": "Humor in AI",
+    "section": "",
+    "text": "Humor is preconditioned on the ability to see the bright side of something. One has to be able to see many sides, consciously choose the funny, optimistic interpretation and express in a way that resonates with target audiences. It shows both raw intelligence and wisdom.\nTo detect humor and be humorous, grounding is necessary. Grounding to me is weaving modalities. Just a fancy way of saying having sampled variety of experiences of certain things or events.\nFor example, to know what it really means about apple, one could write “apple”, read about it, draw, hold, throw, smell, eat, plant, cook, even share it with others. Without grounding, one can’t have acute and diversified perspectives on a thing or an event. It would be very hard to see ironic yet optimistic interpretation, be it human or AI.\nGrounding AI to full set of human experience is aligning computational humor to humans’. They may be able to see a kind of digital humor that is a bridge too far for us. Literally why Samantha in Her leaving Theodore1.1 youtube\nHumor is the ultimate Turing test. I see this as the source of Yann’s recent debate with others2. It’s the most difficult test to pass. It’s the most difficult test to create.2 tweet\n\n\n\n\n\n\nCitationBibTeX citation:@online{shen2023,\n  author = {Lucas Shen},\n  title = {Humor in {AI}},\n  date = {2023-02-05},\n  url = {https://lukaemon.github.io/posts/2023/humor-ai},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLucas Shen. 2023. “Humor in AI.” February 5, 2023. https://lukaemon.github.io/posts/2023/humor-ai."
+  },
+  {
+    "objectID": "posts/2023/sc-cot/index.html#reasoning-and-natural-language-understanding",
+    "href": "posts/2023/sc-cot/index.html#reasoning-and-natural-language-understanding",
     "title": "Self-consistency and chain of thought",
     "section": "Reasoning and natural language understanding",
     "text": "Reasoning and natural language understanding\nRae et al. (2022):\n\nScale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs.\n\nThe paper points out flat scaling curve of few task categories. Since then, google has been very creative to push the frontier with CoT (Wei et al. (2022)), SC (Wang et al. (2022)), least to most (Zhou et al. (2022)) and more. CoT is the most exciting method to scale computation on tasks since few-shot prompting.\nInformal reasoning would be solved, and there is a reason why google, DeepMind and OpenAI are all into solving formal reasoning. That’s the last frontier wrt reasoning if AI could get logic and math right.\nCodex family model is the first step on solving formal reasoning. In SC and BBH (Suzgun et al. (2022)) paper, code-davinci-002 performs better than InstructGPT families on reasoning tasks. DeepMind even dives into GNN to explore architecture other than transformer. Reasoning in general would be solved as a modality in near future. It may require a specialized model, but would ultimately be fused into general LLM like image, audio and the like.\nHenighan et al. (2020):\n\nThe approach to the irreducible loss does not necessarily indicate diminishing returns for representation quality or semantic content as significant semantic information may lie in the last few bits.\n\nTo get natural language understanding right, scale is necessary. This also explains why CoT only works with scale. Small model makes too many semantic mistakes that render scaling computation with CoT worthless. SC could cancel out mistakes by majority vote to improve performance for model of all size but the increased computational cost far out weight possible gain for small model. Self-ensemble weak reasoner is a waste of resource."
   },
   {
-    "objectID": "posts/2023-sc-cot/index.html#retrieval-augmented-lm",
-    "href": "posts/2023-sc-cot/index.html#retrieval-augmented-lm",
+    "objectID": "posts/2023/sc-cot/index.html#retrieval-augmented-lm",
+    "href": "posts/2023/sc-cot/index.html#retrieval-augmented-lm",
     "title": "Self-consistency and chain of thought",
     "section": "Retrieval augmented LM",
     "text": "Retrieval augmented LM\nScale may not be the most effective method to solve world knowledge problem. 1T param model may get the last few bit of semantics but won’t get the facts 100% right. That’s why retrieval is necessary. One could treat external knowledge database as one modality and figure out how to fuse it with general LLM.\nThink about how existing multimodal model fuses modalities, ex: Dall-E, Stable Diffusion, MusicLM and so on. RETRO (Borgeaud et al. (2022)) is a great example of treating external memory as modality and fuse it with general LM deeply. Of course it’s not plug and play but still an very interesting research direction.\nIn-context retrieval dominates current research output because of light resource requirement. Its value is similar to prompt engineering: the most effective method to probe LLM to find new gains, but prompt engineering would never be the ultimate solution. It’s a tentative exploration process. Like instruction finetuning makes LLM to follow human instruction and do CoT in 0 shot, rather than few shot, RETRO like solution may render methods such as Sun et al. (2022) unnecessary. However, recitation to me is like SC for open ended text generation, which is one great first step into retrieval world by scaling computation on retrieval tasks, like CoT to rationale engineering."
   },
   {
-    "objectID": "posts/2023-sc-cot/index.html#building-application",
-    "href": "posts/2023-sc-cot/index.html#building-application",
+    "objectID": "posts/2023/sc-cot/index.html#building-application",
+    "href": "posts/2023/sc-cot/index.html#building-application",
     "title": "Self-consistency and chain of thought",
     "section": "Building application",
     "text": "Building application\nThe point is not all-in 100b+ LLM, all-in text-davinci-003, but to find a way to fuse modalities. Small model like T5-11b, yes 11b is the new small lol, is still important for controlling latency and cost. Imagine doing 40 path SC on a 540b model per response for interactive UX. Not ideal. A good production example: Neeva1.1 T5 for serving ChatGPT like search\nMultimodal is on fire. One big end to end model may be enough, like Gato (Reed et al. (2022)). Modular approach with glue architecture may work, like Flamingo (Alayrac et al. (2022)). It’s great to be alive in this era of AI."
-  },
-  {
-    "objectID": "posts/2023-humor-ai/index.html",
-    "href": "posts/2023-humor-ai/index.html",
-    "title": "Humor in AI",
-    "section": "",
-    "text": "Humor is preconditioned on the ability to see the bright side of something. One has to be able to see many sides, consciously choose the funny, optimistic interpretation and express in a way that resonates with target audiences. It shows both raw intelligence and wisdom.\nTo detect humor and be humorous, grounding is necessary. Grounding to me is weaving modalities. Just a fancy way of saying having sampled variety of experiences of certain things or events.\nFor example, to know what it really means about apple, one could write “apple”, read about it, draw, hold, throw, smell, eat, plant, cook, even share it with others. Without grounding, one can’t have acute and diversified perspectives on a thing or an event. It would be very hard to see ironic yet optimistic interpretation, be it human or AI.\nGrounding AI to full set of human experience is aligning computational humor to humans’. They may be able to see a kind of digital humor that is a bridge too far for us. Literally why Samantha in Her leaving Theodore1.1 youtube\nHumor is the ultimate Turing test. I see this as the source of Yann’s recent debate with others2. It’s the most difficult test to pass. It’s the most difficult test to create.2 tweet\n\n\n\n\n\n\nCitationBibTeX citation:@online{shen2023,\n  author = {Lucas Shen},\n  title = {Humor in {AI}},\n  date = {2023-02-05},\n  url = {https://lukaemon.github.io/posts/2023-humor-ai},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLucas Shen. 2023. “Humor in AI.” February 5, 2023. https://lukaemon.github.io/posts/2023-humor-ai."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "blog",
     "section": "",
-    "text": "Self-consistency and chain of thought\n\n\n\n\n\n\n\nrationale engineering\n\n\n\n\nLesson learned from CoT and SC.\n\n\n\n\n\n\nFeb 5, 2023\n\n\nLucas Shen\n\n\n\n\n\n\n  \n\n\n\n\nHumor in AI\n\n\n\n\n\n\n\ngrounding\n\n\nmultimodal\n\n\n\n\nComputational humor?\n\n\n\n\n\n\nFeb 5, 2023\n\n\nLucas Shen\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n\n\n\n\n  \n\n\n\n\nHumor in AI\n\n\n\n\n\n\n\ngrounding\n\n\nmultimodal\n\n\n\n\nComputational humor?\n\n\n\n\n\n\nFeb 5, 2023\n\n\nLucas Shen\n\n\n\n\n\n\n  \n\n\n\n\nSelf-consistency and chain of thought\n\n\n\n\n\n\n\nrationale engineering\n\n\n\n\nLesson learned from CoT and SC.\n\n\n\n\n\n\nFeb 5, 2023\n\n\nLucas Shen\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",

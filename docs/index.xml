@@ -12,15 +12,56 @@
 <generator>quarto-1.2.280</generator>
 <lastBuildDate>Sat, 04 Feb 2023 16:00:00 GMT</lastBuildDate>
 <item>
-  <title>Self-consistency and chain of thought</title>
+  <title>Humor in AI</title>
   <dc:creator>Lucas Shen</dc:creator>
-  <link>https://lukaemon.github.io/posts/2023-sc-cot/index.html</link>
+  <link>https://lukaemon.github.io/posts/2023/humor-ai/index.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p><img src="https://lukaemon.github.io/posts/2023-sc-cot/sc.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://lukaemon.github.io/posts/2023/humor-ai/humor.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Humor is preconditioned on the ability to see the bright side of something. One has to be able to see many sides, consciously choose the funny, optimistic interpretation and express in a way that resonates with target audiences. It shows both raw intelligence and wisdom.</p>
+<p>To detect humor and be humorous, grounding is necessary. Grounding to me is weaving modalities. Just a fancy way of saying having sampled variety of experiences of certain things or events.</p>
+<p>For example, to know what it really means about apple, one could write “apple”, read about it, draw, hold, throw, smell, eat, plant, cook, even share it with others. Without grounding, one can’t have acute and diversified perspectives on a thing or an event. It would be very hard to see ironic yet optimistic interpretation, be it human or AI.</p>
+<div class="page-columns page-full"><p>Grounding AI to full set of human experience is aligning computational humor to humans’. They may be able to see a kind of digital humor that is a bridge too far for us. Literally why Samantha in Her leaving Theodore<sup>1</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://www.youtube.com/watch?v=PXTQwRf7iRg">youtube</a></p></li></div></div>
+<div class="page-columns page-full"><p>Humor is the ultimate Turing test. I see this as the source of Yann’s recent debate with others<sup>2</sup>. It’s the most difficult test to pass. It’s the most difficult test to create.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://twitter.com/ylecun/status/1621805604900585472">tweet</a></p></li></div></div>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/were-all-leaving/1553022037?i=1553022378">
+</iframe>
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
+  author = {Lucas Shen},
+  title = {Humor in {AI}},
+  date = {2023-02-05},
+  url = {https://lukaemon.github.io/posts/2023/humor-ai},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
+Lucas Shen. 2023. <span>“Humor in AI.”</span> February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/humor-ai">https://lukaemon.github.io/posts/2023/humor-ai</a>.
+</div></div></section></div> ]]></description>
+  <category>grounding</category>
+  <category>multimodal</category>
+  <guid>https://lukaemon.github.io/posts/2023/humor-ai/index.html</guid>
+  <pubDate>Sat, 04 Feb 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://lukaemon.github.io/posts/2023/humor-ai/humor.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Self-consistency and chain of thought</title>
+  <dc:creator>Lucas Shen</dc:creator>
+  <link>https://lukaemon.github.io/posts/2023/sc-cot/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://lukaemon.github.io/posts/2023/sc-cot/sc.png" class="img-fluid"></p>
 <section id="reasoning-and-natural-language-understanding" class="level2">
 <h2 class="anchored" data-anchor-id="reasoning-and-natural-language-understanding">Reasoning and natural language understanding</h2>
 <p><span class="citation" data-cites="raeScalingLanguageModels2022">Rae et al. (2022)</span>:</p>
@@ -87,58 +128,17 @@ Zhou, Denny, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, 
   author = {Lucas Shen},
   title = {Self-Consistency and Chain of Thought},
   date = {2023-02-05},
-  url = {https://lukaemon.github.io/posts/2023-sc-cot},
+  url = {https://lukaemon.github.io/posts/2023/sc-cot},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
 Lucas Shen. 2023. <span>“Self-Consistency and Chain of Thought.”</span>
-February 5, 2023. <a href="https://lukaemon.github.io/posts/2023-sc-cot">https://lukaemon.github.io/posts/2023-sc-cot</a>.
+February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/sc-cot">https://lukaemon.github.io/posts/2023/sc-cot</a>.
 </div></div></section></div> ]]></description>
   <category>rationale engineering</category>
-  <guid>https://lukaemon.github.io/posts/2023-sc-cot/index.html</guid>
+  <guid>https://lukaemon.github.io/posts/2023/sc-cot/index.html</guid>
   <pubDate>Sat, 04 Feb 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023-sc-cot/sc.png" medium="image" type="image/png" height="62" width="144"/>
-</item>
-<item>
-  <title>Humor in AI</title>
-  <dc:creator>Lucas Shen</dc:creator>
-  <link>https://lukaemon.github.io/posts/2023-humor-ai/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://lukaemon.github.io/posts/2023-humor-ai/humor.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-<p>Humor is preconditioned on the ability to see the bright side of something. One has to be able to see many sides, consciously choose the funny, optimistic interpretation and express in a way that resonates with target audiences. It shows both raw intelligence and wisdom.</p>
-<p>To detect humor and be humorous, grounding is necessary. Grounding to me is weaving modalities. Just a fancy way of saying having sampled variety of experiences of certain things or events.</p>
-<p>For example, to know what it really means about apple, one could write “apple”, read about it, draw, hold, throw, smell, eat, plant, cook, even share it with others. Without grounding, one can’t have acute and diversified perspectives on a thing or an event. It would be very hard to see ironic yet optimistic interpretation, be it human or AI.</p>
-<div class="page-columns page-full"><p>Grounding AI to full set of human experience is aligning computational humor to humans’. They may be able to see a kind of digital humor that is a bridge too far for us. Literally why Samantha in Her leaving Theodore<sup>1</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://www.youtube.com/watch?v=PXTQwRf7iRg">youtube</a></p></li></div></div>
-<div class="page-columns page-full"><p>Humor is the ultimate Turing test. I see this as the source of Yann’s recent debate with others<sup>2</sup>. It’s the most difficult test to pass. It’s the most difficult test to create.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://twitter.com/ylecun/status/1621805604900585472">tweet</a></p></li></div></div>
-<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/were-all-leaving/1553022037?i=1553022378">
-</iframe>
-
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
-  title = {Humor in {AI}},
-  date = {2023-02-05},
-  url = {https://lukaemon.github.io/posts/2023-humor-ai},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“Humor in AI.”</span> February 5, 2023. <a href="https://lukaemon.github.io/posts/2023-humor-ai">https://lukaemon.github.io/posts/2023-humor-ai</a>.
-</div></div></section></div> ]]></description>
-  <category>grounding</category>
-  <category>multimodal</category>
-  <guid>https://lukaemon.github.io/posts/2023-humor-ai/index.html</guid>
-  <pubDate>Sat, 04 Feb 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023-humor-ai/humor.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://lukaemon.github.io/posts/2023/sc-cot/sc.png" medium="image" type="image/png" height="62" width="144"/>
 </item>
 </channel>
 </rss>

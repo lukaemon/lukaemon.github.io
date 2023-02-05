@@ -179,48 +179,34 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="rationale engineering" data-listing-date-sort="1675526400000" data-listing-file-modified-sort="1675612122877" data-listing-reading-time-sort="2.995">
+<div class="quarto-post image-right" data-index="0" data-categories="grounding,multimodal" data-listing-date-sort="1675526400000" data-listing-file-modified-sort="1675612541597" data-listing-reading-time-sort="1.105">
 <div class="thumbnail">
-<p><a href="./posts/2023-sc-cot/index.html"> <img src="./posts/2023-sc-cot/sc.png" class="thumnail-image" style="height: 8em;"> </a></p>
+<p><a href="./posts/2023/humor-ai/index.html"> <img src="./posts/2023/humor-ai/humor.png" class="thumnail-image" style="height: 8em;"> </a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-sc-cot/index.html">
-<h3 class="no-anchor listing-title">
-Self-consistency and chain of thought
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('rationale engineering'); return false;">
-rationale engineering
-</div>
-</div>
-<a href="./posts/2023-sc-cot/index.html">
-<div class="listing-description">
-<p>Lesson learned from CoT and SC.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-sc-cot/index.html">
-<div class="listing-date">
-Feb 5, 2023
-</div>
-<div class="listing-author">
-Lucas Shen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="grounding,multimodal" data-listing-date-sort="1675526400000" data-listing-file-modified-sort="1675612541597" data-listing-reading-time-sort="1.105">
-<div class="thumbnail">
-<p><a href="./posts/2023-humor-ai/index.html"> <img src="./posts/2023-humor-ai/humor.png" class="thumnail-image" style="height: 8em;"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-humor-ai/index.html">
+<a href="./posts/2023/humor-ai/index.html">
 <h3 class="no-anchor listing-title">
 Humor in AI
 </h3>
@@ -236,14 +222,49 @@ grounding
 multimodal
 </div>
 </div>
-<a href="./posts/2023-humor-ai/index.html">
+<a href="./posts/2023/humor-ai/index.html">
 <div class="listing-description">
 <p>Computational humor?</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-humor-ai/index.html">
+<a href="./posts/2023/humor-ai/index.html">
+<div class="listing-date">
+Feb 5, 2023
+</div>
+<div class="listing-author">
+Lucas Shen
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="rationale engineering" data-listing-date-sort="1675526400000" data-listing-file-modified-sort="1675612770280" data-listing-reading-time-sort="2.995">
+<div class="thumbnail">
+<p><a href="./posts/2023/sc-cot/index.html"> <img src="./posts/2023/sc-cot/sc.png" class="thumnail-image" style="height: 8em;"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/2023/sc-cot/index.html">
+<h3 class="no-anchor listing-title">
+Self-consistency and chain of thought
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('rationale engineering'); return false;">
+rationale engineering
+</div>
+</div>
+<a href="./posts/2023/sc-cot/index.html">
+<div class="listing-description">
+<p>Lesson learned from CoT and SC.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/2023/sc-cot/index.html">
 <div class="listing-date">
 Feb 5, 2023
 </div>
