@@ -15,6 +15,7 @@ website:
   search:
     location: navbar
     type: textbox
+  favicon: asset/logo.png
 format:
   html:
     theme: 
