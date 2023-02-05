@@ -2,7 +2,7 @@
 title: "About"
 image: asset/profile.png
 about:
-  template: jolla
+  template: solana
 ---
 
 I'm an independent researcher interested in cryptography and AI.

@@ -8,6 +8,8 @@ listing:
   sort-ui: false
   filter-ui: false
   page-size: 8
+  image-height: 8em
+  feed: true
 page-layout: full
 title-block-banner: true
 ---

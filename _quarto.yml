@@ -2,6 +2,8 @@ project:
   type: website
 
 website:
+  site-url: "https://lukaemon.github.io"
+  description: "Lucas Shen blog"
   title: "Lucas Shen"
   navbar:
     right:
@@ -10,6 +12,8 @@ website:
         href: https://github.com/lukaemon
       - icon: twitter
         href: https://twitter.com/luka_emon
+      - icon: rss
+        href: index.xml
   twitter-card: true
   open-graph: true
   search:

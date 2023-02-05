@@ -2,7 +2,7 @@
 title: "Self-consistency and chain of thought"
 description: Lesson learned from CoT and SC. 
 date: "2023-02-05"
-categories: [AI]
+categories: [AI, rationale engineering]
 image: "sc.png"
 ---
 ![](sc.png)
