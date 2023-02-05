@@ -8,9 +8,9 @@
 
 <meta name="author" content="Lucas Shen">
 <meta name="dcterms.date" content="2023-02-05">
-<meta name="description" content="Computational humor?">
+<meta name="description" content="Lesson learned from CoT and SC.">
 
-<title>Luka’Soliloquy - Humor in AI</title>
+<title>Luka’Soliloquy - Self-consistency and chain of thought</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -66,17 +85,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Luka’Soliloquy - Humor in AI">
-<meta property="og:description" content="Computational humor?">
-<meta property="og:image" content="https://lukaemon.github.io/posts/20230205-humor-ai/humor.png">
+<meta property="og:title" content="Luka’Soliloquy - Self-consistency and chain of thought">
+<meta property="og:description" content="Lesson learned from CoT and SC.">
+<meta property="og:image" content="https://lukaemon.github.io/posts/2023-sc-cot/sc.png">
 <meta property="og:site-name" content="Luka'Soliloquy">
-<meta property="og:image:height" content="512">
-<meta property="og:image:width" content="512">
-<meta name="twitter:title" content="Luka’Soliloquy - Humor in AI">
-<meta name="twitter:description" content="Computational humor?">
-<meta name="twitter:image" content="https://lukaemon.github.io/posts/20230205-humor-ai/humor.png">
-<meta name="twitter:image-height" content="512">
-<meta name="twitter:image-width" content="512">
+<meta property="og:image:height" content="350">
+<meta property="og:image:width" content="807">
+<meta name="twitter:title" content="Luka’Soliloquy - Self-consistency and chain of thought">
+<meta name="twitter:description" content="Lesson learned from CoT and SC.">
+<meta name="twitter:image" content="https://lukaemon.github.io/posts/2023-sc-cot/sc.png">
+<meta name="twitter:image-height" content="350">
+<meta name="twitter:image-width" content="807">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -128,15 +147,14 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Humor in AI</h1>
+      <h1 class="title">Self-consistency and chain of thought</h1>
                   <div>
         <div class="description">
-          Computational humor?
+          Lesson learned from CoT and SC.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">grounding</div>
-                <div class="quarto-category">multimodal</div>
+                <div class="quarto-category">rationale engineering</div>
               </div>
                   </div>
   </div>
@@ -166,7 +184,15 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#reasoning-and-natural-language-understanding" id="toc-reasoning-and-natural-language-understanding" class="nav-link active" data-scroll-target="#reasoning-and-natural-language-understanding">Reasoning and natural language understanding</a></li>
+  <li><a href="#retrieval-augmented-lm" id="toc-retrieval-augmented-lm" class="nav-link" data-scroll-target="#retrieval-augmented-lm">Retrieval augmented LM</a></li>
+  <li><a href="#building-application" id="toc-building-application" class="nav-link" data-scroll-target="#building-application">Building application</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
@@ -174,31 +200,79 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="humor.png" class="img-fluid figure-img"></p>
-</figure>
+<p><img src="sc.png" class="img-fluid"></p>
+<section id="reasoning-and-natural-language-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="reasoning-and-natural-language-understanding">Reasoning and natural language understanding</h2>
+<p><span class="citation" data-cites="raeScalingLanguageModels2022">Rae et al. (<a href="#ref-raeScalingLanguageModels2022" role="doc-biblioref">2022</a>)</span>:</p>
+<blockquote class="blockquote">
+<p>Scale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs.</p>
+</blockquote>
+<p>The paper points out flat scaling curve of few task categories. Since then, google has been very creative to push the frontier with <code>CoT</code> (<span class="citation" data-cites="weiChainThoughtPrompting2022">Wei et al. (<a href="#ref-weiChainThoughtPrompting2022" role="doc-biblioref">2022</a>)</span>), <code>SC</code> (<span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">Wang et al. (<a href="#ref-wangSelfConsistencyImprovesChain2022a" role="doc-biblioref">2022</a>)</span>), <code>least to most</code> (<span class="citation" data-cites="zhouLeasttoMostPromptingEnables2022">Zhou et al. (<a href="#ref-zhouLeasttoMostPromptingEnables2022" role="doc-biblioref">2022</a>)</span>) and more. CoT is the most exciting method to scale computation on tasks since few-shot prompting.</p>
+<p><code>Informal reasoning</code> would be solved, and there is a reason why google, DeepMind and OpenAI are all into solving <code>formal reasoning</code>. That’s the last frontier wrt reasoning if AI could get logic and math right.</p>
+<p><code>Codex</code> family model is the first step on solving formal reasoning. In SC and BBH (<span class="citation" data-cites="suzgunChallengingBIGBenchTasks2022">Suzgun et al. (<a href="#ref-suzgunChallengingBIGBenchTasks2022" role="doc-biblioref">2022</a>)</span>) paper, <code>code-davinci-002</code> performs better than <code>InstructGPT</code> families on reasoning tasks. DeepMind even dives into <code>GNN</code> to explore architecture other than transformer. Reasoning in general would be solved as a modality in near future. It may require a specialized model, but would ultimately be fused into general LLM like image, audio and the like.</p>
+<p><span class="citation" data-cites="henighanScalingLawsAutoregressive2020">Henighan et al. (<a href="#ref-henighanScalingLawsAutoregressive2020" role="doc-biblioref">2020</a>)</span>:</p>
+<blockquote class="blockquote">
+<p>The approach to the <code>irreducible loss</code> does not necessarily indicate diminishing returns for representation quality or semantic content as <strong>significant semantic information may lie in the last few bits</strong>.</p>
+</blockquote>
+<p>To get natural language understanding right, scale is necessary. This also explains why CoT only works with scale. Small model makes too many semantic mistakes that render scaling computation with CoT worthless. SC could cancel out mistakes by majority vote to improve performance for model of all size but the increased computational cost far out weight possible gain for small model. <code>Self-ensemble</code> weak reasoner is a waste of resource.</p>
+</section>
+<section id="retrieval-augmented-lm" class="level2">
+<h2 class="anchored" data-anchor-id="retrieval-augmented-lm">Retrieval augmented LM</h2>
+<p>Scale may not be the most effective method to solve <code>world knowledge</code> problem. 1T param model may get the <code>last few bit of semantics</code> but won’t get the facts 100% right. That’s why <code>retrieval</code> is necessary. One could treat external knowledge database as one modality and figure out how to fuse it with general LLM.</p>
+<p>Think about how existing multimodal model fuses modalities, ex: <code>Dall-E</code>, <code>Stable Diffusion</code>, <code>MusicLM</code> and so on. <code>RETRO</code> (<span class="citation" data-cites="borgeaudImprovingLanguageModels2022">Borgeaud et al. (<a href="#ref-borgeaudImprovingLanguageModels2022" role="doc-biblioref">2022</a>)</span>) is a great example of treating external memory as modality and fuse it with general LM deeply. Of course it’s not plug and play but still an very interesting research direction.</p>
+<p><code>In-context retrieval</code> dominates current research output because of light resource requirement. Its value is similar to <code>prompt engineering</code>: the most effective method to probe LLM to find new gains, but prompt engineering would never be the ultimate solution. It’s a tentative exploration process. Like instruction finetuning makes LLM to follow human instruction and do CoT in 0 shot, rather than few shot, <code>RETRO</code> like solution may render methods such as <span class="citation" data-cites="sunRecitationAugmentedLanguageModels2022a">Sun et al. (<a href="#ref-sunRecitationAugmentedLanguageModels2022a" role="doc-biblioref">2022</a>)</span> unnecessary. However, recitation to me is like SC for open ended text generation, which is one great first step into retrieval world by scaling computation on retrieval tasks, like CoT to <code>rationale engineering</code>.</p>
+</section>
+<section id="building-application" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="building-application">Building application</h2>
+<div class="page-columns page-full"><p>The point is not all-in 100b+ LLM, all-in <code>text-davinci-003</code>, but to find a way to fuse modalities. Small model like <code>T5-11b</code>, yes 11b is the new small lol, is still important for controlling latency and cost. Imagine doing 40 path <code>SC</code> on a 540b model per response for interactive UX. Not ideal. A good production example: <code>Neeva</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://twitter.com/ramaswmysridhar/status/1621870491945533440?s=12&amp;t=nyAGas8S6bDKS1eLUw9I7Q">T5 for serving ChatGPT like search</a></p></li></div></div>
+<p>Multimodal is on fire. One big end to end model may be enough, like <code>Gato</code> (<span class="citation" data-cites="reedGeneralistAgent2022">Reed et al. (<a href="#ref-reedGeneralistAgent2022" role="doc-biblioref">2022</a>)</span>). Modular approach with glue architecture may work, like <code>Flamingo</code> (<span class="citation" data-cites="alayracFlamingoVisualLanguage2022">Alayrac et al. (<a href="#ref-alayracFlamingoVisualLanguage2022" role="doc-biblioref">2022</a>)</span>). It’s great to be alive in this era of AI.</p>
+
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-alayracFlamingoVisualLanguage2022" class="csl-entry" role="doc-biblioentry">
+Alayrac, Jean-Baptiste, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, et al. 2022. <span>“🦩 <span>Flamingo</span>: A <span>Visual Language Model</span> for <span>Few-Shot Learning</span>,”</span> April, 66.
 </div>
-<p>Humor is preconditioned on the ability to see the bright side of something. One has to be able to see many sides, consciously choose the funny, optimistic interpretation and express in a way that resonates with target audiences. It shows both raw intelligence and wisdom.</p>
-<p>To detect humor and be humorous, grounding is necessary. Grounding to me is weaving modalities. Just a fancy way of saying having sampled variety of experiences of certain things or events.</p>
-<p>For example, to know what it really means about apple, one could write “apple”, read about it, draw, hold, throw, smell, eat, plant, cook, even share it with others. Without grounding, one can’t have acute and diversified perspectives on a thing or an event. It would be very hard to see ironic yet optimistic interpretation, be it human or AI.</p>
-<div class="page-columns page-full"><p>Grounding AI to full set of human experience is aligning computational humor to humans’. They may be able to see a kind of digital humor that is a bridge too far for us. Literally why Samantha in Her leaving Theodore<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://www.youtube.com/watch?v=PXTQwRf7iRg">youtube</a></p></li></div></div>
-<div class="page-columns page-full"><p>Humor is the ultimate Turing test. I see this as the source of Yann’s recent twitter debate with others<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. It’s the most difficult test to pass. It’s the most difficult test to create.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://twitter.com/ylecun/status/1621805604900585472">tweet</a></p></li></div></div>
-<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/were-all-leaving/1553022037?i=1553022378">
-</iframe>
-
-
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
+<div id="ref-borgeaudImprovingLanguageModels2022" class="csl-entry" role="doc-biblioentry">
+Borgeaud, Sebastian, Arthur Mensch, Jordan Hoffmann, Trevor Cai, Eliza Rutherford, Katie Millican, George van den Driessche, et al. 2022. <span>“Improving Language Models by Retrieving from Trillions of Tokens.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2112.04426">http://arxiv.org/abs/2112.04426</a>.
+</div>
+<div id="ref-henighanScalingLawsAutoregressive2020" class="csl-entry" role="doc-biblioentry">
+Henighan, Tom, Jared Kaplan, Mor Katz, Mark Chen, Christopher Hesse, Jacob Jackson, Heewoo Jun, et al. 2020. <span>“Scaling <span>Laws</span> for <span>Autoregressive Generative Modeling</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2010.14701">http://arxiv.org/abs/2010.14701</a>.
+</div>
+<div id="ref-raeScalingLanguageModels2022" class="csl-entry" role="doc-biblioentry">
+Rae, Jack W., Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, et al. 2022. <span>“Scaling <span>Language Models</span>: <span>Methods</span>, <span>Analysis</span> &amp; <span>Insights</span> from <span>Training Gopher</span>.”</span> <a href="http://arxiv.org/abs/2112.11446">http://arxiv.org/abs/2112.11446</a>.
+</div>
+<div id="ref-reedGeneralistAgent2022" class="csl-entry" role="doc-biblioentry">
+Reed, Scott, Konrad Zolna, Emilio Parisotto, Sergio Gomez Colmenarejo, Alexander Novikov, Gabriel Barth-Maron, Mai Gimenez, et al. 2022. <span>“A <span>Generalist Agent</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2205.06175">http://arxiv.org/abs/2205.06175</a>.
+</div>
+<div id="ref-sunRecitationAugmentedLanguageModels2022a" class="csl-entry" role="doc-biblioentry">
+Sun, Zhiqing, Xuezhi Wang, Yi Tay, Yiming Yang, and Denny Zhou. 2022. <span>“Recitation-<span>Augmented Language Models</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2210.01296">http://arxiv.org/abs/2210.01296</a>.
+</div>
+<div id="ref-suzgunChallengingBIGBenchTasks2022" class="csl-entry" role="doc-biblioentry">
+Suzgun, Mirac, Nathan Scales, Nathanael Schärli, Sebastian Gehrmann, Yi Tay, Hyung Won Chung, Aakanksha Chowdhery, et al. 2022. <span>“Challenging <span>BIG-Bench Tasks</span> and <span class="nocase">Whether Chain-of-Thought Can Solve Them</span>,”</span> October. <a href="https://arxiv.org/abs/2210.09261v1">https://arxiv.org/abs/2210.09261v1</a>.
+</div>
+<div id="ref-wangSelfConsistencyImprovesChain2022a" class="csl-entry" role="doc-biblioentry">
+Wang, Xuezhi, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang, Aakanksha Chowdhery, and Denny Zhou. 2022. <span>“Self-<span>Consistency Improves Chain</span> of <span>Thought Reasoning</span> in <span>Language Models</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2203.11171">http://arxiv.org/abs/2203.11171</a>.
+</div>
+<div id="ref-weiChainThoughtPrompting2022" class="csl-entry" role="doc-biblioentry">
+Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc Le, and Denny Zhou. 2022. <span>“Chain of <span>Thought Prompting Elicits Reasoning</span> in <span>Large Language Models</span>.”</span> <a href="https://arxiv.org/abs/2201.11903v5">https://arxiv.org/abs/2201.11903v5</a>.
+</div>
+<div id="ref-zhouLeasttoMostPromptingEnables2022" class="csl-entry" role="doc-biblioentry">
+Zhou, Denny, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, et al. 2022. <span>“Least-to-<span>Most Prompting Enables Complex Reasoning</span> in <span>Large Language Models</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2205.10625">http://arxiv.org/abs/2205.10625</a>.
+</div>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
   author = {Lucas Shen},
-  title = {Humor in {AI}},
+  title = {Self-Consistency and Chain of Thought},
   date = {2023-02-05},
-  url = {https://lukaemon.github.io/posts/20230205-humor-ai},
+  url = {https://lukaemon.github.io/posts/2023-sc-cot},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Lucas Shen. 2023. <span>“Humor in AI.”</span> February 5, 2023. <a href="https://lukaemon.github.io/posts/20230205-humor-ai">https://lukaemon.github.io/posts/20230205-humor-ai</a>.
+Lucas Shen. 2023. <span>“Self-Consistency and Chain of Thought.”</span>
+February 5, 2023. <a href="https://lukaemon.github.io/posts/2023-sc-cot">https://lukaemon.github.io/posts/2023-sc-cot</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
