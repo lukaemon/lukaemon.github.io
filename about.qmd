@@ -1,0 +1,11 @@
+---
+title: "About"
+image: asset/profile.png
+about:
+  template: jolla
+---
+
+I'm an independent researcher interested in cryptography and AI.
+
+[nostr](https://github.com/nostr-protocol/nostr): `npub1tk5wx0cgsthysderdmr5f2pm5yc094qlsr94l2tcy7dyp7hararqdy62tt`
+
