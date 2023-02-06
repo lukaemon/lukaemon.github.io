@@ -25,7 +25,7 @@
     "href": "posts/2023/sc-cot/index.html#multimodal",
     "title": "Self-consistency and chain of thought",
     "section": "Multimodal",
-    "text": "Multimodal\n500b+ dense LLM, 1T+ MoE, text-davinci-003 are great and useful but not enough. Have to find a way to fuse modalities. Small model like T5-11b, yes 11b is the new small lol, is still important for controlling latency and cost. Imagine doing 40 path SC on a 540b model per response for interactive UX. Not ideal. A good production example: Neeva1.1 [T5 for serving ChatGPT like search][https://twitter.com/ramaswmysridhar/status/1621870491945533440?s=12&t=nyAGas8S6bDKS1eLUw9I7Q]\nMultimodal is on fire. One big end to end model may be enough, ex: Gato (Reed et al. 2022). On the other hand, modular approach with glue architecture may work, ex: Flamingo (Alayrac et al. 2022) and RETRO. It’s great to be alive in this era of AI."
+    "text": "Multimodal\n500b+ dense LLM, 1T+ MoE, text-davinci-003 are great and useful but not enough. Have to find a way to fuse modalities. Small model like T5-11b, yes 11b is the new small lol, is still important for controlling latency and cost. Imagine doing 40 path SC on a 540b model per response for interactive UX. Not ideal. A good production example: Neeva1.1 T5 for serving ChatGPT like search\nMultimodal is on fire. One big end to end model may be enough, ex: Gato (Reed et al. 2022). On the other hand, modular approach with glue architecture may work, ex: Flamingo (Alayrac et al. 2022) and RETRO. It’s great to be alive in this era of AI."
   },
   {
     "objectID": "index.html",
