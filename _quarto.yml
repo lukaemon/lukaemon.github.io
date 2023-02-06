@@ -5,7 +5,7 @@ project:
 website:
   site-url: "https://lukaemon.github.io"
   description: "Lucas Shen blog"
-  title: "Soliloquy"
+  title: "Lucas Shen"
   navbar:
     right:
       - about.qmd
@@ -20,7 +20,7 @@ website:
   search:
     location: navbar
     type: textbox
-  favicon: asset/logo.png
+  favicon: asset/favicon.png
 
 bibliography: asset/ref.bib
 

@@ -1,6 +1,6 @@
 ---
 title: "🖖 Welcome"
-description: "Documenting my learning process, log of self-play."
+description: "to my log of self-play"
 listing:
   contents: posts
   sort: "date desc"

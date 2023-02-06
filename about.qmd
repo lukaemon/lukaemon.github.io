@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: asset/about.png
+# image: asset/about.png
 about:
   template: marquee
 ---
