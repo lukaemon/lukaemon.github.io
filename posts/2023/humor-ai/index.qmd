@@ -4,8 +4,6 @@ description: Computational humor?
 date: "2023-02-05"
 categories: [grounding, multimodal]
 image: "humor.png"
-author: Lucas Shen
-citation: true
 ---
 ![](humor.png){fig-align="center"}
 

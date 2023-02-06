@@ -5,7 +5,7 @@ project:
 website:
   site-url: "https://lukaemon.github.io"
   description: "Lucas Shen blog"
-  title: "Luka'Soliloquy"
+  title: "Luca'Soliloquy"
   navbar:
     right:
       - about.qmd

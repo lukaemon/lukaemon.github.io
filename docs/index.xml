@@ -5,7 +5,7 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Luka&#39;Soliloquy</title>
+<title>Luca&#39;Soliloquy</title>
 <link>https://lukaemon.github.io/index.html</link>
 <atom:link href="https://lukaemon.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Were all these vast designs and rapid strides worth it?</description>
@@ -62,31 +62,31 @@ Lucas Shen. 2023. <span>“Humor in AI.”</span> February 5, 2023. <a href="htt
 
 
 <p><img src="https://lukaemon.github.io/posts/2023/sc-cot/sc.png" class="img-fluid"></p>
-<section id="reasoning-and-natural-language-understanding" class="level2">
-<h2 class="anchored" data-anchor-id="reasoning-and-natural-language-understanding">Reasoning and natural language understanding</h2>
+<section id="reasoning" class="level2">
+<h2 class="anchored" data-anchor-id="reasoning">Reasoning</h2>
 <blockquote class="blockquote">
 <p>Scale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs.</p>
 <p>– <cite><span class="citation" data-cites="raeScalingLanguageModels2022">Rae et al. (2022)</span>:</cite></p>
 </blockquote>
-<p>The paper points out flat scaling curve of few task categories. Since then, google has been very creative to push the frontier with <code>CoT</code> (<span class="citation" data-cites="weiChainThoughtPrompting2022">Wei et al. (2022)</span>), <code>SC</code> (<span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">Wang et al. (2022)</span>), <code>least to most</code> (<span class="citation" data-cites="zhouLeasttoMostPromptingEnables2022">Zhou et al. (2022)</span>) and more. CoT is the most exciting method to scale computation on tasks since few-shot prompting.</p>
+<p>The paper points out flat scaling curve of few task categories. Since then, google has been very creative to push the frontier with <code>CoT</code> (<span class="citation" data-cites="weiChainThoughtPrompting2022">Wei et al. (2022)</span>), <code>SC</code> (<span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">Wang et al. (2022)</span>), <code>least to most</code> (<span class="citation" data-cites="zhouLeasttoMostPromptingEnables2022">Zhou et al. (2022)</span>) and more. CoT is the most exciting method to scale computation on tasks since few-shot in-context learning.</p>
 <p><code>Informal reasoning</code> would be solved, and there is a reason why google, DeepMind and OpenAI are all into solving <code>formal reasoning</code>. That’s the last frontier wrt reasoning if AI could get logic and math right.</p>
-<p><code>Codex</code> family model is the first step on solving formal reasoning. In SC and BBH (<span class="citation" data-cites="suzgunChallengingBIGBenchTasks2022">Suzgun et al. (2022)</span>) paper, <code>code-davinci-002</code> performs better than <code>InstructGPT</code> families on reasoning tasks. DeepMind even dives into <code>GNN</code> to explore architecture other than transformer. Reasoning in general would be solved as a modality in near future. It may require a specialized model, but would ultimately be fused into general LLM like image, audio and the like.</p>
+<p><code>Codex</code> family model is the first step on solving formal reasoning. In SC and BBH (<span class="citation" data-cites="suzgunChallengingBIGBenchTasks2022">Suzgun et al. (2022)</span>), <code>code-davinci-002</code> performs better than <code>InstructGPT</code> families on reasoning tasks. DeepMind even dives into <code>GNN</code> to explore architecture other than transformer. Reasoning in general would be solved as a modality in near future. It may require a specialized model, but would ultimately be fused into general LLM like image, audio and the like.</p>
 <blockquote class="blockquote">
 <p>The approach to the <code>irreducible loss</code> does not necessarily indicate diminishing returns for representation quality or semantic content as <strong>significant semantic information may lie in the last few bits</strong>.</p>
 <p>– <cite><span class="citation" data-cites="henighanScalingLawsAutoregressive2020">Henighan et al. (2020)</span>:</cite></p>
 </blockquote>
 <p>To get natural language understanding right, scale is necessary. This also explains why CoT only works with scale. Small model makes too many semantic mistakes that render scaling computation with CoT worthless. SC could cancel out mistakes by majority vote to improve performance for model of all size but the increased computational cost far out weight possible gain for small model. <code>Self-ensemble</code> weak reasoner is a waste of resource.</p>
 </section>
-<section id="retrieval-augmented-lm" class="level2">
-<h2 class="anchored" data-anchor-id="retrieval-augmented-lm">Retrieval augmented LM</h2>
+<section id="retrieval" class="level2">
+<h2 class="anchored" data-anchor-id="retrieval">Retrieval</h2>
 <p>Scale may not be the most effective method to solve <code>world knowledge</code> problem. 1T param model may get the <code>last few bit of semantics</code> but won’t get the facts 100% right. That’s why <code>retrieval</code> is necessary. One could treat external knowledge database as one modality and figure out how to fuse it with general LLM.</p>
-<p>Think about how existing multimodal model fuses modalities, ex: <code>Dall-E</code>, <code>Stable Diffusion</code>, <code>MusicLM</code> and so on. <code>RETRO</code> (<span class="citation" data-cites="borgeaudImprovingLanguageModels2022">Borgeaud et al. (2022)</span>) is a great example of treating external memory as modality and fuse it with general LM deeply. Of course it’s not plug and play but still an very interesting research direction.</p>
-<p><code>In-context retrieval</code> dominates current research output because of light resource requirement. Its value is similar to <code>prompt engineering</code>: the most effective method to probe LLM to find new gains, but prompt engineering would never be the ultimate solution. It’s a tentative exploration process. Like instruction finetuning makes LLM to follow human instruction and do CoT in 0 shot, rather than few shot, <code>RETRO</code> like solution may render methods such as <span class="citation" data-cites="sunRecitationAugmentedLanguageModels2022a">Sun et al. (2022)</span> unnecessary. However, recitation to me is like SC for open ended text generation, which is one great first step into retrieval world by scaling computation on retrieval tasks, like CoT to <code>rationale engineering</code>.</p>
+<p>Think about how existing multimodal model fuses modalities, ex: <code>Dall-E</code> (<span class="citation" data-cites="rameshHierarchicalTextConditionalImage2022">Ramesh et al. (2022)</span>), <code>Diffusion</code> (<span class="citation" data-cites="rombachHighResolutionImageSynthesis2022">Rombach et al. (2022)</span>), <code>MusicLM</code> (<span class="citation" data-cites="agostinelliMusicLMGeneratingMusic2023">Agostinelli et al. (2023)</span>) and so on. <code>RETRO</code> (<span class="citation" data-cites="borgeaudImprovingLanguageModels2022">Borgeaud et al. (2022)</span>) is a great example of treating external memory as modality and fuse it with general LM deeply. Of course it’s not plug and play but still a very interesting direction.</p>
+<p><code>In-context retrieval</code> dominates current research output because of light resource requirement. Its value is similar to <code>prompt engineering</code>: the most effective method to probe LLM to find new gains, but prompt engineering would never be the ultimate solution. It’s a tentative exploration process. Like instruction finetuning makes LLM to follow human instruction and do CoT in 0 shot, rather than few shot, <code>RETRO</code> like solution may render methods such as recitaiton (<span class="citation" data-cites="sunRecitationAugmentedLanguageModels2022a">Sun et al. (2022)</span>) unnecessary. However, recitation to me is like SC for open ended text generation, which is one great first step into retrieval world by scaling computation on retrieval tasks, like CoT to <code>rationale engineering</code>.</p>
 </section>
-<section id="building-application" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="building-application">Building application</h2>
-<div class="page-columns page-full"><p>The point is not all-in 100b+ LLM, all-in <code>text-davinci-003</code>, but to find a way to fuse modalities. Small model like <code>T5-11b</code>, yes 11b is the new small lol, is still important for controlling latency and cost. Imagine doing 40 path <code>SC</code> on a 540b model per response for interactive UX. Not ideal. A good production example: <code>Neeva</code><sup>1</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://twitter.com/ramaswmysridhar/status/1621870491945533440?s=12&amp;t=nyAGas8S6bDKS1eLUw9I7Q">T5 for serving ChatGPT like search</a></p></li></div></div>
-<p>Multimodal is on fire. One big end to end model may be enough, like <code>Gato</code> (<span class="citation" data-cites="reedGeneralistAgent2022">Reed et al. (2022)</span>). Modular approach with glue architecture may work, like <code>Flamingo</code> (<span class="citation" data-cites="alayracFlamingoVisualLanguage2022">Alayrac et al. (2022)</span>). It’s great to be alive in this era of AI.</p>
+<section id="multimodal" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="multimodal">Multimodal</h2>
+<div class="page-columns page-full"><p>500b+ dense LLM, 1T+ MoE, <code>text-davinci-003</code> are great and useful but not enough. Have to find a way to fuse modalities. Small model like <code>T5-11b</code>, yes 11b is the new small lol, is still important for controlling latency and cost. Imagine doing 40 path <code>SC</code> on a 540b model per response for interactive UX. Not ideal. A good production example: <code>Neeva</code><sup>1</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://twitter.com/ramaswmysridhar/status/1621870491945533440?s=12&amp;t=nyAGas8S6bDKS1eLUw9I7Q">T5 for serving ChatGPT like search</a></p></li></div></div>
+<p>Multimodal is on fire. One big end to end model may be enough, <code>Gato</code> (<span class="citation" data-cites="reedGeneralistAgent2022">Reed et al. (2022)</span>). On the other hand, modular approach with glue architecture may work, <code>Flamingo</code> (<span class="citation" data-cites="alayracFlamingoVisualLanguage2022">Alayrac et al. (2022)</span>), <code>RETRO</code>. It’s great to be alive in this era of AI.</p>
 
 
 
@@ -94,6 +94,9 @@ Lucas Shen. 2023. <span>“Humor in AI.”</span> February 5, 2023. <a href="htt
 
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-agostinelliMusicLMGeneratingMusic2023" class="csl-entry">
+Agostinelli, Andrea, Timo I. Denk, Zalán Borsos, Jesse Engel, Mauro Verzetti, Antoine Caillon, Qingqing Huang, et al. 2023. <span>“<span>MusicLM</span>: <span>Generating Music From Text</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2301.11325">http://arxiv.org/abs/2301.11325</a>.
+</div>
 <div id="ref-alayracFlamingoVisualLanguage2022" class="csl-entry">
 Alayrac, Jean-Baptiste, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, et al. 2022. <span>“🦩 <span>Flamingo</span>: A <span>Visual Language Model</span> for <span>Few-Shot Learning</span>,”</span> April, 66.
 </div>
@@ -106,8 +109,14 @@ Henighan, Tom, Jared Kaplan, Mor Katz, Mark Chen, Christopher Hesse, Jacob Jacks
 <div id="ref-raeScalingLanguageModels2022" class="csl-entry">
 Rae, Jack W., Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, et al. 2022. <span>“Scaling <span>Language Models</span>: <span>Methods</span>, <span>Analysis</span> &amp; <span>Insights</span> from <span>Training Gopher</span>.”</span> <a href="http://arxiv.org/abs/2112.11446">http://arxiv.org/abs/2112.11446</a>.
 </div>
+<div id="ref-rameshHierarchicalTextConditionalImage2022" class="csl-entry">
+Ramesh, Aditya, Prafulla Dhariwal, Alex Nichol, Casey Chu, and Mark Chen. 2022. <span>“Hierarchical <span>Text-Conditional Image Generation</span> with <span>CLIP Latents</span>,”</span> 26.
+</div>
 <div id="ref-reedGeneralistAgent2022" class="csl-entry">
 Reed, Scott, Konrad Zolna, Emilio Parisotto, Sergio Gomez Colmenarejo, Alexander Novikov, Gabriel Barth-Maron, Mai Gimenez, et al. 2022. <span>“A <span>Generalist Agent</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2205.06175">http://arxiv.org/abs/2205.06175</a>.
+</div>
+<div id="ref-rombachHighResolutionImageSynthesis2022" class="csl-entry">
+Rombach, Robin, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn Ommer. 2022. <span>“High-<span>Resolution Image Synthesis</span> with <span>Latent Diffusion Models</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2112.10752">http://arxiv.org/abs/2112.10752</a>.
 </div>
 <div id="ref-sunRecitationAugmentedLanguageModels2022a" class="csl-entry">
 Sun, Zhiqing, Xuezhi Wang, Yi Tay, Yiming Yang, and Denny Zhou. 2022. <span>“Recitation-<span>Augmented Language Models</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2210.01296">http://arxiv.org/abs/2210.01296</a>.
