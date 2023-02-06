@@ -26,7 +26,5 @@ bibliography: asset/ref.bib
 
 format:
   html:
-    theme: 
-      light: flatly
-      dark: darkly
+    theme: spacelab
     toc: true

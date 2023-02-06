@@ -58,12 +58,10 @@ div.csl-indent {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -135,9 +133,6 @@ div.csl-indent {
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -203,16 +198,16 @@ div.csl-indent {
 <p><img src="sc.png" class="img-fluid"></p>
 <section id="reasoning-and-natural-language-understanding" class="level2">
 <h2 class="anchored" data-anchor-id="reasoning-and-natural-language-understanding">Reasoning and natural language understanding</h2>
-<p><span class="citation" data-cites="raeScalingLanguageModels2022">Rae et al. (<a href="#ref-raeScalingLanguageModels2022" role="doc-biblioref">2022</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>Scale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs.</p>
+<p>– <cite><span class="citation" data-cites="raeScalingLanguageModels2022">Rae et al. (<a href="#ref-raeScalingLanguageModels2022" role="doc-biblioref">2022</a>)</span>:</cite></p>
 </blockquote>
 <p>The paper points out flat scaling curve of few task categories. Since then, google has been very creative to push the frontier with <code>CoT</code> (<span class="citation" data-cites="weiChainThoughtPrompting2022">Wei et al. (<a href="#ref-weiChainThoughtPrompting2022" role="doc-biblioref">2022</a>)</span>), <code>SC</code> (<span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">Wang et al. (<a href="#ref-wangSelfConsistencyImprovesChain2022a" role="doc-biblioref">2022</a>)</span>), <code>least to most</code> (<span class="citation" data-cites="zhouLeasttoMostPromptingEnables2022">Zhou et al. (<a href="#ref-zhouLeasttoMostPromptingEnables2022" role="doc-biblioref">2022</a>)</span>) and more. CoT is the most exciting method to scale computation on tasks since few-shot prompting.</p>
 <p><code>Informal reasoning</code> would be solved, and there is a reason why google, DeepMind and OpenAI are all into solving <code>formal reasoning</code>. That’s the last frontier wrt reasoning if AI could get logic and math right.</p>
 <p><code>Codex</code> family model is the first step on solving formal reasoning. In SC and BBH (<span class="citation" data-cites="suzgunChallengingBIGBenchTasks2022">Suzgun et al. (<a href="#ref-suzgunChallengingBIGBenchTasks2022" role="doc-biblioref">2022</a>)</span>) paper, <code>code-davinci-002</code> performs better than <code>InstructGPT</code> families on reasoning tasks. DeepMind even dives into <code>GNN</code> to explore architecture other than transformer. Reasoning in general would be solved as a modality in near future. It may require a specialized model, but would ultimately be fused into general LLM like image, audio and the like.</p>
-<p><span class="citation" data-cites="henighanScalingLawsAutoregressive2020">Henighan et al. (<a href="#ref-henighanScalingLawsAutoregressive2020" role="doc-biblioref">2020</a>)</span>:</p>
 <blockquote class="blockquote">
 <p>The approach to the <code>irreducible loss</code> does not necessarily indicate diminishing returns for representation quality or semantic content as <strong>significant semantic information may lie in the last few bits</strong>.</p>
+<p>– <cite><span class="citation" data-cites="henighanScalingLawsAutoregressive2020">Henighan et al. (<a href="#ref-henighanScalingLawsAutoregressive2020" role="doc-biblioref">2020</a>)</span>:</cite></p>
 </blockquote>
 <p>To get natural language understanding right, scale is necessary. This also explains why CoT only works with scale. Small model makes too many semantic mistakes that render scaling computation with CoT worthless. SC could cancel out mistakes by majority vote to improve performance for model of all size but the increased computational cost far out weight possible gain for small model. <code>Self-ensemble</code> weak reasoner is a waste of resource.</p>
 </section>
@@ -294,121 +289,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

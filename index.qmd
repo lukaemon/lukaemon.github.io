@@ -1,13 +1,14 @@
 ---
-title: "blog"
+title: "🤗 Welcome"
+description: "Were all these vast designs and rapid strides worth it?"
 listing:
   contents: posts
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: true
+  sort-ui: false
   filter-ui: false
-  page-size: 8
+  page-size: 16
   image-height: 8em
   feed: true
 page-layout: full

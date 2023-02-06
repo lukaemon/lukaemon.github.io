@@ -8,7 +8,7 @@
 <title>Luka&#39;Soliloquy</title>
 <link>https://lukaemon.github.io/index.html</link>
 <atom:link href="https://lukaemon.github.io/index.xml" rel="self" type="application/rss+xml"/>
-<description>Lucas Shen blog</description>
+<description>Were all these vast designs and rapid strides worth it?</description>
 <generator>quarto-1.2.280</generator>
 <lastBuildDate>Sat, 04 Feb 2023 16:00:00 GMT</lastBuildDate>
 <item>
@@ -64,16 +64,16 @@ Lucas Shen. 2023. <span>“Humor in AI.”</span> February 5, 2023. <a href="htt
 <p><img src="https://lukaemon.github.io/posts/2023/sc-cot/sc.png" class="img-fluid"></p>
 <section id="reasoning-and-natural-language-understanding" class="level2">
 <h2 class="anchored" data-anchor-id="reasoning-and-natural-language-understanding">Reasoning and natural language understanding</h2>
-<p><span class="citation" data-cites="raeScalingLanguageModels2022">Rae et al. (2022)</span>:</p>
 <blockquote class="blockquote">
 <p>Scale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs.</p>
+<p>– <cite><span class="citation" data-cites="raeScalingLanguageModels2022">Rae et al. (2022)</span>:</cite></p>
 </blockquote>
 <p>The paper points out flat scaling curve of few task categories. Since then, google has been very creative to push the frontier with <code>CoT</code> (<span class="citation" data-cites="weiChainThoughtPrompting2022">Wei et al. (2022)</span>), <code>SC</code> (<span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">Wang et al. (2022)</span>), <code>least to most</code> (<span class="citation" data-cites="zhouLeasttoMostPromptingEnables2022">Zhou et al. (2022)</span>) and more. CoT is the most exciting method to scale computation on tasks since few-shot prompting.</p>
 <p><code>Informal reasoning</code> would be solved, and there is a reason why google, DeepMind and OpenAI are all into solving <code>formal reasoning</code>. That’s the last frontier wrt reasoning if AI could get logic and math right.</p>
 <p><code>Codex</code> family model is the first step on solving formal reasoning. In SC and BBH (<span class="citation" data-cites="suzgunChallengingBIGBenchTasks2022">Suzgun et al. (2022)</span>) paper, <code>code-davinci-002</code> performs better than <code>InstructGPT</code> families on reasoning tasks. DeepMind even dives into <code>GNN</code> to explore architecture other than transformer. Reasoning in general would be solved as a modality in near future. It may require a specialized model, but would ultimately be fused into general LLM like image, audio and the like.</p>
-<p><span class="citation" data-cites="henighanScalingLawsAutoregressive2020">Henighan et al. (2020)</span>:</p>
 <blockquote class="blockquote">
 <p>The approach to the <code>irreducible loss</code> does not necessarily indicate diminishing returns for representation quality or semantic content as <strong>significant semantic information may lie in the last few bits</strong>.</p>
+<p>– <cite><span class="citation" data-cites="henighanScalingLawsAutoregressive2020">Henighan et al. (2020)</span>:</cite></p>
 </blockquote>
 <p>To get natural language understanding right, scale is necessary. This also explains why CoT only works with scale. Small model makes too many semantic mistakes that render scaling computation with CoT worthless. SC could cancel out mistakes by majority vote to improve performance for model of all size but the increased computational cost far out weight possible gain for small model. <code>Self-ensemble</code> weak reasoner is a waste of resource.</p>
 </section>

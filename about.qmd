@@ -5,9 +5,12 @@ about:
   template: solana
 ---
 
-I'm `Lucas Shen`, independent researcher interested in cryptography and AI.
+I'm Lucas Shen, independent researcher interested in cryptography and AI.
 
-Cryptography gives options. AI enhances capabilities. Together, they make autonomy affordable at scale.
+- Cryptography enables pseudonymity and information exchange without centralized point of failure.  
+- AI enhances and complements human.  
+
+Together, with decent personal computation power, autonomy could be affordable at scale.
 
 [nostr](https://github.com/nostr-protocol/nostr): `npub1tk5wx0cgsthysderdmr5f2pm5yc094qlsr94l2tcy7dyp7hararqdy62tt`
 
