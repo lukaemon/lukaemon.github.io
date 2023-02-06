@@ -61,7 +61,12 @@ Lucas Shen. 2023. <span>“Humor in AI.”</span> February 5, 2023. <a href="htt
 
 
 
-<p><img src="https://lukaemon.github.io/posts/2023/sc-cot/sc.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/sc-cot/sc.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">Wang et al. (2022)</span></figcaption><p></p>
+</figure>
+</div>
 <section id="reasoning" class="level2">
 <h2 class="anchored" data-anchor-id="reasoning">Reasoning</h2>
 <blockquote class="blockquote">
@@ -145,7 +150,7 @@ February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/sc-cot">https:/
   <category>rationale engineering</category>
   <guid>https://lukaemon.github.io/posts/2023/sc-cot/index.html</guid>
   <pubDate>Sat, 04 Feb 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023/sc-cot/sc.png" medium="image" type="image/png" height="62" width="144"/>
+  <media:content url="https://lukaemon.github.io/posts/2023/sc-cot/sc.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 </channel>
 </rss>

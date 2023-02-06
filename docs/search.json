@@ -7,6 +7,13 @@
     "text": "Humor is preconditioned on the ability to see the bright side of something. One has to be able to see many sides, consciously choose the funny, optimistic interpretation and express in a way that resonates with target audiences. It shows both raw intelligence and wisdom.\nTo detect humor and be humorous, grounding is necessary. Grounding to me is weaving modalities. Just a fancy way of saying having sampled variety of experiences of certain things or events.\nFor example, to know what it really means about apple, one could write “apple”, read about it, draw, hold, throw, smell, eat, plant, cook, even share it with others. Without grounding, one can’t have acute and diversified perspectives on a thing or an event. It would be very hard to see ironic yet optimistic interpretation, be it human or AI.\nGrounding AI to full set of human experience is aligning computational humor to humans’. They may be able to see a kind of digital humor that is a bridge too far for us. Literally why Samantha in Her leaving Theodore1.1 youtube\nHumor is the ultimate Turing test. I see this as the source of Yann’s recent debate with others2. It’s the most difficult test to pass. It’s the most difficult test to create.2 tweet\n\n\n\n\n\n\nCitationBibTeX citation:@online{shen2023,\n  author = {Lucas Shen},\n  title = {Humor in {AI}},\n  date = {2023-02-05},\n  url = {https://lukaemon.github.io/posts/2023/humor-ai},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nLucas Shen. 2023. “Humor in AI.” February 5, 2023. https://lukaemon.github.io/posts/2023/humor-ai."
   },
   {
+    "objectID": "posts/2023/sc-cot/index.html",
+    "href": "posts/2023/sc-cot/index.html",
+    "title": "Self-consistency and chain of thought",
+    "section": "",
+    "text": "Wang et al. (2022)"
+  },
+  {
     "objectID": "posts/2023/sc-cot/index.html#reasoning",
     "href": "posts/2023/sc-cot/index.html#reasoning",
     "title": "Self-consistency and chain of thought",

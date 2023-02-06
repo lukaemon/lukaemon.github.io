@@ -5,3 +5,4 @@ citation: true
 freeze: true
 title-block-banner: true
 reference-location: margin
+fig-cap-location: margin
