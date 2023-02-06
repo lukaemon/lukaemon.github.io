@@ -2,8 +2,11 @@
 title: "About"
 image: asset/profile.png
 about:
-  template: solana
+  template: marquee
 ---
+> One pressing question woke him up every morning, as regularly as the screech of the whistle of the train that chugged by his cabin, on tracks built just up the hill from Walden Pond, where he’d hoped to still his soul. Were all these vast designs and rapid strides worth it? Thoreau thought not. He came to this truth: “They are but improved means to an unimproved end.”And still the trains chugged along, and the factories hummed, and the banks opened and closed, and the presses printed newspapers, and the telegraph wires reached across the nation, in one great and unending thrum.
+>
+> -- <cite>Jill Lepore, These Truths: A History of the United States</cite>
 
 I'm Lucas Shen, independent researcher interested in cryptography and AI.
 

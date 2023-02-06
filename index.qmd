@@ -1,6 +1,6 @@
 ---
 title: "🖖 Welcome"
-description: "Were all these vast designs and rapid strides worth it?"
+description: "This is my learning notes."
 listing:
   contents: posts
   sort: "date desc"
