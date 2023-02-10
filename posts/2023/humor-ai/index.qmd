@@ -5,7 +5,7 @@ date: "2023-02-05"
 categories: [grounding, multimodal]
 image: "cover.png"
 ---
-![MJ: abstract art, picasso's expression about humor --ar 16:9](humor.png)
+![MJ: abstract art, picasso's expression about humor --ar 16:9](cover.png)
 
 Humor is preconditioned on the ability to see the bright side of something. One has to be able to see many sides, consciously choose the funny, optimistic interpretation and express in a way that resonates with target audiences. It shows both raw intelligence and wisdom.
 
