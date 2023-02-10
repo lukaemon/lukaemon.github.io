@@ -245,7 +245,7 @@
   date = {2022-04-28},
   pages = {66},
   langid = {english},
-  keywords = {(ext) Flamingo,*DeepMind,cover to cover},
+  keywords = {(ext) Flamingo,*DeepMind,cover to cover,milestone,multimodal},
   file = {/Users/lukakuma/Zotero/storage/TCJCJDME/Alayrac et al. -  Flamingo a Visual Language Model for Few-Shot .pdf}
 }
 
@@ -965,6 +965,23 @@
   file = {/Users/lukakuma/Zotero/storage/YRAL3HMJ/Bartoldson et al. - 2022 - Compute-Efficient Deep Learning Algorithmic Trend.pdf;/Users/lukakuma/Zotero/storage/SF25SXBZ/2210.html}
 }
 
+@misc{bauerSpatialFunctaScaling2023,
+  title = {Spatial {{Functa}}: {{Scaling Functa}} to {{ImageNet Classification}} and {{Generation}}},
+  shorttitle = {Spatial {{Functa}}},
+  author = {Bauer, Matthias and Dupont, Emilien and Brock, Andy and Rosenbaum, Dan and Schwarz, Jonathan and Kim, Hyunjik},
+  date = {2023-02-06},
+  number = {arXiv:2302.03130},
+  eprint = {2302.03130},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.03130},
+  urldate = {2023-02-08},
+  abstract = {Neural fields, also known as implicit neural representations, have emerged as a powerful means to represent complex signals of various modalities. Based on this Dupont et al. (2022) introduce a framework that views neural fields as data, termed *functa*, and proposes to do deep learning directly on this dataset of neural fields. In this work, we show that the proposed framework faces limitations when scaling up to even moderately complex datasets such as CIFAR-10. We then propose *spatial functa*, which overcome these limitations by using spatially arranged latent representations of neural fields, thereby allowing us to scale up the approach to ImageNet-1k at 256x256 resolution. We demonstrate competitive performance to Vision Transformers (Steiner et al., 2022) on classification and Latent Diffusion (Rombach et al., 2022) on image generation respectively.},
+  archiveprefix = {arXiv},
+  file = {/Users/lukakuma/Zotero/storage/GI8CMZB8/Bauer et al. - 2023 - Spatial Functa Scaling Functa to ImageNet Classif.pdf;/Users/lukakuma/Zotero/storage/WNMZUNAK/2302.html}
+}
+
 @misc{bavarianEfficientTrainingLanguage2022,
   title = {Efficient {{Training}} of {{Language Models}} to {{Fill}} in the {{Middle}}},
   author = {Bavarian, Mohammad and Jun, Heewoo and Tezak, Nikolas and Schulman, John and McLeavey, Christine and Tworek, Jerry and Chen, Mark},
@@ -980,6 +997,15 @@
   archiveprefix = {arXiv},
   keywords = {*OpenAI,objective fn,skimed},
   file = {/Users/lukakuma/Zotero/storage/2J89TNUA/Bavarian et al. - 2022 - Efficient Training of Language Models to Fill in t.pdf;/Users/lukakuma/Zotero/storage/6PL3HM2H/2207.html}
+}
+
+@article{bayernAreAutonomousEntities2019,
+  title = {Are {{Autonomous Entities Possible}}?},
+  author = {Bayern, Shawn},
+  date = {2019-06-24},
+  journaltitle = {NULR Online},
+  url = {https://scholarlycommons.law.northwestern.edu/nulr_online/271},
+  file = {/Users/lukakuma/Zotero/storage/MKRF6ZUZ/Bayern - 2019 - Are Autonomous Entities Possible.pdf}
 }
 
 @inproceedings{bebergFoldingHomeLessons2009,
@@ -1375,7 +1401,7 @@
   urldate = {2022-09-20},
   abstract = {We enhance auto-regressive language models by conditioning on document chunks retrieved from a large corpus, based on local similarity with preceding tokens. With a \$2\$ trillion token database, our Retrieval-Enhanced Transformer (RETRO) obtains comparable performance to GPT-3 and Jurassic-1 on the Pile, despite using 25\$\textbackslash times\$ fewer parameters. After fine-tuning, RETRO performance translates to downstream knowledge-intensive tasks such as question answering. RETRO combines a frozen Bert retriever, a differentiable encoder and a chunked cross-attention mechanism to predict tokens based on an order of magnitude more data than what is typically consumed during training. We typically train RETRO from scratch, yet can also rapidly RETROfit pre-trained transformers with retrieval and still achieve good performance. Our work opens up new avenues for improving language models through explicit memory at unprecedented scale.},
   archiveprefix = {arXiv},
-  keywords = {cover to cover,retrieval},
+  keywords = {cover to cover,milestone,multimodal,retrieval},
   file = {/Users/lukakuma/Zotero/storage/WFN8WKAF/Borgeaud et al. - 2022 - Improving language models by retrieving from trill.pdf;/Users/lukakuma/Zotero/storage/WWBXJ4E4/2112.html}
 }
 
@@ -1958,6 +1984,22 @@
   file = {/Users/lukakuma/Zotero/storage/I9CJGNIG/Chanussot et al. - 2021 - The Open Catalyst 2020 (OC20) Dataset and Communit.pdf;/Users/lukakuma/Zotero/storage/34FEAEFG/2010.html}
 }
 
+@misc{chenAcceleratingLargeLanguage2023,
+  title = {Accelerating {{Large Language Model Decoding}} with {{Speculative Sampling}}},
+  author = {Chen, Charlie and Borgeaud, Sebastian and Irving, Geoffrey and Lespiau, Jean-Baptiste and Sifre, Laurent and Jumper, John},
+  date = {2023-02-02},
+  number = {arXiv:2302.01318},
+  eprint = {2302.01318},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.01318},
+  urldate = {2023-02-07},
+  abstract = {We present speculative sampling, an algorithm for accelerating transformer decoding by enabling the generation of multiple tokens from each transformer call. Our algorithm relies on the observation that the latency of parallel scoring of short continuations, generated by a faster but less powerful draft model, is comparable to that of sampling a single token from the larger target model. This is combined with a novel modified rejection sampling scheme which preserves the distribution of the target model within hardware numerics. We benchmark speculative sampling with Chinchilla, a 70 billion parameter language model, achieving a 2-2.5x decoding speedup in a distributed setup, without compromising the sample quality or making modifications to the model itself.},
+  archiveprefix = {arXiv},
+  file = {/Users/lukakuma/Zotero/storage/2EKL7XIS/Chen et al. - 2023 - Accelerating Large Language Model Decoding with Sp.pdf;/Users/lukakuma/Zotero/storage/GCGJ3NPX/2302.html}
+}
+
 @misc{chenAltCLIPAlteringLanguage2022,
   title = {{{AltCLIP}}: {{Altering}} the {{Language Encoder}} in {{CLIP}} for {{Extended Language Capabilities}}},
   shorttitle = {{{AltCLIP}}},
@@ -2173,6 +2215,7 @@
   urldate = {2022-10-18},
   abstract = {Effective scaling and a flexible task interface enable large language models to excel at many tasks. PaLI (Pathways Language and Image model) extends this approach to the joint modeling of language and vision. PaLI generates text based on visual and textual inputs, and with this interface performs many vision, language, and multimodal tasks, in many languages. To train PaLI, we make use of large pretrained encoder-decoder language models and Vision Transformers (ViTs). This allows us to capitalize on their existing capabilities and leverage the substantial cost of training them. We find that joint scaling of the vision and language components is important. Since existing Transformers for language are much larger than their vision counterparts, we train the largest ViT to date (ViT-e) to quantify the benefits from even larger-capacity vision models. To train PaLI, we create a large multilingual mix of pretraining tasks, based on a new image-text training set containing 10B images and texts in over 100 languages. PaLI achieves state-of-the-art in multiple vision and language tasks (such as captioning, visual question-answering, scene-text understanding), while retaining a simple, modular, and scalable design.},
   archiveprefix = {arXiv},
+  keywords = {multimodal},
   file = {/Users/lukakuma/Zotero/storage/SRKZTZDJ/Chen et al. - 2022 - PaLI A Jointly-Scaled Multilingual Language-Image.pdf;/Users/lukakuma/Zotero/storage/CTHPMK97/2209.html}
 }
 
@@ -4907,6 +4950,24 @@
   file = {/Users/lukakuma/Zotero/storage/ZF87CSAI/Hashemi et al. - 2020 - Guided Transformer Leveraging Multiple External S.pdf;/Users/lukakuma/Zotero/storage/X2QB98R5/2006.html}
 }
 
+@misc{hassidMoreWordsIntheWild2022,
+  title = {More than {{Words}}: {{In-the-Wild Visually-Driven Prosody}} for {{Text-to-Speech}}},
+  shorttitle = {More than {{Words}}},
+  author = {Hassid, Michael and Ramanovich, Michelle Tadmor and Shillingford, Brendan and Wang, Miaosen and Jia, Ye and Remez, Tal},
+  date = {2022-03-23},
+  number = {arXiv:2111.10139},
+  eprint = {2111.10139},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2111.10139},
+  urldate = {2023-02-07},
+  abstract = {In this paper we present VDTTS, a Visually-Driven Text-to-Speech model. Motivated by dubbing, VDTTS takes advantage of video frames as an additional input alongside text, and generates speech that matches the video signal. We demonstrate how this allows VDTTS to, unlike plain TTS models, generate speech that not only has prosodic variations like natural pauses and pitch, but is also synchronized to the input video. Experimentally, we show our model produces well-synchronized outputs, approaching the video-speech synchronization quality of the ground-truth, on several challenging benchmarks including "in-the-wild" content from VoxCeleb2. Supplementary demo videos demonstrating video-speech synchronization, robustness to speaker ID swapping, and prosody, presented at the project page.},
+  archiveprefix = {arXiv},
+  keywords = {multimodal},
+  file = {/Users/lukakuma/Zotero/storage/4Y4FDENK/Hassid et al. - 2022 - More than Words In-the-Wild Visually-Driven Proso.pdf;/Users/lukakuma/Zotero/storage/KW2WWBC9/2111.html}
+}
+
 @article{hawkinsFrameworkIntelligenceCortical2019,
   title = {A {{Framework}} for {{Intelligence}} and {{Cortical Function Based}} on {{Grid Cells}} in the {{Neocortex}}},
   author = {Hawkins, Jeff and Lewis, Marcus and Klukas, Mirko and Purdy, Scott and Ahmad, Subutai},
@@ -5103,6 +5164,7 @@
   urldate = {2022-11-22},
   abstract = {We propose a new test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However, on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the breadth and depth of a model's academic and professional understanding, our test can be used to analyze models across many tasks and to identify important shortcomings.},
   archiveprefix = {arXiv},
+  keywords = {cover to cover},
   file = {/Users/lukakuma/Zotero/storage/KR8EH7UV/Hendrycks et al. - 2021 - Measuring Massive Multitask Language Understanding.pdf;/Users/lukakuma/Zotero/storage/F9APQ5HL/2009.html}
 }
 
@@ -6009,6 +6071,22 @@
   file = {/Users/lukakuma/Zotero/storage/FLH4V9UU/Jang et al. - 2021 - BC-Z Zero-Shot Task Generalization with Robotic I.pdf}
 }
 
+@misc{jangExploringBenefitsTraining2023,
+  title = {Exploring the {{Benefits}} of {{Training Expert Language Models}} over {{Instruction Tuning}}},
+  author = {Jang, Joel and Kim, Seungone and Ye, Seonghyeon and Kim, Doyoung and Logeswaran, Lajanugen and Lee, Moontae and Lee, Kyungjae and Seo, Minjoon},
+  date = {2023-02-06},
+  number = {arXiv:2302.03202},
+  eprint = {2302.03202},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.03202},
+  urldate = {2023-02-08},
+  abstract = {Recently, Language Models (LMs) instruction-tuned on multiple tasks, also known as multitask-prompted fine-tuning (MT), have shown the capability to generalize to unseen tasks. Previous work has shown that scaling the number of training tasks is the key component in making stronger MT LMs. In this work, we report an unexpected finding that an expert LM fine-tuned on just a single task can outperform an MT LM trained with 300+ different tasks on 11 different unseen datasets and on 13 datasets of the BIG-bench benchmark by a mean accuracy of 3.20\% and 1.29\%, respectively. This finding casts doubt on the previously held belief that simply scaling the number of tasks makes stronger MT LMs. Leveraging this finding, we further show that this distributed approach of training a separate expert LM per training task instead of a single MT LM for zero-shot inference possesses many benefits including (1) avoiding negative task transfer that often occurs during instruction tuning, (2) being able to continually learn new tasks without having to re-train on previous tasks to avoid catastrophic forgetting, and (3) showing compositional capabilities when merging individual experts together. The code is available at https://github.com/joeljang/ELM.},
+  archiveprefix = {arXiv},
+  file = {/Users/lukakuma/Zotero/storage/LWKQLY9K/Jang et al. - 2023 - Exploring the Benefits of Training Expert Language.pdf;/Users/lukakuma/Zotero/storage/3Z229BCB/2302.html}
+}
+
 @misc{jannerOfflineReinforcementLearning2021,
   title = {Offline {{Reinforcement Learning}} as {{One Big Sequence Modeling Problem}}},
   author = {Janner, Michael and Li, Qiyang and Levine, Sergey},
@@ -6549,6 +6627,23 @@
   file = {/Users/lukakuma/Zotero/storage/A9WBLP92/Khan et al. - 2022 - Transformers in Vision A Survey.pdf;/Users/lukakuma/Zotero/storage/C4ZZ6XKY/2101.html}
 }
 
+@misc{khashabiUnifiedQACrossingFormat2020,
+  title = {{{UnifiedQA}}: {{Crossing Format Boundaries With}} a {{Single QA System}}},
+  shorttitle = {{{UnifiedQA}}},
+  author = {Khashabi, Daniel and Min, Sewon and Khot, Tushar and Sabharwal, Ashish and Tafjord, Oyvind and Clark, Peter and Hajishirzi, Hannaneh},
+  date = {2020-10-06},
+  number = {arXiv:2005.00700},
+  eprint = {2005.00700},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2005.00700},
+  urldate = {2023-02-07},
+  abstract = {Question answering (QA) tasks have been posed using a variety of formats, such as extractive span selection, multiple choice, etc. This has led to format-specialized models, and even to an implicit division in the QA community. We argue that such boundaries are artificial and perhaps unnecessary, given the reasoning abilities we seek to teach are not governed by the format. As evidence, we use the latest advances in language modeling to build a single pre-trained QA model, UnifiedQA, that performs surprisingly well across 17 QA datasets spanning 4 diverse formats. UnifiedQA performs on par with 9 different models that were trained on individual datasets themselves. Even when faced with 12 unseen datasets of observed formats, UnifiedQA performs surprisingly well, showing strong generalization from its out-of-format training data. Finally, simply fine-tuning this pre-trained QA model into specialized models results in a new state of the art on 6 datasets, establishing UnifiedQA as a strong starting point for building QA systems.},
+  archiveprefix = {arXiv},
+  file = {/Users/lukakuma/Zotero/storage/ZWEW23B4/Khashabi et al. - 2020 - UnifiedQA Crossing Format Boundaries With a Singl.pdf;/Users/lukakuma/Zotero/storage/6DPMKBP7/2005.html}
+}
+
 @misc{khattabDemonstrateSearchPredictComposingRetrieval2023,
   title = {Demonstrate-{{Search-Predict}}: {{Composing}} Retrieval and Language Models for Knowledge-Intensive {{NLP}}},
   shorttitle = {Demonstrate-{{Search-Predict}}},
@@ -6953,6 +7048,24 @@
   file = {/Users/lukakuma/Zotero/storage/FF5DRX42/Kunda - 1990 - The case for motivated reasoning.pdf}
 }
 
+@misc{kuoFindItGeneralizedLocalization2022,
+  title = {{{FindIt}}: {{Generalized Localization}} with {{Natural Language Queries}}},
+  shorttitle = {{{FindIt}}},
+  author = {Kuo, Weicheng and Bertsch, Fred and Li, Wei and Piergiovanni, A. J. and Saffar, Mohammad and Angelova, Anelia},
+  date = {2022-08-08},
+  number = {arXiv:2203.17273},
+  eprint = {2203.17273},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2203.17273},
+  urldate = {2023-02-07},
+  abstract = {We propose FindIt, a simple and versatile framework that unifies a variety of visual grounding and localization tasks including referring expression comprehension, text-based localization, and object detection. Key to our architecture is an efficient multi-scale fusion module that unifies the disparate localization requirements across the tasks. In addition, we discover that a standard object detector is surprisingly effective in unifying these tasks without a need for task-specific design, losses, or pre-computed detections. Our end-to-end trainable framework responds flexibly and accurately to a wide range of referring expression, localization or detection queries for zero, one, or multiple objects. Jointly trained on these tasks, FindIt outperforms the state of the art on both referring expression and text-based localization, and shows competitive performance on object detection. Finally, FindIt generalizes better to out-of-distribution data and novel categories compared to strong single-task baselines. All of these are accomplished by a single, unified and efficient model. The code will be released.},
+  archiveprefix = {arXiv},
+  keywords = {multimodal},
+  file = {/Users/lukakuma/Zotero/storage/Y428GTRB/Kuo et al. - 2022 - FindIt Generalized Localization with Natural Lang.pdf;/Users/lukakuma/Zotero/storage/KJG547ZV/2203.html}
+}
+
 @unpublished{kurinMyBodyCage2021,
   title = {My {{Body}} Is a {{Cage}}: The {{Role}} of {{Morphology}} in {{Graph-Based Incompatible Control}}},
   shorttitle = {My {{Body}} Is a {{Cage}}},
@@ -7317,7 +7430,7 @@
   urldate = {2022-12-13},
   abstract = {In this work, we explore "prompt tuning", a simple yet effective mechanism for learning "soft prompts" to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signal from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3's "few-shot" learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method "closes the gap" and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant in that large models are costly to share and serve, and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed "prefix tuning" of Li and Liang (2021), and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer, as compared to full model tuning.},
   archiveprefix = {arXiv},
-  keywords = {finetuning,parameter efficient finetuninig},
+  keywords = {finetuning,parameter efficient finetuninig,skimed},
   file = {/Users/lukakuma/Zotero/storage/RD52397I/Lester et al. - 2021 - The Power of Scale for Parameter-Efficient Prompt .pdf;/Users/lukakuma/Zotero/storage/796N9G7I/2104.html}
 }
 
@@ -7576,6 +7689,24 @@
   langid = {english},
   keywords = {cover to cover},
   file = {/Users/lukakuma/Zotero/storage/25FRFMI7/Liang et al. - 2022 - Holistic Evaluation of Language Models.pdf}
+}
+
+@misc{liBLIP2BootstrappingLanguageImage2023,
+  title = {{{BLIP-2}}: {{Bootstrapping Language-Image Pre-training}} with {{Frozen Image Encoders}} and {{Large Language Models}}},
+  shorttitle = {{{BLIP-2}}},
+  author = {Li, Junnan and Li, Dongxu and Savarese, Silvio and Hoi, Steven},
+  date = {2023-01-29},
+  number = {arXiv:2301.12597},
+  eprint = {2301.12597},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2301.12597},
+  urldate = {2023-02-07},
+  abstract = {The cost of vision-and-language pre-training has become increasingly prohibitive due to end-to-end training of large-scale models. This paper proposes BLIP-2, a generic and efficient pre-training strategy that bootstraps vision-language pre-training from off-the-shelf frozen pre-trained image encoders and frozen large language models. BLIP-2 bridges the modality gap with a lightweight Querying Transformer, which is pre-trained in two stages. The first stage bootstraps vision-language representation learning from a frozen image encoder. The second stage bootstraps vision-to-language generative learning from a frozen language model. BLIP-2 achieves state-of-the-art performance on various vision-language tasks, despite having significantly fewer trainable parameters than existing methods. For example, our model outperforms Flamingo80B by 8.7\% on zero-shot VQAv2 with 54x fewer trainable parameters. We also demonstrate the model's emerging capabilities of zero-shot image-to-text generation that can follow natural language instructions.},
+  archiveprefix = {arXiv},
+  keywords = {multimodal},
+  file = {/Users/lukakuma/Zotero/storage/9KI7CUC7/Li et al. - 2023 - BLIP-2 Bootstrapping Language-Image Pre-training .pdf;/Users/lukakuma/Zotero/storage/63U3R6AZ/2301.html}
 }
 
 @unpublished{liBLIPBootstrappingLanguageImage2022,
@@ -7884,6 +8015,22 @@
   file = {/Users/lukakuma/Zotero/storage/B3LPCKPN/Liu et al. - 2022 - Generating Wikipedia by Summarizing Long Sequences.pdf;/Users/lukakuma/Zotero/storage/T5WP38RU/forum.html}
 }
 
+@misc{liuCommonsenseAwarePromptingControllable2023,
+  title = {Commonsense-{{Aware Prompting}} for {{Controllable Empathetic Dialogue Generation}}},
+  author = {Liu, Yiren and Kilicoglu, Halil},
+  date = {2023-02-02},
+  number = {arXiv:2302.01441},
+  eprint = {2302.01441},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.01441},
+  urldate = {2023-02-08},
+  abstract = {Improving the emotional awareness of pre-trained language models is an emerging important problem for dialogue generation tasks. Although prior studies have introduced methods to improve empathetic dialogue generation, few have discussed how to incorporate commonsense knowledge into pre-trained language models for controllable dialogue generation. In this study, we propose a novel framework that improves empathetic dialogue generation using pre-trained language models by 1) incorporating commonsense knowledge through prompt verbalization, and 2) controlling dialogue generation using a strategy-driven future discriminator. We conducted experiments to reveal that both the incorporation of social commonsense knowledge and enforcement of control over generation help to improve generation performance. Finally, we discuss the implications of our study for future research.},
+  archiveprefix = {arXiv},
+  file = {/Users/lukakuma/Zotero/storage/8XERFVBY/Liu and Kilicoglu - 2023 - Commonsense-Aware Prompting for Controllable Empat.pdf;/Users/lukakuma/Zotero/storage/L8FMYURE/2302.html}
+}
+
 @unpublished{liuDiscreteValuedNeuralCommunication2021,
   title = {Discrete-{{Valued Neural Communication}}},
   author = {Liu, Dianbo and Lamb, Alex and Kawaguchi, Kenji and Goyal, Anirudh and Sun, Chen and Mozer, Michael Curtis and Bengio, Yoshua},
@@ -8073,6 +8220,23 @@
   file = {/Users/lukakuma/Zotero/storage/W53RQITE/Liu et al. - 2022 - WANLI Worker and AI Collaboration for Natural Lan.pdf;/Users/lukakuma/Zotero/storage/KGLT9TF6/2201.html}
 }
 
+@misc{liVisionFeaturesMultimodal2022,
+  title = {On {{Vision Features}} in {{Multimodal Machine Translation}}},
+  author = {Li, Bei and Lv, Chuanhao and Zhou, Zefan and Zhou, Tao and Xiao, Tong and Ma, Anxiang and Zhu, JingBo},
+  date = {2022-03-17},
+  number = {arXiv:2203.09173},
+  eprint = {2203.09173},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2203.09173},
+  urldate = {2023-02-07},
+  abstract = {Previous work on multimodal machine translation (MMT) has focused on the way of incorporating vision features into translation but little attention is on the quality of vision models. In this work, we investigate the impact of vision models on MMT. Given the fact that Transformer is becoming popular in computer vision, we experiment with various strong models (such as Vision Transformer) and enhanced features (such as object-detection and image captioning). We develop a selective attention model to study the patch-level contribution of an image in MMT. On detailed probing tasks, we find that stronger vision models are helpful for learning translation from the visual modality. Our results also suggest the need of carefully examining MMT models, especially when current benchmarks are small-scale and biased. Our code could be found at \textbackslash url\{https://github.com/libeineu/fairseq\_mmt\}.},
+  archiveprefix = {arXiv},
+  keywords = {multimodal},
+  file = {/Users/lukakuma/Zotero/storage/Y5IK3UI5/Li et al. - 2022 - On Vision Features in Multimodal Machine Translati.pdf;/Users/lukakuma/Zotero/storage/7WU4XBSE/2203.html}
+}
+
 @misc{loganivCuttingPromptsParameters2021,
   title = {Cutting {{Down}} on {{Prompts}} and {{Parameters}}: {{Simple Few-Shot Learning}} with {{Language Models}}},
   shorttitle = {Cutting {{Down}} on {{Prompts}} and {{Parameters}}},
@@ -8196,6 +8360,23 @@
   abstract = {To be successful in real-world tasks, Reinforcement Learning (RL) needs to exploit the compositional, relational, and hierarchical structure of the world, and learn to transfer it to the task at hand. Recent advances in representation learning for language make it possible to build models that acquire world knowledge from text corpora and integrate this knowledge into downstream decision making problems. We thus argue that the time is right to investigate a tight integration of natural language understanding into RL in particular. We survey the state of the field, including work on instruction following, text games, and learning from textual domain knowledge. Finally, we call for the development of new environments as well as further investigation into the potential uses of recent Natural Language Processing (NLP) techniques for such tasks.},
   archiveprefix = {arXiv},
   file = {/Users/lukakuma/Zotero/storage/7JH2BREB/Luketina et al. - 2019 - A Survey of Reinforcement Learning Informed by Nat.pdf;/Users/lukakuma/Zotero/storage/32XWHQ8V/1906.html}
+}
+
+@misc{luLearnExplainMultimodal2022,
+  title = {Learn to {{Explain}}: {{Multimodal Reasoning}} via {{Thought Chains}} for {{Science Question Answering}}},
+  shorttitle = {Learn to {{Explain}}},
+  author = {Lu, Pan and Mishra, Swaroop and Xia, Tony and Qiu, Liang and Chang, Kai-Wei and Zhu, Song-Chun and Tafjord, Oyvind and Clark, Peter and Kalyan, Ashwin},
+  date = {2022-10-17},
+  number = {arXiv:2209.09513},
+  eprint = {2209.09513},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2209.09513},
+  urldate = {2023-02-08},
+  abstract = {When answering a question, humans utilize the information available across different modalities to synthesize a consistent and complete chain of thought (CoT). This process is normally a black box in the case of deep learning models like large-scale language models. Recently, science question benchmarks have been used to diagnose the multi-hop reasoning ability and interpretability of an AI system. However, existing datasets fail to provide annotations for the answers, or are restricted to the textual-only modality, small scales, and limited domain diversity. To this end, we present Science Question Answering (ScienceQA), a new benchmark that consists of \textasciitilde 21k multimodal multiple choice questions with a diverse set of science topics and annotations of their answers with corresponding lectures and explanations. We further design language models to learn to generate lectures and explanations as the chain of thought (CoT) to mimic the multi-hop reasoning process when answering ScienceQA questions. ScienceQA demonstrates the utility of CoT in language models, as CoT improves the question answering performance by 1.20\% in few-shot GPT-3 and 3.99\% in fine-tuned UnifiedQA. We also explore the upper bound for models to leverage explanations by feeding those in the input; we observe that it improves the few-shot performance of GPT-3 by 18.96\%. Our analysis further shows that language models, similar to humans, benefit from explanations to learn from fewer data and achieve the same performance with just 40\% of the data. The data and code are available at https://scienceqa.github.io.},
+  archiveprefix = {arXiv},
+  file = {/Users/lukakuma/Zotero/storage/6HEFXFN8/Lu et al. - 2022 - Learn to Explain Multimodal Reasoning via Thought.pdf;/Users/lukakuma/Zotero/storage/ERP99EU5/2209.html}
 }
 
 @unpublished{luNeuroLogicDecodingSupervised2021,
@@ -10220,6 +10401,23 @@
   file = {/Users/lukakuma/Zotero/storage/FZW585ZZ/Piantasodi and Hill - 2022 - Meaning without reference in large language models.pdf;/Users/lukakuma/Zotero/storage/7YNXJGM5/2208.html}
 }
 
+@misc{piergiovanniVideoQuestionAnswering2022,
+  title = {Video {{Question Answering}} with {{Iterative Video-Text Co-Tokenization}}},
+  author = {Piergiovanni, A. J. and Morton, Kairo and Kuo, Weicheng and Ryoo, Michael S. and Angelova, Anelia},
+  date = {2022-08-01},
+  number = {arXiv:2208.00934},
+  eprint = {2208.00934},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2208.00934},
+  urldate = {2023-02-07},
+  abstract = {Video question answering is a challenging task that requires understanding jointly the language input, the visual information in individual video frames, as well as the temporal information about the events occurring in the video. In this paper, we propose a novel multi-stream video encoder for video question answering that uses multiple video inputs and a new video-text iterative co-tokenization approach to answer a variety of questions related to videos. We experimentally evaluate the model on several datasets, such as MSRVTT-QA, MSVD-QA, IVQA, outperforming the previous state-of-the-art by large margins. Simultaneously, our model reduces the required GFLOPs from 150-360 to only 67, producing a highly efficient video question answering model.},
+  archiveprefix = {arXiv},
+  keywords = {multimodal},
+  file = {/Users/lukakuma/Zotero/storage/LWNC8BL2/Piergiovanni et al. - 2022 - Video Question Answering with Iterative Video-Text.pdf;/Users/lukakuma/Zotero/storage/48PTCS3N/2208.html}
+}
+
 @video{pieterabbeelCVPR2021Keynote2021,
   title = {{{CVPR}} 2021 {{Keynote}} -- {{Pieter Abbeel}} -- {{Towards}} a {{General Solution}} for {{Robotics}}.},
   editor = {{Pieter Abbeel}},
@@ -10411,7 +10609,7 @@
   urldate = {2022-11-20},
   abstract = {We investigate the ability of language models to perform compositional reasoning tasks where the overall solution depends on correctly composing the answers to sub-problems. We measure how often models can correctly answer all sub-problems but not generate the overall solution, a ratio we call the compositionality gap. We evaluate this ratio by asking multi-hop questions with answers that require composing multiple facts unlikely to have been observed together during pretraining. In the GPT-3 family of models, as model size increases we show that the single-hop question answering performance improves faster than the multi-hop performance does, therefore the compositionality gap does not decrease. This surprising result suggests that while more powerful models memorize and recall more factual knowledge, they show no corresponding improvement in their ability to perform this kind of compositional reasoning. We then demonstrate how elicitive prompting (such as chain of thought) narrows the compositionality gap by reasoning explicitly instead of implicitly. We present a new method, self-ask, that further improves on chain of thought. In our method, the model explicitly asks itself (and then answers) follow-up questions before answering the initial question. We finally show that self-ask's structured prompting lets us easily plug in a search engine to answer the follow-up questions, which additionally improves accuracy.},
   archiveprefix = {arXiv},
-  keywords = {informal reasoning},
+  keywords = {informal reasoning,retrieval},
   file = {/Users/lukakuma/Zotero/storage/M4C98QD7/Press et al. - 2022 - Measuring and Narrowing the Compositionality Gap i.pdf;/Users/lukakuma/Zotero/storage/BPMKGZY6/2210.html}
 }
 
@@ -10430,6 +10628,14 @@
   abstract = {Since the introduction of the transformer model by Vaswani et al. (2017), a fundamental question has yet to be answered: how does a model achieve extrapolation at inference time for sequences that are longer than it saw during training? We first show that extrapolation can be enabled by simply changing the position representation method, though we find that current methods do not allow for efficient extrapolation. We therefore introduce a simpler and more efficient position method, Attention with Linear Biases (ALiBi). ALiBi does not add positional embeddings to word embeddings; instead, it biases query-key attention scores with a penalty that is proportional to their distance. We show that this method trains a 1.3 billion parameter model on input sequences of length 1024 that extrapolates to input sequences of length 2048, achieving the same perplexity as a sinusoidal position embedding model trained on inputs of length 2048 but training 11\% faster and using 11\% less memory. ALiBi's inductive bias towards recency also leads it to outperform multiple strong position methods on the WikiText-103 benchmark.},
   archiveprefix = {arXiv},
   file = {/Users/lukakuma/Zotero/storage/K2V92N5U/Press et al. - 2022 - Train Short, Test Long Attention with Linear Bias.pdf;/Users/lukakuma/Zotero/storage/T8AVXJXI/2108.html}
+}
+
+@online{ProgrammingLanguageFuture,
+  title = {A {{Programming Language}} for {{Future Interests}} | {{Yale Journal}} of {{Law}} \& {{Technology}}},
+  date = {2022},
+  url = {https://yjolt.org/programming-language-future-interests},
+  urldate = {2023-02-08},
+  file = {/Users/lukakuma/Zotero/storage/WDXKU6MT/grimmelmann_-_a_programming_language_for_future_interests.pdf;/Users/lukakuma/Zotero/storage/H2P6PPHD/programming-language-future-interests.html}
 }
 
 @inproceedings{punyFrameAveragingInvariant2021,
@@ -11665,6 +11871,7 @@
   urldate = {2023-02-02},
   abstract = {Large language models have achieved impressive performance on various natural language processing tasks. However, so far they have been evaluated primarily on benchmarks where all information in the input context is relevant for solving the task. In this work, we investigate the distractibility of large language models, i.e., how the model problem-solving accuracy can be influenced by irrelevant context. In particular, we introduce Grade-School Math with Irrelevant Context (GSM-IC), an arithmetic reasoning dataset with irrelevant information in the problem description. We use this benchmark to measure the distractibility of cutting-edge prompting techniques for large language models, and find that the model performance is dramatically decreased when irrelevant information is included. We also identify several approaches for mitigating this deficiency, such as decoding with self-consistency and adding to the prompt an instruction that tells the language model to ignore the irrelevant information.},
   archiveprefix = {arXiv},
+  keywords = {rationale engr},
   file = {/Users/lukakuma/Zotero/storage/5QRKLDFI/Shi et al. - 2023 - Large Language Models Can Be Easily Distracted by .pdf;/Users/lukakuma/Zotero/storage/LA7ZFHW2/2302.html}
 }
 
@@ -11935,7 +12142,7 @@
   urldate = {2023-01-09},
   abstract = {Large language models (LLMs) have demonstrated impressive capabilities in natural language understanding and generation, but the quality bar for medical and clinical applications is high. Today, attempts to assess models' clinical knowledge typically rely on automated evaluations on limited benchmarks. There is no standard to evaluate model predictions and reasoning across a breadth of tasks. To address this, we present MultiMedQA, a benchmark combining six existing open question answering datasets spanning professional medical exams, research, and consumer queries; and HealthSearchQA, a new free-response dataset of medical questions searched online. We propose a framework for human evaluation of model answers along multiple axes including factuality, precision, possible harm, and bias. In addition, we evaluate PaLM (a 540-billion parameter LLM) and its instruction-tuned variant, Flan-PaLM, on MultiMedQA. Using a combination of prompting strategies, Flan-PaLM achieves state-of-the-art accuracy on every MultiMedQA multiple-choice dataset (MedQA, MedMCQA, PubMedQA, MMLU clinical topics), including 67.6\% accuracy on MedQA (US Medical License Exam questions), surpassing prior state-of-the-art by over 17\%. However, human evaluation reveals key gaps in Flan-PaLM responses. To resolve this we introduce instruction prompt tuning, a parameter-efficient approach for aligning LLMs to new domains using a few exemplars. The resulting model, Med-PaLM, performs encouragingly, but remains inferior to clinicians. We show that comprehension, recall of knowledge, and medical reasoning improve with model scale and instruction prompt tuning, suggesting the potential utility of LLMs in medicine. Our human evaluations reveal important limitations of today's models, reinforcing the importance of both evaluation frameworks and method development in creating safe, helpful LLM models for clinical applications.},
   archiveprefix = {arXiv},
-  keywords = {milestone},
+  keywords = {cover to cover,milestone},
   file = {/Users/lukakuma/Zotero/storage/2I85D4BQ/Singhal et al. - 2022 - Large Language Models Encode Clinical Knowledge.pdf;/Users/lukakuma/Zotero/storage/CNYH4DBL/2212.html}
 }
 
@@ -13245,6 +13452,23 @@
   file = {/Users/lukakuma/Zotero/storage/IEG9BHPA/Wang et al. - 2022 - AdaMix Mixture-of-Adaptations for Parameter-effic.pdf;/Users/lukakuma/Zotero/storage/GBA6MSC6/2205.html}
 }
 
+@misc{wangDescribeExplainPlan2023,
+  title = {Describe, {{Explain}}, {{Plan}} and {{Select}}: {{Interactive Planning}} with {{Large Language Models Enables Open-World Multi-Task Agents}}},
+  shorttitle = {Describe, {{Explain}}, {{Plan}} and {{Select}}},
+  author = {Wang, Zihao and Cai, Shaofei and Liu, Anji and Ma, Xiaojian and Liang, Yitao},
+  date = {2023-02-03},
+  number = {arXiv:2302.01560},
+  eprint = {2302.01560},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.01560},
+  urldate = {2023-02-07},
+  abstract = {In this paper, we study the problem of planning in Minecraft, a popular, democratized yet challenging open-ended environment for developing multi-task embodied agents. We've found two primary challenges of empowering such agents with planning: 1) planning in an open-ended world like Minecraft requires precise and multi-step reasoning due to the long-term nature of the tasks, and 2) as vanilla planners do not consider the proximity to the current agent when ordering parallel sub-goals within a complicated plan, the resulting plan could be inefficient. To this end, we propose "Describe, Explain, Plan and Select" (DEPS), an interactive planning approach based on Large Language Models (LLMs). Our approach helps with better error correction from the feedback during the long-haul planning, while also bringing the sense of proximity via goal Selector, a learnable module that ranks parallel sub-goals based on the estimated steps of completion and improves the original plan accordingly. Our experiments mark the milestone of the first multi-task agent that can robustly accomplish 70+ Minecraft tasks and nearly doubles the overall performances. Finally, the ablation and exploratory studies detail how our design beats the counterparts and provide a promising update on the \$\textbackslash texttt\{ObtainDiamond\}\$ grand challenge with our approach. The code is released at https://github.com/CraftJarvis/MC-Planner.},
+  archiveprefix = {arXiv},
+  file = {/Users/lukakuma/Zotero/storage/L2JS745C/Wang et al. - 2023 - Describe, Explain, Plan and Select Interactive Pl.pdf;/Users/lukakuma/Zotero/storage/SRMCFUYP/2302.html}
+}
+
 @unpublished{wangDynamicGraphCNN2019,
   title = {Dynamic {{Graph CNN}} for {{Learning}} on {{Point Clouds}}},
   author = {Wang, Yue and Sun, Yongbin and Liu, Ziwei and Sarma, Sanjay E. and Bronstein, Michael M. and Solomon, Justin M.},
@@ -13625,6 +13849,23 @@
   abstract = {It has been almost two years since my last post on attention. Recent progress on new and enhanced versions of Transformer motivates me to write another post on this specific topic, focusing on how the vanilla Transformer can be improved for longer-term attention span, less memory and computation consumption, RL task solving and more. Notations    Symbol Meaning     \$d\$ The model size / hidden state dimension / positional encoding size.},
   langid = {english},
   file = {/Users/lukakuma/Zotero/storage/TEK6RNXS/2020-04-07-the-transformer-family.html}
+}
+
+@misc{wenHardPromptsMade2023,
+  title = {Hard {{Prompts Made Easy}}: {{Gradient-Based Discrete Optimization}} for {{Prompt Tuning}} and {{Discovery}}},
+  shorttitle = {Hard {{Prompts Made Easy}}},
+  author = {Wen, Yuxin and Jain, Neel and Kirchenbauer, John and Goldblum, Micah and Geiping, Jonas and Goldstein, Tom},
+  date = {2023-02-07},
+  number = {arXiv:2302.03668},
+  eprint = {2302.03668},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.03668},
+  urldate = {2023-02-08},
+  abstract = {The strength of modern generative models lies in their ability to be controlled through text-based prompts. Typical "hard" prompts are made from interpretable words and tokens, and must be hand-crafted by humans. There are also "soft" prompts, which consist of continuous feature vectors. These can be discovered using powerful optimization methods, but they cannot be easily interpreted, re-used across models, or plugged into a text-based interface. We describe an approach to robustly optimize hard text prompts through efficient gradient-based optimization. Our approach automatically generates hard text-based prompts for both text-to-image and text-to-text applications. In the text-to-image setting, the method creates hard prompts for diffusion models, allowing API users to easily generate, discover, and mix and match image concepts without prior knowledge on how to prompt the model. In the text-to-text setting, we show that hard prompts can be automatically discovered that are effective in tuning LMs for classification.},
+  archiveprefix = {arXiv},
+  file = {/Users/lukakuma/Zotero/storage/FGEW7VLZ/Wen et al. - 2023 - Hard Prompts Made Easy Gradient-Based Discrete Op.pdf;/Users/lukakuma/Zotero/storage/Y9XXAMRY/2302.html}
 }
 
 @misc{wenzekCCNetExtractingHigh2019,
@@ -14577,7 +14818,7 @@
   urldate = {2022-11-17},
   abstract = {Generating step-by-step "chain-of-thought" rationales improves language model performance on complex reasoning tasks like mathematics or commonsense question-answering. However, inducing language model rationale generation currently requires either constructing massive rationale datasets or sacrificing accuracy by using only few-shot inference. We propose a technique to iteratively leverage a small number of rationale examples and a large dataset without rationales, to bootstrap the ability to perform successively more complex reasoning. This technique, the "Self-Taught Reasoner" (STaR), relies on a simple loop: generate rationales to answer many questions, prompted with a few rationale examples; if the generated answers are wrong, try again to generate a rationale given the correct answer; fine-tune on all the rationales that ultimately yielded correct answers; repeat. We show that STaR significantly improves performance on multiple datasets compared to a model fine-tuned to directly predict final answers, and performs comparably to fine-tuning a 30\$\textbackslash times\$ larger state-of-the-art language model on CommensenseQA. Thus, STaR lets a model improve itself by learning from its own generated reasoning.},
   archiveprefix = {arXiv},
-  keywords = {informal reasoning},
+  keywords = {informal reasoning,rationale engr},
   file = {/Users/lukakuma/Zotero/storage/6XLWLH5G/Zelikman et al. - 2022 - STaR Bootstrapping Reasoning With Reasoning.pdf;/Users/lukakuma/Zotero/storage/BX3YAZD9/2203.html}
 }
 
@@ -14625,6 +14866,24 @@
   file = {/Users/lukakuma/Zotero/storage/MLG9FJMY/zero-inference.html}
 }
 
+@misc{zhaiLiTZeroShotTransfer2022,
+  title = {{{LiT}}: {{Zero-Shot Transfer}} with {{Locked-image}} Text {{Tuning}}},
+  shorttitle = {{{LiT}}},
+  author = {Zhai, Xiaohua and Wang, Xiao and Mustafa, Basil and Steiner, Andreas and Keysers, Daniel and Kolesnikov, Alexander and Beyer, Lucas},
+  date = {2022-06-22},
+  number = {arXiv:2111.07991},
+  eprint = {2111.07991},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2111.07991},
+  urldate = {2023-02-07},
+  abstract = {This paper presents contrastive-tuning, a simple method employing contrastive training to align image and text models while still taking advantage of their pre-training. In our empirical study we find that locked pre-trained image models with unlocked text models work best. We call this instance of contrastive-tuning "Locked-image Tuning" (LiT), which just teaches a text model to read out good representations from a pre-trained image model for new tasks. A LiT model gains the capability of zero-shot transfer to new vision tasks, such as image classification or retrieval. The proposed LiT is widely applicable; it works reliably with multiple pre-training methods (supervised and unsupervised) and across diverse architectures (ResNet, Vision Transformers and MLP-Mixer) using three different image-text datasets. With the transformer-based pre-trained ViT-g/14 model, the LiT model achieves 85.2\% zero-shot transfer accuracy on the ImageNet test set, and 82.5\% on the challenging out-of-distribution ObjectNet test set.},
+  archiveprefix = {arXiv},
+  keywords = {multimodal},
+  file = {/Users/lukakuma/Zotero/storage/ZCL5XI28/Zhai et al. - 2022 - LiT Zero-Shot Transfer with Locked-image text Tun.pdf;/Users/lukakuma/Zotero/storage/46W7ME24/2111.html}
+}
+
 @misc{zhangAutomaticChainThought2022,
   title = {Automatic {{Chain}} of {{Thought Prompting}} in {{Large Language Models}}},
   author = {Zhang, Zhuosheng and Zhang, Aston and Li, Mu and Smola, Alex},
@@ -14638,7 +14897,7 @@
   urldate = {2022-10-25},
   abstract = {Large language models (LLMs) can perform complex reasoning by generating intermediate reasoning steps. Providing these steps for prompting demonstrations is called chain-of-thought (CoT) prompting. CoT prompting has two major paradigms. One leverages a simple prompt like "Let's think step by step" to facilitate step-by-step thinking before answering a question. The other uses a few manual demonstrations one by one, each composed of a question and a reasoning chain that leads to an answer. The superior performance of the second paradigm hinges on the hand-crafting of task-specific demonstrations one by one. We show that such manual efforts may be eliminated by leveraging LLMs with the "Let's think step by step" prompt to generate reasoning chains for demonstrations one by one, i.e., let's think not just step by step, but also one by one. However, these generated chains often come with mistakes. To mitigate the effect of such mistakes, we find that diversity matters for automatically constructing demonstrations. We propose an automatic CoT prompting method: Auto-CoT. It samples questions with diversity and generates reasoning chains to construct demonstrations. On ten public benchmark reasoning tasks with GPT-3, Auto-CoT consistently matches or exceeds the performance of the CoT paradigm that requires manual designs of demonstrations. Code is available at https://github.com/amazon-research/auto-cot},
   archiveprefix = {arXiv},
-  keywords = {informal reasoning},
+  keywords = {informal reasoning,rationale engr},
   file = {/Users/lukakuma/Zotero/storage/UDQIQE9U/Zhang et al. - 2022 - Automatic Chain of Thought Prompting in Large Lang.pdf;/Users/lukakuma/Zotero/storage/HS9QVNNI/2210.html}
 }
 

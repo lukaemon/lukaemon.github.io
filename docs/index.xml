@@ -8,9 +8,382 @@
 <title>Lucas Shen</title>
 <link>https://lukaemon.github.io/index.html</link>
 <atom:link href="https://lukaemon.github.io/index.xml" rel="self" type="application/rss+xml"/>
-<description>to my log of self-play</description>
+<description>to my self-play</description>
 <generator>quarto-1.2.280</generator>
-<lastBuildDate>Sat, 04 Feb 2023 16:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 09 Feb 2023 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>Hello, world! Huggingface T5 finetuning</title>
+  <dc:creator>Lucas Shen</dc:creator>
+  <link>https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/samsum.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>A learning note from reproducing this <a href="https://www.philschmid.de/fine-tune-flan-t5">amazing post from Philipp</a>.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;">import</span> os</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="im" style="color: #00769E;">from</span> transformers <span class="im" style="color: #00769E;">import</span> (</span>
+<span id="cb1-4">    AutoTokenizer,</span>
+<span id="cb1-5">    AutoModelForSeq2SeqLM,</span>
+<span id="cb1-6">    Seq2SeqTrainingArguments,</span>
+<span id="cb1-7">    DataCollatorForSeq2Seq,</span>
+<span id="cb1-8">    Seq2SeqTrainer,</span>
+<span id="cb1-9">)</span>
+<span id="cb1-10"><span class="im" style="color: #00769E;">from</span> datasets <span class="im" style="color: #00769E;">import</span> load_dataset</span>
+<span id="cb1-11"><span class="im" style="color: #00769E;">import</span> evaluate</span>
+<span id="cb1-12"><span class="im" style="color: #00769E;">import</span> nltk</span>
+<span id="cb1-13"><span class="im" style="color: #00769E;">import</span> numpy <span class="im" style="color: #00769E;">as</span> np</span>
+<span id="cb1-14"><span class="im" style="color: #00769E;">import</span> pandas <span class="im" style="color: #00769E;">as</span> pd</span>
+<span id="cb1-15"><span class="im" style="color: #00769E;">import</span> wandb</span>
+<span id="cb1-16"></span>
+<span id="cb1-17">nltk.download(<span class="st" style="color: #20794D;">"punkt"</span>, quiet<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span></code></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">checkpoint <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"google/flan-t5-base"</span></span>
+<span id="cb2-2">dataset_name <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"samsum"</span></span>
+<span id="cb2-3"></span>
+<span id="cb2-4">ft_output_dir <span class="op" style="color: #5E5E5E;">=</span> os.getenv(<span class="st" style="color: #20794D;">"HF_FINETUNE_OUTPUT_DIR"</span>)</span>
+<span id="cb2-5">model_name <span class="op" style="color: #5E5E5E;">=</span> checkpoint.split(<span class="st" style="color: #20794D;">"/"</span>)[<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>]</span>
+<span id="cb2-6">hub_model_id <span class="op" style="color: #5E5E5E;">=</span> <span class="ss" style="color: #20794D;">f"</span><span class="sc" style="color: #5E5E5E;">{</span>model_name<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;">-</span><span class="sc" style="color: #5E5E5E;">{</span>dataset_name<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;">"</span></span>
+<span id="cb2-7">model_output_dir <span class="op" style="color: #5E5E5E;">=</span> os.path.join(ft_output_dir, hub_model_id)</span>
+<span id="cb2-8"></span>
+<span id="cb2-9">os.environ[<span class="st" style="color: #20794D;">"WANDB_PROJECT"</span>] <span class="op" style="color: #5E5E5E;">=</span> hub_model_id</span></code></pre></div>
+</details>
+</div>
+<section id="load-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="load-dataset">Load dataset</h2>
+<p><code>samsum</code> is a conversation dataset. The goal is to summarize a conversation. Dataset is available on <a href="https://huggingface.co/datasets/samsum">Huggingface</a>.</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">ds <span class="op" style="color: #5E5E5E;">=</span> load_dataset(dataset_name)</span>
+<span id="cb3-2">ds</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"d8e2dd6627d6431f8867e0616b3ced63","version_major":2,"version_minor":0}
+</script>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>DatasetDict({
+    train: Dataset({
+        features: ['id', 'dialogue', 'summary'],
+        num_rows: 14732
+    })
+    test: Dataset({
+        features: ['id', 'dialogue', 'summary'],
+        num_rows: 819
+    })
+    validation: Dataset({
+        features: ['id', 'dialogue', 'summary'],
+        num_rows: 818
+    })
+})</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">example <span class="op" style="color: #5E5E5E;">=</span> ds[<span class="st" style="color: #20794D;">"train"</span>][<span class="dv" style="color: #AD0000;">0</span>]</span>
+<span id="cb5-2">example</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>{'id': '13818513',
+ 'dialogue': "Amanda: I baked  cookies. Do you want some?\r\nJerry: Sure!\r\nAmanda: I'll bring you tomorrow :-)",
+ 'summary': 'Amanda baked cookies and will bring Jerry some tomorrow.'}</code></pre>
+</div>
+</div>
+</section>
+<section id="max_length-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="max_length-analysis"><code>max_length</code> analysis</h2>
+<p>Investigate <a href="https://huggingface.co/docs/transformers/main/en/pad_truncation#padding-and-truncation">truncation and padding</a> to get statistics on dialogue and summary token length.</p>
+<p>Outlier long input may cause out of memory error during training.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">model <span class="op" style="color: #5E5E5E;">=</span> AutoModelForSeq2SeqLM.from_pretrained(checkpoint)</span>
+<span id="cb7-2">model.parallelize()</span>
+<span id="cb7-3"></span>
+<span id="cb7-4">tokenizer <span class="op" style="color: #5E5E5E;">=</span> AutoTokenizer.from_pretrained(checkpoint)</span></code></pre></div>
+</div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">tk_dialogue <span class="op" style="color: #5E5E5E;">=</span> tokenizer(ds[<span class="st" style="color: #20794D;">"train"</span>][<span class="st" style="color: #20794D;">"dialogue"</span>])[<span class="st" style="color: #20794D;">"input_ids"</span>]</span>
+<span id="cb8-2">tk_summary <span class="op" style="color: #5E5E5E;">=</span> tokenizer(ds[<span class="st" style="color: #20794D;">"train"</span>][<span class="st" style="color: #20794D;">"summary"</span>])[<span class="st" style="color: #20794D;">"input_ids"</span>]</span>
+<span id="cb8-3">pd.set_option(<span class="st" style="color: #20794D;">'display.float_format'</span>, <span class="kw" style="color: #003B4F;">lambda</span> x: <span class="st" style="color: #20794D;">'</span><span class="sc" style="color: #5E5E5E;">%.1f</span><span class="st" style="color: #20794D;">'</span> <span class="op" style="color: #5E5E5E;">%</span> x)</span>
+<span id="cb8-4"></span>
+<span id="cb8-5">df <span class="op" style="color: #5E5E5E;">=</span> pd.DataFrame(</span>
+<span id="cb8-6">    {<span class="st" style="color: #20794D;">"dialogue"</span>: [<span class="bu" style="color: null;">len</span>(d) <span class="cf" style="color: #003B4F;">for</span> d <span class="kw" style="color: #003B4F;">in</span> tk_dialogue], <span class="st" style="color: #20794D;">"summary"</span>: [<span class="bu" style="color: null;">len</span>(s) <span class="cf" style="color: #003B4F;">for</span> s <span class="kw" style="color: #003B4F;">in</span> tk_summary]}</span>
+<span id="cb8-7">)</span>
+<span id="cb8-8"><span class="bu" style="color: null;">print</span>(df.describe())</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       dialogue  summary
+count   14732.0  14732.0
+mean      149.0     28.9
+std       110.7     15.1
+min         1.0      2.0
+25%        66.0     17.0
+50%       120.0     26.0
+75%       202.0     37.0
+max      1153.0     94.0</code></pre>
+</div>
+</div>
+<p>My first hunch is I shouldn’t truncate the input. Just need to pad to the longest of the batch. The setting would be <code>tokenizer(batch_sentences, padding=True)</code>.</p>
+<p>However, it seems that <a href="https://twitter.com/RamaswmySridhar/status/1621870502766858241">truncation is inevitable in production</a>. You need to find a balance and curb the long input outlier.</p>
+<p>For this dataset, 1153 max is not too crazy.</p>
+<section id="padding-experiments" class="level3">
+<h3 class="anchored" data-anchor-id="padding-experiments">Padding experiments</h3>
+<p>Let’s experiment with different padding strategy and how it affects the following batching and training.</p>
+<p>First, do it without truncation:</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1">tk_dialogue <span class="op" style="color: #5E5E5E;">=</span> tokenizer(ds[<span class="st" style="color: #20794D;">"train"</span>][<span class="st" style="color: #20794D;">"dialogue"</span>], padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)[<span class="st" style="color: #20794D;">"input_ids"</span>]</span>
+<span id="cb10-2">tk_summary <span class="op" style="color: #5E5E5E;">=</span> tokenizer(ds[<span class="st" style="color: #20794D;">"train"</span>][<span class="st" style="color: #20794D;">"summary"</span>], padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)[<span class="st" style="color: #20794D;">"input_ids"</span>]</span>
+<span id="cb10-3">pd.set_option(<span class="st" style="color: #20794D;">'display.float_format'</span>, <span class="kw" style="color: #003B4F;">lambda</span> x: <span class="st" style="color: #20794D;">'</span><span class="sc" style="color: #5E5E5E;">%.1f</span><span class="st" style="color: #20794D;">'</span> <span class="op" style="color: #5E5E5E;">%</span> x)</span>
+<span id="cb10-4"></span>
+<span id="cb10-5">df <span class="op" style="color: #5E5E5E;">=</span> pd.DataFrame(</span>
+<span id="cb10-6">    {<span class="st" style="color: #20794D;">"dialogue"</span>: [<span class="bu" style="color: null;">len</span>(d) <span class="cf" style="color: #003B4F;">for</span> d <span class="kw" style="color: #003B4F;">in</span> tk_dialogue], <span class="st" style="color: #20794D;">"summary"</span>: [<span class="bu" style="color: null;">len</span>(s) <span class="cf" style="color: #003B4F;">for</span> s <span class="kw" style="color: #003B4F;">in</span> tk_summary]}</span>
+<span id="cb10-7">)</span>
+<span id="cb10-8"><span class="bu" style="color: null;">print</span>(df.describe())</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       dialogue  summary
+count   14732.0  14732.0
+mean     1153.0     94.0
+std         0.0      0.0
+min      1153.0     94.0
+25%      1153.0     94.0
+50%      1153.0     94.0
+75%      1153.0     94.0
+max      1153.0     94.0</code></pre>
+</div>
+</div>
+<p>Expected result. This is literally treating the whole training corpus as one full batch. All sequences are pad to the max length, 1153.</p>
+<p>Try this idea with <code>batch_size = 8</code> in dataloader.</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="im" style="color: #00769E;">from</span> torch.utils.data <span class="im" style="color: #00769E;">import</span> DataLoader</span>
+<span id="cb12-2"></span>
+<span id="cb12-3">collator <span class="op" style="color: #5E5E5E;">=</span> DataCollatorForSeq2Seq(tokenizer, padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
+<span id="cb12-4">dl <span class="op" style="color: #5E5E5E;">=</span> DataLoader(ds[<span class="st" style="color: #20794D;">'train'</span>].with_transform(<span class="kw" style="color: #003B4F;">lambda</span> x: tokenizer(x[<span class="st" style="color: #20794D;">'dialogue'</span>])), batch_size<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>, collate_fn<span class="op" style="color: #5E5E5E;">=</span>collator)</span>
+<span id="cb12-5"></span>
+<span id="cb12-6"></span>
+<span id="cb12-7">tk_batched <span class="op" style="color: #5E5E5E;">=</span> np.array([batch[<span class="st" style="color: #20794D;">'input_ids'</span>].shape[<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>] <span class="cf" style="color: #003B4F;">for</span> batch <span class="kw" style="color: #003B4F;">in</span> dl])</span>
+<span id="cb12-8"></span>
+<span id="cb12-9"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(tk_batched), <span class="bu" style="color: null;">len</span>(dl))</span>
+<span id="cb12-10"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(np.unique(tk_batched)))</span>
+<span id="cb12-11"></span>
+<span id="cb12-12">np.unique(tk_batched).<span class="bu" style="color: null;">max</span>(), np.unique(tk_batched).mean(), np.unique(tk_batched).<span class="bu" style="color: null;">min</span>()b</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1842 1842
+482</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>(1153, 389.02904564315355, 92)</code></pre>
+</div>
+</div>
+<p>1842 batches, with 482 unique length. This is fine for <code>pytorch</code> but would be brutal for jax jit since every change of input shape would <a href="https://huggingface.co/docs/transformers/main/en/model_doc/t5#training">trigger jit recompilation</a>.</p>
+<blockquote class="blockquote">
+<p>If training on TPU, it is recommended to pad all examples of the dataset to the same length or make use of pad_to_multiple_of to have a small number of predefined bucket sizes to fit all examples in. Dynamically padding batches to the longest example is not recommended on TPU as it triggers a recompilation for every batch shape that is encountered during training thus significantly slowing down the training. only padding up to the longest example in a batch) leads to very slow training on TPU.</p>
+</blockquote>
+<p>The part of only padding to the longest leads to slow training applies to <code>pytorch</code> as well.</p>
+<p>Try <code>pad_to_multiple_of=8</code> to curb the variance of token length in batches.</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1">collator <span class="op" style="color: #5E5E5E;">=</span> DataCollatorForSeq2Seq(tokenizer, padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>, pad_to_multiple_of<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>)</span>
+<span id="cb15-2">dl <span class="op" style="color: #5E5E5E;">=</span> DataLoader(ds[<span class="st" style="color: #20794D;">'train'</span>].with_transform(<span class="kw" style="color: #003B4F;">lambda</span> x: tokenizer(x[<span class="st" style="color: #20794D;">'dialogue'</span>])), batch_size<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>, collate_fn<span class="op" style="color: #5E5E5E;">=</span>collator)</span>
+<span id="cb15-3"></span>
+<span id="cb15-4"></span>
+<span id="cb15-5">tk_batched <span class="op" style="color: #5E5E5E;">=</span> np.array([batch[<span class="st" style="color: #20794D;">'input_ids'</span>].shape[<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>] <span class="cf" style="color: #003B4F;">for</span> batch <span class="kw" style="color: #003B4F;">in</span> dl])</span>
+<span id="cb15-6"></span>
+<span id="cb15-7"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(tk_batched), <span class="bu" style="color: null;">len</span>(dl))</span>
+<span id="cb15-8"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(np.unique(tk_batched)))</span>
+<span id="cb15-9"></span>
+<span id="cb15-10">np.unique(tk_batched).<span class="bu" style="color: null;">max</span>(), np.unique(tk_batched).mean(), np.unique(tk_batched).<span class="bu" style="color: null;">min</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1842 1842
+91</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>(1160, 485.27472527472526, 96)</code></pre>
+</div>
+</div>
+<p>1842 batches with 91 unique lengths, much better.</p>
+</section>
+<section id="truncation-experiment" class="level3">
+<h3 class="anchored" data-anchor-id="truncation-experiment">Truncation experiment</h3>
+<p>How does <code>truncation=True</code> change anything? According to huggingface doc: <code>tokenizer(batch_sentences, padding=True, truncation=True)</code> has the same effect as <code>tokenizer(batch_sentences, padding=True)</code>, both padding to max sequence in batch.</p>
+<p>Let’s try it out.</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1">collator <span class="op" style="color: #5E5E5E;">=</span> DataCollatorForSeq2Seq(tokenizer, padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>, pad_to_multiple_of<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>)</span>
+<span id="cb18-2">dl <span class="op" style="color: #5E5E5E;">=</span> DataLoader(ds[<span class="st" style="color: #20794D;">'train'</span>].with_transform(<span class="kw" style="color: #003B4F;">lambda</span> x: tokenizer(x[<span class="st" style="color: #20794D;">'dialogue'</span>], truncation<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)), batch_size<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>, collate_fn<span class="op" style="color: #5E5E5E;">=</span>collator)</span>
+<span id="cb18-3"></span>
+<span id="cb18-4"></span>
+<span id="cb18-5">tk_batched <span class="op" style="color: #5E5E5E;">=</span> np.array([batch[<span class="st" style="color: #20794D;">'input_ids'</span>].shape[<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>] <span class="cf" style="color: #003B4F;">for</span> batch <span class="kw" style="color: #003B4F;">in</span> dl])</span>
+<span id="cb18-6"></span>
+<span id="cb18-7"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(tk_batched), <span class="bu" style="color: null;">len</span>(dl))</span>
+<span id="cb18-8"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(np.unique(tk_batched)))</span>
+<span id="cb18-9"></span>
+<span id="cb18-10">np.unique(tk_batched).<span class="bu" style="color: null;">max</span>(), np.unique(tk_batched).mean(), np.unique(tk_batched).<span class="bu" style="color: null;">min</span>()</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1842 1842
+51</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>(512, 311.52941176470586, 96)</code></pre>
+</div>
+</div>
+<p><code>truncation=True</code> in the tokenizer truncates the dialogue to 512 tokens, which is the max length of the T5. However, by default T5 should not have a set maximum length. This is imposed, artificial limitation by transformers library.</p>
+<p>Be careful to this behavior. Since unnoticed truncation means unnoticed loss input information during training.</p>
+</section>
+<section id="source-implementation" class="level3">
+<h3 class="anchored" data-anchor-id="source-implementation">Source implementation</h3>
+<p>In <a href="https://www.philschmid.de/fine-tune-flan-t5">source ipynb</a>:</p>
+<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1">tokenized_inputs <span class="op" style="color: #5E5E5E;">=</span> concatenate_datasets([dataset[<span class="st" style="color: #20794D;">"train"</span>], dataset[<span class="st" style="color: #20794D;">"test"</span>]]).<span class="bu" style="color: null;">map</span>(<span class="kw" style="color: #003B4F;">lambda</span> x: tokenizer(x[<span class="st" style="color: #20794D;">"dialogue"</span>], truncation<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>), batched<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>, remove_columns<span class="op" style="color: #5E5E5E;">=</span>[<span class="st" style="color: #20794D;">"dialogue"</span>, <span class="st" style="color: #20794D;">"summary"</span>])</span>
+<span id="cb21-2">max_source_length <span class="op" style="color: #5E5E5E;">=</span> <span class="bu" style="color: null;">max</span>([<span class="bu" style="color: null;">len</span>(x) <span class="cf" style="color: #003B4F;">for</span> x <span class="kw" style="color: #003B4F;">in</span> tokenized_inputs[<span class="st" style="color: #20794D;">"input_ids"</span>]])</span>
+<span id="cb21-3"></span>
+<span id="cb21-4"><span class="kw" style="color: #003B4F;">def</span> preprocess_function(sample,padding<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"max_length"</span>):</span>
+<span id="cb21-5">    <span class="co" style="color: #5E5E5E;"># add prefix to the input for t5</span></span>
+<span id="cb21-6">    inputs <span class="op" style="color: #5E5E5E;">=</span> [<span class="st" style="color: #20794D;">"summarize: "</span> <span class="op" style="color: #5E5E5E;">+</span> item <span class="cf" style="color: #003B4F;">for</span> item <span class="kw" style="color: #003B4F;">in</span> sample[<span class="st" style="color: #20794D;">"dialogue"</span>]]</span>
+<span id="cb21-7"></span>
+<span id="cb21-8">    <span class="co" style="color: #5E5E5E;"># tokenize inputs</span></span>
+<span id="cb21-9">    model_inputs <span class="op" style="color: #5E5E5E;">=</span> tokenizer(inputs, max_length<span class="op" style="color: #5E5E5E;">=</span>max_source_length, padding<span class="op" style="color: #5E5E5E;">=</span>padding, truncation<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
+<span id="cb21-10">    <span class="cf" style="color: #003B4F;">pass</span></span></code></pre></div>
+<ol type="1">
+<li>It pads every input to absolute corpus max length. Would waste tons of memory and computation. The mean of dialogue is 149, meaning on average, 1k unnecessary tokens would be processed for each instance, and we have 14732 instances in training set.</li>
+<li>I use <code>flan-t5</code> which is the heir of LM adopted T5, that makes prepending <code>summarize:</code> to the input not necessary.</li>
+</ol>
+</section>
+</section>
+<section id="training" class="level2">
+<h2 class="anchored" data-anchor-id="training">Training</h2>
+<section id="prepare-for-trainer" class="level3">
+<h3 class="anchored" data-anchor-id="prepare-for-trainer">Prepare for trainer</h3>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><span class="co" style="color: #5E5E5E;"># no truncation, since the max_length in the training set is only 1153. Should be fine.</span></span>
+<span id="cb22-2"><span class="kw" style="color: #003B4F;">def</span> preprocess(examples):</span>
+<span id="cb22-3">    output <span class="op" style="color: #5E5E5E;">=</span> tokenizer(examples[<span class="st" style="color: #20794D;">"dialogue"</span>])</span>
+<span id="cb22-4">    output[<span class="st" style="color: #20794D;">"labels"</span>] <span class="op" style="color: #5E5E5E;">=</span> tokenizer(examples[<span class="st" style="color: #20794D;">"summary"</span>])[<span class="st" style="color: #20794D;">"input_ids"</span>]</span>
+<span id="cb22-5">    <span class="cf" style="color: #003B4F;">return</span> output</span>
+<span id="cb22-6"></span>
+<span id="cb22-7"><span class="co" style="color: #5E5E5E;"># tokenize the dataset</span></span>
+<span id="cb22-8">tk_ds <span class="op" style="color: #5E5E5E;">=</span> ds.<span class="bu" style="color: null;">map</span>(preprocess, batched<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>).remove_columns(ds[<span class="st" style="color: #20794D;">'train'</span>].column_names)</span>
+<span id="cb22-9"></span>
+<span id="cb22-10"><span class="co" style="color: #5E5E5E;"># load the evaluation metric</span></span>
+<span id="cb22-11">rouge <span class="op" style="color: #5E5E5E;">=</span> evaluate.load(<span class="st" style="color: #20794D;">'rouge'</span>)</span>
+<span id="cb22-12"></span>
+<span id="cb22-13"><span class="co" style="color: #5E5E5E;"># postprocessing necessary for rouge</span></span>
+<span id="cb22-14"><span class="kw" style="color: #003B4F;">def</span> compute_metrics(eval_preds):</span>
+<span id="cb22-15">    preds, labels <span class="op" style="color: #5E5E5E;">=</span> eval_preds</span>
+<span id="cb22-16"></span>
+<span id="cb22-17">    labels <span class="op" style="color: #5E5E5E;">=</span> np.where(labels <span class="op" style="color: #5E5E5E;">!=</span> <span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">100</span>, labels, tokenizer.pad_token_id)</span>
+<span id="cb22-18">    decoded_preds <span class="op" style="color: #5E5E5E;">=</span> tokenizer.batch_decode(preds, skip_special_tokens<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
+<span id="cb22-19">    decoded_labels <span class="op" style="color: #5E5E5E;">=</span> tokenizer.batch_decode(labels, skip_special_tokens<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
+<span id="cb22-20"></span>
+<span id="cb22-21">    decoded_preds <span class="op" style="color: #5E5E5E;">=</span> [</span>
+<span id="cb22-22">        <span class="st" style="color: #20794D;">"</span><span class="ch" style="color: #20794D;">\n</span><span class="st" style="color: #20794D;">"</span>.join(nltk.sent_tokenize(pred.strip())) <span class="cf" style="color: #003B4F;">for</span> pred <span class="kw" style="color: #003B4F;">in</span> decoded_preds</span>
+<span id="cb22-23">    ]</span>
+<span id="cb22-24">    decoded_labels <span class="op" style="color: #5E5E5E;">=</span> [</span>
+<span id="cb22-25">        <span class="st" style="color: #20794D;">"</span><span class="ch" style="color: #20794D;">\n</span><span class="st" style="color: #20794D;">"</span>.join(nltk.sent_tokenize(label.strip())) <span class="cf" style="color: #003B4F;">for</span> label <span class="kw" style="color: #003B4F;">in</span> decoded_labels</span>
+<span id="cb22-26">    ]</span>
+<span id="cb22-27"></span>
+<span id="cb22-28">    result <span class="op" style="color: #5E5E5E;">=</span> rouge.compute(</span>
+<span id="cb22-29">        predictions<span class="op" style="color: #5E5E5E;">=</span>decoded_preds, references<span class="op" style="color: #5E5E5E;">=</span>decoded_labels, use_stemmer<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span></span>
+<span id="cb22-30">    )</span>
+<span id="cb22-31">    <span class="cf" style="color: #003B4F;">return</span> result</span>
+<span id="cb22-32"></span>
+<span id="cb22-33">collator <span class="op" style="color: #5E5E5E;">=</span> DataCollatorForSeq2Seq(tokenizer, padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span> pad_to_multiple_of<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>)</span>
+<span id="cb22-34"></span>
+<span id="cb22-35">args <span class="op" style="color: #5E5E5E;">=</span> Seq2SeqTrainingArguments(</span>
+<span id="cb22-36">    output_dir<span class="op" style="color: #5E5E5E;">=</span>model_output_dir,</span>
+<span id="cb22-37">    evaluation_strategy<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"epoch"</span>,</span>
+<span id="cb22-38">    learning_rate<span class="op" style="color: #5E5E5E;">=</span><span class="fl" style="color: #AD0000;">5e-5</span>,</span>
+<span id="cb22-39">    per_device_train_batch_size<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>,</span>
+<span id="cb22-40">    per_device_eval_batch_size<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>,</span>
+<span id="cb22-41">    weight_decay<span class="op" style="color: #5E5E5E;">=</span><span class="fl" style="color: #AD0000;">0.01</span>,</span>
+<span id="cb22-42">    save_total_limit<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">2</span>,</span>
+<span id="cb22-43">    num_train_epochs<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">1</span>,</span>
+<span id="cb22-44">    bf16<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>,</span>
+<span id="cb22-45">    gradient_accumulation_steps<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">4</span>,</span>
+<span id="cb22-46">    predict_with_generate<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>,</span>
+<span id="cb22-47">    save_strategy<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"epoch"</span>,</span>
+<span id="cb22-48">    load_best_model_at_end<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>,</span>
+<span id="cb22-49">    hub_model_id<span class="op" style="color: #5E5E5E;">=</span>hub_model_id,</span>
+<span id="cb22-50">    report_to<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"wandb"</span>,</span>
+<span id="cb22-51">)</span></code></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"></span>
+<span id="cb23-2">trainer <span class="op" style="color: #5E5E5E;">=</span> Seq2SeqTrainer(</span>
+<span id="cb23-3">    model<span class="op" style="color: #5E5E5E;">=</span>model,</span>
+<span id="cb23-4">    args<span class="op" style="color: #5E5E5E;">=</span>args,</span>
+<span id="cb23-5">    train_dataset<span class="op" style="color: #5E5E5E;">=</span>tk_ds[<span class="st" style="color: #20794D;">"train"</span>],</span>
+<span id="cb23-6">    eval_dataset<span class="op" style="color: #5E5E5E;">=</span>tk_ds[<span class="st" style="color: #20794D;">"validation"</span>],</span>
+<span id="cb23-7">    tokenizer<span class="op" style="color: #5E5E5E;">=</span>tokenizer,</span>
+<span id="cb23-8">    data_collator<span class="op" style="color: #5E5E5E;">=</span>collator,</span>
+<span id="cb23-9">    compute_metrics<span class="op" style="color: #5E5E5E;">=</span>compute_metrics,</span>
+<span id="cb23-10">)</span></code></pre></div>
+</div>
+</section>
+<section id="fire-up-the-training" class="level3">
+<h3 class="anchored" data-anchor-id="fire-up-the-training">Fire up the training</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1">trainer.train()</span></code></pre></div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1">wandb.finish()</span>
+<span id="cb25-2"></span>
+<span id="cb25-3">total_flos <span class="op" style="color: #5E5E5E;">=</span> trainer.state.total_flos</span>
+<span id="cb25-4">runtime <span class="op" style="color: #5E5E5E;">=</span> trainer.state.log_history[<span class="dv" style="color: #AD0000;">1</span>][<span class="st" style="color: #20794D;">'train_runtime'</span>]</span>
+<span id="cb25-5">utilization <span class="op" style="color: #5E5E5E;">=</span> total_flos <span class="op" style="color: #5E5E5E;">/</span> <span class="fl" style="color: #AD0000;">1e12</span> <span class="op" style="color: #5E5E5E;">/</span> runtime <span class="co" style="color: #5E5E5E;"># in tflops</span></span></code></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="result" class="level2">
+<h2 class="anchored" data-anchor-id="result">Result</h2>
+<p><code>rouge-1: 47.8%</code> is in the same range with the source blog. However, to save time it’s only trained for 1 epoch.</p>
+<section id="about-tflops" class="level3">
+<h3 class="anchored" data-anchor-id="about-tflops">About TFLOPS</h3>
+<ul>
+<li><code>model.parallelize()</code>
+<ul>
+<li><code>20.43</code> tflops.</li>
+<li>Peak memory: GPU1: 16.6G, GPU2: 14.9G</li>
+</ul></li>
+<li>No <code>m.parallelize()</code>, vanilla huggingface trainer.
+<ul>
+<li><code>16.66</code> tflops.</li>
+<li>Peak memory: GPU1: 22.27, GPU2: 21.93G</li>
+<li>Higher GPU utilization, ~90%, slower training, more memory footprint. Why…?</li>
+</ul></li>
+<li><code>pad_to_multiple_of=64</code> -&gt; <code>19.72</code> tflops
+<ul>
+<li>Not ready to innovate on <a href="https://twitter.com/karpathy/status/1621578354024677377">dark magic</a> yet LoL.</li>
+</ul></li>
+<li>No <code>pad_to_multiple_of=8</code> -&gt; <code>20.38</code> tflops
+<ul>
+<li>No need to do this religiously. Make no difference with <code>pytorch</code> and this dataset.</li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
+  author = {Lucas Shen},
+  title = {Hello, World! {Huggingface} {T5} Finetuning},
+  date = {2023-02-10},
+  url = {https://lukaemon.github.io/samsum.html},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
+Lucas Shen. 2023. <span>“Hello, World! Huggingface T5
+Finetuning.”</span> February 10, 2023. <a href="https://lukaemon.github.io/samsum.html">https://lukaemon.github.io/samsum.html</a>.
+</div></div></section></div> ]]></description>
+  <category>tutorial</category>
+  <category>copy</category>
+  <guid>https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/samsum.html</guid>
+  <pubDate>Thu, 09 Feb 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/cover.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Humor in AI</title>
   <dc:creator>Lucas Shen</dc:creator>
@@ -70,13 +443,13 @@ Lucas Shen. 2023. <span>“Humor in AI.”</span> February 5, 2023. <a href="htt
 <section id="reasoning" class="level2">
 <h2 class="anchored" data-anchor-id="reasoning">Reasoning</h2>
 <blockquote class="blockquote">
-<p>Scale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs. <span class="citation" data-cites="raeScalingLanguageModels2022">Rae et al. (2022)</span></p>
+<p>Scale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs. –<span class="citation" data-cites="raeScalingLanguageModels2022">(Rae et al. 2022)</span></p>
 </blockquote>
 <p>It points out flat scaling curve of few task categories. Since then, google has been very creative to push the frontier with CoT <span class="citation" data-cites="weiChainThoughtPrompting2022">(Wei et al. 2022)</span>, SC <span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">(Wang et al. 2022)</span> and least to most <span class="citation" data-cites="zhouLeasttoMostPromptingEnables2022">(Zhou et al. 2022)</span>. CoT is the most exciting method to scale computation on tasks since few-shot in-context learning.</p>
 <p>Informal reasoning would be solved. DeepMind and OpenAI are all into solving formal reasoning, the last frontier wrt reasoning if AI could get logic and math right.</p>
 <p>Codex family model is the first step on solving formal reasoning. In SC and BBH <span class="citation" data-cites="suzgunChallengingBIGBenchTasks2022">(Suzgun et al. 2022)</span>, code-davinci-002 performs better than InstructGPT families on reasoning tasks. DeepMind even dives into GNN to explore architecture other than transformer. Reasoning in general would be solved as a modality in near future. It may require a specialized model, but would ultimately be fused into general LLM like image, audio and the like.</p>
 <blockquote class="blockquote">
-<p>The approach to the irreducible loss does not necessarily indicate diminishing returns for representation quality or semantic content as significant semantic information may lie in the last few bits. –<span class="citation" data-cites="henighanScalingLawsAutoregressive2020">Henighan et al. (2020)</span></p>
+<p>The approach to the irreducible loss does not necessarily indicate diminishing returns for representation quality or semantic content as significant semantic information may lie in the last few bits. –<span class="citation" data-cites="henighanScalingLawsAutoregressive2020">(Henighan et al. 2020)</span></p>
 </blockquote>
 <p>To get natural language understanding right, scale is necessary. This also explains why CoT only works with scale. Small model makes too many semantic mistakes that render scaling computation with CoT worthless. SC could cancel out mistakes by majority vote to improve performance for model of all size but the increased computational cost far out weight possible gain for small model. Self-ensemble weak reasoner is a waste of resource.</p>
 </section>

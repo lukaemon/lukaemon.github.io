@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lukaemon.github.io/posts/2023/humor-ai/index.html</loc>
-    <lastmod>2023-02-06T10:44:09.806Z</lastmod>
+    <lastmod>2023-02-10T05:07:49.562Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/samsum.html</loc>
+    <lastmod>2023-02-10T05:07:50.399Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/posts/2023/sc-cot/index.html</loc>
-    <lastmod>2023-02-06T10:44:10.743Z</lastmod>
+    <lastmod>2023-02-10T05:07:51.216Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/index.html</loc>
-    <lastmod>2023-02-06T10:44:11.307Z</lastmod>
+    <lastmod>2023-02-10T05:07:51.850Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/about.html</loc>
-    <lastmod>2023-02-06T10:44:11.902Z</lastmod>
+    <lastmod>2023-02-10T05:07:52.407Z</lastmod>
   </url>
 </urlset>

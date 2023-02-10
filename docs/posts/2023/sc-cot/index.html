@@ -187,7 +187,7 @@ div.csl-indent {
   <li><a href="#retrieval" id="toc-retrieval" class="nav-link" data-scroll-target="#retrieval">Retrieval</a></li>
   <li><a href="#multimodal" id="toc-multimodal" class="nav-link" data-scroll-target="#multimodal">Multimodal</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/lukaemon/lukaemon.github.io/blob/main/posts/2023/sc-cot/index.qmd" class="toc-action">View source</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
@@ -204,13 +204,13 @@ div.csl-indent {
 <section id="reasoning" class="level2">
 <h2 class="anchored" data-anchor-id="reasoning">Reasoning</h2>
 <blockquote class="blockquote">
-<p>Scale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs. <span class="citation" data-cites="raeScalingLanguageModels2022">Rae et al. (<a href="#ref-raeScalingLanguageModels2022" role="doc-biblioref">2022</a>)</span></p>
+<p>Scale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs. –<span class="citation" data-cites="raeScalingLanguageModels2022">(<a href="#ref-raeScalingLanguageModels2022" role="doc-biblioref">Rae et al. 2022</a>)</span></p>
 </blockquote>
 <p>It points out flat scaling curve of few task categories. Since then, google has been very creative to push the frontier with CoT <span class="citation" data-cites="weiChainThoughtPrompting2022">(<a href="#ref-weiChainThoughtPrompting2022" role="doc-biblioref">Wei et al. 2022</a>)</span>, SC <span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">(<a href="#ref-wangSelfConsistencyImprovesChain2022a" role="doc-biblioref">Wang et al. 2022</a>)</span> and least to most <span class="citation" data-cites="zhouLeasttoMostPromptingEnables2022">(<a href="#ref-zhouLeasttoMostPromptingEnables2022" role="doc-biblioref">Zhou et al. 2022</a>)</span>. CoT is the most exciting method to scale computation on tasks since few-shot in-context learning.</p>
 <p>Informal reasoning would be solved. DeepMind and OpenAI are all into solving formal reasoning, the last frontier wrt reasoning if AI could get logic and math right.</p>
 <p>Codex family model is the first step on solving formal reasoning. In SC and BBH <span class="citation" data-cites="suzgunChallengingBIGBenchTasks2022">(<a href="#ref-suzgunChallengingBIGBenchTasks2022" role="doc-biblioref">Suzgun et al. 2022</a>)</span>, code-davinci-002 performs better than InstructGPT families on reasoning tasks. DeepMind even dives into GNN to explore architecture other than transformer. Reasoning in general would be solved as a modality in near future. It may require a specialized model, but would ultimately be fused into general LLM like image, audio and the like.</p>
 <blockquote class="blockquote">
-<p>The approach to the irreducible loss does not necessarily indicate diminishing returns for representation quality or semantic content as significant semantic information may lie in the last few bits. –<span class="citation" data-cites="henighanScalingLawsAutoregressive2020">Henighan et al. (<a href="#ref-henighanScalingLawsAutoregressive2020" role="doc-biblioref">2020</a>)</span></p>
+<p>The approach to the irreducible loss does not necessarily indicate diminishing returns for representation quality or semantic content as significant semantic information may lie in the last few bits. –<span class="citation" data-cites="henighanScalingLawsAutoregressive2020">(<a href="#ref-henighanScalingLawsAutoregressive2020" role="doc-biblioref">Henighan et al. 2020</a>)</span></p>
 </blockquote>
 <p>To get natural language understanding right, scale is necessary. This also explains why CoT only works with scale. Small model makes too many semantic mistakes that render scaling computation with CoT worthless. SC could cancel out mistakes by majority vote to improve performance for model of all size but the increased computational cost far out weight possible gain for small model. Self-ensemble weak reasoner is a waste of resource.</p>
 </section>

@@ -21,6 +21,9 @@ website:
     location: navbar
     type: textbox
   favicon: asset/favicon.png
+  repo-url: https://github.com/lukaemon/lukaemon.github.io
+  repo-actions: [source]
+
 
 bibliography: asset/ref.bib
 
