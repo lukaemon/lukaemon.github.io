@@ -11,7 +11,7 @@
     "href": "posts/2023/t5-finetuning-hello-world/samsum.html",
     "title": "Hello, world! Huggingface T5 finetuning",
     "section": "",
-    "text": "A learning note from reproducing this amazing post from Philipp."
+    "text": "A learning note from reproducing this amazing post by Philipp Schmid."
   },
   {
     "objectID": "posts/2023/t5-finetuning-hello-world/samsum.html#load-dataset",
