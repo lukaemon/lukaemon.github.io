@@ -20,6 +20,13 @@
 
 
 
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/cover.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption">MJ: computer scientist coding to train AI model, studio ghibli –ar 16:9 –niji</figcaption><p></p>
+</figure>
+</div>
+<div class="page-columns page-full"><p><sup>1</sup></p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;According to the picture, the future belongs the children. Seems to be playing Scratch.</p></li></div></div>
 <p>A learning note from reproducing this <a href="https://www.philschmid.de/fine-tune-flan-t5">amazing post by Philipp Schmid</a>.</p>
 <div class="cell">
 <details>
@@ -367,6 +374,7 @@ max      1153.0     94.0</code></pre>
 </section>
 </section>
 
+
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
   author = {Lucas Shen},
   title = {Hello, World! {Huggingface} {T5} Finetuning},
@@ -382,10 +390,10 @@ Finetuning.”</span> February 10, 2023. <a href="https://lukaemon.github.io/sam
   <category>copy</category>
   <guid>https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/samsum.html</guid>
   <pubDate>Thu, 09 Feb 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/cover.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/cover.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 <item>
-  <title>Humor in AI</title>
+  <title>Humor AI</title>
   <dc:creator>Lucas Shen</dc:creator>
   <link>https://lukaemon.github.io/posts/2023/humor-ai/index.html</link>
   <description><![CDATA[ 
@@ -393,9 +401,10 @@ Finetuning.”</span> February 10, 2023. <a href="https://lukaemon.github.io/sam
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
 <p><img src="https://lukaemon.github.io/posts/2023/humor-ai/humor.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption">MJ: abstract art, picasso’s expression about humor –ar 16:9</figcaption><p></p>
 </figure>
 </div>
 <p>Humor is preconditioned on the ability to see the bright side of something. One has to be able to see many sides, consciously choose the funny, optimistic interpretation and express in a way that resonates with target audiences. It shows both raw intelligence and wisdom.</p>
@@ -411,19 +420,19 @@ Finetuning.”</span> February 10, 2023. <a href="https://lukaemon.github.io/sam
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
   author = {Lucas Shen},
-  title = {Humor in {AI}},
+  title = {Humor {AI}},
   date = {2023-02-05},
   url = {https://lukaemon.github.io/posts/2023/humor-ai},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“Humor in AI.”</span> February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/humor-ai">https://lukaemon.github.io/posts/2023/humor-ai</a>.
+Lucas Shen. 2023. <span>“Humor AI.”</span> February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/humor-ai">https://lukaemon.github.io/posts/2023/humor-ai</a>.
 </div></div></section></div> ]]></description>
   <category>grounding</category>
   <category>multimodal</category>
   <guid>https://lukaemon.github.io/posts/2023/humor-ai/index.html</guid>
   <pubDate>Sat, 04 Feb 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023/humor-ai/humor.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://lukaemon.github.io/posts/2023/humor-ai/cover.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 <item>
   <title>Self-consistency and chain of thought</title>
@@ -523,7 +532,7 @@ February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/sc-cot">https:/
   <category>rationale engineering</category>
   <guid>https://lukaemon.github.io/posts/2023/sc-cot/index.html</guid>
   <pubDate>Sat, 04 Feb 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023/sc-cot/sc.png" medium="image" type="image/png" height="86" width="144"/>
+  <media:content url="https://lukaemon.github.io/posts/2023/sc-cot/cover.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 </channel>
 </rss>

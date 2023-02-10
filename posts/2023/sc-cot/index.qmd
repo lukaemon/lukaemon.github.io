@@ -3,7 +3,7 @@ title: "Self-consistency and chain of thought"
 date: "2023-02-05"
 description: Lesson learned from CoT and SC. 
 categories: [rationale engineering]
-image: "sc.png"
+image: "cover.png"
 ---
 ![@wangSelfConsistencyImprovesChain2022a](sc.png)
 
