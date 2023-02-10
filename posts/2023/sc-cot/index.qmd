@@ -5,7 +5,7 @@ description: Lesson learned from CoT and SC.
 categories: [rationale engineering]
 image: "cover.png"
 ---
-![@wangSelfConsistencyImprovesChain2022a](sc.png)
+![@wangSelfConsistencyImprovesChain2022a](cover.png)
 
 ## Reasoning
 > Scale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs. --[@raeScalingLanguageModels2022]
