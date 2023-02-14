@@ -1,7 +1,7 @@
 # options specified here will apply to all posts in this folder
 
 author: Lucas Shen
-citation: true
+# citation: true
 freeze: true
 title-block-banner: true
 reference-location: margin

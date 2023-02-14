@@ -929,24 +929,6 @@
   file = {/Users/lukakuma/Zotero/storage/EHGUJHG7/Barreto et al. - 2020 - Fast reinforcement learning with generalized polic.pdf}
 }
 
-@misc{barronMipNeRFMultiscaleRepresentation2021,
-  title = {Mip-{{NeRF}}: {{A Multiscale Representation}} for {{Anti-Aliasing Neural Radiance Fields}}},
-  shorttitle = {Mip-{{NeRF}}},
-  author = {Barron, Jonathan T. and Mildenhall, Ben and Tancik, Matthew and Hedman, Peter and Martin-Brualla, Ricardo and Srinivasan, Pratul P.},
-  date = {2021-08-13},
-  number = {arXiv:2103.13415},
-  eprint = {2103.13415},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2103.13415},
-  urldate = {2022-08-29},
-  abstract = {The rendering procedure used by neural radiance fields (NeRF) samples a scene with a single ray per pixel and may therefore produce renderings that are excessively blurred or aliased when training or testing images observe scene content at different resolutions. The straightforward solution of supersampling by rendering with multiple rays per pixel is impractical for NeRF, because rendering each ray requires querying a multilayer perceptron hundreds of times. Our solution, which we call "mip-NeRF" (a la "mipmap"), extends NeRF to represent the scene at a continuously-valued scale. By efficiently rendering anti-aliased conical frustums instead of rays, mip-NeRF reduces objectionable aliasing artifacts and significantly improves NeRF's ability to represent fine details, while also being 7\% faster than NeRF and half the size. Compared to NeRF, mip-NeRF reduces average error rates by 17\% on the dataset presented with NeRF and by 60\% on a challenging multiscale variant of that dataset that we present. Mip-NeRF is also able to match the accuracy of a brute-force supersampled NeRF on our multiscale dataset while being 22x faster.},
-  archiveprefix = {arXiv},
-  keywords = {functa},
-  file = {/Users/lukakuma/Zotero/storage/IIDHRF3U/Barron et al. - 2021 - Mip-NeRF A Multiscale Representation for Anti-Ali.pdf;/Users/lukakuma/Zotero/storage/WUUYCQIA/2103.html}
-}
-
 @misc{bartoldsonComputeEfficientDeepLearning2022,
   title = {Compute-{{Efficient Deep Learning}}: {{Algorithmic Trends}} and {{Opportunities}}},
   shorttitle = {Compute-{{Efficient Deep Learning}}},
@@ -2234,6 +2216,15 @@
   file = {/Users/lukakuma/Zotero/storage/VMZ5ZG9L/Chen et al. - 2022 - Pix2seq A Language Modeling Framework for Object .pdf;/Users/lukakuma/Zotero/storage/FSSGX2BJ/2109.html}
 }
 
+@article{chenPLACESPromptingLanguage,
+  title = {{{PLACES}}: {{Prompting Language Models}} for {{Social Conversation Synthesis}}},
+  author = {Chen, Maximillian and Papangelis, Alexandros and Tao, Chenyang and Kim, Seokhwan and Rosenbaum, Andy and Liu, Yang and Yu, Zhou and Hakkani-Tur, Dilek},
+  date = {2023-02},
+  abstract = {Collecting high quality conversational data can be very expensive for most applications and infeasible for others due to privacy, ethical, or similar concerns. A promising direction to tackle this problem is to generate synthetic dialogues by prompting large language models. In this work, we use a small set of expert-written conversations as incontext examples to synthesize a social conversation dataset using prompting1. We perform several thorough evaluations of our synthetic conversations compared to human-collected conversations. This includes various dimensions of conversation quality with human evaluation directly on the synthesized conversations, and interactive human evaluation of chatbots fine-tuned on the synthetically generated dataset. We additionally demonstrate that this prompting approach is generalizable to multiparty conversations, providing potential to create new synthetic data for multi-party tasks. Our synthetic multi-party conversations were rated more favorably across all measured dimensions compared to conversation excerpts sampled from a human-collected multi-party dataset.},
+  langid = {english},
+  file = {/Users/lukakuma/Zotero/storage/I56H87A3/Chen et al. - PLACES Prompting Language Models for Social Conve.pdf}
+}
+
 @misc{chenProgramThoughtsPrompting2022,
   title = {Program of {{Thoughts Prompting}}: {{Disentangling Computation}} from {{Reasoning}} for {{Numerical Reasoning Tasks}}},
   shorttitle = {Program of {{Thoughts Prompting}}},
@@ -3294,6 +3285,21 @@
   archiveprefix = {arXiv},
   keywords = {formal reasoning},
   file = {/Users/lukakuma/Zotero/storage/83799TVU/Drori et al. - 2022 - A Neural Network Solves, Explains, and Generates U.pdf;/Users/lukakuma/Zotero/storage/AN6YSLPG/2112.html}
+}
+
+@article{droriNeuralNetworkSolves2022a,
+  title = {A Neural Network Solves, Explains, and Generates University Math Problems by Program Synthesis and Few-Shot Learning at Human Level},
+  author = {Drori, Iddo and Zhang, Sarah and Shuttleworth, Reece and Tang, Leonard and Lu, Albert and Ke, Elizabeth and Liu, Kevin and Chen, Linda and Tran, Sunny and Cheng, Newman and Wang, Roman and Singh, Nikhil and Patti, Taylor L. and Lynch, Jayson and Shporer, Avi and Verma, Nakul and Wu, Eugene and Strang, Gilbert},
+  date = {2022-08-09},
+  journaltitle = {Proceedings of the National Academy of Sciences},
+  volume = {119},
+  number = {32},
+  pages = {e2123433119},
+  publisher = {{Proceedings of the National Academy of Sciences}},
+  url = {https://www.pnas.org/doi/10.1073/pnas.2123433119},
+  urldate = {2023-02-11},
+  abstract = {We demonstrate that a neural network pretrained on text and fine-tuned on code solves mathematics course problems, explains solutions, and generates questions at a human level. We automatically synthesize programs using few-shot learning and OpenAI’s Codex transformer and execute them to solve course problems at 81\% automatic accuracy. We curate a dataset of questions from Massachusetts Institute of Technology (MIT)’s largest mathematics courses (Single Variable and Multivariable Calculus, Differential Equations, Introduction to Probability and Statistics, Linear Algebra, and Mathematics for Computer Science) and Columbia University’s Computational Linear Algebra. We solve questions from a MATH dataset (on Prealgebra, Algebra, Counting and Probability, Intermediate Algebra, Number Theory, and Precalculus), the latest benchmark of advanced mathematics problems designed to assess mathematical reasoning. We randomly sample questions and generate solutions with multiple modalities, including numbers, equations, and plots. The latest GPT-3 language model pretrained on text automatically solves only 18.8\% of these university questions using zero-shot learning and 30.8\% using few-shot learning and the most recent chain of thought prompting. In contrast, program synthesis with few-shot learning using Codex fine-tuned on code generates programs that automatically solve 81\% of these questions. Our approach improves the previous state-of-the-art automatic solution accuracy on the benchmark topics from 8.8 to 81.1\%. We perform a survey to evaluate the quality and difficulty of generated questions. This work automatically solves university-level mathematics course questions at a human level and explains and generates university-level mathematics course questions at scale, a milestone for higher education.},
+  file = {/Users/lukakuma/Zotero/storage/UEQVFSNC/Drori et al. - 2022 - A neural network solves, explains, and generates u.pdf}
 }
 
 @misc{drozdovCompositionalSemanticParsing2022,
@@ -6868,6 +6874,17 @@
   archiveprefix = {arXiv},
   keywords = {multimodal},
   file = {/Users/lukakuma/Zotero/storage/X5DZJ8X2/Koh et al. - 2023 - Grounding Language Models to Images for Multimodal.pdf;/Users/lukakuma/Zotero/storage/Q8JF47IJ/2301.html}
+}
+
+@article{kohGroundingLanguageModels2023a,
+  title = {Grounding {{Language Models}} to {{Images}} for {{Multimodal Generation}}},
+  author = {Koh, Jing Yu and Salakhutdinov, Ruslan and Fried, Daniel},
+  date = {2023-01-31},
+  url = {https://arxiv.org/abs/2301.13823v1},
+  urldate = {2023-02-11},
+  abstract = {We propose an efficient method to ground pretrained text-only language models to the visual domain, enabling them to process and generate arbitrarily interleaved image-and-text data. Our method leverages the abilities of language models learnt from large scale text-only pretraining, such as in-context learning and free-form text generation. We keep the language model frozen, and finetune input and output linear layers to enable cross-modality interactions. This allows our model to process arbitrarily interleaved image-and-text inputs, and generate free-form text interleaved with retrieved images. We achieve strong zero-shot performance on grounded tasks such as contextual image retrieval and multimodal dialogue, and showcase compelling interactive abilities. Our approach works with any off-the-shelf language model and paves the way towards an effective, general solution for leveraging pretrained language models in visually grounded settings.},
+  langid = {english},
+  file = {/Users/lukakuma/Zotero/storage/BL6V5ZLF/Koh et al. - 2023 - Grounding Language Models to Images for Multimodal.pdf}
 }
 
 @misc{kojimaLargeLanguageModels2022a,
@@ -10963,24 +10980,6 @@
   file = {/Users/lukakuma/Zotero/storage/I3VBMM7Z/Reid et al. - 2022 - Can Wikipedia Help Offline Reinforcement Learning.pdf;/Users/lukakuma/Zotero/storage/XAB3ZWUV/2201.html}
 }
 
-@misc{reiserKiloNeRFSpeedingNeural2021,
-  title = {{{KiloNeRF}}: {{Speeding}} up {{Neural Radiance Fields}} with {{Thousands}} of {{Tiny MLPs}}},
-  shorttitle = {{{KiloNeRF}}},
-  author = {Reiser, Christian and Peng, Songyou and Liao, Yiyi and Geiger, Andreas},
-  date = {2021-08-02},
-  number = {arXiv:2103.13744},
-  eprint = {2103.13744},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2103.13744},
-  urldate = {2022-08-29},
-  abstract = {NeRF synthesizes novel views of a scene with unprecedented quality by fitting a neural radiance field to RGB images. However, NeRF requires querying a deep Multi-Layer Perceptron (MLP) millions of times, leading to slow rendering times, even on modern GPUs. In this paper, we demonstrate that real-time rendering is possible by utilizing thousands of tiny MLPs instead of one single large MLP. In our setting, each individual MLP only needs to represent parts of the scene, thus smaller and faster-to-evaluate MLPs can be used. By combining this divide-and-conquer strategy with further optimizations, rendering is accelerated by three orders of magnitude compared to the original NeRF model without incurring high storage costs. Further, using teacher-student distillation for training, we show that this speed-up can be achieved without sacrificing visual quality.},
-  archiveprefix = {arXiv},
-  keywords = {functa},
-  file = {/Users/lukakuma/Zotero/storage/Q7QRRJ5D/Reiser et al. - 2021 - KiloNeRF Speeding up Neural Radiance Fields with .pdf;/Users/lukakuma/Zotero/storage/VEQ65NCQ/2103.html}
-}
-
 @misc{renOutofDistributionDetectionSelective2022,
   title = {Out-of-{{Distribution Detection}} and {{Selective Generation}} for {{Conditional Language Models}}},
   author = {Ren, Jie and Luo, Jiaming and Zhao, Yao and Krishna, Kundan and Saleh, Mohammad and Lakshminarayanan, Balaji and Liu, Peter J.},
@@ -11531,6 +11530,18 @@
   archiveprefix = {arXiv},
   langid = {english},
   file = {/Users/lukakuma/Zotero/storage/3M4AP86P/Schick et al. - 2021 - Self-Diagnosis and Self-Debiasing A Proposal for .pdf}
+}
+
+@misc{schickToolformerLanguageModels2023,
+  title = {Toolformer: {{Language Models Can Teach Themselves}} to {{Use Tools}}},
+  shorttitle = {Toolformer},
+  author = {Schick, Timo and Dwivedi-Yu, Jane and Dessì, Roberto and Raileanu, Roberta and Lomeli, Maria and Zettlemoyer, Luke and Cancedda, Nicola and Scialom, Thomas},
+  date = {2023-02-09},
+  url = {https://arxiv.org/abs/2302.04761v1},
+  urldate = {2023-02-11},
+  abstract = {Language models (LMs) exhibit remarkable abilities to solve new tasks from just a few examples or textual instructions, especially at scale. They also, paradoxically, struggle with basic functionality, such as arithmetic or factual lookup, where much simpler and smaller models excel. In this paper, we show that LMs can teach themselves to use external tools via simple APIs and achieve the best of both worlds. We introduce Toolformer, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring nothing more than a handful of demonstrations for each API. We incorporate a range of tools, including a calculator, a Q\textbackslash\&A system, two different search engines, a translation system, and a calendar. Toolformer achieves substantially improved zero-shot performance across a variety of downstream tasks, often competitive with much larger models, without sacrificing its core language modeling abilities.},
+  langid = {english},
+  file = {/Users/lukakuma/Zotero/storage/R7VC8XZP/Schick et al. - 2023 - Toolformer Language Models Can Teach Themselves t.pdf}
 }
 
 @report{schmidtfuturesBioeconomyChartingCourse2022,
@@ -12610,6 +12621,23 @@
   file = {/Users/lukakuma/Zotero/storage/B9T3QS32/Suzgun et al. - 2022 - Challenging BIG-Bench Tasks and Whether Chain-of-T.pdf}
 }
 
+@misc{tafjordGeneralPurposeQuestionAnsweringMacaw2021,
+  title = {General-{{Purpose Question-Answering}} with {{Macaw}}},
+  author = {Tafjord, Oyvind and Clark, Peter},
+  date = {2021-09-06},
+  number = {arXiv:2109.02593},
+  eprint = {2109.02593},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2109.02593},
+  urldate = {2023-02-12},
+  abstract = {Despite the successes of pretrained language models, there are still few high-quality, general-purpose QA systems that are freely available. In response, we present Macaw, a versatile, generative question-answering (QA) system that we are making available to the community. Macaw is built on UnifiedQA, itself built on T5, and exhibits strong performance, zero-shot, on a wide variety of topics, including outperforming GPT-3 by over 10\% (absolute) on Challenge300, a suite of 300 challenge questions, despite being an order of magnitude smaller (11 billion vs. 175 billion parameters). In addition, Macaw allows different permutations ("angles") of its inputs and outputs to be used, for example Macaw can take a question and produce an answer; or take an answer and produce a question; or take an answer and question, and produce multiple-choice options. We describe the system, and illustrate a variety of question types where it produces surprisingly good answers, well outside the training setup. We also identify question classes where it still appears to struggle, offering insights into the limitations of pretrained language models. Macaw is freely available, and we hope that it proves useful to the community. Macaw is available at https://github.com/allenai/macaw},
+  archiveprefix = {arXiv},
+  version = {1},
+  file = {/Users/lukakuma/Zotero/storage/4UJPIEB4/Tafjord and Clark - 2021 - General-Purpose Question-Answering with Macaw.pdf;/Users/lukakuma/Zotero/storage/MHQTG3VT/2109.html}
+}
+
 @article{takamotoUniversalNeuralNetwork2022,
   title = {Towards Universal Neural Network Potential for Material Discovery Applicable to Arbitrary Combination of 45 Elements},
   author = {Takamoto, So and Shinagawa, Chikashi and Motoki, Daisuke and Nakago, Kosuke and Li, Wenwen and Kurata, Iori and Watanabe, Taku and Yayama, Yoshihiro and Iriguchi, Hiroki and Asano, Yusuke and Onodera, Tasuku and Ishii, Takafumi and Kudo, Takao and Ono, Hideki and Sawada, Ryohto and Ishitani, Ryuichiro and Ong, Marc and Yamaguchi, Taiki and Kataoka, Toshiki and Hayashi, Akihide and Charoenphakdee, Nontawat and Ibuka, Takeshi},
@@ -12675,24 +12703,6 @@
   archiveprefix = {arXiv},
   keywords = {*OpenAI},
   file = {/Users/lukakuma/Zotero/storage/IYLHZSRA/Tamkin et al. - 2021 - Understanding the Capabilities, Limitations, and S.pdf;/Users/lukakuma/Zotero/storage/9222H29V/2102.html}
-}
-
-@misc{tancikBlockNeRFScalableLarge2022,
-  title = {Block-{{NeRF}}: {{Scalable Large Scene Neural View Synthesis}}},
-  shorttitle = {Block-{{NeRF}}},
-  author = {Tancik, Matthew and Casser, Vincent and Yan, Xinchen and Pradhan, Sabeek and Mildenhall, Ben and Srinivasan, Pratul P. and Barron, Jonathan T. and Kretzschmar, Henrik},
-  date = {2022-02-10},
-  number = {arXiv:2202.05263},
-  eprint = {2202.05263},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2202.05263},
-  urldate = {2022-08-29},
-  abstract = {We present Block-NeRF, a variant of Neural Radiance Fields that can represent large-scale environments. Specifically, we demonstrate that when scaling NeRF to render city-scale scenes spanning multiple blocks, it is vital to decompose the scene into individually trained NeRFs. This decomposition decouples rendering time from scene size, enables rendering to scale to arbitrarily large environments, and allows per-block updates of the environment. We adopt several architectural changes to make NeRF robust to data captured over months under different environmental conditions. We add appearance embeddings, learned pose refinement, and controllable exposure to each individual NeRF, and introduce a procedure for aligning appearance between adjacent NeRFs so that they can be seamlessly combined. We build a grid of Block-NeRFs from 2.8 million images to create the largest neural scene representation to date, capable of rendering an entire neighborhood of San Francisco.},
-  archiveprefix = {arXiv},
-  keywords = {functa},
-  file = {/Users/lukakuma/Zotero/storage/57728K9M/Tancik et al. - 2022 - Block-NeRF Scalable Large Scene Neural View Synth.pdf;/Users/lukakuma/Zotero/storage/63YPCF2E/2202.html}
 }
 
 @unpublished{tangSparseMLPImage2022,
@@ -13518,6 +13528,23 @@
   file = {/Users/lukakuma/Zotero/storage/Y24VVL56/Wang et al. - 2022 - Foundation Transformers.pdf;/Users/lukakuma/Zotero/storage/8JI536UR/2210.html}
 }
 
+@misc{wangGITGenerativeImagetotext2022,
+  title = {{{GIT}}: {{A Generative Image-to-text Transformer}} for {{Vision}} and {{Language}}},
+  shorttitle = {{{GIT}}},
+  author = {Wang, Jianfeng and Yang, Zhengyuan and Hu, Xiaowei and Li, Linjie and Lin, Kevin and Gan, Zhe and Liu, Zicheng and Liu, Ce and Wang, Lijuan},
+  date = {2022-12-15},
+  number = {arXiv:2205.14100},
+  eprint = {2205.14100},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2205.14100},
+  urldate = {2023-02-12},
+  abstract = {In this paper, we design and train a Generative Image-to-text Transformer, GIT, to unify vision-language tasks such as image/video captioning and question answering. While generative models provide a consistent network architecture between pre-training and fine-tuning, existing work typically contains complex structures (uni/multi-modal encoder/decoder) and depends on external modules such as object detectors/taggers and optical character recognition (OCR). In GIT, we simplify the architecture as one image encoder and one text decoder under a single language modeling task. We also scale up the pre-training data and the model size to boost the model performance. Without bells and whistles, our GIT establishes new state of the arts on 12 challenging benchmarks with a large margin. For instance, our model surpasses the human performance for the first time on TextCaps (138.2 vs. 125.5 in CIDEr). Furthermore, we present a new scheme of generation-based image classification and scene text recognition, achieving decent performance on standard benchmarks. Codes are released at \textbackslash url\{https://github.com/microsoft/GenerativeImage2Text\}.},
+  archiveprefix = {arXiv},
+  file = {/Users/lukakuma/Zotero/storage/636RBQG2/Wang et al. - 2022 - GIT A Generative Image-to-text Transformer for Vi.pdf;/Users/lukakuma/Zotero/storage/TMZP52UF/2205.html}
+}
+
 @misc{wangImageForeignLanguage2022,
   title = {Image as a {{Foreign Language}}: {{BEiT Pretraining}} for {{All Vision}} and {{Vision-Language Tasks}}},
   shorttitle = {Image as a {{Foreign Language}}},
@@ -14135,6 +14162,18 @@
   abstract = {Building home assistant robots has long been a pursuit for vision and robotics researchers. To achieve this task, a simulated environment with physically realistic simulation, sufficient articulated objects, and transferability to the real robot is indispensable. Existing environments achieve these requirements for robotics simulation with different levels of simplification and focus. We take one step further in constructing an environment that supports household tasks for training robot learning algorithm. Our work, SAPIEN, is a realistic and physics-rich simulated environment that hosts a large-scale set for articulated objects. Our SAPIEN enables various robotic vision and interaction tasks that require detailed part-level understanding.We evaluate state-of-the-art vision algorithms for part detection and motion attribute recognition as well as demonstrate robotic interaction tasks using heuristic approaches and reinforcement learning algorithms. We hope that our SAPIEN can open a lot of research directions yet to be explored, including learning cognition through interaction, part motion discovery, and construction of robotics-ready simulated game environment.},
   archiveprefix = {arXiv},
   file = {/Users/lukakuma/Zotero/storage/QIVU2YEJ/Xiang et al. - 2020 - SAPIEN A SimulAted Part-based Interactive ENviron.pdf;/Users/lukakuma/Zotero/storage/RIK468TI/2003.html}
+}
+
+@misc{xiaoOffsiteTuningTransferLearning2023,
+  title = {Offsite-{{Tuning}}: {{Transfer Learning}} without {{Full Model}}},
+  shorttitle = {Offsite-{{Tuning}}},
+  author = {Xiao, Guangxuan and Lin, Ji and Han, Song},
+  date = {2023-02-09},
+  url = {https://arxiv.org/abs/2302.04870v1},
+  urldate = {2023-02-11},
+  abstract = {Transfer learning is important for foundation models to adapt to downstream tasks. However, many foundation models are proprietary, so users must share their data with model owners to fine-tune the models, which is costly and raise privacy concerns. Moreover, fine-tuning large foundation models is computation-intensive and impractical for most downstream users. In this paper, we propose Offsite-Tuning, a privacy-preserving and efficient transfer learning framework that can adapt billion-parameter foundation models to downstream data without access to the full model. In offsite-tuning, the model owner sends a light-weight adapter and a lossy compressed emulator to the data owner, who then fine-tunes the adapter on the downstream data with the emulator's assistance. The fine-tuned adapter is then returned to the model owner, who plugs it into the full model to create an adapted foundation model. Offsite-tuning preserves both parties' privacy and is computationally more efficient than the existing fine-tuning methods that require access to the full model weights. We demonstrate the effectiveness of offsite-tuning on various large language and vision foundation models. Offsite-tuning can achieve comparable accuracy as full model fine-tuning while being privacy-preserving and efficient, achieving 6.5x speedup and 5.6x memory reduction. Code is available at https://github.com/mit-han-lab/offsite-tuning.},
+  langid = {english},
+  file = {/Users/lukakuma/Zotero/storage/GYTV6XEW/Xiao et al. - 2023 - Offsite-Tuning Transfer Learning without Full Mod.pdf}
 }
 
 @misc{xuAcceleratedPolicyLearning2022,

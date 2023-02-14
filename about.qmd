@@ -15,5 +15,5 @@ I'm Lucas Shen, independent researcher interested in cryptography and AI.
 
 Together, with decent personal computation power, autonomy could be affordable at scale.
 
-[nostr](https://github.com/nostr-protocol/nostr): `npub1tk5wx0cgsthysderdmr5f2pm5yc094qlsr94l2tcy7dyp7hararqdy62tt`
+[nostr](https://github.com/nostr-protocol/nostr): npub1tk5wx0cgsthysderdmr5f2pm5yc094qlsr94l2tcy7dyp7hararqdy62tt
 

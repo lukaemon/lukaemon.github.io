@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2023/learning-to-learn/index.html",
       "/posts/2023/t5-finetuning-hello-world/samsum.html",
       "/posts/2023/humor-ai/index.html",
       "/posts/2023/sc-cot/index.html"

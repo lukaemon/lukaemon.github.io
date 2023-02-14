@@ -10,7 +10,116 @@
 <atom:link href="https://lukaemon.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>to my self-play</description>
 <generator>quarto-1.2.280</generator>
-<lastBuildDate>Thu, 09 Feb 2023 16:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 13 Feb 2023 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>Learning to learn</title>
+  <dc:creator>Lucas Shen</dc:creator>
+  <link>https://lukaemon.github.io/posts/2023/learning-to-learn/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/learning-to-learn/hands.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption">M.C. Escher’s “Drawing Hands,” a lithograph from 1948. Collection of Experience in Visual Arts, Cordon Art B.V., Baarn, The Netherlands.</figcaption><p></p>
+</figure>
+</div>
+<p>Learning is change, mentally and physically. Learning is creation.</p>
+<p>First, one creates new mental constructs, represented as new neuronal firing patterns. Over time, firing patterns change actual wirings of the brain.</p>
+<p>Second, one creates various artifacts to realize learned ideas. Artifacts like poem, book, music, painting, sculpture, architecture, computer program, movie, even video game. The medium is the message. The medium is the host of idea cross pollination cascades. Beautiful and scary ideas are born and died is such infosphere.</p>
+<p>Could alway try harder, but time and mental energy can’t be leveraged. Maybe stepping back once for a while to think about how to learn more effectively would be constructive.</p>
+<section id="structure-and-interpretation-of-computer-programs" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="structure-and-interpretation-of-computer-programs">Structure and Interpretation of Computer Programs</h2>
+<div class="page-columns page-full"><p>In the first great SICP<sup>1</sup> course<sup>2</sup>, the professor shares how to learn a new computer language. I believe it applies to all learnings. 3 simple principles are key to manage complexity, experiment and build new things:</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<img src="https://lukaemon.github.io/posts/2023/learning-to-learn/https:/upload.wikimedia.org/wikipedia/commons/9/9d/SICP_cover.jpg" class="img-fluid"></p></li><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://youtu.be/-J_xL4IGhJA?t=1670">youtube: 2 min</a></p></li></div></div>
+<ol type="1">
+<li>Primitive elements<br>
+</li>
+<li>Means of combination<br>
+</li>
+<li>Means of abstraction</li>
+</ol>
+<p>Primitive elements are fundamental building block, ex: lego.</p>
+<p>Means of combination are API between elements. One could fit different building blocks together for something new. ex: fit variety of lego blocks to build a lego house.</p>
+<p>Means of abstraction is where magic happened. How to name a complex construct and use it as primitives in later builds? Building with primitive elements are building from <code>first principle</code>. It offers both maximum flexibility and maximum redundancy. To build a lego city, if one could name a lego house and use it as primitive to expand the lego city, it would be way more efficient than building every single house from scratch.</p>
+<p>Mastering primitives, APIs and the power of abstraction, complex system could be understood, and created.</p>
+</section>
+<section id="the-nature-of-creation-is-remix" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-nature-of-creation-is-remix">The nature of creation is remix</h2>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/learning-to-learn/copy_transform_combined.jpeg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption">Everything is a Remix: <a href="https://www.youtube.com/watch?v=MZ2GuvUWaP8">part1</a>, <a href="https://www.youtube.com/watch?v=HhMar_eYnNY">part2</a>, <a href="https://www.youtube.com/watch?v=dwxtW1Aio68">part3</a></figcaption><p></p>
+</figure>
+</div>
+<p>The series do an incredible job to explain the nature of creation from cultural perspective. Artists first would copy lots of previous works to learn the basics and build up muscle memories, primitive elements. Then they could start tweaking old ideas, and fit different ideas together to create new one, means of combination and abstraction.</p>
+<p>There would be countless failures during all stages, copy, transform and combine. Typical learning process. One just have to find the grit.</p>
+</section>
+<section id="evergreen-notes-and-spaced-repetition" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="evergreen-notes-and-spaced-repetition">Evergreen notes and spaced repetition</h2>
+<div class="page-columns page-full"><p>The idea of evergreen notes<sup>3</sup> is keeping notes on ideas, let them evolve and connect. The process could easily be supported by software such as Obsidian<sup>4</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;<a href="https://notes.andymatuschak.org/z4SDCZQeRo4xFEQ8H4qrSqd68ucpgE6LU155C">Andy Matuschak - Evergreen notes</a></p></li><li id="fn4"><p><sup>4</sup>&nbsp;<a href="https://obsidian.md/">obsidian.md</a></p></li></div></div>
+<p>Think of every idea as primitive. For example, treat the idea about <code>learning to learn</code> as atomic. If one could keep notes about <code>learning to learn</code> whenever it’s triggered and connect it to other ideas, the knowledge graph would become organic. It will function like a mental fusion reactor, reinforcing one idea while making connections to others, even trigger conflicts among ideas. This is super valuable process to sustain. Especially treasure and cultivate the internal conflicts.</p>
+<blockquote class="blockquote">
+<p>The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.</p>
+<p><cite>F. Scott Fitzgerald</cite></p>
+</blockquote>
+<div class="page-columns page-full"><p>Spaced repetition<sup>5</sup> resonates well with understanding primitives and the copy phase. Find the rhythm to reinforce fundamentals and grow the network density.</p><div class="no-row-height column-margin column-container"><li id="fn5"><p><sup>5</sup>&nbsp;<a href="https://numinous.productions/ttft/">Andy Matuschak - How can we develop transformative tools for thought?</a></p></li></div></div>
+<div class="page-columns page-full"><p>It could be unintentional repetition or deliberate practice<sup>6</sup>. Experiment and find the right mix.</p><div class="no-row-height column-margin column-container"><li id="fn6"><p><sup>6</sup>&nbsp;<a href="https://en.wikipedia.org/wiki/Practice_(learning_method)#Deliberate_practice">wiki</a></p></li></div></div>
+</section>
+<section id="bootstrapping-with-delta" class="level2">
+<h2 class="anchored" data-anchor-id="bootstrapping-with-delta">Bootstrapping with <img src="https://latex.codecogs.com/png.latex?%5CDelta"></h2>
+<p>What to copy? To transform? To combine with? I know nothing right now. How to improve the quality of idea?</p>
+<p>The quality is conditioned on:</p>
+<ul>
+<li>How good is the world model?</li>
+<li>How goodness of world model attenuate during n step roll out? What’s the largest, usable n?</li>
+<li>How fast, how many orthogonal possibilities could be found based on n-step rolled out simulations?</li>
+<li>Precision and recall?
+<ul>
+<li>Precision: the ratio of good idea.</li>
+<li>Recall: out of all good possible ideas, how many are found?</li>
+</ul></li>
+</ul>
+<p>Generate 100 bad ideas to get a good one is ok at the beginning, but sticking to naive working hard is never ideal. To improve, one needs to improve the world model, the quality of simulation and the efficiency of exploration.</p>
+<p>Great mentors and brilliant peers are a bliss. However, solo walker could still make meaningful strides. <strong>The key is to expand on time axis and create <code>delta</code> to answer known unknown and explore unknown unknown.</strong></p>
+<p>For example, starting every new project by writing down the context and expectation:</p>
+<ul>
+<li>Trigger of the project? Why?</li>
+<li>Expected result?</li>
+<li>Expected learning?</li>
+<li>Expected obstacles?</li>
+</ul>
+<p>The goal is not to predict the future, but create a T0 snapshot.</p>
+<p>During the project, record every single new ideas about how to improve the project, possible extension follow up, even tangential quantum leap. Don’t care about the quality of ideas. The goal is to create T1 … Tn snapshots.</p>
+<p>Finish the project and critique the old you.</p>
+<p>Critique of the context is the largest <code>delta</code>. One may enter the project for all the wrong reasons and with many biased or varied expectations. Hopefully one could recognize some and figure out why looking backward.</p>
+<p>Listing all, non-discriminative ideas first to critique after creates a flow of <code>delta</code> along the progress. Hopefully one could see how old perspective changes and new form.</p>
+<p>That <code>delta</code> is THE force. Actively search, mine, recognize, accept and adopt to it.</p>
+<p>Learning is a process of resolving merge conflicts between internal world model and perceived reality. Faster learning means one is willing to and could resolve more conflicts in a shorter time. Stopped learning means one is unwilling to or unable to see the delta and resolve the conflict.</p>
+<p>Bootstrapping is soliloquy by nature. Endless self-play. It could be a long gradually with no light of suddenly, but one can choose to believe.</p>
+<p>For most adults, multiagent learning is more humane. However, if one could effectively copy, transform and simulate different perspectives through various media such as papers or books, some of real human apprenticeship or peers could be replaced by self-multiagent learning, ideally saving communication overhead and redundant information. This is similar to self-ensemble on LLM conditioned by different prompts.</p>
+<p>It’s possible to be your own mentor, simulate the diversified peers and grow sustainably. Just have to reset and self-question all the time to keep many characters alive in one brain. Not the most effective route though. One will learn way more faster by simply observing brilliant people. Deep collaboration has even greater yields. Closed mode can’t match such electrifying environment, but slow learning is real, honest and grounded.</p>
+</section>
+<section id="why" class="level2">
+<h2 class="anchored" data-anchor-id="why">Why</h2>
+<p>These ideas are in the same league of every other how to knowledge, means to ends. Humans build tools to achieve goals. However, developing the understanding of how is as important as the understanding of why.</p>
+<blockquote class="blockquote">
+<p>He who has a why to live can bear almost any how.</p>
+<p>– <cite>Friedrich Nietzsche</cite></p>
+</blockquote>
+<p>Happy learning and remember to ask periodically: <code>to what ends?</code></p>
+
+
+</section>
+
+
+ ]]></description>
+  <category>meta-learning</category>
+  <guid>https://lukaemon.github.io/posts/2023/learning-to-learn/index.html</guid>
+  <pubDate>Mon, 13 Feb 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://lukaemon.github.io/posts/2023/learning-to-learn/hands.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Hello, world! Huggingface T5 finetuning</title>
   <dc:creator>Lucas Shen</dc:creator>
@@ -375,17 +484,7 @@ max      1153.0     94.0</code></pre>
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
-  title = {Hello, World! {Huggingface} {T5} Finetuning},
-  date = {2023-02-10},
-  url = {https://lukaemon.github.io/samsum.html},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“Hello, World! Huggingface T5
-Finetuning.”</span> February 10, 2023. <a href="https://lukaemon.github.io/samsum.html">https://lukaemon.github.io/samsum.html</a>.
-</div></div></section></div> ]]></description>
+ ]]></description>
   <category>tutorial</category>
   <category>copy</category>
   <guid>https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/samsum.html</guid>
@@ -418,16 +517,7 @@ Finetuning.”</span> February 10, 2023. <a href="https://lukaemon.github.io/sam
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
-  title = {Humor {AI}},
-  date = {2023-02-05},
-  url = {https://lukaemon.github.io/posts/2023/humor-ai},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“Humor AI.”</span> February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/humor-ai">https://lukaemon.github.io/posts/2023/humor-ai</a>.
-</div></div></section></div> ]]></description>
+ ]]></description>
   <category>grounding</category>
   <category>multimodal</category>
   <guid>https://lukaemon.github.io/posts/2023/humor-ai/index.html</guid>
@@ -518,17 +608,7 @@ Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, 
 <div id="ref-zhouLeasttoMostPromptingEnables2022" class="csl-entry">
 Zhou, Denny, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, et al. 2022. <span>“Least-to-<span>Most Prompting Enables Complex Reasoning</span> in <span>Large Language Models</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2205.10625">http://arxiv.org/abs/2205.10625</a>.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
-  title = {Self-Consistency and Chain of Thought},
-  date = {2023-02-05},
-  url = {https://lukaemon.github.io/posts/2023/sc-cot},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“Self-Consistency and Chain of Thought.”</span>
-February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/sc-cot">https://lukaemon.github.io/posts/2023/sc-cot</a>.
-</div></div></section></div> ]]></description>
+</div></section></div> ]]></description>
   <category>rationale engineering</category>
   <guid>https://lukaemon.github.io/posts/2023/sc-cot/index.html</guid>
   <pubDate>Sat, 04 Feb 2023 16:00:00 GMT</pubDate>
