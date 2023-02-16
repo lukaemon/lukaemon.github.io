@@ -8,12 +8,10 @@ about:
 >
 > -- <cite>Jill Lepore, These Truths: A History of the United States</cite>
 
-I'm Lucas Shen, independent researcher interested in cryptography and AI.
+I'm an independent researcher interested in cryptography and AI.
 
-- Cryptography enables pseudonymity and information exchange without centralized point of failure.  
-- AI enhances and complements human.  
+What if we didn't have to convince three people to found an organization and raise millions to do something truly meaningful and impactful? Would that increase the diversity of ideasphere?
 
-Together, with decent personal computation power, autonomy could be affordable at scale.
+Individuals always have absolute autonomy over the [creative arts](https://en.wikipedia.org/wiki/The_arts), though it may come at a great personal cost. One may have to live extremely frugally in exchange for autonomy or risk being canceled by mainstream social norms. However, that hasn't stopped some stubborn spirits from creating masterpieces that still inspire people and contribute to the great conversation of our culture. Can we expand the scope and reduce the cost and risk?
 
-[nostr](https://github.com/nostr-protocol/nostr): npub1tk5wx0cgsthysderdmr5f2pm5yc094qlsr94l2tcy7dyp7hararqdy62tt
-
+If we combine AI and cryptography with decent personal computing power, autonomy could be affordable at scale. What would your verse be?

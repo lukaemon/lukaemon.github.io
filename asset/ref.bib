@@ -245,17 +245,8 @@
   date = {2022-04-28},
   pages = {66},
   langid = {english},
-  keywords = {(ext) Flamingo,*DeepMind,cover to cover,milestone,multimodal},
+  keywords = {(ext) Flamingo,*DeepMind,adaptor,cover to cover,milestone,multimodal},
   file = {/Users/lukakuma/Zotero/storage/TCJCJDME/Alayrac et al. -  Flamingo a Visual Language Model for Few-Shot .pdf}
-}
-
-@article{allalSantaCoderDonReach,
-  title = {{{SantaCoder}}: Don’t Reach for the Stars!},
-  author = {Allal, Loubna Ben and Li, Raymond and Kocetkov, Denis and Mou, Chenghao and Akiki, Christopher and Ferrandis, Carlos Munoz and Muennighoff, Niklas and Mishra, Mayank and Gu, Alex and Dey, Manan and Umapathi, Logesh Kumar and Anderson, Carolyn Jane and Zi, Yangtian and Poirier, Joel Lamy and Schoelkopf, Hailey and Troshin, Sergey and Abulkhanov, Dmitry and Romero, Manuel and Zhuo, Terry Yue},
-  date = {2022-12-23},
-  langid = {english},
-  keywords = {code},
-  file = {/Users/lukakuma/Zotero/storage/Z48RH79V/Allal et al. - SantaCoder don’t reach for the stars!.pdf}
 }
 
 @misc{allawayPenguinsDonFly2022,
@@ -372,7 +363,7 @@
   urldate = {2022-12-17},
   abstract = {Fine-tuning all parameters of a pre-trained model has become the mainstream approach for transfer learning. To increase its efficiency and prevent catastrophic forgetting and interference, techniques like adapters and sparse fine-tuning have been developed. Adapters are modular, as they can be combined to adapt a model towards different facets of knowledge (e.g., dedicated language and/or task adapters). Sparse fine-tuning is expressive, as it controls the behavior of all model components. In this work, we introduce a new fine-tuning method with both these desirable properties. In particular, we learn sparse, real-valued masks based on a simple variant of the Lottery Ticket Hypothesis. Task-specific masks are obtained from annotated data in a source language, and language-specific masks from masked language modeling in a target language. Both these masks can then be composed with the pre-trained model. Unlike adapter-based fine-tuning, this method neither increases the number of parameters at inference time nor alters the original model architecture. Most importantly, it outperforms adapters in zero-shot cross-lingual transfer by a large margin in a series of multilingual benchmarks, including Universal Dependencies, MasakhaNER, and AmericasNLI. Based on an in-depth analysis, we additionally find that sparsity is crucial to prevent both 1) interference between the fine-tunings to be composed and 2) overfitting. We release the code and models at https://github.com/cambridgeltl/composable-sft.},
   archiveprefix = {arXiv},
-  keywords = {parameter efficient finetuninig},
+  keywords = {peft},
   file = {/Users/lukakuma/Zotero/storage/HX3KG78C/Ansell et al. - 2021 - Composable Sparse Fine-Tuning for Cross-Lingual Tr.pdf;/Users/lukakuma/Zotero/storage/5QQ82ZQT/2110.html}
 }
 
@@ -411,6 +402,24 @@
   pmcid = {PMC5643072},
   keywords = {(ext) J.Hawkins},
   file = {/Users/lukakuma/Zotero/storage/P6H9Y4SF/Antic et al. - 2010 - The Decade of the Dendritic NMDA Spike.pdf}
+}
+
+@misc{aoSpeechT5UnifiedModalEncoderDecoder2022,
+  title = {{{SpeechT5}}: {{Unified-Modal Encoder-Decoder Pre-Training}} for {{Spoken Language Processing}}},
+  shorttitle = {{{SpeechT5}}},
+  author = {Ao, Junyi and Wang, Rui and Zhou, Long and Wang, Chengyi and Ren, Shuo and Wu, Yu and Liu, Shujie and Ko, Tom and Li, Qing and Zhang, Yu and Wei, Zhihua and Qian, Yao and Li, Jinyu and Wei, Furu},
+  date = {2022-05-24},
+  number = {arXiv:2110.07205},
+  eprint = {2110.07205},
+  eprinttype = {arxiv},
+  primaryclass = {cs, eess},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2110.07205},
+  urldate = {2023-02-14},
+  abstract = {Motivated by the success of T5 (Text-To-Text Transfer Transformer) in pre-trained natural language processing models, we propose a unified-modal SpeechT5 framework that explores the encoder-decoder pre-training for self-supervised speech/text representation learning. The SpeechT5 framework consists of a shared encoder-decoder network and six modal-specific (speech/text) pre/post-nets. After preprocessing the input speech/text through the pre-nets, the shared encoder-decoder network models the sequence-to-sequence transformation, and then the post-nets generate the output in the speech/text modality based on the output of the decoder. Leveraging large-scale unlabeled speech and text data, we pre-train SpeechT5 to learn a unified-modal representation, hoping to improve the modeling capability for both speech and text. To align the textual and speech information into this unified semantic space, we propose a cross-modal vector quantization approach that randomly mixes up speech/text states with latent units as the interface between encoder and decoder. Extensive evaluations show the superiority of the proposed SpeechT5 framework on a wide variety of spoken language processing tasks, including automatic speech recognition, speech synthesis, speech translation, voice conversion, speech enhancement, and speaker identification. We release our code and model at https://github.com/microsoft/SpeechT5.},
+  archiveprefix = {arXiv},
+  keywords = {adaptor,multimodal},
+  file = {/Users/lukakuma/Zotero/storage/EULDETYT/Ao et al. - 2022 - SpeechT5 Unified-Modal Encoder-Decoder Pre-Traini.pdf;/Users/lukakuma/Zotero/storage/CP5YIDCI/2110.html}
 }
 
 @online{armstrongCoinbaseMissionFocused2020,
@@ -665,7 +674,7 @@
   date = {2022-12-17},
   abstract = {As AI systems become more capable, we would like to enlist their help to supervise other AIs. We experiment with methods for training a harmless AI assistant through selfimprovement, without any human labels identifying harmful outputs. The only human oversight is provided through a list of rules or principles, and so we refer to the method as ‘Constitutional AI’. The process involves both a supervised learning and a reinforcement learning phase. In the supervised phase we sample from an initial model, then generate self-critiques and revisions, and then finetune the original model on revised responses. In the RL phase, we sample from the finetuned model, use a model to evaluate which of the two samples is better, and then train a preference model from this dataset of AI preferences. We then train with RL using the preference model as the reward signal, i.e. we use ‘RL from AI Feedback’ (RLAIF). As a result we are able to train a harmless but nonevasive AI assistant that engages with harmful queries by explaining its objections to them. Both the SL and RL methods can leverage chain-of-thought style reasoning to improve the human-judged performance and transparency of AI decision making. These methods make it possible to control AI behavior more precisely and with far fewer human labels.},
   langid = {english},
-  keywords = {alignment},
+  keywords = {alignment,rationale engr},
   file = {/Users/lukakuma/Zotero/storage/55DJBV42/Bai et al. - Constitutional AI Harmlessness from AI Feedback.pdf}
 }
 
@@ -781,6 +790,7 @@
   abstract = {Large-scale diffusion-based generative models have led to breakthroughs in text-conditioned high-resolution image synthesis. Starting from random noise, such text-to-image diffusion models gradually synthesize images in an iterative fashion while conditioning on text prompts. We find that their synthesis behavior qualitatively changes throughout this process: Early in sampling, generation strongly relies on the text prompt to generate text-aligned content, while later, the text conditioning is almost entirely ignored. This suggests that sharing model parameters throughout the entire generation process may not be ideal. Therefore, in contrast to existing works, we propose to train an ensemble of text-to-image diffusion models specialized for different synthesis stages. To maintain training efficiency, we initially train a single model, which is then split into specialized models that are trained for the specific stages of the iterative generation process. Our ensemble of diffusion models, called eDiffi, results in improved text alignment while maintaining the same inference computation cost and preserving high visual quality, outperforming previous large-scale text-to-image diffusion models on the standard benchmark. In addition, we train our model to exploit a variety of embeddings for conditioning, including the T5 text, CLIP text, and CLIP image embeddings. We show that these different embeddings lead to different behaviors. Notably, the CLIP image embedding allows an intuitive way of transferring the style of a reference image to the target text-to-image output. Lastly, we show a technique that enables eDiffi's "paint-with-words" capability. A user can select the word in the input text and paint it in a canvas to control the output, which is very handy for crafting the desired image in mind. The project page is available at https://deepimagination.cc/eDiffi/},
   archiveprefix = {arXiv},
   langid = {english},
+  keywords = {diffusion,image generation},
   file = {/Users/lukakuma/Zotero/storage/E65S6MUK/Balaji et al. - 2022 - eDiffi Text-to-Image Diffusion Models with an Ens.pdf}
 }
 
@@ -929,24 +939,6 @@
   file = {/Users/lukakuma/Zotero/storage/EHGUJHG7/Barreto et al. - 2020 - Fast reinforcement learning with generalized polic.pdf}
 }
 
-@misc{bartoldsonComputeEfficientDeepLearning2022,
-  title = {Compute-{{Efficient Deep Learning}}: {{Algorithmic Trends}} and {{Opportunities}}},
-  shorttitle = {Compute-{{Efficient Deep Learning}}},
-  author = {Bartoldson, Brian R. and Kailkhura, Bhavya and Blalock, Davis},
-  date = {2022-10-12},
-  number = {arXiv:2210.06640},
-  eprint = {2210.06640},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2210.06640},
-  urldate = {2022-12-17},
-  abstract = {Although deep learning has made great progress in recent years, the exploding economic and environmental costs of training neural networks are becoming unsustainable. To address this problem, there has been a great deal of research on *algorithmically-efficient deep learning*, which seeks to reduce training costs not at the hardware or implementation level, but through changes in the semantics of the training program. In this paper, we present a structured and comprehensive overview of the research in this field. First, we formalize the *algorithmic speedup* problem, then we use fundamental building blocks of algorithmically efficient training to develop a taxonomy. Our taxonomy highlights commonalities of seemingly disparate methods and reveals current research gaps. Next, we present evaluation best practices to enable comprehensive, fair, and reliable comparisons of speedup techniques. To further aid research and applications, we discuss common bottlenecks in the training pipeline (illustrated via experiments) and offer taxonomic mitigation strategies for them. Finally, we highlight some unsolved research challenges and present promising future directions.},
-  archiveprefix = {arXiv},
-  keywords = {compute efficient method,skimed},
-  file = {/Users/lukakuma/Zotero/storage/YRAL3HMJ/Bartoldson et al. - 2022 - Compute-Efficient Deep Learning Algorithmic Trend.pdf;/Users/lukakuma/Zotero/storage/SF25SXBZ/2210.html}
-}
-
 @misc{bauerSpatialFunctaScaling2023,
   title = {Spatial {{Functa}}: {{Scaling Functa}} to {{ImageNet Classification}} and {{Generation}}},
   shorttitle = {Spatial {{Functa}}},
@@ -961,6 +953,7 @@
   urldate = {2023-02-08},
   abstract = {Neural fields, also known as implicit neural representations, have emerged as a powerful means to represent complex signals of various modalities. Based on this Dupont et al. (2022) introduce a framework that views neural fields as data, termed *functa*, and proposes to do deep learning directly on this dataset of neural fields. In this work, we show that the proposed framework faces limitations when scaling up to even moderately complex datasets such as CIFAR-10. We then propose *spatial functa*, which overcome these limitations by using spatially arranged latent representations of neural fields, thereby allowing us to scale up the approach to ImageNet-1k at 256x256 resolution. We demonstrate competitive performance to Vision Transformers (Steiner et al., 2022) on classification and Latent Diffusion (Rombach et al., 2022) on image generation respectively.},
   archiveprefix = {arXiv},
+  keywords = {functa},
   file = {/Users/lukakuma/Zotero/storage/GI8CMZB8/Bauer et al. - 2023 - Spatial Functa Scaling Functa to ImageNet Classif.pdf;/Users/lukakuma/Zotero/storage/WNMZUNAK/2302.html}
 }
 
@@ -1306,21 +1299,6 @@
   file = {/Users/lukakuma/Zotero/storage/35TPG54Z/Black et al. - 2022 - GPT-NeoX-20B An Open-Source Autoregressive Langua.pdf;/Users/lukakuma/Zotero/storage/E4XEH24D/2204.html}
 }
 
-@unpublished{bodnarNeuralSheafDiffusion2022,
-  title = {Neural {{Sheaf Diffusion}}: {{A Topological Perspective}} on {{Heterophily}} and {{Oversmoothing}} in {{GNNs}}},
-  shorttitle = {Neural {{Sheaf Diffusion}}},
-  author = {Bodnar, Cristian and Di Giovanni, Francesco and Chamberlain, Benjamin Paul and Liò, Pietro and Bronstein, Michael M.},
-  date = {2022-02-09},
-  eprint = {2202.04579},
-  eprinttype = {arxiv},
-  primaryclass = {cs, math},
-  url = {http://arxiv.org/abs/2202.04579},
-  urldate = {2022-05-16},
-  abstract = {Cellular sheaves equip graphs with "geometrical" structure by assigning vector spaces and linear maps to nodes and edges. Graph Neural Networks (GNNs) implicitly assume a graph with a trivial underlying sheaf. This choice is reflected in the structure of the graph Laplacian operator, the properties of the associated diffusion equation, and the characteristics of the convolutional models that discretise this equation. In this paper, we use cellular sheaf theory to show that the underlying geometry of the graph is deeply linked with the performance of GNNs in heterophilic settings and their oversmoothing behaviour. By considering a hierarchy of increasingly general sheaves, we study how the ability of the sheaf diffusion process to achieve linear separation of the classes in the infinite time limit expands. At the same time, we prove that when the sheaf is non-trivial, discretised parametric diffusion processes have greater control than GNNs over their asymptotic behaviour. On the practical side, we study how sheaves can be learned from data. The resulting sheaf diffusion models have many desirable properties that address the limitations of classical graph diffusion equations (and corresponding GNN models) and obtain state-of-the-art results in heterophilic settings. Overall, our work provides new connections between GNNs and algebraic topology and would be of interest to both fields.},
-  archiveprefix = {arXiv},
-  file = {/Users/lukakuma/Zotero/storage/HATH9QDE/Bodnar et al. - 2022 - Neural Sheaf Diffusion A Topological Perspective on Heterophily and Oversmoothing in GNNs.pdf}
-}
-
 @misc{bohnetAttributedQuestionAnswering2022,
   title = {Attributed {{Question Answering}}: {{Evaluation}} and {{Modeling}} for {{Attributed Large Language Models}}},
   shorttitle = {Attributed {{Question Answering}}},
@@ -1383,7 +1361,7 @@
   urldate = {2022-09-20},
   abstract = {We enhance auto-regressive language models by conditioning on document chunks retrieved from a large corpus, based on local similarity with preceding tokens. With a \$2\$ trillion token database, our Retrieval-Enhanced Transformer (RETRO) obtains comparable performance to GPT-3 and Jurassic-1 on the Pile, despite using 25\$\textbackslash times\$ fewer parameters. After fine-tuning, RETRO performance translates to downstream knowledge-intensive tasks such as question answering. RETRO combines a frozen Bert retriever, a differentiable encoder and a chunked cross-attention mechanism to predict tokens based on an order of magnitude more data than what is typically consumed during training. We typically train RETRO from scratch, yet can also rapidly RETROfit pre-trained transformers with retrieval and still achieve good performance. Our work opens up new avenues for improving language models through explicit memory at unprecedented scale.},
   archiveprefix = {arXiv},
-  keywords = {cover to cover,milestone,multimodal,retrieval},
+  keywords = {adaptor,cover to cover,milestone,multimodal,retrieval},
   file = {/Users/lukakuma/Zotero/storage/WFN8WKAF/Borgeaud et al. - 2022 - Improving language models by retrieving from trill.pdf;/Users/lukakuma/Zotero/storage/WWBXJ4E4/2112.html}
 }
 
@@ -1929,6 +1907,7 @@
   urldate = {2023-01-13},
   abstract = {We present Muse, a text-to-image Transformer model that achieves state-of-the-art image generation performance while being significantly more efficient than diffusion or autoregressive models. Muse is trained on a masked modeling task in discrete token space: given the text embedding extracted from a pre-trained large language model (LLM), Muse is trained to predict randomly masked image tokens. Compared to pixel-space diffusion models, such as Imagen and DALL-E 2, Muse is significantly more efficient due to the use of discrete tokens and requiring fewer sampling iterations; compared to autoregressive models, such as Parti, Muse is more efficient due to the use of parallel decoding. The use of a pre-trained LLM enables fine-grained language understanding, translating to high-fidelity image generation and the understanding of visual concepts such as objects, their spatial relationships, pose, cardinality etc. Our 900M parameter model achieves a new SOTA on CC3M, with an FID score of 6.06. The Muse 3B parameter model achieves an FID of 7.88 on zero-shot COCO evaluation, along with a CLIP score of 0.32. Muse also directly enables a number of image editing applications without the need to fine-tune or invert the model: inpainting, outpainting, and mask-free editing. More results are available at https://muse-model.github.io},
   archiveprefix = {arXiv},
+  keywords = {image generation},
   file = {/Users/lukakuma/Zotero/storage/GDBFWH6T/Chang et al. - 2023 - Muse Text-To-Image Generation via Masked Generati.pdf;/Users/lukakuma/Zotero/storage/WHHIPY39/2301.html}
 }
 
@@ -2201,6 +2180,23 @@
   file = {/Users/lukakuma/Zotero/storage/SRKZTZDJ/Chen et al. - 2022 - PaLI A Jointly-Scaled Multilingual Language-Image.pdf;/Users/lukakuma/Zotero/storage/CTHPMK97/2209.html}
 }
 
+@misc{chenParameterEfficientFineTuningDesign2023,
+  title = {Parameter-{{Efficient Fine-Tuning Design Spaces}}},
+  author = {Chen, Jiaao and Zhang, Aston and Shi, Xingjian and Li, Mu and Smola, Alex and Yang, Diyi},
+  date = {2023-01-04},
+  number = {arXiv:2301.01821},
+  eprint = {2301.01821},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2301.01821},
+  urldate = {2023-02-16},
+  abstract = {Parameter-efficient fine-tuning aims to achieve performance comparable to fine-tuning, using fewer trainable parameters. Several strategies (e.g., Adapters, prefix tuning, BitFit, and LoRA) have been proposed. However, their designs are hand-crafted separately, and it remains unclear whether certain design patterns exist for parameter-efficient fine-tuning. Thus, we present a parameter-efficient fine-tuning design paradigm and discover design patterns that are applicable to different experimental settings. Instead of focusing on designing another individual tuning strategy, we introduce parameter-efficient fine-tuning design spaces that parameterize tuning structures and tuning strategies. Specifically, any design space is characterized by four components: layer grouping, trainable parameter allocation, tunable groups, and strategy assignment. Starting from an initial design space, we progressively refine the space based on the model quality of each design choice and make greedy selection at each stage over these four components. We discover the following design patterns: (i) group layers in a spindle pattern; (ii) allocate the number of trainable parameters to layers uniformly; (iii) tune all the groups; (iv) assign proper tuning strategies to different groups. These design patterns result in new parameter-efficient fine-tuning methods. We show experimentally that these methods consistently and significantly outperform investigated parameter-efficient fine-tuning strategies across different backbone models and different tasks in natural language processing.},
+  archiveprefix = {arXiv},
+  keywords = {peft},
+  file = {/Users/lukakuma/Zotero/storage/THKK3LRT/Chen et al. - 2023 - Parameter-Efficient Fine-Tuning Design Spaces.pdf;/Users/lukakuma/Zotero/storage/P3FE7C8G/2301.html}
+}
+
 @unpublished{chenPix2seqLanguageModeling2022,
   title = {Pix2seq: {{A Language Modeling Framework}} for {{Object Detection}}},
   shorttitle = {Pix2seq},
@@ -2214,15 +2210,6 @@
   abstract = {We present Pix2Seq, a simple and generic framework for object detection. Unlike existing approaches that explicitly integrate prior knowledge about the task, we cast object detection as a language modeling task conditioned on the observed pixel inputs. Object descriptions (e.g., bounding boxes and class labels) are expressed as sequences of discrete tokens, and we train a neural network to perceive the image and generate the desired sequence. Our approach is based mainly on the intuition that if a neural network knows about where and what the objects are, we just need to teach it how to read them out. Beyond the use of task-specific data augmentations, our approach makes minimal assumptions about the task, yet it achieves competitive results on the challenging COCO dataset, compared to highly specialized and well optimized detection algorithms.},
   archiveprefix = {arXiv},
   file = {/Users/lukakuma/Zotero/storage/VMZ5ZG9L/Chen et al. - 2022 - Pix2seq A Language Modeling Framework for Object .pdf;/Users/lukakuma/Zotero/storage/FSSGX2BJ/2109.html}
-}
-
-@article{chenPLACESPromptingLanguage,
-  title = {{{PLACES}}: {{Prompting Language Models}} for {{Social Conversation Synthesis}}},
-  author = {Chen, Maximillian and Papangelis, Alexandros and Tao, Chenyang and Kim, Seokhwan and Rosenbaum, Andy and Liu, Yang and Yu, Zhou and Hakkani-Tur, Dilek},
-  date = {2023-02},
-  abstract = {Collecting high quality conversational data can be very expensive for most applications and infeasible for others due to privacy, ethical, or similar concerns. A promising direction to tackle this problem is to generate synthetic dialogues by prompting large language models. In this work, we use a small set of expert-written conversations as incontext examples to synthesize a social conversation dataset using prompting1. We perform several thorough evaluations of our synthetic conversations compared to human-collected conversations. This includes various dimensions of conversation quality with human evaluation directly on the synthesized conversations, and interactive human evaluation of chatbots fine-tuned on the synthetically generated dataset. We additionally demonstrate that this prompting approach is generalizable to multiparty conversations, providing potential to create new synthetic data for multi-party tasks. Our synthetic multi-party conversations were rated more favorably across all measured dimensions compared to conversation excerpts sampled from a human-collected multi-party dataset.},
-  langid = {english},
-  file = {/Users/lukakuma/Zotero/storage/I56H87A3/Chen et al. - PLACES Prompting Language Models for Social Conve.pdf}
 }
 
 @misc{chenProgramThoughtsPrompting2022,
@@ -2259,6 +2246,25 @@
   file = {/Users/lukakuma/Zotero/storage/7V8XKXGZ/Chen et al. - 2021 - Randomized Ensembled Double Q-Learning Learning F.pdf;/Users/lukakuma/Zotero/storage/4KP8GWM4/2101.html}
 }
 
+@misc{chenRevisitingParameterEfficientTuning2022,
+  title = {Revisiting {{Parameter-Efficient Tuning}}: {{Are We Really There Yet}}?},
+  shorttitle = {Revisiting {{Parameter-Efficient Tuning}}},
+  author = {Chen, Guanzheng and Liu, Fangyu and Meng, Zaiqiao and Liang, Shangsong},
+  date = {2022-02-16},
+  number = {arXiv:2202.07962},
+  eprint = {2202.07962},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2202.07962},
+  urldate = {2023-02-16},
+  abstract = {Parameter-Efficient Tuning (PETuning) methods have been deemed by many as the new paradigm for using pretrained language models (PLMs). By tuning just a fraction amount of parameters comparing to full model finetuning, PETuning methods claim to have achieved performance on par with or even better than finetuning. In this work, we take a step back and re-examine these PETuning methods by conducting the first comprehensive investigation into the training and evaluation of them. We found the problematic validation and testing practice in current studies, when accompanied by the instability nature of PETuning methods, has led to unreliable conclusions. When being compared under a truly fair evaluation protocol, PETuning cannot yield consistently competitive performance while finetuning remains to be the best-performing method in medium- and high-resource settings. We delve deeper into the cause of the instability and observed that the number of trainable parameters and training iterations are two main factors: reducing trainable parameters and prolonging training iterations may lead to higher stability in PETuning methods.},
+  archiveprefix = {arXiv},
+  version = {1},
+  keywords = {peft},
+  file = {/Users/lukakuma/Zotero/storage/PNVEXPVU/Chen et al. - 2022 - Revisiting Parameter-Efficient Tuning Are We Real.pdf;/Users/lukakuma/Zotero/storage/XMFI25UI/2202.html}
+}
+
 @article{chenSimpleFrameworkContrastive2020,
   title = {A {{Simple Framework}} for {{Contrastive Learning}} of {{Visual Representations}}},
   author = {Chen, Ting and Kornblith, Simon and Norouzi, Mohammad and Hinton, Geoffrey},
@@ -2270,7 +2276,7 @@
   file = {/Users/lukakuma/Zotero/storage/HV3SSITH/Chen et al. - 2020 - A Simple Framework for Contrastive Learning of Vis.pdf;/Users/lukakuma/Zotero/storage/FTIJNW7F/2002.html}
 }
 
-@misc{chenVisualGPTDataefficientAdaptation2022,
+@misc{chenVisualGPTDataefficientAdaptation2022a,
   title = {{{VisualGPT}}: {{Data-efficient Adaptation}} of {{Pretrained Language Models}} for {{Image Captioning}}},
   shorttitle = {{{VisualGPT}}},
   author = {Chen, Jun and Guo, Han and Yi, Kai and Li, Boyang and Elhoseiny, Mohamed},
@@ -2281,10 +2287,11 @@
   primaryclass = {cs},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2102.10407},
-  urldate = {2022-08-10},
+  urldate = {2023-02-15},
   abstract = {The ability to quickly learn from a small quantity oftraining data widens the range of machine learning applications. In this paper, we propose a data-efficient image captioning model, VisualGPT, which leverages the linguistic knowledge from a large pretrained language model(LM). A crucial challenge is to balance between the use of visual information in the image and prior linguistic knowledge acquired from pretraining. We designed a novel self-resurrecting encoder-decoder attention mechanism to quickly adapt the pretrained LM as the language decoder ona small amount of in-domain training data. The proposed self-resurrecting activation unit produces sparse activations but has reduced susceptibility to zero gradients. We train the proposed model, VisualGPT, on 0.1\%, 0.5\% and 1\% of MSCOCO and Conceptual Captions training data. Under these conditions, we outperform the best baseline model by up to 10.8\% CIDEr on MS COCO and upto 5.4\% CIDEr on Conceptual Captions. Further, Visual-GPT achieves the state-of-the-art result on IU X-ray, a medical report generation dataset. To the best of our knowledge, this is the first work that improves data efficiency of image captioning by utilizing LM pretrained on unimodal data. Our code is available at: https://github.com/Vision-CAIR/VisualGPT.},
   archiveprefix = {arXiv},
-  file = {/Users/lukakuma/Zotero/storage/YXGJY44V/Chen et al. - 2022 - VisualGPT Data-efficient Adaptation of Pretrained.pdf;/Users/lukakuma/Zotero/storage/XH7USJAC/2102.html}
+  keywords = {multimodal},
+  file = {/Users/lukakuma/Zotero/storage/SLY9KGWE/Chen et al. - 2022 - VisualGPT Data-efficient Adaptation of Pretrained.pdf;/Users/lukakuma/Zotero/storage/UMU2W4E4/2102.html}
 }
 
 @article{chiangClusterGCNEfficientAlgorithm2019,
@@ -2791,18 +2798,6 @@
   file = {/Users/lukakuma/Zotero/storage/63DYSHSI/Dao et al. - 2022 - FlashAttention Fast and Memory-Efficient Exact At.pdf;/Users/lukakuma/Zotero/storage/4C3GEQZS/2205.html}
 }
 
-@article{daoHungryHungryHippos2022,
-  title = {Hungry {{Hungry Hippos}}: {{Towards Language Modeling}} with {{State Space Models}}},
-  shorttitle = {Hungry {{Hungry Hippos}}},
-  author = {Dao, Tri and Fu, Daniel Y. and Saab, Khaled K. and Thomas, Armin W. and Rudra, Atri and Ré, Christopher},
-  date = {2022-12-28},
-  url = {https://arxiv.org/abs/2212.14052v1},
-  urldate = {2023-01-26},
-  abstract = {State space models (SSMs) have demonstrated state-of-the-art sequence modeling performance in some modalities, but underperform attention in language modeling. Moreover, despite scaling nearly linearly in sequence length instead of quadratically, SSMs are still slower than Transformers due to poor hardware utilization. In this paper, we make progress on understanding the expressivity gap between SSMs and attention in language modeling, and on reducing the hardware barrier between SSMs and attention. First, we use synthetic language modeling tasks to understand the gap between SSMs and attention. We find that existing SSMs struggle with two capabilities: recalling earlier tokens in the sequence and comparing tokens across the sequence. To understand the impact on language modeling, we propose a new SSM layer, H3, that is explicitly designed for these abilities. H3 matches attention on the synthetic languages and comes within 0.4 PPL of Transformers on OpenWebText. Furthermore, a hybrid 125M-parameter H3-attention model that retains two attention layers surprisingly outperforms Transformers on OpenWebText by 1.0 PPL. Next, to improve the efficiency of training SSMs on modern hardware, we propose FlashConv. FlashConv uses a fused block FFT algorithm to improve efficiency on sequences up to 8K, and introduces a novel state passing algorithm that exploits the recurrent properties of SSMs to scale to longer sequences. FlashConv yields 2\$\textbackslash times\$ speedup on the long-range arena benchmark and allows hybrid language models to generate text 1.6\$\textbackslash times\$ faster than Transformers. Using FlashConv, we scale hybrid H3-attention language models up to 1.3B parameters on the Pile and find promising initial results, achieving lower perplexity than Transformers and outperforming Transformers in zero- and few-shot learning on a majority of tasks in the SuperGLUE benchmark.},
-  langid = {english},
-  file = {/Users/lukakuma/Zotero/storage/77BCSTVZ/Dao et al. - 2022 - Hungry Hungry Hippos Towards Language Modeling wi.pdf}
-}
-
 @misc{dasguptaLanguageModelsShow2022,
   title = {Language Models Show Human-like Content Effects on Reasoning},
   author = {Dasgupta, Ishita and Lampinen, Andrew K. and Chan, Stephanie C. Y. and Creswell, Antonia and Kumaran, Dharshan and McClelland, James L. and Hill, Felix},
@@ -2908,6 +2903,23 @@
   issue = {7897},
   langid = {english},
   file = {/Users/lukakuma/Zotero/storage/F4KFNCFU/Degrave et al. - 2022 - Magnetic control of tokamak plasmas through deep r.pdf;/Users/lukakuma/Zotero/storage/5JYZ7Y68/s41586-021-04301-9.html}
+}
+
+@misc{dehghaniScalingVisionTransformers2023,
+  title = {Scaling {{Vision Transformers}} to 22 {{Billion Parameters}}},
+  author = {Dehghani, Mostafa and Djolonga, Josip and Mustafa, Basil and Padlewski, Piotr and Heek, Jonathan and Gilmer, Justin and Steiner, Andreas and Caron, Mathilde and Geirhos, Robert and Alabdulmohsin, Ibrahim and Jenatton, Rodolphe and Beyer, Lucas and Tschannen, Michael and Arnab, Anurag and Wang, Xiao and Riquelme, Carlos and Minderer, Matthias and Puigcerver, Joan and Evci, Utku and Kumar, Manoj and van Steenkiste, Sjoerd and Elsayed, Gamaleldin F. and Mahendran, Aravindh and Yu, Fisher and Oliver, Avital and Huot, Fantine and Bastings, Jasmijn and Collier, Mark Patrick and Gritsenko, Alexey and Birodkar, Vighnesh and Vasconcelos, Cristina and Tay, Yi and Mensink, Thomas and Kolesnikov, Alexander and Pavetić, Filip and Tran, Dustin and Kipf, Thomas and Lučić, Mario and Zhai, Xiaohua and Keysers, Daniel and Harmsen, Jeremiah and Houlsby, Neil},
+  options = {useprefix=true},
+  date = {2023-02-10},
+  number = {arXiv:2302.05442},
+  eprint = {2302.05442},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.05442},
+  urldate = {2023-02-14},
+  abstract = {The scaling of Transformers has driven breakthrough capabilities for language models. At present, the largest large language models (LLMs) contain upwards of 100B parameters. Vision Transformers (ViT) have introduced the same architecture to image and video modelling, but these have not yet been successfully scaled to nearly the same degree; the largest dense ViT contains 4B parameters (Chen et al., 2022). We present a recipe for highly efficient and stable training of a 22B-parameter ViT (ViT-22B) and perform a wide variety of experiments on the resulting model. When evaluated on downstream tasks (often with a lightweight linear model on frozen features), ViT-22B demonstrates increasing performance with scale. We further observe other interesting benefits of scale, including an improved tradeoff between fairness and performance, state-of-the-art alignment to human visual perception in terms of shape/texture bias, and improved robustness. ViT-22B demonstrates the potential for "LLM-like" scaling in vision, and provides key steps towards getting there.},
+  archiveprefix = {arXiv},
+  file = {/Users/lukakuma/Zotero/storage/TC8GEQG8/Dehghani et al. - 2023 - Scaling Vision Transformers to 22 Billion Paramete.pdf;/Users/lukakuma/Zotero/storage/STUETAMP/2302.html}
 }
 
 @misc{dehghaniUniversalTransformers2019,
@@ -3197,6 +3209,7 @@
   urldate = {2022-07-23},
   abstract = {Prompted models have demonstrated impressive few-shot learning abilities. Repeated interactions at test-time with a single model, or the composition of multiple models together, further expands capabilities. These compositions are probabilistic models, and may be expressed in the language of graphical models with random variables whose values are complex data types such as strings. Cases with control flow and dynamic structure require techniques from probabilistic programming, which allow implementing disparate model structures and inference strategies in a unified language. We formalize several existing techniques from this perspective, including scratchpads / chain of thought, verifiers, STaR, selection-inference, and tool use. We refer to the resulting programs as language model cascades.},
   archiveprefix = {arXiv},
+  keywords = {rationale engr},
   file = {/Users/lukakuma/Zotero/storage/Q8IWE4DI/Dohan et al. - 2022 - Language Model Cascades.pdf;/Users/lukakuma/Zotero/storage/VY68Z6VL/2207.html}
 }
 
@@ -3266,27 +3279,6 @@
   file = {/Users/lukakuma/Zotero/storage/5HCW76IR/Downs et al. - 2022 - Google Scanned Objects A High-Quality Dataset of .pdf;/Users/lukakuma/Zotero/storage/JR7F649H/2204.html}
 }
 
-@article{droriNeuralNetworkSolves2022,
-  title = {A {{Neural Network Solves}}, {{Explains}}, and {{Generates University Math Problems}} by {{Program Synthesis}} and {{Few-Shot Learning}} at {{Human Level}}},
-  author = {Drori, Iddo and Zhang, Sarah and Shuttleworth, Reece and Tang, Leonard and Lu, Albert and Ke, Elizabeth and Liu, Kevin and Chen, Linda and Tran, Sunny and Cheng, Newman and Wang, Roman and Singh, Nikhil and Patti, Taylor L. and Lynch, Jayson and Shporer, Avi and Verma, Nakul and Wu, Eugene and Strang, Gilbert},
-  date = {2022-08-09},
-  journaltitle = {Proceedings of the National Academy of Sciences},
-  shortjournal = {Proc. Natl. Acad. Sci. U.S.A.},
-  volume = {119},
-  number = {32},
-  eprint = {2112.15594},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  pages = {e2123433119},
-  issn = {0027-8424, 1091-6490},
-  url = {http://arxiv.org/abs/2112.15594},
-  urldate = {2022-11-14},
-  abstract = {We demonstrate that a neural network pre-trained on text and fine-tuned on code solves mathematics course problems, explains solutions, and generates new questions at a human level. We automatically synthesize programs using few-shot learning and OpenAI's Codex transformer and execute them to solve course problems at 81\% automatic accuracy. We curate a new dataset of questions from MIT's largest mathematics courses (Single Variable and Multivariable Calculus, Differential Equations, Introduction to Probability and Statistics, Linear Algebra, and Mathematics for Computer Science) and Columbia University's Computational Linear Algebra. We solve questions from a MATH dataset (on Prealgebra, Algebra, Counting and Probability, Intermediate Algebra, Number Theory, and Precalculus), the latest benchmark of advanced mathematics problems designed to assess mathematical reasoning. We randomly sample questions and generate solutions with multiple modalities, including numbers, equations, and plots. The latest GPT-3 language model pre-trained on text automatically solves only 18.8\% of these university questions using zero-shot learning and 30.8\% using few-shot learning and the most recent chain of thought prompting. In contrast, program synthesis with few-shot learning using Codex fine-tuned on code generates programs that automatically solve 81\% of these questions. Our approach improves the previous state-of-the-art automatic solution accuracy on the benchmark topics from 8.8\% to 81.1\%. We perform a survey to evaluate the quality and difficulty of generated questions. This work is the first to automatically solve university-level mathematics course questions at a human level and the first work to explain and generate university-level mathematics course questions at scale, a milestone for higher education.},
-  archiveprefix = {arXiv},
-  keywords = {formal reasoning},
-  file = {/Users/lukakuma/Zotero/storage/83799TVU/Drori et al. - 2022 - A Neural Network Solves, Explains, and Generates U.pdf;/Users/lukakuma/Zotero/storage/AN6YSLPG/2112.html}
-}
-
 @article{droriNeuralNetworkSolves2022a,
   title = {A Neural Network Solves, Explains, and Generates University Math Problems by Program Synthesis and Few-Shot Learning at Human Level},
   author = {Drori, Iddo and Zhang, Sarah and Shuttleworth, Reece and Tang, Leonard and Lu, Albert and Ke, Elizabeth and Liu, Kevin and Chen, Linda and Tran, Sunny and Cheng, Newman and Wang, Roman and Singh, Nikhil and Patti, Taylor L. and Lynch, Jayson and Shporer, Avi and Verma, Nakul and Wu, Eugene and Strang, Gilbert},
@@ -3299,7 +3291,8 @@
   url = {https://www.pnas.org/doi/10.1073/pnas.2123433119},
   urldate = {2023-02-11},
   abstract = {We demonstrate that a neural network pretrained on text and fine-tuned on code solves mathematics course problems, explains solutions, and generates questions at a human level. We automatically synthesize programs using few-shot learning and OpenAI’s Codex transformer and execute them to solve course problems at 81\% automatic accuracy. We curate a dataset of questions from Massachusetts Institute of Technology (MIT)’s largest mathematics courses (Single Variable and Multivariable Calculus, Differential Equations, Introduction to Probability and Statistics, Linear Algebra, and Mathematics for Computer Science) and Columbia University’s Computational Linear Algebra. We solve questions from a MATH dataset (on Prealgebra, Algebra, Counting and Probability, Intermediate Algebra, Number Theory, and Precalculus), the latest benchmark of advanced mathematics problems designed to assess mathematical reasoning. We randomly sample questions and generate solutions with multiple modalities, including numbers, equations, and plots. The latest GPT-3 language model pretrained on text automatically solves only 18.8\% of these university questions using zero-shot learning and 30.8\% using few-shot learning and the most recent chain of thought prompting. In contrast, program synthesis with few-shot learning using Codex fine-tuned on code generates programs that automatically solve 81\% of these questions. Our approach improves the previous state-of-the-art automatic solution accuracy on the benchmark topics from 8.8 to 81.1\%. We perform a survey to evaluate the quality and difficulty of generated questions. This work automatically solves university-level mathematics course questions at a human level and explains and generates university-level mathematics course questions at scale, a milestone for higher education.},
-  file = {/Users/lukakuma/Zotero/storage/UEQVFSNC/Drori et al. - 2022 - A neural network solves, explains, and generates u.pdf}
+  keywords = {formal reasoning},
+  file = {/Users/lukakuma/Zotero/storage/83799TVU/Drori et al. - 2022 - A Neural Network Solves, Explains, and Generates U.pdf;/Users/lukakuma/Zotero/storage/UEQVFSNC/Drori et al. - 2022 - A neural network solves, explains, and generates u.pdf;/Users/lukakuma/Zotero/storage/AN6YSLPG/2112.html}
 }
 
 @misc{drozdovCompositionalSemanticParsing2022,
@@ -3552,6 +3545,23 @@
   file = {/Users/lukakuma/Zotero/storage/27ALWSDU/Easley and Kleinberg - 2010 - Networks, Crowds, and Markets A Book by David Eas.pdf;/Users/lukakuma/Zotero/storage/24NFE964/networks-book.html}
 }
 
+@misc{eichenbergMAGMAMultimodalAugmentation2022,
+  title = {{{MAGMA}} -- {{Multimodal Augmentation}} of {{Generative Models}} through {{Adapter-based Finetuning}}},
+  author = {Eichenberg, Constantin and Black, Sidney and Weinbach, Samuel and Parcalabescu, Letitia and Frank, Anette},
+  date = {2022-10-24},
+  number = {arXiv:2112.05253},
+  eprint = {2112.05253},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2112.05253},
+  urldate = {2023-02-15},
+  abstract = {Large-scale pretraining is fast becoming the norm in Vision-Language (VL) modeling. However, prevailing VL approaches are limited by the requirement for labeled data and the use of complex multi-step pretraining objectives. We present MAGMA - a simple method for augmenting generative language models with additional modalities using adapter-based finetuning. Building on Frozen, we train a series of VL models that autoregressively generate text from arbitrary combinations of visual and textual input. The pretraining is entirely end-to-end using a single language modeling objective, simplifying optimization compared to previous approaches. Importantly, the language model weights remain unchanged during training, allowing for transfer of encyclopedic knowledge and in-context learning abilities from language pretraining. MAGMA outperforms Frozen on open-ended generative tasks, achieving state of the art results on the OKVQA benchmark and competitive results on a range of other popular VL benchmarks, while pretraining on 0.2\% of the number of samples used to train SimVLM.},
+  archiveprefix = {arXiv},
+  keywords = {adaptor,multimodal},
+  file = {/Users/lukakuma/Zotero/storage/6H4FQP8J/Eichenberg et al. - 2022 - MAGMA -- Multimodal Augmentation of Generative Mod.pdf;/Users/lukakuma/Zotero/storage/C3NDPVZ8/2112.html}
+}
+
 @misc{ektefaieGeometricMultimodalRepresentation2022,
   title = {Geometric Multimodal Representation Learning},
   author = {Ektefaie, Yasha and Dasoulas, George and Noori, Ayush and Farhat, Maha and Zitnik, Marinka},
@@ -3602,17 +3612,6 @@
   keywords = {information theory},
   annotation = {OCLC: ocn748328333},
   file = {/Users/lukakuma/Zotero/storage/K7RCKNCT/El Gamal and Kim - 2011 - Network information theory.pdf}
-}
-
-@article{elhagGRAPHANISOTROPICDIFFUSION2022,
-  title = {{{GRAPH ANISOTROPIC DIFFUSION FOR MOLECULES}}},
-  author = {Elhag, Ahmed A A and Corso, Gabriele and Stark, Hannes and Bronstein, Michael M},
-  date = {2022},
-  pages = {10},
-  abstract = {Traditional Graph Neural Networks (GNNs) rely on message passing, which amounts to permutation-invariant local aggregation of neighbour features. Such a process is isotropic and there is no notion of ‘direction’ on the graph. We present a new GNN architecture called Graph Anisotropic Diffusion. Our model alternates between linear diffusion, for which a closed-form solution is available, and local anisotropic filters to obtain efficient multi-hop anisotropic kernels. We test our model on two common molecular property prediction benchmarks (ZINC and QM9) and show its competitive performance.},
-  langid = {english},
-  keywords = {GNN},
-  file = {/Users/lukakuma/Zotero/storage/F53C4NZU/Elhag et al. - 2022 - GRAPH ANISOTROPIC DIFFUSION FOR MOLECULES.pdf}
 }
 
 @online{Elondrop2022,
@@ -4005,6 +4004,23 @@
   file = {/Users/lukakuma/Zotero/storage/XSE2RXWB/Friston and Kiebel - 2009 - Predictive coding under the free-energy principle.pdf}
 }
 
+@misc{fuEffectivenessParameterEfficientFineTuning2022,
+  title = {On the {{Effectiveness}} of {{Parameter-Efficient Fine-Tuning}}},
+  author = {Fu, Zihao and Yang, Haoran and So, Anthony Man-Cho and Lam, Wai and Bing, Lidong and Collier, Nigel},
+  date = {2022-11-28},
+  number = {arXiv:2211.15583},
+  eprint = {2211.15583},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2211.15583},
+  urldate = {2023-02-16},
+  abstract = {Fine-tuning pre-trained models has been ubiquitously proven to be effective in a wide range of NLP tasks. However, fine-tuning the whole model is parameter inefficient as it always yields an entirely new model for each task. Currently, many research works propose to only fine-tune a small portion of the parameters while keeping most of the parameters shared across different tasks. These methods achieve surprisingly good performance and are shown to be more stable than their corresponding fully fine-tuned counterparts. However, such kind of methods is still not well understood. Some natural questions arise: How does the parameter sparsity lead to promising performance? Why is the model more stable than the fully fine-tuned models? How to choose the tunable parameters? In this paper, we first categorize the existing methods into random approaches, rule-based approaches, and projection-based approaches based on how they choose which parameters to tune. Then, we show that all of the methods are actually sparse fine-tuned models and conduct a novel theoretical analysis of them. We indicate that the sparsity is actually imposing a regularization on the original model by controlling the upper bound of the stability. Such stability leads to better generalization capability which has been empirically observed in a lot of recent research works. Despite the effectiveness of sparsity grounded by our theory, it still remains an open problem of how to choose the tunable parameters. To better choose the tunable parameters, we propose a novel Second-order Approximation Method (SAM) which approximates the original problem with an analytically solvable optimization function. The tunable parameters are determined by directly optimizing the approximation function. The experimental results show that our proposed SAM model outperforms many strong baseline models and it also verifies our theoretical analysis.},
+  archiveprefix = {arXiv},
+  keywords = {peft},
+  file = {/Users/lukakuma/Zotero/storage/R8FFQG9X/Fu et al. - 2022 - On the Effectiveness of Parameter-Efficient Fine-T.pdf;/Users/lukakuma/Zotero/storage/EF5M7LWT/2211.html}
+}
+
 @misc{fujimotoAddressingFunctionApproximation2018,
   title = {Addressing {{Function Approximation Error}} in {{Actor-Critic Methods}}},
   author = {Fujimoto, Scott and van Hoof, Herke and Meger, David},
@@ -4313,6 +4329,7 @@
   urldate = {2023-01-23},
   abstract = {We propose eXtensible Prompt (X-Prompt) for prompting a large language model (LLM) beyond natural language (NL). X-Prompt instructs an LLM with not only NL but also an extensible vocabulary of imaginary words that are introduced to help represent what NL words hardly describe, allowing a prompt to be more descriptive. Like NL prompts, X-Prompt is out-of-distribution (OOD) robust, for which we propose context-guided learning with prompt augmentation to learn its imaginary words for general usability, enabling them to use in different prompt contexts for fine-grain specifications. The promising results of X-Prompt demonstrate its potential of approaching advanced interaction between humans and LLMs to bridge their communication gap.},
   archiveprefix = {arXiv},
+  keywords = {peft},
   file = {/Users/lukakuma/Zotero/storage/6W6XR542/Ge et al. - 2022 - Extensible Prompts for Language Models.pdf;/Users/lukakuma/Zotero/storage/DUVYD6DU/2212.html}
 }
 
@@ -4906,6 +4923,24 @@
   file = {/Users/lukakuma/Zotero/storage/LXSE2ZNZ/Han et al. - 2021 - Scalable Sampling for Nonsymmetric Determinantal P.pdf;/Users/lukakuma/Zotero/storage/HPVCDJ2G/forum.html}
 }
 
+@misc{hansenMoDemAcceleratingVisual2022,
+  title = {{{MoDem}}: {{Accelerating Visual Model-Based Reinforcement Learning}} with {{Demonstrations}}},
+  shorttitle = {{{MoDem}}},
+  author = {Hansen, Nicklas and Lin, Yixin and Su, Hao and Wang, Xiaolong and Kumar, Vikash and Rajeswaran, Aravind},
+  date = {2022-12-11},
+  number = {arXiv:2212.05698},
+  eprint = {2212.05698},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2212.05698},
+  urldate = {2023-02-15},
+  abstract = {Poor sample efficiency continues to be the primary challenge for deployment of deep Reinforcement Learning (RL) algorithms for real-world applications, and in particular for visuo-motor control. Model-based RL has the potential to be highly sample efficient by concurrently learning a world model and using synthetic rollouts for planning and policy improvement. However, in practice, sample-efficient learning with model-based RL is bottlenecked by the exploration challenge. In this work, we find that leveraging just a handful of demonstrations can dramatically improve the sample-efficiency of model-based RL. Simply appending demonstrations to the interaction dataset, however, does not suffice. We identify key ingredients for leveraging demonstrations in model learning -- policy pretraining, targeted exploration, and oversampling of demonstration data -- which forms the three phases of our model-based RL framework. We empirically study three complex visuo-motor control domains and find that our method is 150\%-250\% more successful in completing sparse reward tasks compared to prior approaches in the low data regime (100K interaction steps, 5 demonstrations). Code and videos are available at: https://nicklashansen.github.io/modemrl},
+  archiveprefix = {arXiv},
+  keywords = {jepa},
+  file = {/Users/lukakuma/Zotero/storage/JTY65CFE/Hansen et al. - 2022 - MoDem Accelerating Visual Model-Based Reinforceme.pdf;/Users/lukakuma/Zotero/storage/M7Y4N6MH/2212.html}
+}
+
 @misc{haoLanguageModelsAre2022,
   title = {Language {{Models}} Are {{General-Purpose Interfaces}}},
   author = {Hao, Yaru and Song, Haoyu and Dong, Li and Huang, Shaohan and Chi, Zewen and Wang, Wenhui and Ma, Shuming and Wei, Furu},
@@ -5291,7 +5326,7 @@
   urldate = {2022-12-13},
   abstract = {Fine-tuning large pre-trained language models on downstream tasks has become the de-facto learning paradigm in NLP. However, conventional approaches fine-tune all the parameters of the pre-trained model, which becomes prohibitive as the model size and the number of tasks grow. Recent work has proposed a variety of parameter-efficient transfer learning methods that only fine-tune a small number of (extra) parameters to attain strong performance. While effective, the critical ingredients for success and the connections among the various methods are poorly understood. In this paper, we break down the design of state-of-the-art parameter-efficient transfer learning methods and present a unified framework that establishes connections between them. Specifically, we re-frame them as modifications to specific hidden states in pre-trained models, and define a set of design dimensions along which different methods vary, such as the function to compute the modification and the position to apply the modification. Through comprehensive empirical studies across machine translation, text summarization, language understanding, and text classification benchmarks, we utilize the unified view to identify important design choices in previous methods. Furthermore, our unified framework enables the transfer of design elements across different approaches, and as a result we are able to instantiate new parameter-efficient fine-tuning methods that tune less parameters than previous methods while being more effective, achieving comparable results to fine-tuning all parameters on all four tasks.},
   archiveprefix = {arXiv},
-  keywords = {finetuning,parameter efficient finetuninig,skimed},
+  keywords = {finetuning,peft,skimed},
   file = {/Users/lukakuma/Zotero/storage/UDRXLUTY/He et al. - 2022 - Towards a Unified View of Parameter-Efficient Tran.pdf;/Users/lukakuma/Zotero/storage/58A8KY4C/2110.html}
 }
 
@@ -5591,6 +5626,24 @@
   file = {/Users/lukakuma/Zotero/storage/2WTEQFWY/Houthooft et al. - 2018 - Evolved Policy Gradients.pdf;/Users/lukakuma/Zotero/storage/5FY9AWYX/1802.html}
 }
 
+@misc{hsuReVISESelfSupervisedSpeech2022,
+  title = {{{ReVISE}}: {{Self-Supervised Speech Resynthesis}} with {{Visual Input}} for {{Universal}} and {{Generalized Speech Enhancement}}},
+  shorttitle = {{{ReVISE}}},
+  author = {Hsu, Wei-Ning and Remez, Tal and Shi, Bowen and Donley, Jacob and Adi, Yossi},
+  date = {2022-12-21},
+  number = {arXiv:2212.11377},
+  eprint = {2212.11377},
+  eprinttype = {arxiv},
+  primaryclass = {cs, eess},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2212.11377},
+  urldate = {2023-02-15},
+  abstract = {Prior works on improving speech quality with visual input typically study each type of auditory distortion separately (e.g., separation, inpainting, video-to-speech) and present tailored algorithms. This paper proposes to unify these subjects and study Generalized Speech Enhancement, where the goal is not to reconstruct the exact reference clean signal, but to focus on improving certain aspects of speech. In particular, this paper concerns intelligibility, quality, and video synchronization. We cast the problem as audio-visual speech resynthesis, which is composed of two steps: pseudo audio-visual speech recognition (P-AVSR) and pseudo text-to-speech synthesis (P-TTS). P-AVSR and P-TTS are connected by discrete units derived from a self-supervised speech model. Moreover, we utilize self-supervised audio-visual speech model to initialize P-AVSR. The proposed model is coined ReVISE. ReVISE is the first high-quality model for in-the-wild video-to-speech synthesis and achieves superior performance on all LRS3 audio-visual enhancement tasks with a single model. To demonstrates its applicability in the real world, ReVISE is also evaluated on EasyCom, an audio-visual benchmark collected under challenging acoustic conditions with only 1.6 hours of training data. Similarly, ReVISE greatly suppresses noise and improves quality. Project page: https://wnhsu.github.io/ReVISE.},
+  archiveprefix = {arXiv},
+  keywords = {jepa},
+  file = {/Users/lukakuma/Zotero/storage/47DDZAWB/Hsu et al. - 2022 - ReVISE Self-Supervised Speech Resynthesis with Vi.pdf;/Users/lukakuma/Zotero/storage/9MJP35JW/2212.html}
+}
+
 @article{huangGPipeEfficientTraining2018,
   title = {{{GPipe}}: {{Efficient Training}} of {{Giant Neural Networks}} Using {{Pipeline Parallelism}}},
   shorttitle = {{{GPipe}}},
@@ -5618,7 +5671,7 @@
   urldate = {2022-07-21},
   abstract = {Recent works have shown how the reasoning capabilities of Large Language Models (LLMs) can be applied to domains beyond natural language processing, such as planning and interaction for robots. These embodied problems require an agent to understand many semantic aspects of the world: the repertoire of skills available, how these skills influence the world, and how changes to the world map back to the language. LLMs planning in embodied environments need to consider not just what skills to do, but also how and when to do them - answers that change over time in response to the agent's own choices. In this work, we investigate to what extent LLMs used in such embodied contexts can reason over sources of feedback provided through natural language, without any additional training. We propose that by leveraging environment feedback, LLMs are able to form an inner monologue that allows them to more richly process and plan in robotic control scenarios. We investigate a variety of sources of feedback, such as success detection, scene description, and human interaction. We find that closed-loop language feedback significantly improves high-level instruction completion on three domains, including simulated and real table top rearrangement tasks and long-horizon mobile manipulation tasks in a kitchen environment in the real world.},
   archiveprefix = {arXiv},
-  keywords = {informal reasoning,planning},
+  keywords = {informal reasoning,rationale engr},
   file = {/Users/lukakuma/Zotero/storage/MPL2Y337/Huang et al. - 2022 - Inner Monologue Embodied Reasoning through Planni.pdf;/Users/lukakuma/Zotero/storage/3F99XFZ4/2207.html}
 }
 
@@ -5686,7 +5739,7 @@
   file = {/Users/lukakuma/Zotero/storage/F4IFU5YB/Huang and Chang - 2022 - Towards Reasoning in Large Language Models A Surv.pdf;/Users/lukakuma/Zotero/storage/MTE9QUWR/2212.html}
 }
 
-@misc{huLoRALowRankAdaptation2021,
+@misc{huLoRALowRankAdaptation2021a,
   title = {{{LoRA}}: {{Low-Rank Adaptation}} of {{Large Language Models}}},
   shorttitle = {{{LoRA}}},
   author = {Hu, Edward J. and Shen, Yelong and Wallis, Phillip and Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
@@ -5697,12 +5750,11 @@
   primaryclass = {cs},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2106.09685},
-  urldate = {2022-11-02},
-  abstract = {An important paradigm of natural language processing consists of large-scale pretraining on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example – deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pretrained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than finetuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.},
+  urldate = {2023-02-15},
+  abstract = {An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.},
   archiveprefix = {arXiv},
-  langid = {english},
-  keywords = {finetuning},
-  file = {/Users/lukakuma/Zotero/storage/8G6GPIDI/Hu et al. - 2021 - LoRA Low-Rank Adaptation of Large Language Models.pdf}
+  keywords = {finetuning,peft},
+  file = {/Users/lukakuma/Zotero/storage/7EBEG26P/Hu et al. - 2021 - LoRA Low-Rank Adaptation of Large Language Models.pdf;/Users/lukakuma/Zotero/storage/QCR6KT8F/2106.html}
 }
 
 @unpublished{humphreysLargeScaleRetrievalReinforcement2022,
@@ -6077,22 +6129,6 @@
   file = {/Users/lukakuma/Zotero/storage/FLH4V9UU/Jang et al. - 2021 - BC-Z Zero-Shot Task Generalization with Robotic I.pdf}
 }
 
-@misc{jangExploringBenefitsTraining2023,
-  title = {Exploring the {{Benefits}} of {{Training Expert Language Models}} over {{Instruction Tuning}}},
-  author = {Jang, Joel and Kim, Seungone and Ye, Seonghyeon and Kim, Doyoung and Logeswaran, Lajanugen and Lee, Moontae and Lee, Kyungjae and Seo, Minjoon},
-  date = {2023-02-06},
-  number = {arXiv:2302.03202},
-  eprint = {2302.03202},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2302.03202},
-  urldate = {2023-02-08},
-  abstract = {Recently, Language Models (LMs) instruction-tuned on multiple tasks, also known as multitask-prompted fine-tuning (MT), have shown the capability to generalize to unseen tasks. Previous work has shown that scaling the number of training tasks is the key component in making stronger MT LMs. In this work, we report an unexpected finding that an expert LM fine-tuned on just a single task can outperform an MT LM trained with 300+ different tasks on 11 different unseen datasets and on 13 datasets of the BIG-bench benchmark by a mean accuracy of 3.20\% and 1.29\%, respectively. This finding casts doubt on the previously held belief that simply scaling the number of tasks makes stronger MT LMs. Leveraging this finding, we further show that this distributed approach of training a separate expert LM per training task instead of a single MT LM for zero-shot inference possesses many benefits including (1) avoiding negative task transfer that often occurs during instruction tuning, (2) being able to continually learn new tasks without having to re-train on previous tasks to avoid catastrophic forgetting, and (3) showing compositional capabilities when merging individual experts together. The code is available at https://github.com/joeljang/ELM.},
-  archiveprefix = {arXiv},
-  file = {/Users/lukakuma/Zotero/storage/LWKQLY9K/Jang et al. - 2023 - Exploring the Benefits of Training Expert Language.pdf;/Users/lukakuma/Zotero/storage/3Z229BCB/2302.html}
-}
-
 @misc{jannerOfflineReinforcementLearning2021,
   title = {Offline {{Reinforcement Learning}} as {{One Big Sequence Modeling Problem}}},
   author = {Janner, Michael and Li, Qiyang and Levine, Sergey},
@@ -6117,6 +6153,7 @@
   urldate = {2022-07-28},
   abstract = {Model-based reinforcement learning methods often use learning only for the purpose of estimating an approximate dynamics model, offloading the rest of the decision-making work to classical trajectory optimizers. While conceptually simple, this combination has a number of empirical shortcomings, suggesting that learned models may not be well-suited to standard trajectory optimization. In this paper, we consider what it would look like to fold as much of the trajectory optimization pipeline as possible into the modeling problem, such that sampling from the model and planning with it become nearly identical. The core of our technical approach lies in a diffusion probabilistic model that plans by iteratively denoising trajectories. We show how classifier-guided sampling and image inpainting can be reinterpreted as coherent planning strategies, explore the unusual and useful properties of diffusion-based planning methods, and demonstrate the effectiveness of our framework in control settings that emphasize long-horizon decision-making and test-time flexibility.},
   langid = {english},
+  keywords = {diffusion,image generation},
   file = {/Users/lukakuma/Zotero/storage/BTPZ2CRL/Janner et al. - 2022 - Planning with Diffusion for Flexible Behavior Synt.pdf;/Users/lukakuma/Zotero/storage/UZ3VCLGZ/2205.html}
 }
 
@@ -6511,6 +6548,7 @@
   urldate = {2023-02-03},
   abstract = {Huge language models (LMs) have ushered in a new era for AI, serving as a gateway to natural-language-based knowledge tasks. Although an essential element of modern AI, LMs are also inherently limited in a number of ways. We discuss these limitations and how they can be avoided by adopting a systems approach. Conceptualizing the challenge as one that involves knowledge and reasoning in addition to linguistic processing, we define a flexible architecture with multiple neural models, complemented by discrete knowledge and reasoning modules. We describe this neuro-symbolic architecture, dubbed the Modular Reasoning, Knowledge and Language (MRKL, pronounced "miracle") system, some of the technical challenges in implementing it, and Jurassic-X, AI21 Labs' MRKL system implementation.},
   archiveprefix = {arXiv},
+  keywords = {rationale engr},
   file = {/Users/lukakuma/Zotero/storage/XBHGQNKJ/Karpas et al. - 2022 - MRKL Systems A modular, neuro-symbolic architectu.pdf;/Users/lukakuma/Zotero/storage/PRYRD627/2205.html}
 }
 
@@ -6859,23 +6897,6 @@
   file = {/Users/lukakuma/Zotero/storage/ULBRRLNW/Kocetkov et al. - 2022 - The Stack 3 TB of permissively licensed source co.pdf;/Users/lukakuma/Zotero/storage/7QX2H265/2211.html}
 }
 
-@misc{kohGroundingLanguageModels2023,
-  title = {Grounding {{Language Models}} to {{Images}} for {{Multimodal Generation}}},
-  author = {Koh, Jing Yu and Salakhutdinov, Ruslan and Fried, Daniel},
-  date = {2023-01-31},
-  number = {arXiv:2301.13823},
-  eprint = {2301.13823},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2301.13823},
-  urldate = {2023-02-02},
-  abstract = {We propose an efficient method to ground pretrained text-only language models to the visual domain, enabling them to process and generate arbitrarily interleaved image-and-text data. Our method leverages the abilities of language models learnt from large scale text-only pretraining, such as in-context learning and free-form text generation. We keep the language model frozen, and finetune input and output linear layers to enable cross-modality interactions. This allows our model to process arbitrarily interleaved image-and-text inputs, and generate free-form text interleaved with retrieved images. We achieve strong zero-shot performance on grounded tasks such as contextual image retrieval and multimodal dialogue, and showcase compelling interactive abilities. Our approach works with any off-the-shelf language model and paves the way towards an effective, general solution for leveraging pretrained language models in visually grounded settings.},
-  archiveprefix = {arXiv},
-  keywords = {multimodal},
-  file = {/Users/lukakuma/Zotero/storage/X5DZJ8X2/Koh et al. - 2023 - Grounding Language Models to Images for Multimodal.pdf;/Users/lukakuma/Zotero/storage/Q8JF47IJ/2301.html}
-}
-
 @article{kohGroundingLanguageModels2023a,
   title = {Grounding {{Language Models}} to {{Images}} for {{Multimodal Generation}}},
   author = {Koh, Jing Yu and Salakhutdinov, Ruslan and Fried, Daniel},
@@ -6884,6 +6905,7 @@
   urldate = {2023-02-11},
   abstract = {We propose an efficient method to ground pretrained text-only language models to the visual domain, enabling them to process and generate arbitrarily interleaved image-and-text data. Our method leverages the abilities of language models learnt from large scale text-only pretraining, such as in-context learning and free-form text generation. We keep the language model frozen, and finetune input and output linear layers to enable cross-modality interactions. This allows our model to process arbitrarily interleaved image-and-text inputs, and generate free-form text interleaved with retrieved images. We achieve strong zero-shot performance on grounded tasks such as contextual image retrieval and multimodal dialogue, and showcase compelling interactive abilities. Our approach works with any off-the-shelf language model and paves the way towards an effective, general solution for leveraging pretrained language models in visually grounded settings.},
   langid = {english},
+  keywords = {multimodal},
   file = {/Users/lukakuma/Zotero/storage/BL6V5ZLF/Koh et al. - 2023 - Grounding Language Models to Images for Multimodal.pdf}
 }
 
@@ -6918,6 +6940,20 @@
   abstract = {Federated Learning is a machine learning setting where the goal is to train a high-quality centralized model while training data remains distributed over a large number of clients each with unreliable and relatively slow network connections. We consider learning algorithms for this setting where on each round, each client independently computes an update to the current model based on its local data, and communicates this update to a central server, where the client-side updates are aggregated to compute a new global model. The typical clients in this setting are mobile phones, and communication efficiency is of the utmost importance. In this paper, we propose two ways to reduce the uplink communication costs: structured updates, where we directly learn an update from a restricted space parametrized using a smaller number of variables, e.g. either low-rank or a random mask; and sketched updates, where we learn a full model update and then compress it using a combination of quantization, random rotations, and subsampling before sending it to the server. Experiments on both convolutional and recurrent networks show that the proposed methods can reduce the communication cost by two orders of magnitude.},
   archiveprefix = {arXiv},
   file = {/Users/lukakuma/Zotero/storage/IXSS4FYH/Konečný et al. - 2017 - Federated Learning Strategies for Improving Commu.pdf;/Users/lukakuma/Zotero/storage/E4ZV8NM3/1610.html}
+}
+
+@misc{korinekLanguageModelsCognitive2023,
+  type = {Working Paper},
+  title = {Language {{Models}} and {{Cognitive Automation}} for {{Economic Research}}},
+  author = {Korinek, Anton},
+  date = {2023-02},
+  series = {Working {{Paper Series}}},
+  number = {30957},
+  publisher = {{National Bureau of Economic Research}},
+  url = {https://www.nber.org/papers/w30957},
+  urldate = {2023-02-14},
+  abstract = {Large language models (LLMs) such as ChatGPT have the potential to revolutionize research in economics and other disciplines. I describe 25 use cases along six domains in which LLMs are starting to become useful as both research assistants and tutors: ideation, writing, background research, data analysis, coding, and mathematical derivations. I provide general instructions and demonstrate specific examples for how to take advantage of each of these, classifying the LLM capabilities from experimental to highly useful. I hypothesize that ongoing advances will improve the performance of LLMs across all of these domains, and that economic researchers who take advantage of LLMs to automate micro tasks will become significantly more productive. Finally, I speculate on the longer-term implications of cognitive automation via LLMs for economic research.},
+  file = {/Users/lukakuma/Zotero/storage/XB8B8JYL/Korinek - 2023 - Language Models and Cognitive Automation for Econo.pdf}
 }
 
 @article{kosoyExploringExplorationComparing2020,
@@ -7312,7 +7348,7 @@
   pages = {62},
   abstract = {How could machines learn as efficiently as humans and animals? How could machines learn to reason and plan? How could machines learn representations of percepts and action plans at multiple levels of abstraction, enabling them to reason, predict, and plan at multiple time horizons? This position paper proposes an architecture and training paradigms with which to construct autonomous intelligent agents. It combines concepts such as configurable predictive world model, behavior driven through intrinsic motivation, and hierarchical joint embedding architectures trained with self-supervised learning.},
   langid = {english},
-  keywords = {skimed},
+  keywords = {jepa,skimed},
   file = {/Users/lukakuma/Zotero/storage/MS3BFMU3/LeCun - A Path Towards Autonomous Machine Intelligence Ver.pdf}
 }
 
@@ -7447,7 +7483,7 @@
   urldate = {2022-12-13},
   abstract = {In this work, we explore "prompt tuning", a simple yet effective mechanism for learning "soft prompts" to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signal from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3's "few-shot" learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method "closes the gap" and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant in that large models are costly to share and serve, and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed "prefix tuning" of Li and Liang (2021), and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer, as compared to full model tuning.},
   archiveprefix = {arXiv},
-  keywords = {finetuning,parameter efficient finetuninig,skimed},
+  keywords = {finetuning,peft,skimed},
   file = {/Users/lukakuma/Zotero/storage/RD52397I/Lester et al. - 2021 - The Power of Scale for Parameter-Efficient Prompt .pdf;/Users/lukakuma/Zotero/storage/796N9G7I/2104.html}
 }
 
@@ -7722,7 +7758,7 @@
   urldate = {2023-02-07},
   abstract = {The cost of vision-and-language pre-training has become increasingly prohibitive due to end-to-end training of large-scale models. This paper proposes BLIP-2, a generic and efficient pre-training strategy that bootstraps vision-language pre-training from off-the-shelf frozen pre-trained image encoders and frozen large language models. BLIP-2 bridges the modality gap with a lightweight Querying Transformer, which is pre-trained in two stages. The first stage bootstraps vision-language representation learning from a frozen image encoder. The second stage bootstraps vision-to-language generative learning from a frozen language model. BLIP-2 achieves state-of-the-art performance on various vision-language tasks, despite having significantly fewer trainable parameters than existing methods. For example, our model outperforms Flamingo80B by 8.7\% on zero-shot VQAv2 with 54x fewer trainable parameters. We also demonstrate the model's emerging capabilities of zero-shot image-to-text generation that can follow natural language instructions.},
   archiveprefix = {arXiv},
-  keywords = {multimodal},
+  keywords = {adaptor,multimodal},
   file = {/Users/lukakuma/Zotero/storage/9KI7CUC7/Li et al. - 2023 - BLIP-2 Bootstrapping Language-Image Pre-training .pdf;/Users/lukakuma/Zotero/storage/63U3R6AZ/2301.html}
 }
 
@@ -8076,8 +8112,43 @@
   urldate = {2022-10-27},
   abstract = {Few-shot in-context learning (ICL) enables pre-trained language models to perform a previously-unseen task without any gradient-based training by feeding a small number of training examples as part of the input. ICL incurs substantial computational, memory, and storage costs because it involves processing all of the training examples every time a prediction is made. Parameter-efficient fine-tuning (PEFT) (e.g. adapter modules, prompt tuning, sparse update methods, etc.) offers an alternative paradigm where a small set of parameters are trained to enable a model to perform the new task. In this paper, we rigorously compare few-shot ICL and PEFT and demonstrate that the latter offers better accuracy as well as dramatically lower computational costs. Along the way, we introduce a new PEFT method called (IA)\$\^3\$ that scales activations by learned vectors, attaining stronger performance while only introducing a relatively tiny amount of new parameters. We also propose a simple recipe based on the T0 model called T-Few that can be applied to new tasks without task-specific tuning or modifications. We validate the effectiveness of T-Few on completely unseen tasks by applying it to the RAFT benchmark, attaining super-human performance for the first time and outperforming the state-of-the-art by 6\% absolute. All of the code used in our experiments is publicly available.},
   archiveprefix = {arXiv},
-  keywords = {parameter efficient finetuninig,skimed},
+  keywords = {peft,skimed},
   file = {/Users/lukakuma/Zotero/storage/NQ576J5I/Liu et al. - 2022 - Few-Shot Parameter-Efficient Fine-Tuning is Better.pdf;/Users/lukakuma/Zotero/storage/2EWYR322/2205.html}
+}
+
+@misc{liuGPTUnderstandsToo2021,
+  title = {{{GPT Understands}}, {{Too}}},
+  author = {Liu, Xiao and Zheng, Yanan and Du, Zhengxiao and Ding, Ming and Qian, Yujie and Yang, Zhilin and Tang, Jie},
+  date = {2021-03-18},
+  number = {arXiv:2103.10385},
+  eprint = {2103.10385},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2103.10385},
+  urldate = {2023-02-15},
+  abstract = {While GPTs with traditional fine-tuning fail to achieve strong results on natural language understanding (NLU), we show that GPTs can be better than or comparable to similar-sized BERTs on NLU tasks with a novel method P-tuning -- which employs trainable continuous prompt embeddings. On the knowledge probing (LAMA) benchmark, the best GPT recovers 64\textbackslash\% (P@1) of world knowledge without any additional text provided during test time, which substantially improves the previous best by 20+ percentage points. On the SuperGlue benchmark, GPTs achieve comparable and sometimes better performance to similar-sized BERTs in supervised learning. Importantly, we find that P-tuning also improves BERTs' performance in both few-shot and supervised settings while largely reducing the need for prompt engineering. Consequently, P-tuning outperforms the state-of-the-art approaches on the few-shot SuperGlue benchmark.},
+  archiveprefix = {arXiv},
+  keywords = {peft},
+  file = {/Users/lukakuma/Zotero/storage/AJBECMDL/Liu et al. - 2021 - GPT Understands, Too.pdf;/Users/lukakuma/Zotero/storage/2YWJCZMS/2103.html}
+}
+
+@misc{liuLanguageQuantizedAutoEncoders2023,
+  title = {Language {{Quantized AutoEncoders}}: {{Towards Unsupervised Text-Image Alignment}}},
+  shorttitle = {Language {{Quantized AutoEncoders}}},
+  author = {Liu, Hao and Yan, Wilson and Abbeel, Pieter},
+  date = {2023-02-03},
+  number = {arXiv:2302.00902},
+  eprint = {2302.00902},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.00902},
+  urldate = {2023-02-14},
+  abstract = {Recent progress in scaling up large language models has shown impressive capabilities in performing few-shot learning across a wide range of text-based tasks. However, a key limitation is that these language models fundamentally lack visual perception - a crucial attribute needed to extend these models to be able to interact with the real world and solve vision tasks, such as in visual-question answering and robotics. Prior works have largely connected image to text through pretraining and/or fine-tuning on curated image-text datasets, which can be a costly and expensive process. In order to resolve this limitation, we propose a simple yet effective approach called Language-Quantized AutoEncoder (LQAE), a modification of VQ-VAE that learns to align text-image data in an unsupervised manner by leveraging pretrained language models (e.g., BERT, RoBERTa). Our main idea is to encode image as sequences of text tokens by directly quantizing image embeddings using a pretrained language codebook. We then apply random masking followed by a BERT model, and have the decoder reconstruct the original image from BERT predicted text token embeddings. By doing so, LQAE learns to represent similar images with similar clusters of text tokens, thereby aligning these two modalities without the use of aligned text-image pairs. This enables few-shot image classification with large language models (e.g., GPT-3) as well as linear classification of images based on BERT text features. To the best of our knowledge, our work is the first work that uses unaligned images for multimodal tasks by leveraging the power of pretrained language models.},
+  archiveprefix = {arXiv},
+  keywords = {multimodal},
+  file = {/Users/lukakuma/Zotero/storage/4QEMJHMW/Liu et al. - 2023 - Language Quantized AutoEncoders Towards Unsupervi.pdf;/Users/lukakuma/Zotero/storage/Y6J3HGM6/2302.html}
 }
 
 @inreference{LiuLangZheZhiGeXiaoShuo2022,
@@ -8171,7 +8242,7 @@
   file = {/Users/lukakuma/Zotero/storage/PK78Z3IZ/Liu et al. - 2021 - Pre-train, Prompt, and Predict A Systematic Surve.pdf;/Users/lukakuma/Zotero/storage/ASTGQT2V/2107.html}
 }
 
-@misc{liuPTuningV2Prompt2022,
+@misc{liuPTuningV2Prompt2022a,
   title = {P-{{Tuning}} v2: {{Prompt Tuning Can Be Comparable}} to {{Fine-tuning Universally Across Scales}} and {{Tasks}}},
   shorttitle = {P-{{Tuning}} V2},
   author = {Liu, Xiao and Ji, Kaixuan and Fu, Yicheng and Tam, Weng Lam and Du, Zhengxiao and Yang, Zhilin and Tang, Jie},
@@ -8182,12 +8253,11 @@
   primaryclass = {cs},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2110.07602},
-  urldate = {2022-11-02},
+  urldate = {2023-02-15},
   abstract = {Prompt tuning, which only tunes continuous prompts with a frozen language model, substantially reduces per-task storage and memory usage at training. However, in the context of NLU, prior work reveals that prompt tuning does not perform well for normal-sized pretrained models. We also find that existing methods of prompt tuning cannot handle hard sequence labeling tasks, indicating a lack of universality. We present a novel empirical finding that properly optimized prompt tuning can be universally effective across a wide range of model scales and NLU tasks. It matches the performance of finetuning while having only 0.1\%-3\% tuned parameters. Our method P-Tuning v2 is an implementation of Deep Prompt Tuning \textbackslash cite\{li2021prefix,qin2021learning\} optimized and adapted for NLU. Given the universality and simplicity of P-Tuning v2, we believe it can serve as an alternative to finetuning and a strong baseline for future research.Our code and data are released at https://github.com/THUDM/P-tuning-v2.},
   archiveprefix = {arXiv},
-  langid = {english},
-  keywords = {finetuning},
-  file = {/Users/lukakuma/Zotero/storage/QBWAZL29/Liu et al. - 2022 - P-Tuning v2 Prompt Tuning Can Be Comparable to Fi.pdf}
+  keywords = {finetuning,peft},
+  file = {/Users/lukakuma/Zotero/storage/2ZAXYWDS/Liu et al. - 2022 - P-Tuning v2 Prompt Tuning Can Be Comparable to Fi.pdf;/Users/lukakuma/Zotero/storage/66NJL5LN/2110.html}
 }
 
 @misc{liuRoBERTaRobustlyOptimized2019,
@@ -8393,6 +8463,7 @@
   urldate = {2023-02-08},
   abstract = {When answering a question, humans utilize the information available across different modalities to synthesize a consistent and complete chain of thought (CoT). This process is normally a black box in the case of deep learning models like large-scale language models. Recently, science question benchmarks have been used to diagnose the multi-hop reasoning ability and interpretability of an AI system. However, existing datasets fail to provide annotations for the answers, or are restricted to the textual-only modality, small scales, and limited domain diversity. To this end, we present Science Question Answering (ScienceQA), a new benchmark that consists of \textasciitilde 21k multimodal multiple choice questions with a diverse set of science topics and annotations of their answers with corresponding lectures and explanations. We further design language models to learn to generate lectures and explanations as the chain of thought (CoT) to mimic the multi-hop reasoning process when answering ScienceQA questions. ScienceQA demonstrates the utility of CoT in language models, as CoT improves the question answering performance by 1.20\% in few-shot GPT-3 and 3.99\% in fine-tuned UnifiedQA. We also explore the upper bound for models to leverage explanations by feeding those in the input; we observe that it improves the few-shot performance of GPT-3 by 18.96\%. Our analysis further shows that language models, similar to humans, benefit from explanations to learn from fewer data and achieve the same performance with just 40\% of the data. The data and code are available at https://scienceqa.github.io.},
   archiveprefix = {arXiv},
+  keywords = {skimed},
   file = {/Users/lukakuma/Zotero/storage/6HEFXFN8/Lu et al. - 2022 - Learn to Explain Multimodal Reasoning via Thought.pdf;/Users/lukakuma/Zotero/storage/ERP99EU5/2209.html}
 }
 
@@ -8428,7 +8499,7 @@
   file = {/Users/lukakuma/Zotero/storage/TKTELNTD/Lu et al. - 2021 - NeuroLogic Aesque Decoding Constrained Text Gene.pdf;/Users/lukakuma/Zotero/storage/SGSFRQ4J/2112.html}
 }
 
-@misc{luoFrustratinglySimpleApproach2022,
+@misc{luoFrustratinglySimpleApproach2022a,
   title = {A {{Frustratingly Simple Approach}} for {{End-to-End Image Captioning}}},
   author = {Luo, Ziyang and Xi, Yadong and Zhang, Rongsheng and Ma, Jing},
   date = {2022-04-14},
@@ -8438,11 +8509,11 @@
   primaryclass = {cs},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2201.12723},
-  urldate = {2022-08-10},
+  urldate = {2023-02-15},
   abstract = {Image Captioning is a fundamental task to join vision and language, concerning about cross-modal understanding and text generation. Recent years witness the emerging attention on image captioning. Most of existing works follow a traditional two-stage training paradigm. Before training the captioning models, an extra object detector is utilized to recognize the objects in the image at first. However, they require sizeable datasets with fine-grained object annotation for training the object detector, which is a daunting task. In addition, the errors of the object detectors are easy to propagate to the following captioning models, degenerating models' performance. To alleviate such defects, we propose a frustratingly simple but highly effective end-to-end image captioning framework, Visual Conditioned GPT (VC-GPT), by connecting the pre-trained visual encoder (CLIP-ViT) and language decoder (GPT2). Different from the vanilla connection method that directly inserts the cross-attention modules into GPT2, we come up with a self-ensemble cross-modal fusion mechanism that comprehensively considers both the single- and cross-modal knowledge. As a result, we do not need extra object detectors for model training. Experimental results conducted on three popular image captioning benchmarks (MSCOCO, Flickr30k and NoCaps) demonstrate that our VC-GPT achieves either the best or the second-best performance across all evaluation metrics over extensive baseline systems.},
   archiveprefix = {arXiv},
-  keywords = {(ext) Flamingo},
-  file = {/Users/lukakuma/Zotero/storage/4VLCQRYF/Luo et al. - 2022 - A Frustratingly Simple Approach for End-to-End Ima.pdf;/Users/lukakuma/Zotero/storage/SV8H8LEX/2201.html}
+  keywords = {(ext) Flamingo,adaptor,multimodal},
+  file = {/Users/lukakuma/Zotero/storage/FV3JR3AB/Luo et al. - 2022 - A Frustratingly Simple Approach for End-to-End Ima.pdf;/Users/lukakuma/Zotero/storage/3AI79E4C/2201.html}
 }
 
 @misc{luoUnderstandingDiffusionModels2022,
@@ -8460,7 +8531,7 @@
   abstract = {Diffusion models have shown incredible capabilities as generative models; indeed, they power the current state-of-the-art models on text-conditioned image generation such as Imagen and DALL-E 2. In this work we review, demystify, and unify the understanding of diffusion models across both variational and score-based perspectives. We first derive Variational Diffusion Models (VDM) as a special case of a Markovian Hierarchical Variational Autoencoder, where three key assumptions enable tractable computation and scalable optimization of the ELBO. We then prove that optimizing a VDM boils down to learning a neural network to predict one of three potential objectives: the original source input from any arbitrary noisification of it, the original source noise from any arbitrarily noisified input, or the score function of a noisified input at any arbitrary noise level. We then dive deeper into what it means to learn the score function, and connect the variational perspective of a diffusion model explicitly with the Score-based Generative Modeling perspective through Tweedie's Formula. Lastly, we cover how to learn a conditional distribution using diffusion models via guidance.},
   archiveprefix = {arXiv},
   version = {1},
-  keywords = {diffusion},
+  keywords = {diffusion,image generation},
   file = {/Users/lukakuma/Zotero/storage/INEV2T4E/Luo - 2022 - Understanding Diffusion Models A Unified Perspect.pdf;/Users/lukakuma/Zotero/storage/RC49N8MU/2208.html}
 }
 
@@ -8478,6 +8549,24 @@
   abstract = {Mathematical reasoning is a fundamental aspect of human intelligence and is applicable in various fields, including science, engineering, finance, and everyday life. The development of artificial intelligence (AI) systems capable of solving math problems and proving theorems has garnered significant interest in the fields of machine learning and natural language processing. For example, mathematics serves as a testbed for aspects of reasoning that are challenging for powerful deep learning models, driving new algorithmic and modeling advances. On the other hand, recent advances in large-scale neural language models have opened up new benchmarks and opportunities to use deep learning for mathematical reasoning. In this survey paper, we review the key tasks, datasets, and methods at the intersection of mathematical reasoning and deep learning over the past decade. We also evaluate existing benchmarks and methods, and discuss future research directions in this domain.},
   archiveprefix = {arXiv},
   file = {/Users/lukakuma/Zotero/storage/W88I65JK/Lu et al. - 2022 - A Survey of Deep Learning for Mathematical Reasoni.pdf;/Users/lukakuma/Zotero/storage/AJKFQACI/2212.html}
+}
+
+@misc{luUniAdapterUnifiedParameterEfficient2023,
+  title = {{{UniAdapter}}: {{Unified Parameter-Efficient Transfer Learning}} for {{Cross-modal Modeling}}},
+  shorttitle = {{{UniAdapter}}},
+  author = {Lu, Haoyu and Ding, Mingyu and Huo, Yuqi and Yang, Guoxing and Lu, Zhiwu and Tomizuka, Masayoshi and Zhan, Wei},
+  date = {2023-02-13},
+  number = {arXiv:2302.06605},
+  eprint = {2302.06605},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.06605},
+  urldate = {2023-02-14},
+  abstract = {Large-scale vision-language pre-trained models have shown promising transferability to various downstream tasks. As the size of these foundation models and the number of downstream tasks grow, the standard full fine-tuning paradigm becomes unsustainable due to heavy computational and storage costs. This paper proposes UniAdapter, which unifies unimodal and multimodal adapters for parameter-efficient cross-modal adaptation on pre-trained vision-language models. Specifically, adapters are distributed to different modalities and their interactions, with the total number of tunable parameters reduced by partial weight sharing. The unified and knowledge-sharing design enables powerful cross-modal representations that can benefit various downstream tasks, requiring only 1.0\%-2.0\% tunable parameters of the pre-trained model. Extensive experiments on 6 cross-modal downstream benchmarks (including video-text retrieval, image-text retrieval, VideoQA, and VQA) show that in most cases, UniAdapter not only outperforms the state-of-the-arts, but even beats the full fine-tuning strategy. Particularly, on the MSRVTT retrieval task, UniAdapter achieves 49.7\% recall@1 with 2.2\% model parameters, outperforming the latest competitors by 2.0\%. The code and models are available at https://github.com/RERV/UniAdapter.},
+  archiveprefix = {arXiv},
+  keywords = {adaptor,multimodal},
+  file = {/Users/lukakuma/Zotero/storage/NTAL9TUV/Lu et al. - 2023 - UniAdapter Unified Parameter-Efficient Transfer L.pdf;/Users/lukakuma/Zotero/storage/GV9TNPPQ/2302.html}
 }
 
 @misc{luUnifiedIOUnifiedModel2022,
@@ -8567,23 +8656,6 @@
   pagetotal = {400},
   keywords = {GNN},
   file = {/Users/lukakuma/Zotero/storage/YCEKE8SJ/Ma and Tang - 2021 - Deep Learning on Graphs.pdf}
-}
-
-@misc{mahowaldDissociatingLanguageThought2023,
-  title = {Dissociating Language and Thought in Large Language Models: A Cognitive Perspective},
-  shorttitle = {Dissociating Language and Thought in Large Language Models},
-  author = {Mahowald, Kyle and Ivanova, Anna A. and Blank, Idan A. and Kanwisher, Nancy and Tenenbaum, Joshua B. and Fedorenko, Evelina},
-  date = {2023-01-16},
-  number = {arXiv:2301.06627},
-  eprint = {2301.06627},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2301.06627},
-  urldate = {2023-01-23},
-  abstract = {Today's large language models (LLMs) routinely generate coherent, grammatical and seemingly meaningful paragraphs of text. This achievement has led to speculation that these networks are -- or will soon become -- "thinking machines", capable of performing tasks that require abstract knowledge and reasoning. Here, we review the capabilities of LLMs by considering their performance on two different aspects of language use: 'formal linguistic competence', which includes knowledge of rules and patterns of a given language, and 'functional linguistic competence', a host of cognitive abilities required for language understanding and use in the real world. Drawing on evidence from cognitive neuroscience, we show that formal competence in humans relies on specialized language processing mechanisms, whereas functional competence recruits multiple extralinguistic capacities that comprise human thought, such as formal reasoning, world knowledge, situation modeling, and social cognition. In line with this distinction, LLMs show impressive (although imperfect) performance on tasks requiring formal linguistic competence, but fail on many tests requiring functional competence. Based on this evidence, we argue that (1) contemporary LLMs should be taken seriously as models of formal linguistic skills; (2) models that master real-life language use would need to incorporate or develop not only a core language module, but also multiple non-language-specific cognitive capacities required for modeling thought. Overall, a distinction between formal and functional linguistic competence helps clarify the discourse surrounding LLMs' potential and provides a path toward building models that understand and use language in human-like ways.},
-  archiveprefix = {arXiv},
-  file = {/Users/lukakuma/Zotero/storage/NNHRSKPT/Mahowald et al. - 2023 - Dissociating language and thought in large languag.pdf;/Users/lukakuma/Zotero/storage/G6U2YFPQ/2301.html}
 }
 
 @misc{makoviychukIsaacGymHigh2021,
@@ -9199,16 +9271,22 @@
   file = {/Users/lukakuma/Zotero/storage/2HHT72U3/Moffat et al. - 2021 - A biofoundry workflow for the identification of ge.pdf;/Users/lukakuma/Zotero/storage/P4SAMH7X/6122745.html}
 }
 
-@article{mokadyClipCapCLIPPrefix2021,
+@misc{mokadyClipCapCLIPPrefix2021a,
   title = {{{ClipCap}}: {{CLIP Prefix}} for {{Image Captioning}}},
   shorttitle = {{{ClipCap}}},
   author = {Mokady, Ron and Hertz, Amir and Bermano, Amit H.},
   date = {2021-11-18},
-  url = {https://arxiv.org/abs/2111.09734v1},
-  urldate = {2022-08-10},
+  number = {arXiv:2111.09734},
+  eprint = {2111.09734},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2111.09734},
+  urldate = {2023-02-15},
   abstract = {Image captioning is a fundamental task in vision-language understanding, where the model predicts a textual informative caption to a given input image. In this paper, we present a simple approach to address this task. We use CLIP encoding as a prefix to the caption, by employing a simple mapping network, and then fine-tunes a language model to generate the image captions. The recently proposed CLIP model contains rich semantic features which were trained with textual context, making it best for vision-language perception. Our key idea is that together with a pre-trained language model (GPT2), we obtain a wide understanding of both visual and textual data. Hence, our approach only requires rather quick training to produce a competent captioning model. Without additional annotations or pre-training, it efficiently generates meaningful captions for large-scale and diverse datasets. Surprisingly, our method works well even when only the mapping network is trained, while both CLIP and the language model remain frozen, allowing a lighter architecture with less trainable parameters. Through quantitative evaluation, we demonstrate our model achieves comparable results to state-of-the-art methods on the challenging Conceptual Captions and nocaps datasets, while it is simpler, faster, and lighter. Our code is available in https://github.com/rmokady/CLIP\_prefix\_caption.},
-  langid = {english},
-  file = {/Users/lukakuma/Zotero/storage/X8AHR93H/Mokady et al. - 2021 - ClipCap CLIP Prefix for Image Captioning.pdf}
+  archiveprefix = {arXiv},
+  keywords = {adaptor,multimodal},
+  file = {/Users/lukakuma/Zotero/storage/RSMIZJMX/Mokady et al. - 2021 - ClipCap CLIP Prefix for Image Captioning.pdf;/Users/lukakuma/Zotero/storage/FLEH5PKF/2111.html}
 }
 
 @unpublished{montiDualPrimalGraphConvolutional2018,
@@ -9548,7 +9626,7 @@
   file = {/Users/lukakuma/Zotero/storage/A4E7YMW5/Neelakantan et al. - 2022 - Text and Code Embeddings by Contrastive Pre-Traini.pdf;/Users/lukakuma/Zotero/storage/2IGHX5NE/2201.html}
 }
 
-@misc{ngoAlignmentProblemDeep2022,
+@misc{ngoAlignmentProblemDeep2022a,
   title = {The Alignment Problem from a Deep Learning Perspective},
   author = {Ngo, Richard and Chan, Lawrence and Mindermann, Sören},
   date = {2022-12-16},
@@ -9558,11 +9636,11 @@
   primaryclass = {cs},
   publisher = {{arXiv}},
   url = {http://arxiv.org/abs/2209.00626},
-  urldate = {2022-12-19},
+  urldate = {2023-02-14},
   abstract = {Within the coming decades, artificial general intelligence (AGI) may surpass human capabilities at a wide range of important tasks. We outline a case for expecting that, without substantial effort to prevent it, AGIs could learn to pursue goals which are very undesirable (in other words, misaligned) from a human perspective. We argue that AGIs trained in similar ways as today's most capable models could learn to act deceptively to receive higher reward; learn internally-represented goals which generalize beyond their training distributions; and pursue those goals using power-seeking strategies. We outline how the deployment of misaligned AGIs might irreversibly undermine human control over the world, and briefly review research directions aimed at preventing these problems.},
   archiveprefix = {arXiv},
   keywords = {alignment},
-  file = {/Users/lukakuma/Zotero/storage/A66M5LHE/Ngo et al. - 2022 - The alignment problem from a deep learning perspec.pdf;/Users/lukakuma/Zotero/storage/7BHF5TJL/2209.html}
+  file = {/Users/lukakuma/Zotero/storage/LFHBZ8QR/Ngo et al. - 2022 - The alignment problem from a deep learning perspec.pdf;/Users/lukakuma/Zotero/storage/M9IXTN25/2209.html}
 }
 
 @inproceedings{nicaEvaluatingGeneralizationGFlowNets2022,
@@ -9606,7 +9684,7 @@
   urldate = {2022-04-27},
   abstract = {Diffusion models have recently been shown to generate high-quality synthetic images, especially when paired with a guidance technique to trade off diversity for fidelity. We explore diffusion models for the problem of text-conditional image synthesis and compare two different guidance strategies: CLIP guidance and classifier-free guidance. We find that the latter is preferred by human evaluators for both photorealism and caption similarity, and often produces photorealistic samples. Samples from a 3.5 billion parameter text-conditional diffusion model using classifier-free guidance are favored by human evaluators to those from DALL-E, even when the latter uses expensive CLIP reranking. Additionally, we find that our models can be fine-tuned to perform image inpainting, enabling powerful text-driven image editing. We train a smaller model on a filtered dataset and release the code and weights at https://github.com/openai/glide-text2im.},
   archiveprefix = {arXiv},
-  keywords = {diffusion},
+  keywords = {diffusion,image generation},
   file = {/Users/lukakuma/Zotero/storage/2WDRUQJX/Nichol et al. - 2022 - GLIDE Towards Photorealistic Image Generation and.pdf;/Users/lukakuma/Zotero/storage/EPYVQDGN/2112.html}
 }
 
@@ -9972,22 +10050,6 @@
   file = {/Users/lukakuma/Zotero/storage/DXRUFPTI/Ouyang et al. - 2022 - Training language models to follow instructions wi.pdf}
 }
 
-@inproceedings{padmakumarExploringRoleTask2022,
-  title = {Exploring the {{Role}} of {{Task Transferability}} in {{Large-Scale Multi-Task Learning}}},
-  booktitle = {Proceedings of the 2022 {{Conference}} of the {{North American Chapter}} of the {{Association}} for {{Computational Linguistics}}: {{Human Language Technologies}}},
-  author = {Padmakumar, Vishakh and Lausen, Leonard and Ballesteros, Miguel and Zha, Sheng and He, He and Karypis, George},
-  date = {2022-07},
-  pages = {2542--2550},
-  publisher = {{Association for Computational Linguistics}},
-  location = {{Seattle, United States}},
-  url = {https://aclanthology.org/2022.naacl-main.183},
-  urldate = {2022-10-25},
-  abstract = {Recent work has found that multi-task training with a large number of diverse tasks can uniformly improve downstream performance on unseen target tasks. In contrast, literature on task transferability has established that the choice of intermediate tasks can heavily affect downstream task performance. In this work, we aim to disentangle the effect of scale and relatedness of tasks in multi-task representation learning. We find that, on average, increasing the scale of multi-task learning, in terms of the number of tasks, indeed results in better learned representations than smaller multi-task setups. However, if the target tasks are known ahead of time, then training on a smaller set of related tasks is competitive to the large-scale multi-task training at a reduced computational cost.},
-  eventtitle = {{{NAACL-HLT}} 2022},
-  keywords = {compute efficient method},
-  file = {/Users/lukakuma/Zotero/storage/VYZSKV3X/Padmakumar et al. - 2022 - Exploring the Role of Task Transferability in Larg.pdf}
-}
-
 @misc{palMedMCQALargescaleMultiSubject2022,
   title = {{{MedMCQA}} : {{A Large-scale Multi-Subject Multi-Choice Dataset}} for {{Medical}} Domain {{Question Answering}}},
   shorttitle = {{{MedMCQA}}},
@@ -10151,22 +10213,6 @@
   file = {/Users/lukakuma/Zotero/storage/9Y36KFBE/Patrick et al. - 2020 - On Compositions of Transformations in Contrastive .pdf;/Users/lukakuma/Zotero/storage/RIDLNW2D/2003.html}
 }
 
-@misc{peeblesScalableDiffusionModels2022,
-  title = {Scalable {{Diffusion Models}} with {{Transformers}}},
-  author = {Peebles, William and Xie, Saining},
-  date = {2022-12-19},
-  number = {arXiv:2212.09748},
-  eprint = {2212.09748},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2212.09748},
-  urldate = {2022-12-23},
-  abstract = {We explore a new class of diffusion models based on the transformer architecture. We train latent diffusion models of images, replacing the commonly-used U-Net backbone with a transformer that operates on latent patches. We analyze the scalability of our Diffusion Transformers (DiTs) through the lens of forward pass complexity as measured by Gflops. We find that DiTs with higher Gflops -- through increased transformer depth/width or increased number of input tokens -- consistently have lower FID. In addition to possessing good scalability properties, our largest DiT-XL/2 models outperform all prior diffusion models on the class-conditional ImageNet 512x512 and 256x256 benchmarks, achieving a state-of-the-art FID of 2.27 on the latter.},
-  archiveprefix = {arXiv},
-  file = {/Users/lukakuma/Zotero/storage/BSFTH2A7/Peebles and Xie - 2022 - Scalable Diffusion Models with Transformers.pdf;/Users/lukakuma/Zotero/storage/2654JMG6/2212.html}
-}
-
 @misc{pengBEiTV2Masked2022,
   title = {{{BEiT}} v2: {{Masked Image Modeling}} with {{Vector-Quantized Visual Tokenizers}}},
   shorttitle = {{{BEiT}} V2},
@@ -10202,18 +10248,6 @@
   langid = {english},
   keywords = {cover to cover,dialogue},
   file = {/Users/lukakuma/Zotero/storage/QSXFWZ8X/Peng et al. - 2022 - GODEL Large-Scale Pre-Training for Goal-Directed .pdf}
-}
-
-@article{pereiraViscondeMultidocumentQA2022,
-  title = {Visconde: {{Multi-document QA}} with {{GPT-3}} and {{Neural Reranking}}},
-  shorttitle = {Visconde},
-  author = {Pereira, Jayr and Fidalgo, Robson and Lotufo, Roberto and Nogueira, Rodrigo},
-  date = {2022-12-19},
-  url = {https://arxiv.org/abs/2212.09656v1},
-  urldate = {2022-12-24},
-  abstract = {This paper proposes a question-answering system that can answer questions whose supporting evidence is spread over multiple (potentially long) documents. The system, called Visconde, uses a three-step pipeline to perform the task: decompose, retrieve, and aggregate. The first step decomposes the question into simpler questions using a few-shot large language model (LLM). Then, a state-of-the-art search engine is used to retrieve candidate passages from a large collection for each decomposed question. In the final step, we use the LLM in a few-shot setting to aggregate the contents of the passages into the final answer. The system is evaluated on three datasets: IIRC, Qasper, and StrategyQA. Results suggest that current retrievers are the main bottleneck and that readers are already performing at the human level as long as relevant passages are provided. The system is also shown to be more effective when the model is induced to give explanations before answering a question. Code is available at \textbackslash url\{https://github.com/neuralmind-ai/visconde\}.},
-  langid = {english},
-  file = {/Users/lukakuma/Zotero/storage/VW659QWD/Pereira et al. - 2022 - Visconde Multi-document QA with GPT-3 and Neural .pdf}
 }
 
 @misc{perezDiscoveringLanguageModel2022,
@@ -10860,7 +10894,7 @@
   pages = {26},
   abstract = {Contrastive models like CLIP have been shown to learn robust representations of images that capture both semantics and style. To leverage these representations for image generation, we propose a two-stage model: a prior that generates a CLIP image embedding given a text caption, and a decoder that generates an image conditioned on the image embedding. We show that explicitly generating image representations improves image diversity with minimal loss in photorealism and caption similarity. Our decoders conditioned on image representations can also produce variations of an image that preserve both its semantics and style, while varying the non-essential details absent from the image representation. We use diffusion models for the decoder and experiment with both autoregressive and diffusion models for the prior, finding that the latter are computationally more efficient and produce higher-quality samples.},
   langid = {english},
-  keywords = {*OpenAI,cover to cover,milestone},
+  keywords = {*OpenAI,cover to cover,diffusion,image generation,milestone},
   file = {/Users/lukakuma/Zotero/storage/QGHTZ3NS/Ramesh et al. - Hierarchical Text-Conditional Image Generation wit.pdf}
 }
 
@@ -10943,6 +10977,7 @@
   urldate = {2023-02-03},
   abstract = {We introduce Progressive Prompts - a simple and efficient approach for continual learning in language models. Our method allows forward transfer and resists catastrophic forgetting, without relying on data replay or a large number of task-specific parameters. Progressive Prompts learns a new soft prompt for each task and sequentially concatenates it with the previously learned prompts, while keeping the base model frozen. Experiments on standard continual learning benchmarks show that our approach outperforms state-of-the-art methods, with an improvement {$>$}20\% in average test accuracy over the previous best-preforming method on T5 model. We also explore a more challenging continual learning setup with longer sequences of tasks and show that Progressive Prompts significantly outperforms prior methods.},
   archiveprefix = {arXiv},
+  keywords = {peft},
   file = {/Users/lukakuma/Zotero/storage/PM3CSZ8Q/Razdaibiedina et al. - 2023 - Progressive Prompts Continual Learning for Langua.pdf;/Users/lukakuma/Zotero/storage/JY7G5394/2301.html}
 }
 
@@ -11124,7 +11159,7 @@
   urldate = {2022-08-08},
   abstract = {By decomposing the image formation process into a sequential application of denoising autoencoders, diffusion models (DMs) achieve state-of-the-art synthesis results on image data and beyond. Additionally, their formulation allows for a guiding mechanism to control the image generation process without retraining. However, since these models typically operate directly in pixel space, optimization of powerful DMs often consumes hundreds of GPU days and inference is expensive due to sequential evaluations. To enable DM training on limited computational resources while retaining their quality and flexibility, we apply them in the latent space of powerful pretrained autoencoders. In contrast to previous work, training diffusion models on such a representation allows for the first time to reach a near-optimal point between complexity reduction and detail preservation, greatly boosting visual fidelity. By introducing cross-attention layers into the model architecture, we turn diffusion models into powerful and flexible generators for general conditioning inputs such as text or bounding boxes and high-resolution synthesis becomes possible in a convolutional manner. Our latent diffusion models (LDMs) achieve a new state of the art for image inpainting and highly competitive performance on various tasks, including unconditional image generation, semantic scene synthesis, and super-resolution, while significantly reducing computational requirements compared to pixel-based DMs. Code is available at https://github.com/CompVis/latent-diffusion .},
   archiveprefix = {arXiv},
-  keywords = {diffusion},
+  keywords = {diffusion,image generation,milestone},
   file = {/Users/lukakuma/Zotero/storage/5GZ3ISRI/Rombach et al. - 2022 - High-Resolution Image Synthesis with Latent Diffus.pdf;/Users/lukakuma/Zotero/storage/27IPG4SG/2112.html}
 }
 
@@ -11178,7 +11213,7 @@
   urldate = {2022-08-27},
   abstract = {Large text-to-image models achieved a remarkable leap in the evolution of AI, enabling high-quality and diverse synthesis of images from a given text prompt. However, these models lack the ability to mimic the appearance of subjects in a given reference set and synthesize novel renditions of them in different contexts. In this work, we present a new approach for "personalization" of text-to-image diffusion models (specializing them to users' needs). Given as input just a few images of a subject, we fine-tune a pretrained text-to-image model (Imagen, although our method is not limited to a specific model) such that it learns to bind a unique identifier with that specific subject. Once the subject is embedded in the output domain of the model, the unique identifier can then be used to synthesize fully-novel photorealistic images of the subject contextualized in different scenes. By leveraging the semantic prior embedded in the model with a new autogenous class-specific prior preservation loss, our technique enables synthesizing the subject in diverse scenes, poses, views, and lighting conditions that do not appear in the reference images. We apply our technique to several previously-unassailable tasks, including subject recontextualization, text-guided view synthesis, appearance modification, and artistic rendering (all while preserving the subject's key features). Project page: https://dreambooth.github.io/},
   archiveprefix = {arXiv},
-  keywords = {diffusion,finetuning},
+  keywords = {diffusion,finetuning,image generation},
   file = {/Users/lukakuma/Zotero/storage/62AYILAX/Ruiz et al. - 2022 - DreamBooth Fine Tuning Text-to-Image Diffusion Mo.pdf;/Users/lukakuma/Zotero/storage/NYIFM9QU/2208.html}
 }
 
@@ -11356,7 +11391,7 @@
   urldate = {2022-12-09},
   abstract = {Large language models have recently been shown to attain reasonable zero-shot generalization on a diverse set of tasks (Brown et al., 2020). It has been hypothesized that this is a consequence of implicit multitask learning in language models' pretraining (Radford et al., 2019). Can zero-shot generalization instead be directly induced by explicit multitask learning? To test this question at scale, we develop a system for easily mapping any natural language tasks into a human-readable prompted form. We convert a large set of supervised datasets, each with multiple prompts with diverse wording. These prompted datasets allow for benchmarking the ability of a model to perform completely held-out tasks. We fine-tune a pretrained encoder-decoder model (Raffel et al., 2020; Lester et al., 2021) on this multitask mixture covering a wide variety of tasks. The model attains strong zero-shot performance on several standard datasets, often outperforming models up to 16x its size. Further, our approach attains strong performance on a subset of tasks from the BIG-bench benchmark, outperforming models up to 6x its size. All trained models are available at https://github.com/bigscience-workshop/t-zero and all prompts are available at https://github.com/bigscience-workshop/promptsource.},
   archiveprefix = {arXiv},
-  keywords = {(ext) BIG-bench,finetuning,skimed},
+  keywords = {(ext) BIG-bench,cover to cover,finetuning},
   file = {/Users/lukakuma/Zotero/storage/BP5FLYST/Sanh et al. - 2022 - Multitask Prompted Training Enables Zero-Shot Task.pdf;/Users/lukakuma/Zotero/storage/YIJPVRYT/2110.html}
 }
 
@@ -11410,22 +11445,6 @@
   archiveprefix = {arXiv},
   keywords = {alignment},
   file = {/Users/lukakuma/Zotero/storage/UYACPD6C/Saunders et al. - 2022 - Self-critiquing models for assisting human evaluat.pdf;/Users/lukakuma/Zotero/storage/645HEBPZ/2206.html}
-}
-
-@misc{savinovStepunrolledDenoisingAutoencoders2022,
-  title = {Step-Unrolled {{Denoising Autoencoders}} for {{Text Generation}}},
-  author = {Savinov, Nikolay and Chung, Junyoung and Binkowski, Mikolaj and Elsen, Erich and van den Oord, Aaron},
-  date = {2022-04-19},
-  number = {arXiv:2112.06749},
-  eprint = {2112.06749},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2112.06749},
-  urldate = {2023-01-06},
-  abstract = {In this paper we propose a new generative model of text, Step-unrolled Denoising Autoencoder (SUNDAE), that does not rely on autoregressive models. Similarly to denoising diffusion techniques, SUNDAE is repeatedly applied on a sequence of tokens, starting from random inputs and improving them each time until convergence. We present a simple new improvement operator that converges in fewer iterations than diffusion methods, while qualitatively producing better samples on natural language datasets. SUNDAE achieves state-of-the-art results (among non-autoregressive methods) on the WMT'14 English-to-German translation task and good qualitative results on unconditional language modeling on the Colossal Cleaned Common Crawl dataset and a dataset of Python code from GitHub. The non-autoregressive nature of SUNDAE opens up possibilities beyond left-to-right prompted generation, by filling in arbitrary blank patterns in a template.},
-  archiveprefix = {arXiv},
-  file = {/Users/lukakuma/Zotero/storage/EZ7HRZDC/Savinov et al. - 2022 - Step-unrolled Denoising Autoencoders for Text Gene.pdf;/Users/lukakuma/Zotero/storage/Z59AYW3T/2112.html}
 }
 
 @inproceedings{savvaHabitatPlatformEmbodied2019,
@@ -11541,6 +11560,7 @@
   urldate = {2023-02-11},
   abstract = {Language models (LMs) exhibit remarkable abilities to solve new tasks from just a few examples or textual instructions, especially at scale. They also, paradoxically, struggle with basic functionality, such as arithmetic or factual lookup, where much simpler and smaller models excel. In this paper, we show that LMs can teach themselves to use external tools via simple APIs and achieve the best of both worlds. We introduce Toolformer, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring nothing more than a handful of demonstrations for each API. We incorporate a range of tools, including a calculator, a Q\textbackslash\&A system, two different search engines, a translation system, and a calendar. Toolformer achieves substantially improved zero-shot performance across a variety of downstream tasks, often competitive with much larger models, without sacrificing its core language modeling abilities.},
   langid = {english},
+  keywords = {rationale engr},
   file = {/Users/lukakuma/Zotero/storage/R7VC8XZP/Schick et al. - 2023 - Toolformer Language Models Can Teach Themselves t.pdf}
 }
 
@@ -12153,7 +12173,7 @@
   urldate = {2023-01-09},
   abstract = {Large language models (LLMs) have demonstrated impressive capabilities in natural language understanding and generation, but the quality bar for medical and clinical applications is high. Today, attempts to assess models' clinical knowledge typically rely on automated evaluations on limited benchmarks. There is no standard to evaluate model predictions and reasoning across a breadth of tasks. To address this, we present MultiMedQA, a benchmark combining six existing open question answering datasets spanning professional medical exams, research, and consumer queries; and HealthSearchQA, a new free-response dataset of medical questions searched online. We propose a framework for human evaluation of model answers along multiple axes including factuality, precision, possible harm, and bias. In addition, we evaluate PaLM (a 540-billion parameter LLM) and its instruction-tuned variant, Flan-PaLM, on MultiMedQA. Using a combination of prompting strategies, Flan-PaLM achieves state-of-the-art accuracy on every MultiMedQA multiple-choice dataset (MedQA, MedMCQA, PubMedQA, MMLU clinical topics), including 67.6\% accuracy on MedQA (US Medical License Exam questions), surpassing prior state-of-the-art by over 17\%. However, human evaluation reveals key gaps in Flan-PaLM responses. To resolve this we introduce instruction prompt tuning, a parameter-efficient approach for aligning LLMs to new domains using a few exemplars. The resulting model, Med-PaLM, performs encouragingly, but remains inferior to clinicians. We show that comprehension, recall of knowledge, and medical reasoning improve with model scale and instruction prompt tuning, suggesting the potential utility of LLMs in medicine. Our human evaluations reveal important limitations of today's models, reinforcing the importance of both evaluation frameworks and method development in creating safe, helpful LLM models for clinical applications.},
   archiveprefix = {arXiv},
-  keywords = {cover to cover,milestone},
+  keywords = {cover to cover,milestone,peft},
   file = {/Users/lukakuma/Zotero/storage/2I85D4BQ/Singhal et al. - 2022 - Large Language Models Encode Clinical Knowledge.pdf;/Users/lukakuma/Zotero/storage/CNYH4DBL/2212.html}
 }
 
@@ -12296,24 +12316,6 @@
   abstract = {With the rise of artificial intelligence in recent years, Deep Neural Networks (DNNs) have been widely used in many domains. To achieve high performance and energy efficiency, hardware acceleration (especially inference) of DNNs is intensively studied both in academia and industry. However, we still face two challenges: large DNN models and datasets, which incur frequent off-chip memory accesses; and the training of DNNs, which is not well-explored in recent accelerator designs. To truly provide high throughput and energy efficient acceleration for the training of deep and large models, we inevitably need to use multiple accelerators to explore the coarse-grain parallelism, compared to the fine-grain parallelism inside a layer considered in most of the existing architectures. It poses the key research question to seek the best organization of computation and dataflow among accelerators. In this paper, inspired by recent work in machine learning systems, we propose a solution HyPar to determine layer-wise parallelism for deep neural network training with an array of DNN accelerators. HyPar partitions the feature map tensors (input and output), the kernel tensors, the gradient tensors, and the error tensors for the DNN accelerators. A partition constitutes the choice of parallelism for weighted layers. The optimization target is to search a partition that minimizes the total communication during training a complete DNN. To solve this problem, we propose a communication model to explain the source and amount of communications. Then, we use a hierarchical layer-wise dynamic programming method to search for the partition for each layer.},
   archiveprefix = {arXiv},
   file = {/Users/lukakuma/Zotero/storage/T6IU24J9/Song et al. - 2020 - HyPar Towards Hybrid Parallelism for Deep Learnin.pdf;/Users/lukakuma/Zotero/storage/JIV5T8DG/1901.html}
-}
-
-@misc{soPrimerSearchingEfficient2022a,
-  title = {Primer: {{Searching}} for {{Efficient Transformers}} for {{Language Modeling}}},
-  shorttitle = {Primer},
-  author = {So, David R. and Mańke, Wojciech and Liu, Hanxiao and Dai, Zihang and Shazeer, Noam and Le, Quoc V.},
-  date = {2022-01-24},
-  number = {arXiv:2109.08668},
-  eprint = {2109.08668},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2109.08668},
-  urldate = {2022-10-25},
-  abstract = {Large Transformer models have been central to recent advances in natural language processing. The training and inference costs of these models, however, have grown rapidly and become prohibitively expensive. Here we aim to reduce the costs of Transformers by searching for a more efficient variant. Compared to previous approaches, our search is performed at a lower level, over the primitives that define a Transformer TensorFlow program. We identify an architecture, named Primer, that has a smaller training cost than the original Transformer and other variants for auto-regressive language modeling. Primer's improvements can be mostly attributed to two simple modifications: squaring ReLU activations and adding a depthwise convolution layer after each Q, K, and V projection in self-attention. Experiments show Primer's gains over Transformer increase as compute scale grows and follow a power law with respect to quality at optimal model sizes. We also verify empirically that Primer can be dropped into different codebases to significantly speed up training without additional tuning. For example, at a 500M parameter size, Primer improves the original T5 architecture on C4 auto-regressive language modeling, reducing the training cost by 4X. Furthermore, the reduced training cost means Primer needs much less compute to reach a target one-shot performance. For instance, in a 1.9B parameter configuration similar to GPT-3 XL, Primer uses 1/3 of the training compute to achieve the same one-shot performance as Transformer. We open source our models and several comparisons in T5 to help with reproducibility.},
-  archiveprefix = {arXiv},
-  keywords = {compute efficient method},
-  file = {/Users/lukakuma/Zotero/storage/IG7XTV8G/So et al. - 2022 - Primer Searching for Efficient Transformers for L.pdf;/Users/lukakuma/Zotero/storage/9EXIRX6E/2109.html}
 }
 
 @misc{sorscherNeuralScalingLaws2022a,
@@ -12472,7 +12474,7 @@
   urldate = {2022-12-12},
   abstract = {During typical gradient-based training of deep neural networks, all of the model's parameters are updated at each iteration. Recent work has shown that it is possible to update only a small subset of the model's parameters during training, which can alleviate storage and communication requirements. In this paper, we show that it is possible to induce a fixed sparse mask on the model's parameters that selects a subset to update over many iterations. Our method constructs the mask out of the \$k\$ parameters with the largest Fisher information as a simple approximation as to which parameters are most important for the task at hand. In experiments on parameter-efficient transfer learning and distributed training, we show that our approach matches or exceeds the performance of other methods for training with sparse updates while being more efficient in terms of memory usage and communication costs. We release our code publicly to promote further applications of our approach.},
   archiveprefix = {arXiv},
-  keywords = {parameter efficient finetuninig},
+  keywords = {peft},
   file = {/Users/lukakuma/Zotero/storage/W7XNK742/Sung et al. - 2021 - Training Neural Networks with Fixed Sparse Masks.pdf;/Users/lukakuma/Zotero/storage/J56EU6W6/2111.html}
 }
 
@@ -12721,24 +12723,6 @@
   archiveprefix = {arXiv},
   version = {2},
   file = {/Users/lukakuma/Zotero/storage/AR58XMYG/Tang et al. - 2022 - Sparse MLP for Image Recognition Is Self-Attentio.pdf;/Users/lukakuma/Zotero/storage/AQMLYTES/2109.html}
-}
-
-@misc{tayEfficientTransformersSurvey2022,
-  title = {Efficient {{Transformers}}: {{A Survey}}},
-  shorttitle = {Efficient {{Transformers}}},
-  author = {Tay, Yi and Dehghani, Mostafa and Bahri, Dara and Metzler, Donald},
-  date = {2022-03-14},
-  number = {arXiv:2009.06732},
-  eprint = {2009.06732},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2009.06732},
-  urldate = {2022-08-23},
-  abstract = {Transformer model architectures have garnered immense interest lately due to their effectiveness across a range of domains like language, vision and reinforcement learning. In the field of natural language processing for example, Transformers have become an indispensable staple in the modern deep learning stack. Recently, a dizzying number of "X-former" models have been proposed - Reformer, Linformer, Performer, Longformer, to name a few - which improve upon the original Transformer architecture, many of which make improvements around computational and memory efficiency. With the aim of helping the avid researcher navigate this flurry, this paper characterizes a large and thoughtful selection of recent efficiency-flavored "X-former" models, providing an organized and comprehensive overview of existing work and models across multiple domains.},
-  archiveprefix = {arXiv},
-  keywords = {compute efficient method},
-  file = {/Users/lukakuma/Zotero/storage/NK9Y2J5I/Tay et al. - 2022 - Efficient Transformers A Survey.pdf;/Users/lukakuma/Zotero/storage/Z6XYFF47/2009.html}
 }
 
 @article{taylorGalacticaLargeLanguage2022,
@@ -13050,25 +13034,6 @@
   file = {/Users/lukakuma/Zotero/storage/LD8ES65Y/transformers-are-graph-neural-networks.html}
 }
 
-@misc{trevisoEfficientMethodsNatural2022,
-  title = {Efficient {{Methods}} for {{Natural Language Processing}}: {{A Survey}}},
-  shorttitle = {Efficient {{Methods}} for {{Natural Language Processing}}},
-  author = {Treviso, Marcos and Ji, Tianchu and Lee, Ji-Ung and van Aken, Betty and Cao, Qingqing and Ciosici, Manuel R. and Hassid, Michael and Heafield, Kenneth and Hooker, Sara and Martins, Pedro H. and Martins, André F. T. and Milder, Peter and Raffel, Colin and Simpson, Edwin and Slonim, Noam and Balasubramanian, Niranjan and Derczynski, Leon and Schwartz, Roy},
-  options = {useprefix=true},
-  date = {2022-08-31},
-  number = {arXiv:2209.00099},
-  eprint = {2209.00099},
-  eprinttype = {arxiv},
-  primaryclass = {cs},
-  publisher = {{arXiv}},
-  url = {http://arxiv.org/abs/2209.00099},
-  urldate = {2022-12-12},
-  abstract = {Getting the most out of limited resources allows advances in natural language processing (NLP) research and practice while being conservative with resources. Those resources may be data, time, storage, or energy. Recent work in NLP has yielded interesting results from scaling; however, using only scale to improve results means that resource consumption also scales. That relationship motivates research into efficient methods that require less resources to achieve similar results. This survey relates and synthesises methods and findings in those efficiencies in NLP, aiming to guide new researchers in the field and inspire the development of new methods.},
-  archiveprefix = {arXiv},
-  keywords = {compute efficient method},
-  file = {/Users/lukakuma/Zotero/storage/TE2ZYRUP/Treviso et al. - 2022 - Efficient Methods for Natural Language Processing.pdf;/Users/lukakuma/Zotero/storage/EWNKTDW5/2209.html}
-}
-
 @unpublished{trottBuildingFoundationDataDriven2021,
   title = {Building a {{Foundation}} for {{Data-Driven}}, {{Interpretable}}, and {{Robust Policy Design}} Using the {{AI Economist}}},
   author = {Trott, Alexander and Srinivasa, Sunil and van der Wal, Douwe and Haneuse, Sebastien and Zheng, Stephan},
@@ -13116,6 +13081,23 @@
   abstract = {Multimodal models are becoming increasingly effective, in part due to unified components, such as the Transformer architecture. However, multimodal models still often consist of many task- and modality-specific pieces and training procedures. For example, CLIP (Radford et al., 2021) trains independent text and image towers via a contrastive loss. We explore an additional unification: the use of a pure pixel-based model to perform image, text, and multimodal tasks. Our model is trained with contrastive loss alone, so we call it CLIP-Pixels Only (CLIPPO). CLIPPO uses a single encoder that processes both regular images and text rendered as images. CLIPPO performs image-based tasks such as retrieval and zero-shot image classification almost as well as CLIP, with half the number of parameters and no text-specific tower or embedding. When trained jointly via image-text contrastive learning and next-sentence contrastive learning, CLIPPO can perform well on natural language understanding tasks, without any word-level loss (language modelling or masked language modelling), outperforming pixel-based prior work. Surprisingly, CLIPPO can obtain good accuracy in visual question answering, simply by rendering the question and image together. Finally, we exploit the fact that CLIPPO does not require a tokenizer to show that it can achieve strong performance on multilingual multimodal retrieval without},
   archiveprefix = {arXiv},
   file = {/Users/lukakuma/Zotero/storage/ZIX7H4KU/Tschannen et al. - 2022 - Image-and-Language Understanding from Pixels Only.pdf;/Users/lukakuma/Zotero/storage/KYEWINNW/2212.html}
+}
+
+@misc{tsimpoukelliMultimodalFewShotLearning2021,
+  title = {Multimodal {{Few-Shot Learning}} with {{Frozen Language Models}}},
+  author = {Tsimpoukelli, Maria and Menick, Jacob and Cabi, Serkan and Eslami, S. M. Ali and Vinyals, Oriol and Hill, Felix},
+  date = {2021-07-03},
+  number = {arXiv:2106.13884},
+  eprint = {2106.13884},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2106.13884},
+  urldate = {2023-02-15},
+  abstract = {When trained at sufficient scale, auto-regressive language models exhibit the notable ability to learn a new language task after being prompted with just a few examples. Here, we present a simple, yet effective, approach for transferring this few-shot learning ability to a multimodal setting (vision and language). Using aligned image and caption data, we train a vision encoder to represent each image as a sequence of continuous embeddings, such that a pre-trained, frozen language model prompted with this prefix generates the appropriate caption. The resulting system is a multimodal few-shot learner, with the surprising ability to learn a variety of new tasks when conditioned on examples, represented as a sequence of multiple interleaved image and text embeddings. We demonstrate that it can rapidly learn words for new objects and novel visual categories, do visual question-answering with only a handful of examples, and make use of outside knowledge, by measuring a single model on a variety of established and new benchmarks.},
+  archiveprefix = {arXiv},
+  keywords = {adaptor,multimodal},
+  file = {/Users/lukakuma/Zotero/storage/XSNY2W3N/Tsimpoukelli et al. - 2021 - Multimodal Few-Shot Learning with Frozen Language .pdf;/Users/lukakuma/Zotero/storage/5AYI4DVY/2106.html}
 }
 
 @article{tunyasuvunakoolHighlyAccurateProtein2021,
@@ -13215,7 +13197,7 @@
   urldate = {2022-12-17},
   abstract = {Parameter-efficient fine-tuning methods (PEFTs) offer the promise of adapting large pre-trained models while only tuning a small number of parameters. They have been shown to be competitive with full model fine-tuning for many downstream tasks. However, prior work indicates that PEFTs may not work as well for machine translation (MT), and there is no comprehensive study showing when PEFTs work for MT. We conduct a comprehensive empirical study of PEFTs for MT, considering (1) various parameter budgets, (2) a diverse set of language-pairs, and (3) different pre-trained models. We find that 'adapters', in which small feed-forward networks are added after every layer, are indeed on par with full model fine-tuning when the parameter budget corresponds to 10\% of total model parameters. Nevertheless, as the number of tuned parameters decreases, the performance of PEFTs decreases. The magnitude of this decrease depends on the language pair, with PEFTs particularly struggling for distantly related language-pairs. We find that using PEFTs with a larger pre-trained model outperforms full fine-tuning with a smaller model, and for smaller training data sizes, PEFTs outperform full fine-tuning for the same pre-trained model.},
   archiveprefix = {arXiv},
-  keywords = {parameter efficient finetuninig},
+  keywords = {peft},
   file = {/Users/lukakuma/Zotero/storage/2CT23SV4/Üstün and Stickland - 2022 - When does Parameter-Efficient Transfer Learning Wo.pdf;/Users/lukakuma/Zotero/storage/87RZ6CCK/2205.html}
 }
 
@@ -13458,7 +13440,7 @@
   urldate = {2022-12-16},
   abstract = {Standard fine-tuning of large pre-trained language models (PLMs) for downstream tasks requires updating hundreds of millions to billions of parameters, and storing a large copy of the PLM weights for every task resulting in increased cost for storing, sharing and serving the models. To address this, parameter-efficient fine-tuning (PEFT) techniques were introduced where small trainable components are injected in the PLM and updated during fine-tuning. We propose AdaMix as a general PEFT method that tunes a mixture of adaptation modules -- given the underlying PEFT method of choice -- introduced in each Transformer layer while keeping most of the PLM weights frozen. For instance, AdaMix can leverage a mixture of adapters like Houlsby or a mixture of low rank decomposition matrices like LoRA to improve downstream task performance over the corresponding PEFT methods for fully supervised and few-shot NLU and NLG tasks. Further, we design AdaMix such that it matches the same computational cost and the number of tunable parameters as the underlying PEFT method. By only tuning 0.1-0.2\% of PLM parameters, we show that AdaMix outperforms SOTA parameter-efficient fine-tuning and full model fine-tuning for both NLU and NLG tasks.},
   archiveprefix = {arXiv},
-  keywords = {parameter efficient finetuninig,skimed},
+  keywords = {peft,skimed},
   file = {/Users/lukakuma/Zotero/storage/IEG9BHPA/Wang et al. - 2022 - AdaMix Mixture-of-Adaptations for Parameter-effic.pdf;/Users/lukakuma/Zotero/storage/GBA6MSC6/2205.html}
 }
 
@@ -13542,6 +13524,7 @@
   urldate = {2023-02-12},
   abstract = {In this paper, we design and train a Generative Image-to-text Transformer, GIT, to unify vision-language tasks such as image/video captioning and question answering. While generative models provide a consistent network architecture between pre-training and fine-tuning, existing work typically contains complex structures (uni/multi-modal encoder/decoder) and depends on external modules such as object detectors/taggers and optical character recognition (OCR). In GIT, we simplify the architecture as one image encoder and one text decoder under a single language modeling task. We also scale up the pre-training data and the model size to boost the model performance. Without bells and whistles, our GIT establishes new state of the arts on 12 challenging benchmarks with a large margin. For instance, our model surpasses the human performance for the first time on TextCaps (138.2 vs. 125.5 in CIDEr). Furthermore, we present a new scheme of generation-based image classification and scene text recognition, achieving decent performance on standard benchmarks. Codes are released at \textbackslash url\{https://github.com/microsoft/GenerativeImage2Text\}.},
   archiveprefix = {arXiv},
+  keywords = {multimodal},
   file = {/Users/lukakuma/Zotero/storage/636RBQG2/Wang et al. - 2022 - GIT A Generative Image-to-text Transformer for Vi.pdf;/Users/lukakuma/Zotero/storage/TMZP52UF/2205.html}
 }
 
@@ -13559,7 +13542,7 @@
   urldate = {2022-08-23},
   abstract = {A big convergence of language, vision, and multimodal pretraining is emerging. In this work, we introduce a general-purpose multimodal foundation model BEiT-3, which achieves state-of-the-art transfer performance on both vision and vision-language tasks. Specifically, we advance the big convergence from three aspects: backbone architecture, pretraining task, and model scaling up. We introduce Multiway Transformers for general-purpose modeling, where the modular architecture enables both deep fusion and modality-specific encoding. Based on the shared backbone, we perform masked "language" modeling on images (Imglish), texts (English), and image-text pairs ("parallel sentences") in a unified manner. Experimental results show that BEiT-3 obtains state-of-the-art performance on object detection (COCO), semantic segmentation (ADE20K), image classification (ImageNet), visual reasoning (NLVR2), visual question answering (VQAv2), image captioning (COCO), and cross-modal retrieval (Flickr30K, COCO).},
   archiveprefix = {arXiv},
-  keywords = {skimed},
+  keywords = {multimodal,skimed},
   file = {/Users/lukakuma/Zotero/storage/BJP7NVAM/Wang et al. - 2022 - Image as a Foreign Language BEiT Pretraining for .pdf;/Users/lukakuma/Zotero/storage/CMUHIJCQ/2208.html}
 }
 
@@ -13608,7 +13591,7 @@
   abstract = {Chain-of-thought prompting combined with pre-trained large language models has achieved encouraging results on complex reasoning tasks. In this paper, we propose a new decoding strategy, self-consistency, to replace the naive greedy decoding used in chain-of-thought prompting. It first samples a diverse set of reasoning paths instead of only taking the greedy one, and then selects the most consistent answer by marginalizing out the sampled reasoning paths. Self-consistency leverages the intuition that a complex reasoning problem typically admits multiple different ways of thinking leading to its unique correct answer. Our extensive empirical evaluation shows that self-consistency boosts the performance of chain-of-thought prompting with a striking margin on a range of popular arithmetic and commonsense reasoning benchmarks, including GSM8K (+17.9\%), SVAMP (+11.0\%), AQuA (+12.2\%), StrategyQA (+6.4\%) and ARC-challenge (+3.9\%).},
   archiveprefix = {arXiv},
   langid = {english},
-  keywords = {informal reasoning,rationale engr,skimed},
+  keywords = {cover to cover,informal reasoning,rationale engr},
   file = {/Users/lukakuma/Zotero/storage/DDHRUAUE/Wang et al. - 2022 - Self-Consistency Improves Chain of Thought Reasoni.pdf;/Users/lukakuma/Zotero/storage/IHJBNP2D/2203.html}
 }
 
@@ -13704,7 +13687,7 @@
   urldate = {2022-10-25},
   abstract = {We explore how generating a chain of thought -- a series of intermediate reasoning steps -- significantly improves the ability of large language models to perform complex reasoning. In particular, we show how such reasoning abilities emerge naturally in sufficiently large language models via a simple method called chain of thought prompting, where a few chain of thought demonstrations are provided as exemplars in prompting. Experiments on three large language models show that chain of thought prompting improves performance on a range of arithmetic, commonsense, and symbolic reasoning tasks. The empirical gains can be striking. For instance, prompting a 540B-parameter language model with just eight chain of thought exemplars achieves state of the art accuracy on the GSM8K benchmark of math word problems, surpassing even finetuned GPT-3 with a verifier.},
   langid = {english},
-  keywords = {(ext) BIG-bench,informal reasoning,rationale engr,skimed},
+  keywords = {(ext) BIG-bench,cover to cover,informal reasoning,rationale engr},
   file = {/Users/lukakuma/Zotero/storage/VQI8HMLS/Wei et al. - 2022 - Chain of Thought Prompting Elicits Reasoning in La.pdf;/Users/lukakuma/Zotero/storage/2944RY7L/2201.html}
 }
 
@@ -13795,7 +13778,7 @@
   urldate = {2022-12-09},
   abstract = {We introduce M-VADER: a diffusion model (DM) for image generation where the output can be specified using arbitrary combinations of images and text. We show how M-VADER enables the generation of images specified using combinations of image and text, and combinations of multiple images. Previously, a number of successful DM image generation algorithms have been introduced that make it possible to specify the output image using a text prompt. Inspired by the success of those models, and led by the notion that language was already developed to describe the elements of visual contexts that humans find most important, we introduce an embedding model closely related to a vision-language model. Specifically, we introduce the embedding model S-MAGMA: a 13 billion parameter multimodal decoder combining components from an autoregressive vision-language model MAGMA and biases finetuned for semantic search.},
   archiveprefix = {arXiv},
-  keywords = {multimodal},
+  keywords = {diffusion,image generation,multimodal},
   file = {/Users/lukakuma/Zotero/storage/ZVZURZR3/Weinbach et al. - 2022 - M-VADER A Model for Diffusion with Multimodal Con.pdf;/Users/lukakuma/Zotero/storage/CLM36SZC/2212.html}
 }
 
@@ -13892,6 +13875,7 @@
   urldate = {2023-02-08},
   abstract = {The strength of modern generative models lies in their ability to be controlled through text-based prompts. Typical "hard" prompts are made from interpretable words and tokens, and must be hand-crafted by humans. There are also "soft" prompts, which consist of continuous feature vectors. These can be discovered using powerful optimization methods, but they cannot be easily interpreted, re-used across models, or plugged into a text-based interface. We describe an approach to robustly optimize hard text prompts through efficient gradient-based optimization. Our approach automatically generates hard text-based prompts for both text-to-image and text-to-text applications. In the text-to-image setting, the method creates hard prompts for diffusion models, allowing API users to easily generate, discover, and mix and match image concepts without prior knowledge on how to prompt the model. In the text-to-text setting, we show that hard prompts can be automatically discovered that are effective in tuning LMs for classification.},
   archiveprefix = {arXiv},
+  keywords = {peft},
   file = {/Users/lukakuma/Zotero/storage/FGEW7VLZ/Wen et al. - 2023 - Hard Prompts Made Easy Gradient-Based Discrete Op.pdf;/Users/lukakuma/Zotero/storage/Y9XXAMRY/2302.html}
 }
 
@@ -14511,15 +14495,6 @@
   file = {/Users/lukakuma/Zotero/storage/NKAXZXPY/Yang and Nachum - 2021 - Representation Matters Offline Pretraining for Se.pdf;/Users/lukakuma/Zotero/storage/3EM43NWI/2102.html}
 }
 
-@video{yannickilcherManStableDiffusion2022,
-  title = {The {{Man}} behind {{Stable Diffusion}}},
-  editor = {{Yannic Kilcher}},
-  date = {2022-08-13},
-  url = {https://www.youtube.com/watch?v=YQ2QtKcK2dA},
-  urldate = {2022-08-18},
-  editortype = {director}
-}
-
 @misc{yaoReActSynergizingReasoning2022,
   title = {{{ReAct}}: {{Synergizing Reasoning}} and {{Acting}} in {{Language Models}}},
   shorttitle = {{{ReAct}}},
@@ -14534,7 +14509,7 @@
   urldate = {2022-11-17},
   abstract = {While large language models (LLMs) have demonstrated impressive capabilities across tasks in language understanding and interactive decision making, their abilities for reasoning (e.g. chain-of-thought prompting) and acting (e.g. action plan generation) have primarily been studied as separate topics. In this paper, we explore the use of LLMs to generate both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with external sources, such as knowledge bases or environments, to gather additional information. We apply our approach, named ReAct, to a diverse set of language and decision making tasks and demonstrate its effectiveness over state-of-the-art baselines, as well as improved human interpretability and trustworthiness over methods without reasoning or acting components. Concretely, on question answering (HotpotQA) and fact verification (Fever), ReAct overcomes issues of hallucination and error propagation prevalent in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generates human-like task-solving trajectories that are more interpretable than baselines without reasoning traces. On two interactive decision making benchmarks (ALFWorld and WebShop), ReAct outperforms imitation and reinforcement learning methods by an absolute success rate of 34\% and 10\% respectively, while being prompted with only one or two in-context examples.},
   archiveprefix = {arXiv},
-  keywords = {informal reasoning},
+  keywords = {informal reasoning,rationale engr},
   file = {/Users/lukakuma/Zotero/storage/IK9ZBAKL/Yao et al. - 2022 - ReAct Synergizing Reasoning and Acting in Languag.pdf;/Users/lukakuma/Zotero/storage/7SYVYMS4/2210.html}
 }
 
@@ -14728,7 +14703,7 @@
   urldate = {2022-05-05},
   abstract = {Exploring large-scale pretrained foundation models is of significant interest in computer vision because these models can be quickly transferred to many downstream tasks. This paper presents Contrastive Captioner (CoCa), a minimalist design to pretrain an image-text encoder-decoder foundation model jointly with contrastive loss and captioning loss, thereby subsuming model capabilities from contrastive approaches like CLIP and generative methods like SimVLM. In contrast to standard encoder-decoder transformers where all decoder layers attend to encoder outputs, CoCa omits cross-attention in the first half of decoder layers to encode unimodal text representations, and cascades the remaining decoder layers which cross-attend to the image encoder for multimodal image-text representations. We apply a contrastive loss between unimodal image and text embeddings, in addition to a captioning loss on the multimodal decoder outputs which predicts text tokens autoregressively. By sharing the same computational graph, the two training objectives are computed efficiently with minimal overhead. CoCa is pretrained end-to-end and from scratch on both web-scale alt-text data and annotated images by treating all labels simply as text, seamlessly unifying natural language supervision for representation learning. Empirically, CoCa achieves state-of-the-art performance with zero-shot transfer or minimal task-specific adaptation on a broad range of downstream tasks, spanning visual recognition (ImageNet, Kinetics-400/600/700, Moments-in-Time), crossmodal retrieval (MSCOCO, Flickr30K, MSR-VTT), multimodal understanding (VQA, SNLI-VE, NLVR2), and image captioning (MSCOCO, NoCaps). Notably on ImageNet classification, CoCa obtains 86.3\% zero-shot top-1 accuracy, 90.6\% with a frozen encoder and learned classification head, and new state-of-the-art 91.0\% top-1 accuracy on ImageNet with a finetuned encoder.},
   archiveprefix = {arXiv},
-  keywords = {(ext) Flamingo,cover to cover},
+  keywords = {(ext) Flamingo,cover to cover,multimodal},
   file = {/Users/lukakuma/Zotero/storage/4XJ6HQ2C/Yu et al. - 2022 - CoCa Contrastive Captioners are Image-Text Founda.pdf;/Users/lukakuma/Zotero/storage/S9K5ZZ9B/2205.html}
 }
 
@@ -14919,7 +14894,7 @@
   urldate = {2023-02-07},
   abstract = {This paper presents contrastive-tuning, a simple method employing contrastive training to align image and text models while still taking advantage of their pre-training. In our empirical study we find that locked pre-trained image models with unlocked text models work best. We call this instance of contrastive-tuning "Locked-image Tuning" (LiT), which just teaches a text model to read out good representations from a pre-trained image model for new tasks. A LiT model gains the capability of zero-shot transfer to new vision tasks, such as image classification or retrieval. The proposed LiT is widely applicable; it works reliably with multiple pre-training methods (supervised and unsupervised) and across diverse architectures (ResNet, Vision Transformers and MLP-Mixer) using three different image-text datasets. With the transformer-based pre-trained ViT-g/14 model, the LiT model achieves 85.2\% zero-shot transfer accuracy on the ImageNet test set, and 82.5\% on the challenging out-of-distribution ObjectNet test set.},
   archiveprefix = {arXiv},
-  keywords = {multimodal},
+  keywords = {adaptor,multimodal},
   file = {/Users/lukakuma/Zotero/storage/ZCL5XI28/Zhai et al. - 2022 - LiT Zero-Shot Transfer with Locked-image text Tun.pdf;/Users/lukakuma/Zotero/storage/46W7ME24/2111.html}
 }
 
@@ -15047,7 +15022,7 @@
   urldate = {2023-02-03},
   abstract = {Large language models (LLMs) have shown impressive performance on complex reasoning by leveraging chain-of-thought (CoT) prompting to generate intermediate reasoning chains as the rationale to infer the answer. However, existing CoT studies are mostly isolated in the language modality with LLMs, where LLMs are hard to deploy. To elicit CoT reasoning in multimodality, a possible solution is to fine-tune small language models by fusing the vision and language features to perform CoT reasoning. The key challenge is that those language models tend to generate hallucinated reasoning chains that mislead the answer inference. To mitigate the effect of such mistakes, we propose Multimodal-CoT that incorporates vision features in a decoupled training framework. The framework separates the rationale generation and answer inference into two stages. By incorporating the vision features in both stages, the model is able to generate effective rationales that contribute to answer inference. With Multimodal-CoT, our model under 1 billion parameters outperforms the previous state-of-the-art LLM (GPT-3.5) by 16\% (75.17\%-{$>$}91.68\%) on the ScienceQA benchmark and even surpasses human performance. Code is publicly available at https://github.com/amazon-science/mm-cot.},
   archiveprefix = {arXiv},
-  keywords = {multimodal},
+  keywords = {cover to cover,multimodal},
   file = {/Users/lukakuma/Zotero/storage/CJ3XYXRX/Zhang et al. - 2023 - Multimodal Chain-of-Thought Reasoning in Language .pdf;/Users/lukakuma/Zotero/storage/XIYF78YW/2302.html}
 }
 
@@ -15264,6 +15239,24 @@
   file = {/Users/lukakuma/Zotero/storage/TGQTVDG3/Zhong et al. - 2022 - Training Language Models with Memory Augmentation.pdf}
 }
 
+@misc{zhouAutoPEFTAutomaticConfiguration2023,
+  title = {{{AutoPEFT}}: {{Automatic Configuration Search}} for {{Parameter-Efficient Fine-Tuning}}},
+  shorttitle = {{{AutoPEFT}}},
+  author = {Zhou, Han and Wan, Xingchen and Vulić, Ivan and Korhonen, Anna},
+  date = {2023-01-28},
+  number = {arXiv:2301.12132},
+  eprint = {2301.12132},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2301.12132},
+  urldate = {2023-02-16},
+  abstract = {Large pretrained language models have been widely used in downstream NLP tasks via task-specific fine-tuning. Recently, an array of Parameter-Efficient Fine-Tuning (PEFT) methods have also achieved strong task performance while updating a much smaller number of parameters compared to full model tuning. However, it is non-trivial to make informed per-task design choices (i.e., to create PEFT configurations) concerning the selection of PEFT architectures and modules, the number of tunable parameters, and even the layers in which the PEFT modules are inserted. Consequently, it is highly likely that the current, manually set PEFT configurations might be suboptimal for many tasks from the perspective of the performance-to-efficiency trade-off. To address the core question of the PEFT configuration selection that aims to control and maximise the balance between performance and parameter efficiency, we first define a rich configuration search space spanning multiple representative PEFT modules along with finer-grained configuration decisions over the modules (e.g., parameter budget, insertion layer). We then propose AutoPEFT, a novel framework to traverse this configuration space: it automatically configures multiple PEFT modules via high-dimensional Bayesian optimisation. We show the resource scalability and task transferability of AutoPEFT-found configurations, outperforming existing PEFT methods on average on the standard GLUE benchmark while conducting the configuration search on a single task. The per-task AutoPEFT-based configuration search even outperforms full-model fine-tuning.},
+  archiveprefix = {arXiv},
+  keywords = {peft},
+  file = {/Users/lukakuma/Zotero/storage/DJ3ZAK7Q/Zhou et al. - 2023 - AutoPEFT Automatic Configuration Search for Param.pdf;/Users/lukakuma/Zotero/storage/MA24PRXW/2301.html}
+}
+
 @misc{zhouLargeLanguageModels2022,
   title = {Large {{Language Models Are Human-Level Prompt Engineers}}},
   author = {Zhou, Yongchao and Muresanu, Andrei Ioan and Han, Ziwen and Paster, Keiran and Pitis, Silviu and Chan, Harris and Ba, Jimmy},
@@ -15277,7 +15270,7 @@
   urldate = {2022-11-04},
   abstract = {By conditioning on natural language instructions, large language models (LLMs) have displayed impressive capabilities as general-purpose computers. However, task performance depends significantly on the quality of the prompt used to steer the model, and most effective prompts have been handcrafted by humans. Inspired by classical program synthesis and the human approach to prompt engineering, we propose Automatic Prompt Engineer (APE) for automatic instruction generation and selection. In our method, we treat the instruction as the "program," optimized by searching over a pool of instruction candidates proposed by an LLM in order to maximize a chosen score function. To evaluate the quality of the selected instruction, we evaluate the zero-shot performance of another LLM following the selected instruction. Experiments on 24 NLP tasks show that our automatically generated instructions outperform the prior LLM baseline by a large margin and achieve better or comparable performance to the instructions generated by human annotators on 19/24 tasks. We conduct extensive qualitative and quantitative analyses to explore the performance of APE. We show that APE-engineered prompts can be applied to steer models toward truthfulness and/or informativeness, as well as to improve few-shot learning performance by simply prepending them to standard in-context learning prompts. Please check out our webpage at https://sites.google.com/view/automatic-prompt-engineer.},
   archiveprefix = {arXiv},
-  keywords = {skimed},
+  keywords = {rationale engr,skimed},
   file = {/Users/lukakuma/Zotero/storage/Y9P9SLAC/Zhou et al. - 2022 - Large Language Models Are Human-Level Prompt Engin.pdf;/Users/lukakuma/Zotero/storage/CTKXND3I/2211.html}
 }
 
