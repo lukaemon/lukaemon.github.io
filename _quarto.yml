@@ -20,7 +20,7 @@ website:
   search:
     location: navbar
     type: textbox
-  favicon: asset/favicon.png
+  favicon: asset/favicon.jpg
   repo-url: https://github.com/lukaemon/lukaemon.github.io
   repo-actions: [source]
 
