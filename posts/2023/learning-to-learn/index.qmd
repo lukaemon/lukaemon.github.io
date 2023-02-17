@@ -68,22 +68,26 @@ Generate 100 bad ideas to get a good one is ok at the beginning, but sticking to
 
 Great mentors and brilliant peers are a bliss. However, solo walker could still make meaningful strides. **The key is to expand on time axis and create `delta` to answer known unknown and explore unknown unknown.**
 
-For example, starting every new project by writing down the context and expectation:
+Learning by doing is effective to create `delta`. One should adapt read-do-read-do cycle, instead of read-read-read-do. Creating delta is similar to debugging computer program. Create breakpoints, log tiered info, analyze log, error message and abnormal behavior. 
+
+Starting every new project by writing down the context and expectation. The goal is to create a `t_0` snapshot. 
 
 - Trigger of the project? Why?
 - Expected result?
 - Expected learning? 
 - Expected obstacles?
 
-The goal is not to predict the future, but create a T0 snapshot. 
+During the project, create an operational log. The goal is to create `range(t_1, t_n)` snapshots.
 
-During the project, record every single new ideas about how to improve the project, possible extension follow up, even tangential quantum leap. Don't care about the quality of ideas. The goal is to create T1 ... Tn snapshots.
+- Log new ideas about how to improve the project, possible extension, connection to other projects, follow up, even tangential quantum leap. Don't care about the quality. Just log. 
+- Log questions. One should have many questions, confusions pop out during the project. Log them all. 
+- Log tentative realizations. 
 
-Finish the project and critique the old you. 
+The whole project is an intensive self-question-answering process. Like be your own psychiatrist to debug your own mind. One should generate result and an operational log as side effects. Finish the project and critique snapshots. 
 
 Critique of the context is the largest `delta`. One may enter the project for all the wrong reasons and with many biased or varied expectations. Hopefully one could recognize some and figure out why looking backward.
 
-Listing all, non-discriminative ideas first to critique after creates a flow of `delta` along the progress. Hopefully one could see how old perspective changes and new form. 
+Critique of logs creates a flow of `delta` along the progress. Hopefully one could see how old perspective changes and new form. One could ask old questions sharper, and start asking new questions.
 
 That `delta` is THE force. Actively search, mine, recognize, accept and adopt to it.  
 

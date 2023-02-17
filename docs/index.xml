@@ -83,18 +83,23 @@
 </ul>
 <p>Generate 100 bad ideas to get a good one is ok at the beginning, but sticking to naive working hard is never ideal. To improve, one needs to improve the world model, the quality of simulation and the efficiency of exploration.</p>
 <p>Great mentors and brilliant peers are a bliss. However, solo walker could still make meaningful strides. <strong>The key is to expand on time axis and create <code>delta</code> to answer known unknown and explore unknown unknown.</strong></p>
-<p>For example, starting every new project by writing down the context and expectation:</p>
+<p>Learning by doing is effective to create <code>delta</code>. One should adapt read-do-read-do cycle, instead of read-read-read-do. Creating delta is similar to debugging computer program. Create breakpoints, log tiered info, analyze log, error message and abnormal behavior.</p>
+<p>Starting every new project by writing down the context and expectation. The goal is to create a <code>t_0</code> snapshot.</p>
 <ul>
 <li>Trigger of the project? Why?</li>
 <li>Expected result?</li>
 <li>Expected learning?</li>
 <li>Expected obstacles?</li>
 </ul>
-<p>The goal is not to predict the future, but create a T0 snapshot.</p>
-<p>During the project, record every single new ideas about how to improve the project, possible extension follow up, even tangential quantum leap. Don’t care about the quality of ideas. The goal is to create T1 … Tn snapshots.</p>
-<p>Finish the project and critique the old you.</p>
+<p>During the project, create an operational log. The goal is to create <code>range(t_1, t_n)</code> snapshots.</p>
+<ul>
+<li>Log new ideas about how to improve the project, possible extension, connection to other projects, follow up, even tangential quantum leap. Don’t care about the quality. Just log.</li>
+<li>Log questions. One should have many questions, confusions pop out during the project. Log them all.</li>
+<li>Log tentative realizations.</li>
+</ul>
+<p>The whole project is an intensive self-question-answering process. Like be your own psychiatrist to debug your own mind. One should generate result and an operational log as side effects. Finish the project and critique snapshots.</p>
 <p>Critique of the context is the largest <code>delta</code>. One may enter the project for all the wrong reasons and with many biased or varied expectations. Hopefully one could recognize some and figure out why looking backward.</p>
-<p>Listing all, non-discriminative ideas first to critique after creates a flow of <code>delta</code> along the progress. Hopefully one could see how old perspective changes and new form.</p>
+<p>Critique of logs creates a flow of <code>delta</code> along the progress. Hopefully one could see how old perspective changes and new form. One could ask old questions sharper, and start asking new questions.</p>
 <p>That <code>delta</code> is THE force. Actively search, mine, recognize, accept and adopt to it.</p>
 <p>Learning is a process of resolving merge conflicts between internal world model and perceived reality. Faster learning means one is willing to and could resolve more conflicts in a shorter time. Stopped learning means one is unwilling to or unable to see the delta and resolve the conflict.</p>
 <p>Bootstrapping is soliloquy by nature. Endless self-play. It could be a long gradually with no light of suddenly, but one can choose to believe.</p>
