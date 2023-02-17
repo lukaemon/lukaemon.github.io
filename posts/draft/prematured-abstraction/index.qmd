@@ -1,9 +1,0 @@
----
-title: "Premature abstraction"
-description: The urge to build higher level abstractions.
-date: "2023-02-13"
-categories: []
-# image: "cover.jpg"
-draft: true
----
-Will build universal abstraction when it's time. Won't force it for the sake of doing it. Premature abstraction is premature optimization. Unnecessary legacy.
