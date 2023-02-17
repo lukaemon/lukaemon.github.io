@@ -363,7 +363,7 @@
   urldate = {2022-12-17},
   abstract = {Fine-tuning all parameters of a pre-trained model has become the mainstream approach for transfer learning. To increase its efficiency and prevent catastrophic forgetting and interference, techniques like adapters and sparse fine-tuning have been developed. Adapters are modular, as they can be combined to adapt a model towards different facets of knowledge (e.g., dedicated language and/or task adapters). Sparse fine-tuning is expressive, as it controls the behavior of all model components. In this work, we introduce a new fine-tuning method with both these desirable properties. In particular, we learn sparse, real-valued masks based on a simple variant of the Lottery Ticket Hypothesis. Task-specific masks are obtained from annotated data in a source language, and language-specific masks from masked language modeling in a target language. Both these masks can then be composed with the pre-trained model. Unlike adapter-based fine-tuning, this method neither increases the number of parameters at inference time nor alters the original model architecture. Most importantly, it outperforms adapters in zero-shot cross-lingual transfer by a large margin in a series of multilingual benchmarks, including Universal Dependencies, MasakhaNER, and AmericasNLI. Based on an in-depth analysis, we additionally find that sparsity is crucial to prevent both 1) interference between the fine-tunings to be composed and 2) overfitting. We release the code and models at https://github.com/cambridgeltl/composable-sft.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/HX3KG78C/Ansell et al. - 2021 - Composable Sparse Fine-Tuning for Cross-Lingual Tr.pdf;/Users/lukakuma/Zotero/storage/5QQ82ZQT/2110.html}
 }
 
@@ -1372,7 +1372,7 @@
   pages = {10},
   abstract = {Many NLP tasks benefit from using large language models (LLMs) that often have more than 100 billion parameters. With the release of BLOOM-176B and OPT-175B, everyone can download pretrained models of this scale. Still, using these models requires highend hardware unavailable to many researchers. In some cases, LLMs can be used more affordably via RAM offloading or hosted APIs. However, these techniques have innate limitations: offloading is too slow for interactive inference, while APIs are not flexible enough for research. In this work, we propose PETALS1 — a system for inference and finetuning of large models collaboratively by joining the resources of multiple parties trusted to process client’s data. We demonstrate that this strategy significantly outperforms offloading for very large models, running inference of BLOOM-176B on consumer GPUs with ≈ 1 step per second. Unlike most inference APIs, PETALS also natively exposes the hidden states of served models, allowing its users to train and share custom model extensions based on efficient fine-tuning methods.},
   langid = {english},
-  keywords = {cover to cover,decentralized AI,finetuning},
+  keywords = {cover to cover,decentralized AI},
   file = {/Users/lukakuma/Zotero/storage/2QSDQXLJ/Borzunov et al. - PETALS Collaborative Inference and Fine-tuning of.pdf}
 }
 
@@ -2193,7 +2193,7 @@
   urldate = {2023-02-16},
   abstract = {Parameter-efficient fine-tuning aims to achieve performance comparable to fine-tuning, using fewer trainable parameters. Several strategies (e.g., Adapters, prefix tuning, BitFit, and LoRA) have been proposed. However, their designs are hand-crafted separately, and it remains unclear whether certain design patterns exist for parameter-efficient fine-tuning. Thus, we present a parameter-efficient fine-tuning design paradigm and discover design patterns that are applicable to different experimental settings. Instead of focusing on designing another individual tuning strategy, we introduce parameter-efficient fine-tuning design spaces that parameterize tuning structures and tuning strategies. Specifically, any design space is characterized by four components: layer grouping, trainable parameter allocation, tunable groups, and strategy assignment. Starting from an initial design space, we progressively refine the space based on the model quality of each design choice and make greedy selection at each stage over these four components. We discover the following design patterns: (i) group layers in a spindle pattern; (ii) allocate the number of trainable parameters to layers uniformly; (iii) tune all the groups; (iv) assign proper tuning strategies to different groups. These design patterns result in new parameter-efficient fine-tuning methods. We show experimentally that these methods consistently and significantly outperform investigated parameter-efficient fine-tuning strategies across different backbone models and different tasks in natural language processing.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/THKK3LRT/Chen et al. - 2023 - Parameter-Efficient Fine-Tuning Design Spaces.pdf;/Users/lukakuma/Zotero/storage/P3FE7C8G/2301.html}
 }
 
@@ -2261,7 +2261,7 @@
   abstract = {Parameter-Efficient Tuning (PETuning) methods have been deemed by many as the new paradigm for using pretrained language models (PLMs). By tuning just a fraction amount of parameters comparing to full model finetuning, PETuning methods claim to have achieved performance on par with or even better than finetuning. In this work, we take a step back and re-examine these PETuning methods by conducting the first comprehensive investigation into the training and evaluation of them. We found the problematic validation and testing practice in current studies, when accompanied by the instability nature of PETuning methods, has led to unreliable conclusions. When being compared under a truly fair evaluation protocol, PETuning cannot yield consistently competitive performance while finetuning remains to be the best-performing method in medium- and high-resource settings. We delve deeper into the cause of the instability and observed that the number of trainable parameters and training iterations are two main factors: reducing trainable parameters and prolonging training iterations may lead to higher stability in PETuning methods.},
   archiveprefix = {arXiv},
   version = {1},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/PNVEXPVU/Chen et al. - 2022 - Revisiting Parameter-Efficient Tuning Are We Real.pdf;/Users/lukakuma/Zotero/storage/XMFI25UI/2202.html}
 }
 
@@ -4017,7 +4017,7 @@
   urldate = {2023-02-16},
   abstract = {Fine-tuning pre-trained models has been ubiquitously proven to be effective in a wide range of NLP tasks. However, fine-tuning the whole model is parameter inefficient as it always yields an entirely new model for each task. Currently, many research works propose to only fine-tune a small portion of the parameters while keeping most of the parameters shared across different tasks. These methods achieve surprisingly good performance and are shown to be more stable than their corresponding fully fine-tuned counterparts. However, such kind of methods is still not well understood. Some natural questions arise: How does the parameter sparsity lead to promising performance? Why is the model more stable than the fully fine-tuned models? How to choose the tunable parameters? In this paper, we first categorize the existing methods into random approaches, rule-based approaches, and projection-based approaches based on how they choose which parameters to tune. Then, we show that all of the methods are actually sparse fine-tuned models and conduct a novel theoretical analysis of them. We indicate that the sparsity is actually imposing a regularization on the original model by controlling the upper bound of the stability. Such stability leads to better generalization capability which has been empirically observed in a lot of recent research works. Despite the effectiveness of sparsity grounded by our theory, it still remains an open problem of how to choose the tunable parameters. To better choose the tunable parameters, we propose a novel Second-order Approximation Method (SAM) which approximates the original problem with an analytically solvable optimization function. The tunable parameters are determined by directly optimizing the approximation function. The experimental results show that our proposed SAM model outperforms many strong baseline models and it also verifies our theoretical analysis.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/R8FFQG9X/Fu et al. - 2022 - On the Effectiveness of Parameter-Efficient Fine-T.pdf;/Users/lukakuma/Zotero/storage/EF5M7LWT/2211.html}
 }
 
@@ -4329,7 +4329,7 @@
   urldate = {2023-01-23},
   abstract = {We propose eXtensible Prompt (X-Prompt) for prompting a large language model (LLM) beyond natural language (NL). X-Prompt instructs an LLM with not only NL but also an extensible vocabulary of imaginary words that are introduced to help represent what NL words hardly describe, allowing a prompt to be more descriptive. Like NL prompts, X-Prompt is out-of-distribution (OOD) robust, for which we propose context-guided learning with prompt augmentation to learn its imaginary words for general usability, enabling them to use in different prompt contexts for fine-grain specifications. The promising results of X-Prompt demonstrate its potential of approaching advanced interaction between humans and LLMs to bridge their communication gap.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/6W6XR542/Ge et al. - 2022 - Extensible Prompts for Language Models.pdf;/Users/lukakuma/Zotero/storage/DUVYD6DU/2212.html}
 }
 
@@ -5326,7 +5326,7 @@
   urldate = {2022-12-13},
   abstract = {Fine-tuning large pre-trained language models on downstream tasks has become the de-facto learning paradigm in NLP. However, conventional approaches fine-tune all the parameters of the pre-trained model, which becomes prohibitive as the model size and the number of tasks grow. Recent work has proposed a variety of parameter-efficient transfer learning methods that only fine-tune a small number of (extra) parameters to attain strong performance. While effective, the critical ingredients for success and the connections among the various methods are poorly understood. In this paper, we break down the design of state-of-the-art parameter-efficient transfer learning methods and present a unified framework that establishes connections between them. Specifically, we re-frame them as modifications to specific hidden states in pre-trained models, and define a set of design dimensions along which different methods vary, such as the function to compute the modification and the position to apply the modification. Through comprehensive empirical studies across machine translation, text summarization, language understanding, and text classification benchmarks, we utilize the unified view to identify important design choices in previous methods. Furthermore, our unified framework enables the transfer of design elements across different approaches, and as a result we are able to instantiate new parameter-efficient fine-tuning methods that tune less parameters than previous methods while being more effective, achieving comparable results to fine-tuning all parameters on all four tasks.},
   archiveprefix = {arXiv},
-  keywords = {finetuning,peft,skimed},
+  keywords = {prompt tuning,skimed},
   file = {/Users/lukakuma/Zotero/storage/UDRXLUTY/He et al. - 2022 - Towards a Unified View of Parameter-Efficient Tran.pdf;/Users/lukakuma/Zotero/storage/58A8KY4C/2110.html}
 }
 
@@ -5609,6 +5609,24 @@
   file = {/Users/lukakuma/Zotero/storage/EM5CBS4V/Houlsby et al. - 2019 - Parameter-Efficient Transfer Learning for NLP.pdf;/Users/lukakuma/Zotero/storage/95JTAEZJ/1902.html}
 }
 
+@misc{houlsbyParameterEfficientTransferLearning2019a,
+  title = {Parameter-{{Efficient Transfer Learning}} for {{NLP}}},
+  author = {Houlsby, Neil and Giurgiu, Andrei and Jastrzebski, Stanislaw and Morrone, Bruna and de Laroussilhe, Quentin and Gesmundo, Andrea and Attariyan, Mona and Gelly, Sylvain},
+  options = {useprefix=true},
+  date = {2019-06-13},
+  number = {arXiv:1902.00751},
+  eprint = {1902.00751},
+  eprinttype = {arxiv},
+  primaryclass = {cs, stat},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/1902.00751},
+  urldate = {2023-02-17},
+  abstract = {Fine-tuning large pre-trained models is an effective transfer mechanism in NLP. However, in the presence of many downstream tasks, fine-tuning is parameter inefficient: an entire new model is required for every task. As an alternative, we propose transfer with adapter modules. Adapter modules yield a compact and extensible model; they add only a few trainable parameters per task, and new tasks can be added without revisiting previous ones. The parameters of the original network remain fixed, yielding a high degree of parameter sharing. To demonstrate adapter's effectiveness, we transfer the recently proposed BERT Transformer model to 26 diverse text classification tasks, including the GLUE benchmark. Adapters attain near state-of-the-art performance, whilst adding only a few parameters per task. On GLUE, we attain within 0.4\% of the performance of full fine-tuning, adding only 3.6\% parameters per task. By contrast, fine-tuning trains 100\% of the parameters per task.},
+  archiveprefix = {arXiv},
+  keywords = {adaptor},
+  file = {/Users/lukakuma/Zotero/storage/RAKTB3JI/Houlsby et al. - 2019 - Parameter-Efficient Transfer Learning for NLP.pdf;/Users/lukakuma/Zotero/storage/RQLJ4KS8/1902.html}
+}
+
 @misc{houthooftEvolvedPolicyGradients2018,
   title = {Evolved {{Policy Gradients}}},
   author = {Houthooft, Rein and Chen, Richard Y. and Isola, Phillip and Stadie, Bradly C. and Wolski, Filip and Ho, Jonathan and Abbeel, Pieter},
@@ -5753,7 +5771,7 @@
   urldate = {2023-02-15},
   abstract = {An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.},
   archiveprefix = {arXiv},
-  keywords = {finetuning,peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/7EBEG26P/Hu et al. - 2021 - LoRA Low-Rank Adaptation of Large Language Models.pdf;/Users/lukakuma/Zotero/storage/QCR6KT8F/2106.html}
 }
 
@@ -7483,7 +7501,7 @@
   urldate = {2022-12-13},
   abstract = {In this work, we explore "prompt tuning", a simple yet effective mechanism for learning "soft prompts" to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signal from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3's "few-shot" learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method "closes the gap" and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant in that large models are costly to share and serve, and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed "prefix tuning" of Li and Liang (2021), and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer, as compared to full model tuning.},
   archiveprefix = {arXiv},
-  keywords = {finetuning,peft,skimed},
+  keywords = {cover to cover,prompt tuning,skimed},
   file = {/Users/lukakuma/Zotero/storage/RD52397I/Lester et al. - 2021 - The Power of Scale for Parameter-Efficient Prompt .pdf;/Users/lukakuma/Zotero/storage/796N9G7I/2104.html}
 }
 
@@ -7500,7 +7518,7 @@
   urldate = {2023-02-16},
   abstract = {Parameter-efficient methods are able to use a single frozen pre-trained large language model (LLM) to perform many tasks by learning task-specific soft prompts that modulate model behavior when concatenated to the input text. However, these learned prompts are tightly coupled to a given frozen model -- if the model is updated, corresponding new prompts need to be obtained. In this work, we propose and investigate several approaches to "Prompt Recycling'" where a prompt trained on a source model is transformed to work with the new target model. Our methods do not rely on supervised pairs of prompts, task-specific data, or training updates with the target model, which would be just as costly as re-tuning prompts with the target model from scratch. We show that recycling between models is possible (our best settings are able to successfully recycle \$88.9\textbackslash\%\$ of prompts, producing a prompt that out-performs baselines), but significant performance headroom remains, requiring improved recycling techniques.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/H8GMS8CM/Lester et al. - 2022 - Reducing Retraining by Recycling Parameter-Efficie.pdf;/Users/lukakuma/Zotero/storage/HZQG9EGH/2208.html}
 }
 
@@ -8017,7 +8035,7 @@
   abstract = {Fine-tuning is the de facto way to leverage large pretrained language models to perform downstream tasks. However, it modifies all the language model parameters and therefore necessitates storing a full copy for each task. In this paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for natural language generation tasks, which keeps language model parameters frozen, but optimizes a small continuous task-specific vector (called the prefix). Prefix-tuning draws inspiration from prompting, allowing subsequent tokens to attend to this prefix as if it were “virtual tokens”. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for summarization. We find that by learning only 0.1\% of the parameters, prefix-tuning obtains comparable performance in the full data setting, outperforms fine-tuning in low-data settings, and extrapolates better to examples with topics unseen during training.},
   archiveprefix = {arXiv},
   langid = {english},
-  keywords = {finetuning},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/KNVQGHKW/Li and Liang - 2021 - Prefix-Tuning Optimizing Continuous Prompts for G.pdf}
 }
 
@@ -8129,7 +8147,7 @@
   urldate = {2022-10-27},
   abstract = {Few-shot in-context learning (ICL) enables pre-trained language models to perform a previously-unseen task without any gradient-based training by feeding a small number of training examples as part of the input. ICL incurs substantial computational, memory, and storage costs because it involves processing all of the training examples every time a prediction is made. Parameter-efficient fine-tuning (PEFT) (e.g. adapter modules, prompt tuning, sparse update methods, etc.) offers an alternative paradigm where a small set of parameters are trained to enable a model to perform the new task. In this paper, we rigorously compare few-shot ICL and PEFT and demonstrate that the latter offers better accuracy as well as dramatically lower computational costs. Along the way, we introduce a new PEFT method called (IA)\$\^3\$ that scales activations by learned vectors, attaining stronger performance while only introducing a relatively tiny amount of new parameters. We also propose a simple recipe based on the T0 model called T-Few that can be applied to new tasks without task-specific tuning or modifications. We validate the effectiveness of T-Few on completely unseen tasks by applying it to the RAFT benchmark, attaining super-human performance for the first time and outperforming the state-of-the-art by 6\% absolute. All of the code used in our experiments is publicly available.},
   archiveprefix = {arXiv},
-  keywords = {peft,skimed},
+  keywords = {prompt tuning,skimed},
   file = {/Users/lukakuma/Zotero/storage/NQ576J5I/Liu et al. - 2022 - Few-Shot Parameter-Efficient Fine-Tuning is Better.pdf;/Users/lukakuma/Zotero/storage/2EWYR322/2205.html}
 }
 
@@ -8146,7 +8164,7 @@
   urldate = {2023-02-15},
   abstract = {While GPTs with traditional fine-tuning fail to achieve strong results on natural language understanding (NLU), we show that GPTs can be better than or comparable to similar-sized BERTs on NLU tasks with a novel method P-tuning -- which employs trainable continuous prompt embeddings. On the knowledge probing (LAMA) benchmark, the best GPT recovers 64\textbackslash\% (P@1) of world knowledge without any additional text provided during test time, which substantially improves the previous best by 20+ percentage points. On the SuperGlue benchmark, GPTs achieve comparable and sometimes better performance to similar-sized BERTs in supervised learning. Importantly, we find that P-tuning also improves BERTs' performance in both few-shot and supervised settings while largely reducing the need for prompt engineering. Consequently, P-tuning outperforms the state-of-the-art approaches on the few-shot SuperGlue benchmark.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/AJBECMDL/Liu et al. - 2021 - GPT Understands, Too.pdf;/Users/lukakuma/Zotero/storage/2YWJCZMS/2103.html}
 }
 
@@ -8273,7 +8291,7 @@
   urldate = {2023-02-15},
   abstract = {Prompt tuning, which only tunes continuous prompts with a frozen language model, substantially reduces per-task storage and memory usage at training. However, in the context of NLU, prior work reveals that prompt tuning does not perform well for normal-sized pretrained models. We also find that existing methods of prompt tuning cannot handle hard sequence labeling tasks, indicating a lack of universality. We present a novel empirical finding that properly optimized prompt tuning can be universally effective across a wide range of model scales and NLU tasks. It matches the performance of finetuning while having only 0.1\%-3\% tuned parameters. Our method P-Tuning v2 is an implementation of Deep Prompt Tuning \textbackslash cite\{li2021prefix,qin2021learning\} optimized and adapted for NLU. Given the universality and simplicity of P-Tuning v2, we believe it can serve as an alternative to finetuning and a strong baseline for future research.Our code and data are released at https://github.com/THUDM/P-tuning-v2.},
   archiveprefix = {arXiv},
-  keywords = {finetuning,peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/2ZAXYWDS/Liu et al. - 2022 - P-Tuning v2 Prompt Tuning Can Be Comparable to Fi.pdf;/Users/lukakuma/Zotero/storage/66NJL5LN/2110.html}
 }
 
@@ -9517,7 +9535,7 @@
   urldate = {2023-01-19},
   abstract = {Humans perceive the world by concurrently processing and fusing high-dimensional inputs from multiple modalities such as vision and audio. Machine perception models, in stark contrast, are typically modality-specific and optimised for unimodal benchmarks, and hence late-stage fusion of final representations or predictions from each modality (`late-fusion') is still a dominant paradigm for multimodal video classification. Instead, we introduce a novel transformer based architecture that uses `fusion bottlenecks' for modality fusion at multiple layers. Compared to traditional pairwise self-attention, our model forces information between different modalities to pass through a small number of bottleneck latents, requiring the model to collate and condense the most relevant information in each modality and only share what is necessary. We find that such a strategy improves fusion performance, at the same time reducing computational cost. We conduct thorough ablation studies, and achieve state-of-the-art results on multiple audio-visual classification benchmarks including Audioset, Epic-Kitchens and VGGSound. All code and models will be released.},
   archiveprefix = {arXiv},
-  keywords = {multimodal},
+  keywords = {adaptor,multimodal},
   file = {/Users/lukakuma/Zotero/storage/GBL844L8/Nagrani et al. - 2022 - Attention Bottlenecks for Multimodal Fusion.pdf;/Users/lukakuma/Zotero/storage/BRTEUWUR/2107.html}
 }
 
@@ -10418,6 +10436,24 @@
   file = {/Users/lukakuma/Zotero/storage/S6XPSP9G/Pfeiffer et al. - 2020 - AdapterHub A Framework for Adapting Transformers.pdf;/Users/lukakuma/Zotero/storage/ZHL7QI7R/2007.html}
 }
 
+@misc{pfeifferMADXAdapterBasedFramework2020,
+  title = {{{MAD-X}}: {{An Adapter-Based Framework}} for {{Multi-Task Cross-Lingual Transfer}}},
+  shorttitle = {{{MAD-X}}},
+  author = {Pfeiffer, Jonas and Vulić, Ivan and Gurevych, Iryna and Ruder, Sebastian},
+  date = {2020-10-06},
+  number = {arXiv:2005.00052},
+  eprint = {2005.00052},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2005.00052},
+  urldate = {2023-02-17},
+  abstract = {The main goal behind state-of-the-art pre-trained multilingual models such as multilingual BERT and XLM-R is enabling and bootstrapping NLP applications in low-resource languages through zero-shot or few-shot cross-lingual transfer. However, due to limited model capacity, their transfer performance is the weakest exactly on such low-resource languages and languages unseen during pre-training. We propose MAD-X, an adapter-based framework that enables high portability and parameter-efficient transfer to arbitrary tasks and languages by learning modular language and task representations. In addition, we introduce a novel invertible adapter architecture and a strong baseline method for adapting a pre-trained multilingual model to a new language. MAD-X outperforms the state of the art in cross-lingual transfer across a representative set of typologically diverse languages on named entity recognition and causal commonsense reasoning, and achieves competitive results on question answering. Our code and adapters are available at AdapterHub.ml},
+  archiveprefix = {arXiv},
+  keywords = {adaptor},
+  file = {/Users/lukakuma/Zotero/storage/C8G96I65/Pfeiffer et al. - 2020 - MAD-X An Adapter-Based Framework for Multi-Task C.pdf;/Users/lukakuma/Zotero/storage/LCZ2EJKY/2005.html}
+}
+
 @misc{phangInvestigatingEfficientlyExtending2022,
   title = {Investigating {{Efficiently Extending Transformers}} for {{Long Input Summarization}}},
   author = {Phang, Jason and Zhao, Yao and Liu, Peter J.},
@@ -10994,8 +11030,25 @@
   urldate = {2023-02-03},
   abstract = {We introduce Progressive Prompts - a simple and efficient approach for continual learning in language models. Our method allows forward transfer and resists catastrophic forgetting, without relying on data replay or a large number of task-specific parameters. Progressive Prompts learns a new soft prompt for each task and sequentially concatenates it with the previously learned prompts, while keeping the base model frozen. Experiments on standard continual learning benchmarks show that our approach outperforms state-of-the-art methods, with an improvement {$>$}20\% in average test accuracy over the previous best-preforming method on T5 model. We also explore a more challenging continual learning setup with longer sequences of tasks and show that Progressive Prompts significantly outperforms prior methods.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/PM3CSZ8Q/Razdaibiedina et al. - 2023 - Progressive Prompts Continual Learning for Langua.pdf;/Users/lukakuma/Zotero/storage/JY7G5394/2301.html}
+}
+
+@misc{rebuffiLearningMultipleVisual2017,
+  title = {Learning Multiple Visual Domains with Residual Adapters},
+  author = {Rebuffi, Sylvestre-Alvise and Bilen, Hakan and Vedaldi, Andrea},
+  date = {2017-11-27},
+  number = {arXiv:1705.08045},
+  eprint = {1705.08045},
+  eprinttype = {arxiv},
+  primaryclass = {cs, stat},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/1705.08045},
+  urldate = {2023-02-17},
+  abstract = {There is a growing interest in learning data representations that work well for many different types of problems and data. In this paper, we look in particular at the task of learning a single visual representation that can be successfully utilized in the analysis of very different types of images, from dog breeds to stop signs and digits. Inspired by recent work on learning networks that predict the parameters of another, we develop a tunable deep network architecture that, by means of adapter residual modules, can be steered on the fly to diverse visual domains. Our method achieves a high degree of parameter sharing while maintaining or even improving the accuracy of domain-specific representations. We also introduce the Visual Decathlon Challenge, a benchmark that evaluates the ability of representations to capture simultaneously ten very different visual domains and measures their ability to recognize well uniformly.},
+  archiveprefix = {arXiv},
+  keywords = {adaptor},
+  file = {/Users/lukakuma/Zotero/storage/85GCXTM2/Rebuffi et al. - 2017 - Learning multiple visual domains with residual ada.pdf;/Users/lukakuma/Zotero/storage/JDH4I9RV/1705.html}
 }
 
 @misc{reedGeneralistAgent2022,
@@ -12190,7 +12243,7 @@
   urldate = {2023-01-09},
   abstract = {Large language models (LLMs) have demonstrated impressive capabilities in natural language understanding and generation, but the quality bar for medical and clinical applications is high. Today, attempts to assess models' clinical knowledge typically rely on automated evaluations on limited benchmarks. There is no standard to evaluate model predictions and reasoning across a breadth of tasks. To address this, we present MultiMedQA, a benchmark combining six existing open question answering datasets spanning professional medical exams, research, and consumer queries; and HealthSearchQA, a new free-response dataset of medical questions searched online. We propose a framework for human evaluation of model answers along multiple axes including factuality, precision, possible harm, and bias. In addition, we evaluate PaLM (a 540-billion parameter LLM) and its instruction-tuned variant, Flan-PaLM, on MultiMedQA. Using a combination of prompting strategies, Flan-PaLM achieves state-of-the-art accuracy on every MultiMedQA multiple-choice dataset (MedQA, MedMCQA, PubMedQA, MMLU clinical topics), including 67.6\% accuracy on MedQA (US Medical License Exam questions), surpassing prior state-of-the-art by over 17\%. However, human evaluation reveals key gaps in Flan-PaLM responses. To resolve this we introduce instruction prompt tuning, a parameter-efficient approach for aligning LLMs to new domains using a few exemplars. The resulting model, Med-PaLM, performs encouragingly, but remains inferior to clinicians. We show that comprehension, recall of knowledge, and medical reasoning improve with model scale and instruction prompt tuning, suggesting the potential utility of LLMs in medicine. Our human evaluations reveal important limitations of today's models, reinforcing the importance of both evaluation frameworks and method development in creating safe, helpful LLM models for clinical applications.},
   archiveprefix = {arXiv},
-  keywords = {cover to cover,milestone,peft},
+  keywords = {cover to cover,milestone,prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/2I85D4BQ/Singhal et al. - 2022 - Large Language Models Encode Clinical Knowledge.pdf;/Users/lukakuma/Zotero/storage/CNYH4DBL/2212.html}
 }
 
@@ -12491,7 +12544,7 @@
   urldate = {2022-12-12},
   abstract = {During typical gradient-based training of deep neural networks, all of the model's parameters are updated at each iteration. Recent work has shown that it is possible to update only a small subset of the model's parameters during training, which can alleviate storage and communication requirements. In this paper, we show that it is possible to induce a fixed sparse mask on the model's parameters that selects a subset to update over many iterations. Our method constructs the mask out of the \$k\$ parameters with the largest Fisher information as a simple approximation as to which parameters are most important for the task at hand. In experiments on parameter-efficient transfer learning and distributed training, we show that our approach matches or exceeds the performance of other methods for training with sparse updates while being more efficient in terms of memory usage and communication costs. We release our code publicly to promote further applications of our approach.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/W7XNK742/Sung et al. - 2021 - Training Neural Networks with Fixed Sparse Masks.pdf;/Users/lukakuma/Zotero/storage/J56EU6W6/2111.html}
 }
 
@@ -13214,7 +13267,7 @@
   urldate = {2022-12-17},
   abstract = {Parameter-efficient fine-tuning methods (PEFTs) offer the promise of adapting large pre-trained models while only tuning a small number of parameters. They have been shown to be competitive with full model fine-tuning for many downstream tasks. However, prior work indicates that PEFTs may not work as well for machine translation (MT), and there is no comprehensive study showing when PEFTs work for MT. We conduct a comprehensive empirical study of PEFTs for MT, considering (1) various parameter budgets, (2) a diverse set of language-pairs, and (3) different pre-trained models. We find that 'adapters', in which small feed-forward networks are added after every layer, are indeed on par with full model fine-tuning when the parameter budget corresponds to 10\% of total model parameters. Nevertheless, as the number of tuned parameters decreases, the performance of PEFTs decreases. The magnitude of this decrease depends on the language pair, with PEFTs particularly struggling for distantly related language-pairs. We find that using PEFTs with a larger pre-trained model outperforms full fine-tuning with a smaller model, and for smaller training data sizes, PEFTs outperform full fine-tuning for the same pre-trained model.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/2CT23SV4/Üstün and Stickland - 2022 - When does Parameter-Efficient Transfer Learning Wo.pdf;/Users/lukakuma/Zotero/storage/87RZ6CCK/2205.html}
 }
 
@@ -13457,7 +13510,7 @@
   urldate = {2022-12-16},
   abstract = {Standard fine-tuning of large pre-trained language models (PLMs) for downstream tasks requires updating hundreds of millions to billions of parameters, and storing a large copy of the PLM weights for every task resulting in increased cost for storing, sharing and serving the models. To address this, parameter-efficient fine-tuning (PEFT) techniques were introduced where small trainable components are injected in the PLM and updated during fine-tuning. We propose AdaMix as a general PEFT method that tunes a mixture of adaptation modules -- given the underlying PEFT method of choice -- introduced in each Transformer layer while keeping most of the PLM weights frozen. For instance, AdaMix can leverage a mixture of adapters like Houlsby or a mixture of low rank decomposition matrices like LoRA to improve downstream task performance over the corresponding PEFT methods for fully supervised and few-shot NLU and NLG tasks. Further, we design AdaMix such that it matches the same computational cost and the number of tunable parameters as the underlying PEFT method. By only tuning 0.1-0.2\% of PLM parameters, we show that AdaMix outperforms SOTA parameter-efficient fine-tuning and full model fine-tuning for both NLU and NLG tasks.},
   archiveprefix = {arXiv},
-  keywords = {peft,skimed},
+  keywords = {prompt tuning,skimed},
   file = {/Users/lukakuma/Zotero/storage/IEG9BHPA/Wang et al. - 2022 - AdaMix Mixture-of-Adaptations for Parameter-effic.pdf;/Users/lukakuma/Zotero/storage/GBA6MSC6/2205.html}
 }
 
@@ -13892,7 +13945,7 @@
   urldate = {2023-02-08},
   abstract = {The strength of modern generative models lies in their ability to be controlled through text-based prompts. Typical "hard" prompts are made from interpretable words and tokens, and must be hand-crafted by humans. There are also "soft" prompts, which consist of continuous feature vectors. These can be discovered using powerful optimization methods, but they cannot be easily interpreted, re-used across models, or plugged into a text-based interface. We describe an approach to robustly optimize hard text prompts through efficient gradient-based optimization. Our approach automatically generates hard text-based prompts for both text-to-image and text-to-text applications. In the text-to-image setting, the method creates hard prompts for diffusion models, allowing API users to easily generate, discover, and mix and match image concepts without prior knowledge on how to prompt the model. In the text-to-text setting, we show that hard prompts can be automatically discovered that are effective in tuning LMs for classification.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/FGEW7VLZ/Wen et al. - 2023 - Hard Prompts Made Easy Gradient-Based Discrete Op.pdf;/Users/lukakuma/Zotero/storage/Y9XXAMRY/2302.html}
 }
 
@@ -15087,7 +15140,7 @@
   urldate = {2022-10-27},
   abstract = {GPT-3 can perform numerous tasks when provided a natural language prompt that contains a few training examples. We show that this type of few-shot learning can be unstable: the choice of prompt format, training examples, and even the order of the training examples can cause accuracy to vary from near chance to near state-of-the-art. We demonstrate that this instability arises from the bias of language models towards predicting certain answers, e.g., those that are placed near the end of the prompt or are common in the pre-training data. To mitigate this, we first estimate the model's bias towards each answer by asking for its prediction when given the training prompt and a content-free test input such as "N/A". We then fit calibration parameters that cause the prediction for this input to be uniform across answers. On a diverse set of tasks, this contextual calibration procedure substantially improves GPT-3 and GPT-2's average accuracy (up to 30.0\% absolute) and reduces variance across different choices of the prompt.},
   archiveprefix = {arXiv},
-  keywords = {calibration,finetuning},
+  keywords = {calibration},
   file = {/Users/lukakuma/Zotero/storage/Y6CUV7CZ/Zhao et al. - 2021 - Calibrate Before Use Improving Few-Shot Performan.pdf;/Users/lukakuma/Zotero/storage/TS6CMGR9/2102.html}
 }
 
@@ -15270,7 +15323,7 @@
   urldate = {2023-02-16},
   abstract = {Large pretrained language models have been widely used in downstream NLP tasks via task-specific fine-tuning. Recently, an array of Parameter-Efficient Fine-Tuning (PEFT) methods have also achieved strong task performance while updating a much smaller number of parameters compared to full model tuning. However, it is non-trivial to make informed per-task design choices (i.e., to create PEFT configurations) concerning the selection of PEFT architectures and modules, the number of tunable parameters, and even the layers in which the PEFT modules are inserted. Consequently, it is highly likely that the current, manually set PEFT configurations might be suboptimal for many tasks from the perspective of the performance-to-efficiency trade-off. To address the core question of the PEFT configuration selection that aims to control and maximise the balance between performance and parameter efficiency, we first define a rich configuration search space spanning multiple representative PEFT modules along with finer-grained configuration decisions over the modules (e.g., parameter budget, insertion layer). We then propose AutoPEFT, a novel framework to traverse this configuration space: it automatically configures multiple PEFT modules via high-dimensional Bayesian optimisation. We show the resource scalability and task transferability of AutoPEFT-found configurations, outperforming existing PEFT methods on average on the standard GLUE benchmark while conducting the configuration search on a single task. The per-task AutoPEFT-based configuration search even outperforms full-model fine-tuning.},
   archiveprefix = {arXiv},
-  keywords = {peft},
+  keywords = {prompt tuning},
   file = {/Users/lukakuma/Zotero/storage/DJ3ZAK7Q/Zhou et al. - 2023 - AutoPEFT Automatic Configuration Search for Param.pdf;/Users/lukakuma/Zotero/storage/MA24PRXW/2301.html}
 }
 
