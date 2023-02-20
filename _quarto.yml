@@ -29,5 +29,7 @@ bibliography: asset/ref.bib
 
 format:
   html:
-    theme: spacelab
+    theme:
+      light: spacelab
+      dark: cyborg
     toc: true

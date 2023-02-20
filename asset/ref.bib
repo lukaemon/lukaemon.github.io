@@ -1551,6 +1551,24 @@
   file = {/Users/lukakuma/Zotero/storage/WY6LJLI3/Broockman and Kalla - 2022 - The manifold effects of partisan media on viewers’.pdf}
 }
 
+@misc{brooksInstructPix2PixLearningFollow2023,
+  title = {{{InstructPix2Pix}}: {{Learning}} to {{Follow Image Editing Instructions}}},
+  shorttitle = {{{InstructPix2Pix}}},
+  author = {Brooks, Tim and Holynski, Aleksander and Efros, Alexei A.},
+  date = {2023-01-18},
+  number = {arXiv:2211.09800},
+  eprint = {2211.09800},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2211.09800},
+  urldate = {2023-02-20},
+  abstract = {We propose a method for editing images from human instructions: given an input image and a written instruction that tells the model what to do, our model follows these instructions to edit the image. To obtain training data for this problem, we combine the knowledge of two large pretrained models -- a language model (GPT-3) and a text-to-image model (Stable Diffusion) -- to generate a large dataset of image editing examples. Our conditional diffusion model, InstructPix2Pix, is trained on our generated data, and generalizes to real images and user-written instructions at inference time. Since it performs edits in the forward pass and does not require per example fine-tuning or inversion, our model edits images quickly, in a matter of seconds. We show compelling editing results for a diverse collection of input images and written instructions.},
+  archiveprefix = {arXiv},
+  keywords = {image generation},
+  file = {/Users/lukakuma/Zotero/storage/F6ZD3ZK4/Brooks et al. - 2023 - InstructPix2Pix Learning to Follow Image Editing .pdf;/Users/lukakuma/Zotero/storage/R4ELBGBB/2211.html}
+}
+
 @article{browningAILimitsLanguage2022a,
   title = {{{AI And The Limits Of Language}}},
   author = {Browning, Jacob},
@@ -4459,7 +4477,7 @@
   urldate = {2022-12-20},
   abstract = {We present Sparrow, an information-seeking dialogue agent trained to be more helpful, correct, and harmless compared to prompted language model baselines. We use reinforcement learning from human feedback to train our models with two new additions to help human raters judge agent behaviour. First, to make our agent more helpful and harmless, we break down the requirements for good dialogue into natural language rules the agent should follow, and ask raters about each rule separately. We demonstrate that this breakdown enables us to collect more targeted human judgements of agent behaviour and allows for more efficient rule-conditional reward models. Second, our agent provides evidence from sources supporting factual claims when collecting preference judgements over model statements. For factual questions, evidence provided by Sparrow supports the sampled response 78\% of the time. Sparrow is preferred more often than baselines while being more resilient to adversarial probing by humans, violating our rules only 8\% of the time when probed. Finally, we conduct extensive analyses showing that though our model learns to follow our rules it can exhibit distributional biases.},
   archiveprefix = {arXiv},
-  keywords = {alignment,cover to cover,dialogue,self-play},
+  keywords = {alignment,cover to cover,dialogue,milestone,multiagent,self-play},
   file = {/Users/lukakuma/Zotero/storage/AZF4TQYY/Glaese et al. - 2022 - Improving alignment of dialogue agents via targete.pdf;/Users/lukakuma/Zotero/storage/QPBHK4KP/2209.html}
 }
 
@@ -4955,6 +4973,23 @@
   abstract = {Foundation models have received much attention due to their effectiveness across a broad range of downstream applications. Though there is a big convergence in terms of architecture, most pretrained models are typically still developed for specific tasks or modalities. In this work, we propose to use language models as a general-purpose interface to various foundation models. A collection of pretrained encoders perceive diverse modalities (such as vision, and language), and they dock with a language model that plays the role of a universal task layer. We propose a semi-causal language modeling objective to jointly pretrain the interface and the modular encoders. We subsume the advantages and capabilities from both causal and non-causal modeling, thereby combining the best of two worlds. Specifically, the proposed method not only inherits the capabilities of in-context learning and open-ended generation from causal language modeling, but also is conducive to finetuning because of the bidirectional encoders. More importantly, our approach seamlessly unlocks the combinations of the above capabilities, e.g., enabling in-context learning or instruction following with finetuned encoders. Experimental results across various language-only and vision-language benchmarks show that our model outperforms or is competitive with specialized models on finetuning, zero-shot generalization, and few-shot learning.},
   archiveprefix = {arXiv},
   file = {/Users/lukakuma/Zotero/storage/FA4TNT92/Hao et al. - 2022 - Language Models are General-Purpose Interfaces.pdf;/Users/lukakuma/Zotero/storage/R2NIS2PA/2206.html}
+}
+
+@misc{haoLanguageModelsAre2022a,
+  title = {Language {{Models}} Are {{General-Purpose Interfaces}}},
+  author = {Hao, Yaru and Song, Haoyu and Dong, Li and Huang, Shaohan and Chi, Zewen and Wang, Wenhui and Ma, Shuming and Wei, Furu},
+  date = {2022-06-13},
+  number = {arXiv:2206.06336},
+  eprint = {2206.06336},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2206.06336},
+  urldate = {2023-02-19},
+  abstract = {Foundation models have received much attention due to their effectiveness across a broad range of downstream applications. Though there is a big convergence in terms of architecture, most pretrained models are typically still developed for specific tasks or modalities. In this work, we propose to use language models as a general-purpose interface to various foundation models. A collection of pretrained encoders perceive diverse modalities (such as vision, and language), and they dock with a language model that plays the role of a universal task layer. We propose a semi-causal language modeling objective to jointly pretrain the interface and the modular encoders. We subsume the advantages and capabilities from both causal and non-causal modeling, thereby combining the best of two worlds. Specifically, the proposed method not only inherits the capabilities of in-context learning and open-ended generation from causal language modeling, but also is conducive to finetuning because of the bidirectional encoders. More importantly, our approach seamlessly unlocks the combinations of the above capabilities, e.g., enabling in-context learning or instruction following with finetuned encoders. Experimental results across various language-only and vision-language benchmarks show that our model outperforms or is competitive with specialized models on finetuning, zero-shot generalization, and few-shot learning.},
+  archiveprefix = {arXiv},
+  keywords = {multiagent},
+  file = {/Users/lukakuma/Zotero/storage/G8W6XTPZ/Hao et al. - 2022 - Language Models are General-Purpose Interfaces.pdf;/Users/lukakuma/Zotero/storage/5HRU3CWX/2206.html}
 }
 
 @article{haReinforcementLearningImproving2019,
@@ -9132,6 +9167,24 @@
   file = {/Users/lukakuma/Zotero/storage/NSTDH4G5/Metz et al. - 2022 - VeLO Training Versatile Learned Optimizers by Sca.pdf;/Users/lukakuma/Zotero/storage/88YVVA57/2211.html}
 }
 
+@misc{mialonAugmentedLanguageModels2023,
+  title = {Augmented {{Language Models}}: A {{Survey}}},
+  shorttitle = {Augmented {{Language Models}}},
+  author = {Mialon, Grégoire and Dessì, Roberto and Lomeli, Maria and Nalmpantis, Christoforos and Pasunuru, Ram and Raileanu, Roberta and Rozière, Baptiste and Schick, Timo and Dwivedi-Yu, Jane and Celikyilmaz, Asli and Grave, Edouard and LeCun, Yann and Scialom, Thomas},
+  date = {2023-02-15},
+  number = {arXiv:2302.07842},
+  eprint = {2302.07842},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.07842},
+  urldate = {2023-02-19},
+  abstract = {This survey reviews works in which language models (LMs) are augmented with reasoning skills and the ability to use tools. The former is defined as decomposing a potentially complex task into simpler subtasks while the latter consists in calling external modules such as a code interpreter. LMs can leverage these augmentations separately or in combination via heuristics, or learn to do so from demonstrations. While adhering to a standard missing tokens prediction objective, such augmented LMs can use various, possibly non-parametric external modules to expand their context processing ability, thus departing from the pure language modeling paradigm. We therefore refer to them as Augmented Language Models (ALMs). The missing token objective allows ALMs to learn to reason, use tools, and even act, while still performing standard natural language tasks and even outperforming most regular LMs on several benchmarks. In this work, after reviewing current advance in ALMs, we conclude that this new research direction has the potential to address common limitations of traditional LMs such as interpretability, consistency, and scalability issues.},
+  archiveprefix = {arXiv},
+  keywords = {multiagent},
+  file = {/Users/lukakuma/Zotero/storage/A4EHSXTS/Mialon et al. - 2023 - Augmented Language Models a Survey.pdf;/Users/lukakuma/Zotero/storage/DGBTMGU6/2302.html}
+}
+
 @misc{mildenhallNeRFRepresentingScenes2020,
   title = {{{NeRF}}: {{Representing Scenes}} as {{Neural Radiance Fields}} for {{View Synthesis}}},
   shorttitle = {{{NeRF}}},
@@ -9565,7 +9618,7 @@
   urldate = {2022-09-20},
   abstract = {We fine-tune GPT-3 to answer long-form questions using a text-based web-browsing environment, which allows the model to search and navigate the web. By setting up the task so that it can be performed by humans, we are able to train models on the task using imitation learning, and then optimize answer quality with human feedback. To make human evaluation of factual accuracy easier, models must collect references while browsing in support of their answers. We train and evaluate our models on ELI5, a dataset of questions asked by Reddit users. Our best model is obtained by fine-tuning GPT-3 using behavior cloning, and then performing rejection sampling against a reward model trained to predict human preferences. This model's answers are preferred by humans 56\% of the time to those of our human demonstrators, and 69\% of the time to the highest-voted answer from Reddit.},
   archiveprefix = {arXiv},
-  keywords = {*OpenAI,alignment,cover to cover,QA,retrieval},
+  keywords = {*OpenAI,alignment,cover to cover,multiagent,QA,retrieval},
   file = {/Users/lukakuma/Zotero/storage/XVD4TXD6/Nakano et al. - 2022 - WebGPT Browser-assisted question-answering with h.pdf;/Users/lukakuma/Zotero/storage/ISNGMR9N/2112.html;/Users/lukakuma/Zotero/storage/ZCUICQPE/2112.html}
 }
 
@@ -11630,7 +11683,7 @@
   urldate = {2023-02-11},
   abstract = {Language models (LMs) exhibit remarkable abilities to solve new tasks from just a few examples or textual instructions, especially at scale. They also, paradoxically, struggle with basic functionality, such as arithmetic or factual lookup, where much simpler and smaller models excel. In this paper, we show that LMs can teach themselves to use external tools via simple APIs and achieve the best of both worlds. We introduce Toolformer, a model trained to decide which APIs to call, when to call them, what arguments to pass, and how to best incorporate the results into future token prediction. This is done in a self-supervised way, requiring nothing more than a handful of demonstrations for each API. We incorporate a range of tools, including a calculator, a Q\textbackslash\&A system, two different search engines, a translation system, and a calendar. Toolformer achieves substantially improved zero-shot performance across a variety of downstream tasks, often competitive with much larger models, without sacrificing its core language modeling abilities.},
   langid = {english},
-  keywords = {rationale engr},
+  keywords = {multiagent,rationale engr},
   file = {/Users/lukakuma/Zotero/storage/R7VC8XZP/Schick et al. - 2023 - Toolformer Language Models Can Teach Themselves t.pdf}
 }
 
@@ -13008,7 +13061,7 @@
   urldate = {2022-11-17},
   abstract = {We present LaMDA: Language Models for Dialog Applications. LaMDA is a family of Transformer-based neural language models specialized for dialog, which have up to 137B parameters and are pre-trained on 1.56T words of public dialog data and web text. While model scaling alone can improve quality, it shows less improvements on safety and factual grounding. We demonstrate that fine-tuning with annotated data and enabling the model to consult external knowledge sources can lead to significant improvements towards the two key challenges of safety and factual grounding. The first challenge, safety, involves ensuring that the model's responses are consistent with a set of human values, such as preventing harmful suggestions and unfair bias. We quantify safety using a metric based on an illustrative set of human values, and we find that filtering candidate responses using a LaMDA classifier fine-tuned with a small amount of crowdworker-annotated data offers a promising approach to improving model safety. The second challenge, factual grounding, involves enabling the model to consult external knowledge sources, such as an information retrieval system, a language translator, and a calculator. We quantify factuality using a groundedness metric, and we find that our approach enables the model to generate responses grounded in known sources, rather than responses that merely sound plausible. Finally, we explore the use of LaMDA in the domains of education and content recommendations, and analyze their helpfulness and role consistency.},
   archiveprefix = {arXiv},
-  keywords = {(ext) BIG-bench,cover to cover,dialogue,milestone},
+  keywords = {(ext) BIG-bench,cover to cover,dialogue,milestone,multiagent},
   file = {/Users/lukakuma/Zotero/storage/76WZKCWD/Thoppilan et al. - 2022 - LaMDA Language Models for Dialog Applications.pdf;/Users/lukakuma/Zotero/storage/7TFMUHZM/2201.html}
 }
 
@@ -14966,6 +15019,23 @@
   archiveprefix = {arXiv},
   keywords = {adaptor,multimodal},
   file = {/Users/lukakuma/Zotero/storage/ZCL5XI28/Zhai et al. - 2022 - LiT Zero-Shot Transfer with Locked-image text Tun.pdf;/Users/lukakuma/Zotero/storage/46W7ME24/2111.html}
+}
+
+@misc{zhangAddingConditionalControl2023,
+  title = {Adding {{Conditional Control}} to {{Text-to-Image Diffusion Models}}},
+  author = {Zhang, Lvmin and Agrawala, Maneesh},
+  date = {2023-02-10},
+  number = {arXiv:2302.05543},
+  eprint = {2302.05543},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  publisher = {{arXiv}},
+  url = {http://arxiv.org/abs/2302.05543},
+  urldate = {2023-02-20},
+  abstract = {We present a neural network structure, ControlNet, to control pretrained large diffusion models to support additional input conditions. The ControlNet learns task-specific conditions in an end-to-end way, and the learning is robust even when the training dataset is small ({$<$} 50k). Moreover, training a ControlNet is as fast as fine-tuning a diffusion model, and the model can be trained on a personal devices. Alternatively, if powerful computation clusters are available, the model can scale to large amounts (millions to billions) of data. We report that large diffusion models like Stable Diffusion can be augmented with ControlNets to enable conditional inputs like edge maps, segmentation maps, keypoints, etc. This may enrich the methods to control large diffusion models and further facilitate related applications.},
+  archiveprefix = {arXiv},
+  keywords = {image generation},
+  file = {/Users/lukakuma/Zotero/storage/9HIQ3ZDS/Zhang and Agrawala - 2023 - Adding Conditional Control to Text-to-Image Diffus.pdf;/Users/lukakuma/Zotero/storage/SHQI5FUV/2302.html}
 }
 
 @misc{zhangAutomaticChainThought2022,
