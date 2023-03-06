@@ -1,0 +1,10 @@
+---
+title: "Prompt and finetuning language model"
+description: What's the difference? Brief lesson learned.
+date: "2023-02-23"
+categories: []
+# image: "hands.jpg"
+draft: True
+---
+
+It's about finding the right level of change to reach the ideal performance. 

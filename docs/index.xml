@@ -10,7 +10,296 @@
 <atom:link href="https://lukaemon.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>to my self-play</description>
 <generator>quarto-1.2.280</generator>
-<lastBuildDate>Mon, 13 Feb 2023 16:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 05 Mar 2023 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>From vanilla text encoder decoder to multimodal mid fusion attention bottleneck</title>
+  <dc:creator>Lucas Shen</dc:creator>
+  <link>https://lukaemon.github.io/posts/2023/from-text-to-multimodal/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/cover.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption">midjourney: fusion of multimodal sensory information –ar 16:9</figcaption><p></p>
+</figure>
+</div>
+<p>Tracking the evolution trajectory from <span class="citation" data-cites="vaswaniAttentionAllYou2017">Vaswani et al. (2017)</span> to cutting edge multimodal model <span class="citation" data-cites="nagraniAttentionBottlenecksMultimodal2022">(Nagrani et al. 2022)</span> is an interesting journey. I’m mostly interested in multimodal fusion, meaning how to fuse information from different sensory modalities. A juxtaposition of 2 evolution tracks speaks volumes.</p>
+<ol type="1">
+<li>Text: 2017 OG encoder-decoder &gt; hyperscaled decoder</li>
+<li>Multimodal: encoder-decoder and early fusion decoder &gt; bottleneck mid fusion</li>
+</ol>
+<p>To better appreciate the juxtaposition, a compare and contrast between the starting point and the cutting edge would be helpful.</p>
+<section id="attention-is-all-you-need" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="attention-is-all-you-need">Attention is all you need</h2>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/attn_f1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="vaswaniAttentionAllYou2017">Vaswani et al. (2017)</span></figcaption><p></p>
+</figure>
+</div>
+<p>Staring at this seminal encoder decoder architecture long enough makes me realize few things:</p>
+<ul>
+<li>Attention is applied to a set, not strictly on sequence. Very general and versatile inductive bias.</li>
+<li>Sequence is just the result of information serialization. Text is natural sequence. Image tokens could be rasterized. Most of seq2seq magics are actually set2set plus optional positional information, such add-on info could be of many kinds.</li>
+<li>The whole encoder stack plus the cross attention is an adapter module <span class="citation" data-cites="pfeifferModularDeepLearning2023">(Pfeiffer et al. 2023)</span> to condition an autoregressive generative decoder stack.</li>
+<li>The generative model doesn’t have to be autoregressive, or about text. The gold is multimodal representation learning. Generation is just one task.</li>
+<li>The power of transformers applies to multimodal fusion. Text is just the beginning.</li>
+</ul>
+</section>
+<section id="attention-bottleneck" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="attention-bottleneck">Attention bottleneck</h2>
+<div class="page-columns page-full"><p>Inspired by this great presentation<sup>1</sup> from <a href="https://twitter.com/drjwrae?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Jack Rae</a>, I realize that different form of bottleneck, ex: global workspace theory <span class="citation" data-cites="baarsGlobalWorkspaceTheory2017">(Baars 2017)</span>, could be interpreted as different expression of <a href="https://en.wikipedia.org/wiki/Occam%27s_razor">Occam’s razor</a>, which has deep root in information theory that regards effective compression as general intelligence.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://www.youtube.com/watch?v=dO4TPJkeaaU&amp;list=PLSrTvUm384I9PV10koj_cqit9OfbJXEkq&amp;index=79">Compression for AGI - Jack Rae</a></p></li></div></div>
+<p>Copy and paste is just brute force. Information bottleneck is suffering that builds intelligence.</p>
+<p><span class="citation" data-cites="nagraniAttentionBottlenecksMultimodal2022">Nagrani et al. (2022)</span> introduces <code>bottleneck mid fusion</code>. I see it as successor to Gato’s <span class="citation" data-cites="reedGeneralistAgent2022">(Reed et al. 2022)</span> all you can eat style <code>early fusion</code>. This is a beautiful implementation of using bottleneck to foster learning intelligence.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/attn_bottleneck_f1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="nagraniAttentionBottlenecksMultimodal2022">Nagrani et al. (2022)</span></figcaption><p></p>
+</figure>
+</div>
+<p>The beauty of <code>bottleneck mid fusion</code> comes from few realizations about multimodal learning:</p>
+<blockquote class="blockquote">
+<ol type="1">
+<li>variations in learning dynamics between modalities</li>
+<li>different <code>noise topologies</code>, with some modality streams containing more information for the task at hand than others</li>
+<li>specialized input representations.</li>
+</ol>
+<p>–<span class="citation" data-cites="nagraniAttentionBottlenecksMultimodal2022">Nagrani et al. (2022)</span></p>
+</blockquote>
+<p>Resonate pretty well with <span class="citation" data-cites="rombachHighResolutionImageSynthesis2022">Rombach et al. (2022)</span></p>
+<blockquote class="blockquote">
+<p>Most bits of a digital image correspond to imperceptible details. While DMs allow to suppress this semantically meaningless information by minimizing the responsible loss term, gradients (during training) and the neural network backbone (training and inference) still need to be evaluated on all pixels, leading to superfluous computations and unnecessarily expensive optimization and inference. We propose latent diffusion models (LDMs) as an effective generative model and a separate mild compression stage that only eliminates imperceptible details.</p>
+</blockquote>
+<p>You can see that <code>noise topology</code> exemplified with image. Bits are not equal to information, and human civilization builds semantics only on the subset of all information. Multimodal learning has to deal with different noise topology among different modalities. That’s why early fusion could work, but it would be far from <code>Pareto frontier</code>.</p>
+<p><code>bottleneck mid fusion</code> is making <code>Pareto improvement</code> by doing mid fusion with information bottleneck. Mid fusion affords different modality independent computation to weed out noises. The context window of bottleneck token is global workspace, on which joint representation could be learned. The hope is quality of joint representation could be foster by imposed limitation.</p>
+<p>With basic understandings about the baseline and cutting edge, moving on to juxtaposition.</p>
+</section>
+<section id="text-2017-og-encoder-decoder-hyperscaled-decoder" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="text-2017-og-encoder-decoder-hyperscaled-decoder">Text: 2017 OG encoder-decoder &gt; hyperscaled decoder</h2>
+<p>Text2text treat input text as a modality. Info of input text is fused to text generative model to decide what to generate next. Encoder decoder architecture is basically a forced sparsity that implements a form of mid fusion and information bottleneck.</p>
+<p>The whole encoder stack is isolated representation learning of input text. Regardless how many input tokens, as long as they are within context window, the output is a learned representation, a vector in latent space. Text to vector is a huge bottleneck. Useful information are encoded in the topological relationships in such latent space.</p>
+<div class="page-columns page-full"><p>Take <code>T5</code> for example, from input text to learned representation, it maps <code>(context_window, vocab_size) -&gt; (d_model)</code> where <code>vocab_size=32128, d_model=768</code><sup>2</sup>. I see a huge bottleneck. Input text flow through encoder stack and the resulting representation is hosted in this 768 dim latent space. Different input text would be projected as different vectors. The quality of intelligence is conditioned on the relationships among all possibly encoded vectors in such space, especially for out of distribution input texts.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://huggingface.co/t5-base/blob/main/config.json#L7">config.json</a></p></li></div></div>
+<p>Representation is later used in cross-attention to contribute relevant information to the text generation stack. The relevancy is conditioned on generated text and the relevant info added to the output of masked attention</p>
+<blockquote class="blockquote">
+<p>All modular computation functions can be reduced to function composition: the output of the function <img src="https://latex.codecogs.com/png.latex?f_%7B%5Ctheta_i%7D"> of a model is added to a new term that depends on a learned function <img src="https://latex.codecogs.com/png.latex?f_%7B%5Cvarphi%7D">: <img src="https://latex.codecogs.com/png.latex?f'_i(x)%20=%20f_%7B%5Ctheta%7D(x)%20+%20f_%7B%5Cvarphi_i%7D(x)">.</p>
+<p>–<span class="citation" data-cites="pfeifferModularDeepLearning2023">Pfeiffer et al. (2023)</span></p>
+</blockquote>
+<p>You can see masked attention + cross attention is that addition. The purpose of the whole encoder stack and cross attention is to infuse input info to change how text generative function works. This is what adapters do.</p>
+<p>Why don’t we have 100b+ T5, but many 100b+ decoder only LLM?</p>
+<p>Text only modality doesn’t deal with <code>different noise topology</code>. It has one learning dynamics with coherent input representation. Forced mid fusion is unnecessary engineering. That’s why independent encoder is redundant especially during the push of hyperscaling to squeeze out the last few bits.</p>
+<blockquote class="blockquote">
+<p>…there are benefits to squeezing as much performance as possible out of large generative image models, as significant semantic information may lie in the <code>last few bits</code></p>
+<p>–<span class="citation" data-cites="henighanScalingLawsAutoregressive2020">Henighan et al. (2020)</span></p>
+</blockquote>
+<p>Small model (&lt;20b) is not as powerful as 100b+ model. Forced sparsity could be useful <code>inductive bias</code> to boost performance to a point. That’s why T5 works great for finetuning <span class="citation" data-cites="wangWhatLanguageModel2022a longpreFlanCollectionDesigning2023">(Wang et al. 2022; Longpre et al. 2023)</span>. It’s meant to be specialized. However, when the goal is foundation model that saturates one modality as much as possible, scale is one working formula and the raw performance is self-evident. Big models are more sample efficient, learn faster and compress better.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/llama.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="touvronLLaMAOpenEfficient">Touvron et al. (2023)</span></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="multimodal-encoder-decoder-and-early-fusion-decoder" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="multimodal-encoder-decoder-and-early-fusion-decoder">Multimodal: encoder-decoder and early fusion decoder</h2>
+<p>It would be easier to see the basic pattern with few examples.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;"># patterns</span></span>
+<span id="cb1-2">fused_info <span class="op" style="color: #5E5E5E;">=</span> fuse(modality_a, modality_b)</span>
+<span id="cb1-3">output <span class="op" style="color: #5E5E5E;">=</span> task(fused_info)</span></code></pre></div>
+<p>Task itself is not that important. The point is learnable intelligence to get useful multimodal representation. Task is used to gauge whether the learned representation is useful.</p>
+<section id="retro-enc-dec-texttext-text-generation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="retro-enc-dec-texttext-text-generation"><code>RETRO</code>: enc-dec text|text, text generation</h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/RETRO.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="borgeaudImprovingLanguageModels2022">Borgeaud et al. (2022)</span></figcaption><p></p>
+</figure>
+</div>
+<p>External memory as modality to power traditional text generation task. Retrieval as first class citizen not after thought as in-context retrieval <span class="citation" data-cites="mialonAugmentedLanguageModels2023">(Mialon et al. 2023)</span>.</p>
+</section>
+<section id="flamingo-enc-dec-imagetext-text-generation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="flamingo-enc-dec-imagetext-text-generation"><code>Flamingo</code>: enc-dec image|text, text generation</h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/Flamingo.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="alayracFlamingoVisualLanguage2022">Alayrac et al. (2022)</span></figcaption><p></p>
+</figure>
+</div>
+<p>Interleaving image and text. VQA is the logical next step of <code>ChatGPT</code>.</p>
+</section>
+<section id="latent-diffusion-enc-dec-imagetext-image-generation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="latent-diffusion-enc-dec-imagetext-image-generation"><code>latent diffusion</code>: enc-dec image|text, image generation</h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/latent_diffusion_f3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="rombachHighResolutionImageSynthesis2022">Rombach et al. (2022)</span></figcaption><p></p>
+</figure>
+</div>
+<p>Conditioned diffusion for image generation.</p>
+</section>
+<section id="muse-imagetext-image-generation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="muse-imagetext-image-generation"><code>Muse</code>: image|text, image generation</h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/muse.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="changMuseTextToImageGeneration2023">Chang et al. (2023)</span></figcaption><p></p>
+</figure>
+</div>
+<p>Like 2 layer enc-dec, diffusion free image generation. Very cool.</p>
+</section>
+<section id="speecht5-enc-dec-audiotext-text---audio-generation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="speecht5-enc-dec-audiotext-text---audio-generation"><code>SpeechT5</code>: enc-dec audio|text, text &lt;-&gt; audio generation</h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/speecht5_f2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="aoSpeechT5UnifiedModalEncoderDecoder2022">Ao et al. (2022)</span></figcaption><p></p>
+</figure>
+</div>
+<p>Pre-post processing modules are adapters. Close to the idea:</p>
+<blockquote class="blockquote">
+<p>… image representations from vision models can be transferred as continuous prompts to frozen LMs by training only a single linear projection.</p>
+<p>–<span class="citation" data-cites="merulloLinearlyMappingImage2022">Merullo et al. (2022)</span></p>
+</blockquote>
+</section>
+<section id="gato-decoder-only-all2all" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="gato-decoder-only-all2all"><code>Gato</code>: decoder only all2all</h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/Gato.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="reedGeneralistAgent2022">Reed et al. (2022)</span></figcaption><p></p>
+</figure>
+</div>
+<p>A 1.2B parameter decoder-only transformer with 24 layers, an embedding size of 2048, and a post-attention feedforward hidden size of 8196.</p>
+<p>The major contributions are multimodal tokenization, embedding and training objectives. Pretty sure DeepMind didn’t expect naive <code>early fusion</code> decoder to be the final answer of multimodal learning.</p>
+<p>Or it’s that easy… Just few missing pieces to deal with such as limited context window, quadruple computation of self-attention and so on. Given recent light speed of AI progress, I don’t think Gato is the answer but I’m not so sure anymore LoL.</p>
+<hr>
+<p>All above are interesting. The holy grail is to find a scaling friendly formula for multimodal learning just like GPT3 did to text. Scaling friendly in terms of:</p>
+<ul>
+<li>Simple, easy, parallelizable architecture.</li>
+<li>BIG data.</li>
+<li>Self supervised objective function.</li>
+</ul>
+<p>Current multimodal models are far from settling down on the architecture. Image caption dataset is great but one simply can’t expect to find enough <code>(x, natural language)</code> supervision for every modality. Too many hard to describe intelligence going on daily. Try to explain the internal state of playing piano or the touch of a perfect golf swing. There would always be some modalities that have small cross-modal latent representation. Language is useful but not the universal multimodal substrate.</p>
+<p>I just don’t see current mutation of multimodal enc-dec or simple multimodal decoder architecture are there yet. To be fair, some are already very useful.</p>
+</section>
+</section>
+<section id="back-to-bottleneck-mid-fusion" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="back-to-bottleneck-mid-fusion">Back to bottleneck mid fusion</h2>
+<p>Both architecture and choice of modalities are interesting.</p>
+<section id="architecture" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="architecture">architecture</h3>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/attn_bottleneck_f2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="nagraniAttentionBottlenecksMultimodal2022">Nagrani et al. (2022)</span></figcaption><p></p>
+</figure>
+</div>
+<p>Intuitively, late fusion and early fusion can’t be optimal. Remember we want to scale like crazy. Manually engineered enc-dec is not optimal as well. The paper use few <code>bottleneck token</code> and <code>bottleneck transformer</code> to replace the whole encoder plus cross attention to decoder. The size of bottleneck token could be a hyperparameter to control the size of cross-modal latent space as in <span class="citation" data-cites="aoSpeechT5UnifiedModalEncoderDecoder2022">Ao et al. (2022)</span>.</p>
+<p>The architecture is simple and elegant.</p>
+</section>
+<section id="modality" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="modality">modality</h3>
+<p>Given the following context:</p>
+<ul>
+<li>Text is done. Mobile phone kind of done that innovations are still expected but the field is a perfect competition market. The speed, price and quality of <code>ChatGPT API</code> is crazy.<sup>3</sup></li>
+<li><code>(text, image) -&gt; image</code> is in the instruction finetuning stage <span class="citation" data-cites="zhangAddingConditionalControl2023 huangComposerCreativeControllable2023">(Zhang and Agrawala 2023; L. Huang et al. 2023)</span>.<br>
+</li>
+<li><code>(text, image) -&gt; text</code> is improving super fast <span class="citation" data-cites="kohGroundingLanguageModels2023 liBLIP2BootstrappingLanguageImage2023 huangLanguageNotAll2023">(Koh, Salakhutdinov, and Fried 2023; Li et al. 2023; S. Huang et al. 2023)</span></li>
+</ul>
+<div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;<a href="https://openai.com/blog/introducing-chatgpt-and-whisper-apis">Introducing ChatGPT and Whisper APIs</a></p></li></div><p><code>(image, audio) -&gt; x</code> is a good proxy to think about how and what &lt;12 month baby could learn. It is right at the multimodal research frontier. I see this as the last frontier before embodied learning and some even argue body is not necessary for high intelligence. Reviewing my daily activity, input and output, the idea of body is not necessary for average level intelligence finds support lol.</p>
+<p>Video is abundant. Learning dynamics and noise topology of image and audio are real challenges. Yes we could use natural language to bridge them but that is boring and even it works to an extend, better solution is expected.</p>
+</section>
+</section>
+<section id="outro" class="level2">
+<h2 class="anchored" data-anchor-id="outro">Outro</h2>
+<p>I’m facing 2 problems to further exploring this track of research:</p>
+<ol type="1">
+<li>Weak information theory understanding.</li>
+<li>Weak engineering capabilities to carry on experiments effectively.</li>
+</ol>
+<p><span class="citation" data-cites="aghajanyanScalingLawsGenerative2023">Aghajanyan et al. (2023)</span> could help me get oriented to information theory wrt multimodal research but the theoretical gap is too big to bridge with just one paper. Time to read textbooks.</p>
+<p>End of procrastination. Back to code and read.</p>
+
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-aghajanyanScalingLawsGenerative2023" class="csl-entry">
+Aghajanyan, Armen, Lili Yu, Alexis Conneau, Wei-Ning Hsu, Karen Hambardzumyan, Susan Zhang, Stephen Roller, Naman Goyal, Omer Levy, and Luke Zettlemoyer. 2023. <span>“Scaling <span>Laws</span> for <span>Generative Mixed-Modal Language Models</span>.”</span> January 9, 2023. <a href="http://arxiv.org/abs/2301.03728">http://arxiv.org/abs/2301.03728</a>.
+</div>
+<div id="ref-alayracFlamingoVisualLanguage2022" class="csl-entry">
+Alayrac, Jean-Baptiste, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, et al. 2022. <span>“🦩 <span>Flamingo</span>: A <span>Visual Language Model</span> for <span>Few-Shot Learning</span>,”</span> April, 66.
+</div>
+<div id="ref-aoSpeechT5UnifiedModalEncoderDecoder2022" class="csl-entry">
+Ao, Junyi, Rui Wang, Long Zhou, Chengyi Wang, Shuo Ren, Yu Wu, Shujie Liu, et al. 2022. <span>“<span>SpeechT5</span>: <span>Unified-Modal Encoder-Decoder Pre-Training</span> for <span>Spoken Language Processing</span>.”</span> May 24, 2022. <a href="http://arxiv.org/abs/2110.07205">http://arxiv.org/abs/2110.07205</a>.
+</div>
+<div id="ref-baarsGlobalWorkspaceTheory2017" class="csl-entry">
+Baars, Bernard J. 2017. <span>“The <span>Global Workspace Theory</span> of <span>Consciousness</span>.”</span> In <em>The <span>Blackwell Companion</span> to <span>Consciousness</span></em>, 227–42. <span>John Wiley &amp; Sons, Ltd</span>. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119132363.ch16">https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119132363.ch16</a>.
+</div>
+<div id="ref-borgeaudImprovingLanguageModels2022" class="csl-entry">
+Borgeaud, Sebastian, Arthur Mensch, Jordan Hoffmann, Trevor Cai, Eliza Rutherford, Katie Millican, George van den Driessche, et al. 2022. <span>“Improving Language Models by Retrieving from Trillions of Tokens.”</span> February 7, 2022. <a href="http://arxiv.org/abs/2112.04426">http://arxiv.org/abs/2112.04426</a>.
+</div>
+<div id="ref-changMuseTextToImageGeneration2023" class="csl-entry">
+Chang, Huiwen, Han Zhang, Jarred Barber, A. J. Maschinot, Jose Lezama, Lu Jiang, Ming-Hsuan Yang, et al. 2023. <span>“Muse: <span>Text-To-Image Generation</span> via <span>Masked Generative Transformers</span>.”</span> January 2, 2023. <a href="http://arxiv.org/abs/2301.00704">http://arxiv.org/abs/2301.00704</a>.
+</div>
+<div id="ref-henighanScalingLawsAutoregressive2020" class="csl-entry">
+Henighan, Tom, Jared Kaplan, Mor Katz, Mark Chen, Christopher Hesse, Jacob Jackson, Heewoo Jun, et al. 2020. <span>“Scaling <span>Laws</span> for <span>Autoregressive Generative Modeling</span>.”</span> November 5, 2020. <a href="http://arxiv.org/abs/2010.14701">http://arxiv.org/abs/2010.14701</a>.
+</div>
+<div id="ref-huangComposerCreativeControllable2023" class="csl-entry">
+Huang, Lianghua, Di Chen, Yu Liu, Yujun Shen, Deli Zhao, and Jingren Zhou. 2023. <span>“Composer: <span>Creative</span> and <span>Controllable Image Synthesis</span> with <span>Composable Conditions</span>.”</span> February 21, 2023. <a href="http://arxiv.org/abs/2302.09778">http://arxiv.org/abs/2302.09778</a>.
+</div>
+<div id="ref-huangLanguageNotAll2023" class="csl-entry">
+Huang, Shaohan, Li Dong, Wenhui Wang, Yaru Hao, Saksham Singhal, Shuming Ma, Tengchao Lv, et al. 2023. <span>“Language <span>Is Not All You Need</span>: <span>Aligning Perception</span> with <span>Language Models</span>.”</span> February 27, 2023. <a href="http://arxiv.org/abs/2302.14045">http://arxiv.org/abs/2302.14045</a>.
+</div>
+<div id="ref-kohGroundingLanguageModels2023" class="csl-entry">
+Koh, Jing Yu, Ruslan Salakhutdinov, and Daniel Fried. 2023. <span>“Grounding <span>Language Models</span> to <span>Images</span> for <span>Multimodal Generation</span>.”</span> January 31, 2023. <a href="http://arxiv.org/abs/2301.13823">http://arxiv.org/abs/2301.13823</a>.
+</div>
+<div id="ref-liBLIP2BootstrappingLanguageImage2023" class="csl-entry">
+Li, Junnan, Dongxu Li, Silvio Savarese, and Steven Hoi. 2023. <span>“<span>BLIP-2</span>: <span class="nocase">Bootstrapping Language-Image Pre-training</span> with <span>Frozen Image Encoders</span> and <span>Large Language Models</span>.”</span> January 29, 2023. <a href="http://arxiv.org/abs/2301.12597">http://arxiv.org/abs/2301.12597</a>.
+</div>
+<div id="ref-longpreFlanCollectionDesigning2023" class="csl-entry">
+Longpre, Shayne, Le Hou, Tu Vu, Albert Webson, Hyung Won Chung, Yi Tay, Denny Zhou, et al. 2023. <span>“The <span>Flan Collection</span>: <span>Designing Data</span> and <span>Methods</span> for <span>Effective Instruction Tuning</span>.”</span> January 31, 2023. <a href="http://arxiv.org/abs/2301.13688">http://arxiv.org/abs/2301.13688</a>.
+</div>
+<div id="ref-merulloLinearlyMappingImage2022" class="csl-entry">
+Merullo, Jack, Louis Castricato, Carsten Eickhoff, and Ellie Pavlick. 2022. <span>“Linearly <span>Mapping</span> from <span>Image</span> to <span>Text Space</span>.”</span> September 29, 2022. <a href="http://arxiv.org/abs/2209.15162">http://arxiv.org/abs/2209.15162</a>.
+</div>
+<div id="ref-mialonAugmentedLanguageModels2023" class="csl-entry">
+Mialon, Grégoire, Roberto Dessì, Maria Lomeli, Christoforos Nalmpantis, Ram Pasunuru, Roberta Raileanu, Baptiste Rozière, et al. 2023. <span>“Augmented <span>Language Models</span>: A <span>Survey</span>.”</span> February 15, 2023. <a href="http://arxiv.org/abs/2302.07842">http://arxiv.org/abs/2302.07842</a>.
+</div>
+<div id="ref-nagraniAttentionBottlenecksMultimodal2022" class="csl-entry">
+Nagrani, Arsha, Shan Yang, Anurag Arnab, Aren Jansen, Cordelia Schmid, and Chen Sun. 2022. <span>“Attention <span>Bottlenecks</span> for <span>Multimodal Fusion</span>.”</span> November 30, 2022. <a href="http://arxiv.org/abs/2107.00135">http://arxiv.org/abs/2107.00135</a>.
+</div>
+<div id="ref-pfeifferModularDeepLearning2023" class="csl-entry">
+Pfeiffer, Jonas, Sebastian Ruder, Ivan Vulić, and Edoardo Maria Ponti. 2023. <span>“Modular <span>Deep Learning</span>.”</span> February 22, 2023. <a href="http://arxiv.org/abs/2302.11529">http://arxiv.org/abs/2302.11529</a>.
+</div>
+<div id="ref-reedGeneralistAgent2022" class="csl-entry">
+Reed, Scott, Konrad Zolna, Emilio Parisotto, Sergio Gomez Colmenarejo, Alexander Novikov, Gabriel Barth-Maron, Mai Gimenez, et al. 2022. <span>“A <span>Generalist Agent</span>.”</span> May 19, 2022. <a href="http://arxiv.org/abs/2205.06175">http://arxiv.org/abs/2205.06175</a>.
+</div>
+<div id="ref-rombachHighResolutionImageSynthesis2022" class="csl-entry">
+Rombach, Robin, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn Ommer. 2022. <span>“High-<span>Resolution Image Synthesis</span> with <span>Latent Diffusion Models</span>.”</span> April 13, 2022. <a href="http://arxiv.org/abs/2112.10752">http://arxiv.org/abs/2112.10752</a>.
+</div>
+<div id="ref-touvronLLaMAOpenEfficient" class="csl-entry">
+Touvron, Hugo, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothee Lacroix, Baptiste Rozière, et al. 2023. <span>“<span>LLaMA</span>: <span>Open</span> and <span>Efficient Foundation Language Models</span>,”</span> February.
+</div>
+<div id="ref-vaswaniAttentionAllYou2017" class="csl-entry">
+Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017. <span>“Attention <span>Is All You Need</span>.”</span> <a href="http://arxiv.org/abs/1706.03762">http://arxiv.org/abs/1706.03762</a>.
+</div>
+<div id="ref-wangWhatLanguageModel2022a" class="csl-entry">
+Wang, Thomas, Adam Roberts, Daniel Hesslow, Teven Le Scao, Hyung Won Chung, Iz Beltagy, Julien Launay, and Colin Raffel. 2022. <span>“What <span>Language Model Architecture</span> and <span>Pretraining Objective Work Best</span> for <span>Zero-Shot Generalization</span>?”</span> April 12, 2022. <a href="http://arxiv.org/abs/2204.05832">http://arxiv.org/abs/2204.05832</a>.
+</div>
+<div id="ref-zhangAddingConditionalControl2023" class="csl-entry">
+Zhang, Lvmin, and Maneesh Agrawala. 2023. <span>“Adding <span>Conditional Control</span> to <span class="nocase">Text-to-Image Diffusion Models</span>.”</span> February 10, 2023. <a href="http://arxiv.org/abs/2302.05543">http://arxiv.org/abs/2302.05543</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>multimodal</category>
+  <guid>https://lukaemon.github.io/posts/2023/from-text-to-multimodal/index.html</guid>
+  <pubDate>Sun, 05 Mar 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/cover.png" medium="image" type="image/png" height="82" width="144"/>
+</item>
 <item>
   <title>Learning to learn</title>
   <dc:creator>Lucas Shen</dc:creator>
@@ -575,16 +864,16 @@ max      1153.0     94.0</code></pre>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-agostinelliMusicLMGeneratingMusic2023" class="csl-entry">
-Agostinelli, Andrea, Timo I. Denk, Zalán Borsos, Jesse Engel, Mauro Verzetti, Antoine Caillon, Qingqing Huang, et al. 2023. <span>“<span>MusicLM</span>: <span>Generating Music From Text</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2301.11325">http://arxiv.org/abs/2301.11325</a>.
+Agostinelli, Andrea, Timo I. Denk, Zalán Borsos, Jesse Engel, Mauro Verzetti, Antoine Caillon, Qingqing Huang, et al. 2023. <span>“<span>MusicLM</span>: <span>Generating Music From Text</span>.”</span> January 26, 2023. <a href="http://arxiv.org/abs/2301.11325">http://arxiv.org/abs/2301.11325</a>.
 </div>
 <div id="ref-alayracFlamingoVisualLanguage2022" class="csl-entry">
 Alayrac, Jean-Baptiste, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, et al. 2022. <span>“🦩 <span>Flamingo</span>: A <span>Visual Language Model</span> for <span>Few-Shot Learning</span>,”</span> April, 66.
 </div>
 <div id="ref-borgeaudImprovingLanguageModels2022" class="csl-entry">
-Borgeaud, Sebastian, Arthur Mensch, Jordan Hoffmann, Trevor Cai, Eliza Rutherford, Katie Millican, George van den Driessche, et al. 2022. <span>“Improving Language Models by Retrieving from Trillions of Tokens.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2112.04426">http://arxiv.org/abs/2112.04426</a>.
+Borgeaud, Sebastian, Arthur Mensch, Jordan Hoffmann, Trevor Cai, Eliza Rutherford, Katie Millican, George van den Driessche, et al. 2022. <span>“Improving Language Models by Retrieving from Trillions of Tokens.”</span> February 7, 2022. <a href="http://arxiv.org/abs/2112.04426">http://arxiv.org/abs/2112.04426</a>.
 </div>
 <div id="ref-henighanScalingLawsAutoregressive2020" class="csl-entry">
-Henighan, Tom, Jared Kaplan, Mor Katz, Mark Chen, Christopher Hesse, Jacob Jackson, Heewoo Jun, et al. 2020. <span>“Scaling <span>Laws</span> for <span>Autoregressive Generative Modeling</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2010.14701">http://arxiv.org/abs/2010.14701</a>.
+Henighan, Tom, Jared Kaplan, Mor Katz, Mark Chen, Christopher Hesse, Jacob Jackson, Heewoo Jun, et al. 2020. <span>“Scaling <span>Laws</span> for <span>Autoregressive Generative Modeling</span>.”</span> November 5, 2020. <a href="http://arxiv.org/abs/2010.14701">http://arxiv.org/abs/2010.14701</a>.
 </div>
 <div id="ref-raeScalingLanguageModels2022" class="csl-entry">
 Rae, Jack W., Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, et al. 2022. <span>“Scaling <span>Language Models</span>: <span>Methods</span>, <span>Analysis</span> &amp; <span>Insights</span> from <span>Training Gopher</span>.”</span> <a href="http://arxiv.org/abs/2112.11446">http://arxiv.org/abs/2112.11446</a>.
@@ -593,25 +882,25 @@ Rae, Jack W., Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, F
 Ramesh, Aditya, Prafulla Dhariwal, Alex Nichol, Casey Chu, and Mark Chen. 2022. <span>“Hierarchical <span>Text-Conditional Image Generation</span> with <span>CLIP Latents</span>,”</span> 26.
 </div>
 <div id="ref-reedGeneralistAgent2022" class="csl-entry">
-Reed, Scott, Konrad Zolna, Emilio Parisotto, Sergio Gomez Colmenarejo, Alexander Novikov, Gabriel Barth-Maron, Mai Gimenez, et al. 2022. <span>“A <span>Generalist Agent</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2205.06175">http://arxiv.org/abs/2205.06175</a>.
+Reed, Scott, Konrad Zolna, Emilio Parisotto, Sergio Gomez Colmenarejo, Alexander Novikov, Gabriel Barth-Maron, Mai Gimenez, et al. 2022. <span>“A <span>Generalist Agent</span>.”</span> May 19, 2022. <a href="http://arxiv.org/abs/2205.06175">http://arxiv.org/abs/2205.06175</a>.
 </div>
 <div id="ref-rombachHighResolutionImageSynthesis2022" class="csl-entry">
-Rombach, Robin, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn Ommer. 2022. <span>“High-<span>Resolution Image Synthesis</span> with <span>Latent Diffusion Models</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2112.10752">http://arxiv.org/abs/2112.10752</a>.
+Rombach, Robin, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn Ommer. 2022. <span>“High-<span>Resolution Image Synthesis</span> with <span>Latent Diffusion Models</span>.”</span> April 13, 2022. <a href="http://arxiv.org/abs/2112.10752">http://arxiv.org/abs/2112.10752</a>.
 </div>
 <div id="ref-sunRecitationAugmentedLanguageModels2022a" class="csl-entry">
-Sun, Zhiqing, Xuezhi Wang, Yi Tay, Yiming Yang, and Denny Zhou. 2022. <span>“Recitation-<span>Augmented Language Models</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2210.01296">http://arxiv.org/abs/2210.01296</a>.
+Sun, Zhiqing, Xuezhi Wang, Yi Tay, Yiming Yang, and Denny Zhou. 2022. <span>“Recitation-<span>Augmented Language Models</span>.”</span> October 3, 2022. <a href="http://arxiv.org/abs/2210.01296">http://arxiv.org/abs/2210.01296</a>.
 </div>
 <div id="ref-suzgunChallengingBIGBenchTasks2022" class="csl-entry">
 Suzgun, Mirac, Nathan Scales, Nathanael Schärli, Sebastian Gehrmann, Yi Tay, Hyung Won Chung, Aakanksha Chowdhery, et al. 2022. <span>“Challenging <span>BIG-Bench Tasks</span> and <span class="nocase">Whether Chain-of-Thought Can Solve Them</span>,”</span> October. <a href="https://arxiv.org/abs/2210.09261v1">https://arxiv.org/abs/2210.09261v1</a>.
 </div>
 <div id="ref-wangSelfConsistencyImprovesChain2022a" class="csl-entry">
-Wang, Xuezhi, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang, Aakanksha Chowdhery, and Denny Zhou. 2022. <span>“Self-<span>Consistency Improves Chain</span> of <span>Thought Reasoning</span> in <span>Language Models</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2203.11171">http://arxiv.org/abs/2203.11171</a>.
+Wang, Xuezhi, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang, Aakanksha Chowdhery, and Denny Zhou. 2022. <span>“Self-<span>Consistency Improves Chain</span> of <span>Thought Reasoning</span> in <span>Language Models</span>.”</span> October 4, 2022. <a href="http://arxiv.org/abs/2203.11171">http://arxiv.org/abs/2203.11171</a>.
 </div>
 <div id="ref-weiChainThoughtPrompting2022" class="csl-entry">
-Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc Le, and Denny Zhou. 2022. <span>“Chain of <span>Thought Prompting Elicits Reasoning</span> in <span>Large Language Models</span>.”</span> <a href="https://arxiv.org/abs/2201.11903v5">https://arxiv.org/abs/2201.11903v5</a>.
+Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc Le, and Denny Zhou. 2022. <span>“Chain of <span>Thought Prompting Elicits Reasoning</span> in <span>Large Language Models</span>.”</span> January 28, 2022. <a href="https://arxiv.org/abs/2201.11903v5">https://arxiv.org/abs/2201.11903v5</a>.
 </div>
 <div id="ref-zhouLeasttoMostPromptingEnables2022" class="csl-entry">
-Zhou, Denny, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, et al. 2022. <span>“Least-to-<span>Most Prompting Enables Complex Reasoning</span> in <span>Large Language Models</span>.”</span> <span>arXiv</span>. <a href="http://arxiv.org/abs/2205.10625">http://arxiv.org/abs/2205.10625</a>.
+Zhou, Denny, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, et al. 2022. <span>“Least-to-<span>Most Prompting Enables Complex Reasoning</span> in <span>Large Language Models</span>.”</span> October 6, 2022. <a href="http://arxiv.org/abs/2205.10625">http://arxiv.org/abs/2205.10625</a>.
 </div>
 </div></section></div> ]]></description>
   <category>rationale engineering</category>
