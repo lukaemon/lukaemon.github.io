@@ -7,7 +7,9 @@ image: "hands.jpg"
 ---
 ![M.C. Escher’s “Drawing Hands,” a lithograph from 1948. Collection of Experience in Visual Arts, Cordon Art B.V., Baarn, The Netherlands.](hands.jpg)
 
-Learning is change, mentally and physically. Learning is creation.  
+> Updated on 2023-03-07: add [Everything is a Remix Part 4](https://www.youtube.com/watch?v=rswxcDyotXA)
+
+## Learning is change, mentally and physically. Learning is creation.  
 
 First, one creates new mental constructs, represented as new neuronal firing patterns. Over time, firing patterns change actual wirings of the brain. 
 
@@ -31,7 +33,7 @@ Means of abstraction is where magic happened. How to name a complex construct an
 Mastering primitives, APIs and the power of abstraction, complex system could be understood, and created.
 
 ## The nature of creation is remix
-![Everything is a Remix: [part1](https://www.youtube.com/watch?v=MZ2GuvUWaP8), [part2](https://www.youtube.com/watch?v=HhMar_eYnNY), [part3](https://www.youtube.com/watch?v=dwxtW1Aio68)](copy_transform_combined.jpeg)
+![Everything is a Remix: [part1](https://www.youtube.com/watch?v=MZ2GuvUWaP8), [part2](https://www.youtube.com/watch?v=HhMar_eYnNY), [part3](https://www.youtube.com/watch?v=dwxtW1Aio68), [part4](https://www.youtube.com/watch?v=rswxcDyotXA)](copy_transform_combined.jpeg)
 
 The series do an incredible job to explain the nature of creation from cultural perspective. Artists first would copy lots of previous works to learn the basics and build up muscle memories, primitive elements. Then they could start tweaking old ideas, and fit different ideas together to create new one, means of combination and abstraction. 
 
