@@ -57,7 +57,9 @@ Text2text treat input text as a modality. Info of input text is fused to text ge
 
 The whole encoder stack is isolated representation learning of input text. Regardless how many input tokens, as long as they are within context window, the output is a learned representation, a vector in latent space. Text to vector is a huge bottleneck. Useful information are encoded in the topological relationships in such latent space.
 
-Take `T5` for example, from input text to learned representation, it maps `(context_window, vocab_size) -> (d_model)` where `vocab_size=32128, d_model=768`^[[config.json](https://huggingface.co/t5-base/blob/main/config.json#L7)]. I see a huge bottleneck. Input text flow through encoder stack and the resulting representation is hosted in this 768 dim latent space. Different input text would be projected as different vectors. The quality of intelligence is conditioned on the relationships among all possibly encoded vectors in such space, especially for out of distribution input texts. 
+For example, the T5 model takes input text and transforms it into a learned representation for the decoder stack. This transformation involves mapping a `(number_of_token, d_model)` tensor to a `(d_model)` tensor where `d_model` is 768 according to the model's configuration^[[config.json](https://huggingface.co/t5-base/blob/main/config.json#L7)]. The input goes through several transformer layers before producing this vector.
+
+The model's bottleneck is in the encoder stack, where the input text is transformed into a 768-dimensional latent space. Each input text is represented as a unique vector in this space, and the model's intelligence depends on the relationships between these vectors, particularly for input texts that the model has not seen before.
 
 Representation is later used in cross-attention to contribute relevant information to the text generation stack. The relevancy is conditioned on generated text and the relevant info added to the output of masked attention
  
