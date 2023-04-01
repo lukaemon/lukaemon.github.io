@@ -10,7 +10,7 @@
 <atom:link href="https://lukaemon.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>to my self-play</description>
 <generator>quarto-1.2.280</generator>
-<lastBuildDate>Sun, 26 Mar 2023 16:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 31 Mar 2023 16:00:00 GMT</lastBuildDate>
 <item>
   <title>On GPT4</title>
   <dc:creator>Lucas Shen</dc:creator>
@@ -309,16 +309,16 @@ Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, 
 </div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
   author = {Lucas Shen},
   title = {On {GPT4}},
-  date = {2023-03-27},
+  date = {2023-04-01},
   url = {https://lukaemon.github.io/posts/2023/on-gpt4},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“On GPT4.”</span> March 27, 2023. <a href="https://lukaemon.github.io/posts/2023/on-gpt4">https://lukaemon.github.io/posts/2023/on-gpt4</a>.
+Lucas Shen. 2023. <span>“On GPT4.”</span> April 1, 2023. <a href="https://lukaemon.github.io/posts/2023/on-gpt4">https://lukaemon.github.io/posts/2023/on-gpt4</a>.
 </div></div></section></div> ]]></description>
   <category>opinion</category>
   <guid>https://lukaemon.github.io/posts/2023/on-gpt4/index.html</guid>
-  <pubDate>Sun, 26 Mar 2023 16:00:00 GMT</pubDate>
+  <pubDate>Fri, 31 Mar 2023 16:00:00 GMT</pubDate>
   <media:content url="https://lukaemon.github.io/posts/2023/on-gpt4/cover.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
