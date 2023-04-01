@@ -1,7 +1,7 @@
 ---
 title: "On GPT4"
 description: My takeaway of gpt4 release
-date: "2023-04-02"
+date: "2023-04-01"
 categories: [opinion]
 image: "cover.png"
 ---
