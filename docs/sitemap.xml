@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lukaemon.github.io/posts/2023/learning-to-learn/index.html</loc>
-    <lastmod>2023-03-07T11:46:35.576Z</lastmod>
+    <lastmod>2023-04-01T16:37:29.672Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/posts/2023/humor-ai/index.html</loc>
-    <lastmod>2023-03-07T11:46:36.184Z</lastmod>
+    <lastmod>2023-04-01T16:37:30.414Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/posts/2023/from-text-to-multimodal/index.html</loc>
-    <lastmod>2023-03-07T11:46:37.053Z</lastmod>
+    <lastmod>2023-04-01T16:37:31.367Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/samsum.html</loc>
-    <lastmod>2023-03-07T11:46:37.761Z</lastmod>
+    <lastmod>2023-04-01T16:37:32.198Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/posts/2023/sc-cot/index.html</loc>
-    <lastmod>2023-03-07T11:46:38.456Z</lastmod>
+    <lastmod>2023-04-01T16:37:33.045Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukaemon.github.io/posts/2023/on-gpt4/index.html</loc>
+    <lastmod>2023-04-01T16:37:34.093Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/index.html</loc>
-    <lastmod>2023-03-07T11:46:39.106Z</lastmod>
+    <lastmod>2023-04-01T16:37:35.509Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/about.html</loc>
-    <lastmod>2023-03-07T11:46:39.690Z</lastmod>
+    <lastmod>2023-04-01T16:37:36.107Z</lastmod>
   </url>
 </urlset>

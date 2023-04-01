@@ -2,7 +2,7 @@
 title: "Humor AI"
 description: Computational humor?
 date: "2023-02-05"
-categories: [grounding, multimodal]
+categories: [grounding]
 image: "cover.png"
 ---
 ![MJ: abstract art, picasso's expression about humor --ar 16:9](cover.png)

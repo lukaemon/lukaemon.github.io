@@ -160,7 +160,7 @@ The architecture is simple and elegant.
 Given the following context:
 
 - Text is done. Mobile phone kind of done that innovations are still expected but the field is a perfect competition market. The speed, price and quality of `ChatGPT API` is crazy.^[[Introducing ChatGPT and Whisper APIs](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)]
-- `(text, image) -> image` is in the instruction finetuning stage [@zhangAddingConditionalControl2023;@huangComposerCreativeControllable2023].  
+- `(text, image) -> image` is in the instruction finetuning stage [@zhangAddingConditionalControl2023].  
 - `(text, image) -> text` is improving super fast [@kohGroundingLanguageModels2023;@liBLIP2BootstrappingLanguageImage2023;@huangLanguageNotAll2023]
 
 `(image, audio) -> x` is a good proxy to think about how and what <12 month baby could learn. It is right at the multimodal research frontier. I see this as the last frontier before embodied learning and some even argue body is not necessary for high intelligence. Reviewing my daily activity, input and output, the idea of body is not necessary for average level intelligence finds support lol. 
