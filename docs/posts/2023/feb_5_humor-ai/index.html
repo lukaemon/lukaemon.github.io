@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="to my self-play">
+<meta name="author" content="Lucas Shen">
+<meta name="dcterms.date" content="2023-02-05">
+<meta name="description" content="Computational humor?">
 
-<title>Lucas Shen - 🖖 Welcome</title>
+<title>Lucas Shen - Humor AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,27 +26,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./asset/favicon.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../asset/favicon.jpg" rel="icon" type="image/jpeg">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,77 +71,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="alternate" type="application/rss+xml" title="Lucas Shen" href="index.xml" data-external="1"><meta property="og:title" content="Lucas Shen - 🖖 Welcome">
-<meta property="og:description" content="to my self-play">
-<meta property="og:image" content="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/cover.png">
+<meta property="og:title" content="Lucas Shen - Humor AI">
+<meta property="og:description" content="Computational humor?">
+<meta property="og:image" content="https://lukaemon.github.io/posts/2023/feb_5_humor-ai/cover.png">
 <meta property="og:site_name" content="Lucas Shen">
 <meta property="og:image:height" content="896">
-<meta property="og:image:width" content="1344">
-<meta name="twitter:title" content="Lucas Shen - 🖖 Welcome">
-<meta name="twitter:description" content="to my self-play">
-<meta name="twitter:image" content="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/cover.png">
+<meta property="og:image:width" content="1568">
+<meta name="twitter:title" content="Lucas Shen - Humor AI">
+<meta name="twitter:description" content="Computational humor?">
+<meta name="twitter:image" content="https://lukaemon.github.io/posts/2023/feb_5_humor-ai/cover.png">
 <meta name="twitter:image-height" content="896">
-<meta name="twitter:image-width" content="1344">
+<meta name="twitter:image-width" content="1568">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -152,7 +94,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Lucas Shen</span>
     </a>
   </div>
@@ -163,7 +105,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -177,7 +119,7 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -192,148 +134,80 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">🖖 Welcome</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title">Humor AI</h1>
                   <div>
         <div class="description">
-          to my self-play
+          Computational humor?
         </div>
       </div>
-                </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">grounding</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lucas Shen </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 5, 2023</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="grounding">grounding <span class="quarto-category-count">(1)</span></div><div class="category" data-category="meta-learning">meta-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="opinion">opinion <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
 
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="cover.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">MJ: abstract art, picasso’s expression about humor –ar 16:9</figcaption>
+</figure>
+</div>
+<p>Humor is preconditioned on the ability to see the bright side of something. One has to be able to see many sides, consciously choose the funny, optimistic interpretation and express in a way that resonates with target audiences. It shows both raw intelligence and wisdom.</p>
+<p>To detect humor and be humorous, grounding is necessary. Grounding to me is weaving modalities. Just a fancy way of saying having sampled variety of experiences of certain things or events.</p>
+<p>For example, to know what it really means about apple, one could write “apple”, read about it, draw, hold, throw, smell, eat, plant, cook, even share it with others. Without grounding, one can’t have acute and diversified perspectives on a thing or an event. It would be very hard to see ironic yet optimistic interpretation, be it human or AI.</p>
+<p>Grounding AI to full set of human experience is aligning computational humor to humans’. They may be able to see a kind of digital humor that is a bridge too far for us. Literally why Samantha in Her leaving Theodore<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;<a href="https://www.youtube.com/watch?v=PXTQwRf7iRg">youtube</a></p><p><sup>2</sup>&nbsp;<a href="https://twitter.com/ylecun/status/1621805604900585472">tweet</a></p></div><p>Humor is the ultimate Turing test. I see this as the source of Yann’s recent debate with others<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. It’s the most difficult test to pass. It’s the most difficult test to create.</p>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/were-all-leaving/1553022037?i=1553022378">
+</iframe>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="opinion" data-listing-date-sort="1680332400000" data-listing-file-modified-sort="1708984045272" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3443">
-<div class="thumbnail">
-<p><a href="./posts/2023/apr_1_on-gpt4/index.html" class="no-external"></a></p><a href="./posts/2023/apr_1_on-gpt4/index.html" class="no-external">
-<p><img src="./posts/2023/apr_1_on-gpt4/cover.png" class="thumbnail-image" style="height: 8em;"></p>
-</a><p><a href="./posts/2023/apr_1_on-gpt4/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023/apr_1_on-gpt4/index.html" class="no-external">On GPT4</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023/apr_1_on-gpt4/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('opinion'); return false;">
-opinion
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2023/apr_1_on-gpt4/index.html" class="no-external">My takeaway of gpt4 release</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2023/apr_1_on-gpt4/index.html" class="no-external">
-<div class="listing-date">
-Apr 1, 2023
-</div>
-<div class="listing-author">
-Lucas Shen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="meta-learning" data-listing-date-sort="1676361600000" data-listing-file-modified-sort="1708984045264" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1258">
-<div class="thumbnail">
-<p><a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external"></a></p><a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external">
-<p><img src="./posts/2023/feb_14_learning-to-learn/hands.jpg" class="thumbnail-image" style="height: 8em;"></p>
-</a><p><a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external">Learning to learn</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('meta-learning'); return false;">
-meta-learning
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external">So much to learn. How to learn more effectively?</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external">
-<div class="listing-date">
-Feb 14, 2023
-</div>
-<div class="listing-author">
-Lucas Shen
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="grounding" data-listing-date-sort="1675584000000" data-listing-file-modified-sort="1708984045258" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="229">
-<div class="thumbnail">
-<p><a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external"></a></p><a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external">
-<p><img src="./posts/2023/feb_5_humor-ai/cover.png" class="thumbnail-image" style="height: 8em;"></p>
-</a><p><a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external">Humor AI</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('grounding'); return false;">
-grounding
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external">Computational humor?</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external">
-<div class="listing-date">
-Feb 5, 2023
-</div>
-<div class="listing-author">
-Lucas Shen
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
+  author = {Shen, Lucas},
+  title = {Humor {AI}},
+  date = {2023-02-05},
+  url = {https://lukaemon.github.io/posts/2023/feb_5_humor-ai},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Shen, Lucas. 2023. <span>“Humor AI.”</span> February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/feb_5_humor-ai">https://lukaemon.github.io/posts/2023/feb_5_humor-ai</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -870,4 +744,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/lukaemon/lukaemon.github.io/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/lukaemon/lukaemon.github.io/blob/main/posts/2023/feb_5_humor-ai/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

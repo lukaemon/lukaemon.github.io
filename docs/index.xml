@@ -6,32 +6,33 @@
       version="2.0">
 <channel>
 <title>Lucas Shen</title>
-<link>https://lukaemon.github.io/index.html</link>
+<link>https://lukaemon.github.io/</link>
 <atom:link href="https://lukaemon.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>to my self-play</description>
-<generator>quarto-1.2.280</generator>
-<lastBuildDate>Fri, 31 Mar 2023 16:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.550</generator>
+<lastBuildDate>Sat, 01 Apr 2023 07:00:00 GMT</lastBuildDate>
 <item>
   <title>On GPT4</title>
   <dc:creator>Lucas Shen</dc:creator>
-  <link>https://lukaemon.github.io/posts/2023/on-gpt4/index.html</link>
+  <link>https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/</link>
   <description><![CDATA[ 
+
 
 
 
 
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/on-gpt4/cover.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption">MJ: abstract art, artificial general intelligence –ar 3:2 –v 5. This generation is interesting. It captures the shape of vector space, which is the foundation of modern AI. The shape at the center is more ordered, well organized, but blurry and chaotic close to the edge.</figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/cover.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">MJ: abstract art, artificial general intelligence –ar 3:2 –v 5. This generation is interesting. It captures the shape of vector space, which is the foundation of modern AI. The shape at the center is more ordered, well organized, but blurry and chaotic close to the edge.</figcaption>
 </figure>
 </div>
 <section id="context" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="context">Context</h2>
 <p>At first glance, gpt4 is 80% fear and 20% excitement. I’m afraid of its capability, impact to the future of work, and worried about advanced intelligence being controlled by single organization.</p>
 <p>However, fear is not real. Danger is. Fear is a mental construct mostly caused by ignorance. In hope to cure the ignorance, I go on studying and using gpt4. After few weeks of processing, the fear subsides. I have better understanding of gpt4’s capability, limitation, risk and the future.</p>
-<div class="page-columns page-full"><p>The sheer existence of GPT4 is pivotal to me. It is a wake up call: be prepared to live with AI at all level. I believe GPT4 is pivotal to the society as well. Prepared or not, AI is coming. Open letter<sup>1</sup> like this won’t slow it down, but accelerate. The letter basically validates the hype and few rounds of clickbait journalism and doom hyper would fuel the fear. Leading AI companies would have to handle AI R&amp;D as scientific discovery and political campaign in the post-GPT4 era. AI is political and even more so from now on.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://futureoflife.org/open-letter/pause-giant-ai-experiments">Pause Giant AI Experiments: An Open Letter</a></p></li></div></div>
-<p>Here is my opinion and I won’t bother to be neutral. I could be wrong and I am ready to be.</p>
+<p>The sheer existence of GPT4 is pivotal to me. It is a wake up call: be prepared to live with AI at all level. I believe GPT4 is pivotal to the society as well. Prepared or not, AI is coming. Open letter<sup>1</sup> like this won’t slow it down, but accelerate. The letter basically validates the hype and few rounds of clickbait journalism and doom hyper would fuel the fear. Leading AI companies would have to handle AI R&amp;D as scientific discovery and political campaign in the post-GPT4 era. AI is political and even more so from now on.</p>
+<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;<a href="https://futureoflife.org/open-letter/pause-giant-ai-experiments">Pause Giant AI Experiments: An Open Letter</a></p></div><p>Here is my opinion and I won’t bother to be neutral. I could be wrong and I am ready to be.</p>
 </section>
 <section id="tldr" class="level2">
 <h2 class="anchored" data-anchor-id="tldr">tl;dr</h2>
@@ -99,22 +100,22 @@
 <p>This is a shocking revelation to me. I thought language model is just a huge joint distribution function, which happens to mimic some patterns in text. Turns out it’s more than that. Let’s take a look at few examples.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/on-gpt4/unicorn.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="bubeckSparksArtificialGeneral2023">(Bubeck et al. 2023, fig. 1.3)</span></figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/unicorn.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption"><span class="citation" data-cites="bubeckSparksArtificialGeneral2023">(Bubeck et al. 2023, fig. 1.3)</span></figcaption>
 </figure>
 </div>
 <p>Seriously, how does LLM learn what unicorn looks like is still beyond me. Of course there are texts describing unicorns but it has never seen a picture and yet could still draw a better unicorn than me, in TeX?</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/on-gpt4/artist.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="bubeckSparksArtificialGeneral2023">(Bubeck et al. 2023, fig. 2.1)</span></figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/artist.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption"><span class="citation" data-cites="bubeckSparksArtificialGeneral2023">(Bubeck et al. 2023, fig. 2.1)</span></figcaption>
 </figure>
 </div>
 <p>This is even crazier. Out of uncountable names, gpt4 could recognize this artist name and somehow capture the gist of that artist’s style and use Javascript to render the picture. Speechless.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/on-gpt4/abc_person.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="bubeckSparksArtificialGeneral2023">(Bubeck et al. 2023, fig. 2.5)</span></figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/abc_person.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption"><span class="citation" data-cites="bubeckSparksArtificialGeneral2023">(Bubeck et al. 2023, fig. 2.5)</span></figcaption>
 </figure>
 </div>
 <p>This one is more than a visual render. It combines the shape of English characters and the idea of the appearance of a person to generate a person, and the generation process is controllable by natural language instructions.</p>
@@ -122,15 +123,15 @@
 <p>Modern text to image models have trouble following instructions with specific composition. My hunch is text|image joint entropy learned from CLIP, used by latent diffusion<span class="citation" data-cites="rombachHighResolutionImageSynthesis2022">(Rombach et al. 2022)</span> is not fine grained enough to support precise language instruction. For example:</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/on-gpt4/mj.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption">MidJourney: three people in a row, one man in mid 40s on the left wearing a suit, holding an iphone, a yound lady in the middle, and a 6 year old boy wearing school uniform on the right. –ar 3:2</figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/mj.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">MidJourney: three people in a row, one man in mid 40s on the left wearing a suit, holding an iphone, a yound lady in the middle, and a 6 year old boy wearing school uniform on the right. –ar 3:2</figcaption>
 </figure>
 </div>
 <p>However, gpt4’s unreasonable effectiveness of text to code could repurpose code as intermediate symbolic layer for fine grained instruction guided image generation.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/on-gpt4/diffusion.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="bubeckSparksArtificialGeneral2023">(Bubeck et al. 2023, fig. 2.8)</span></figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/diffusion.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption"><span class="citation" data-cites="bubeckSparksArtificialGeneral2023">(Bubeck et al. 2023, fig. 2.8)</span></figcaption>
 </figure>
 </div>
 <p>This combines the compositionality of natural language, and the pixel generation of diffusion. Win-win.</p>
@@ -152,22 +153,22 @@ There is no magic in self-evaluation. It’s not gpt4 has gained consciousness a
 <p>Take a look at the example of close and open hallucination.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/on-gpt4/hallucination_example.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="bubeckSparksArtificialGeneral2023">(Bubeck et al. 2023, fig. 1.8)</span></figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/hallucination_example.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption"><span class="citation" data-cites="bubeckSparksArtificialGeneral2023">(Bubeck et al. 2023, fig. 1.8)</span></figcaption>
 </figure>
 </div>
 <p>OpenAI introduces a simple iterative procedure to apply gpt4 to evaluate its output and generate self correction.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/on-gpt4/hallucination.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="GPT4TechnicalReport">(<span>“<span>GPT-4</span> Technical Report”</span> 2023, System Card, page 24)</span></figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/hallucination.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption"><span class="citation" data-cites="GPT4TechnicalReport">(<span>“<span>GPT-4</span> Technical Report”</span> 2023, System Card, page 24)</span></figcaption>
 </figure>
 </div>
 <p>The synthetic data is use to improve the mode via RLHF. (original response with hallucinations, new response without hallucination generated by gpt4) data are mixed into reward model dataset. This is RLHF</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/on-gpt4/rlhf.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="ouyangTrainingLanguageModels2022">(Ouyang et al. 2022, fig. 2)</span></figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/rlhf.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption"><span class="citation" data-cites="ouyangTrainingLanguageModels2022">(Ouyang et al. 2022, fig. 2)</span></figcaption>
 </figure>
 </div>
 <p>So on high level: SFT &gt; RM &gt; PPO. I don’t understand why initially. Super confused.</p>
@@ -225,8 +226,8 @@ There is no magic in self-evaluation. It’s not gpt4 has gained consciousness a
 <p>Powerful models introduce serious problems. Helpful and harmless are nuanced if not contradictory balance. Even honest is not so trivial. I was not familiar with the full spectrum of risks introduced in the paper because of my ignorance, I mostly focused on capability upgrade like iPhone spec bump. Definitely recommend reading the system card in full to experience the width and depth of AI dark force.</p>
 <p>What worries me the most is proliferation and acceleration. The danger of enabling simple minds with unrestricted powerful tools is obvious. Now with AI getting better and taking bigger role of evaluation and self-improvement, the speed of progress may be too fast for human to adapt. Dramatic change is in order. Social unrest is unavoidable. This is steam engine-electricity-internet level of change, even AI stops here with no further improvement.</p>
 <p>More and more people are getting at the problem about what value AI should align to, who decides? These are right questions to ask. I hope the process of building ideal AI would force humans to rethink what it means to be a human? What’s the purpose? To what ends? What universal values we should get behind?</p>
-<div class="page-columns page-full"><p>There would be Universal Declaration of Human Rights<sup>2</sup> moment in the future that a group of people consciously choose a set of values as foundation of AI of the group. AI would be the most powerful creation of human civilization. I hope we could settle on a set of values that promotes peace, love and autonomy.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights">https://www.un.org/en/about-us/universal-declaration-of-human-rights</a></p></li></div></div>
-<p>Humans need to learn how to cap the downside and exploit the upside. Alignment research is hot and still underrated. No one wants to live in a world full of super intelligent assholes, to say the least.</p>
+<p>There would be Universal Declaration of Human Rights<sup>2</sup> moment in the future that a group of people consciously choose a set of values as foundation of AI of the group. AI would be the most powerful creation of human civilization. I hope we could settle on a set of values that promotes peace, love and autonomy.</p>
+<div class="no-row-height column-margin column-container"><p><sup>2</sup>&nbsp;<a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights">https://www.un.org/en/about-us/universal-declaration-of-human-rights</a></p></div><p>Humans need to learn how to cap the downside and exploit the upside. Alignment research is hot and still underrated. No one wants to live in a world full of super intelligent assholes, to say the least.</p>
 <p>For effective collaboration, we need to know who is better at what, and allocating resource accordingly.</p>
 <ul>
 <li>Incremental tasks: these are tasks which can be solved in a gradual or continuous way, by adding one word or sentence at a time that constitutes progress in the direction of the solution. Those tasks can be solved via content generation which does not require any major conceptual shifts or insights, but rather relies on applying existing knowledge and skills to the given topic or problem. Examples of incremental tasks are writing a summary of a text, answering factual questions, composing a poem based on a given rhyme scheme, or solving a math problem that follows a standard procedure.</li>
@@ -254,7 +255,7 @@ There is no magic in self-evaluation. It’s not gpt4 has gained consciousness a
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-abelsonStructureInterpretationComputer1996" class="csl-entry">
 Abelson, Harold, Gerald Jay Sussman, and Julie Sussman. 1996. <em>Structure and <span>Interpretation</span> of <span>Computer Programs</span> - 2nd <span>Edition</span></em>. Second edition. <span>Cambridge, Mass.</span>: <span>The MIT Press</span>.
 </div>
@@ -306,332 +307,35 @@ Wang, Xuezhi, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang, Aakank
 <div id="ref-weiChainThoughtPrompting2022" class="csl-entry">
 Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc Le, and Denny Zhou. 2022. <span>“Chain of <span>Thought Prompting Elicits Reasoning</span> in <span>Large Language Models</span>.”</span> January 28, 2022. <a href="https://arxiv.org/abs/2201.11903v5">https://arxiv.org/abs/2201.11903v5</a>.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
+  author = {Shen, Lucas},
   title = {On {GPT4}},
   date = {2023-04-01},
-  url = {https://lukaemon.github.io/posts/2023/on-gpt4},
+  url = {https://lukaemon.github.io/posts/2023/apr_1_on-gpt4},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“On GPT4.”</span> April 1, 2023. <a href="https://lukaemon.github.io/posts/2023/on-gpt4">https://lukaemon.github.io/posts/2023/on-gpt4</a>.
+Shen, Lucas. 2023. <span>“On GPT4.”</span> April 1, 2023. <a href="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4">https://lukaemon.github.io/posts/2023/apr_1_on-gpt4</a>.
 </div></div></section></div> ]]></description>
   <category>opinion</category>
-  <guid>https://lukaemon.github.io/posts/2023/on-gpt4/index.html</guid>
-  <pubDate>Fri, 31 Mar 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023/on-gpt4/cover.png" medium="image" type="image/png" height="96" width="144"/>
-</item>
-<item>
-  <title>From vanilla text encoder decoder to multimodal mid fusion attention bottleneck</title>
-  <dc:creator>Lucas Shen</dc:creator>
-  <link>https://lukaemon.github.io/posts/2023/from-text-to-multimodal/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/cover.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption">midjourney: fusion of multimodal sensory information –ar 16:9</figcaption><p></p>
-</figure>
-</div>
-<p>Tracking the evolution trajectory from <span class="citation" data-cites="vaswaniAttentionAllYou2017">Vaswani et al. (2017)</span> to cutting edge multimodal model <span class="citation" data-cites="nagraniAttentionBottlenecksMultimodal2022">(Nagrani et al. 2022)</span> is an interesting journey. I’m mostly interested in multimodal fusion, meaning how to fuse information from different sensory modalities. A juxtaposition of 2 evolution tracks speaks volumes.</p>
-<ol type="1">
-<li>Text: 2017 OG encoder-decoder &gt; hyperscaled decoder</li>
-<li>Multimodal: encoder-decoder and early fusion decoder &gt; bottleneck mid fusion</li>
-</ol>
-<p>To better appreciate the juxtaposition, a compare and contrast between the starting point and the cutting edge would be helpful.</p>
-<section id="attention-is-all-you-need" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="attention-is-all-you-need">Attention is all you need</h2>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/attn_f1.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="vaswaniAttentionAllYou2017">Vaswani et al. (2017)</span></figcaption><p></p>
-</figure>
-</div>
-<p>Staring at this seminal encoder decoder architecture long enough makes me realize few things:</p>
-<ul>
-<li>Attention is applied to a set, not strictly on sequence. Very general and versatile inductive bias.</li>
-<li>Sequence is just the result of information serialization. Text is natural sequence. Image tokens could be rasterized. Most of seq2seq magics are actually set2set plus optional positional information, such add-on info could be of many kinds.</li>
-<li>The whole encoder stack plus the cross attention is an adapter module <span class="citation" data-cites="pfeifferModularDeepLearning2023">(Pfeiffer et al. 2023)</span> to condition an autoregressive generative decoder stack.</li>
-<li>The generative model doesn’t have to be autoregressive, or about text. The gold is multimodal representation learning. Generation is just one task.</li>
-<li>The power of transformers applies to multimodal fusion. Text is just the beginning.</li>
-</ul>
-</section>
-<section id="attention-bottleneck" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="attention-bottleneck">Attention bottleneck</h2>
-<div class="page-columns page-full"><p>Inspired by this great presentation<sup>1</sup> from <a href="https://twitter.com/drjwrae?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Jack Rae</a>, I realize that different form of bottleneck, ex: global workspace theory <span class="citation" data-cites="baarsGlobalWorkspaceTheory2017">(Baars 2017)</span>, could be interpreted as different expression of <a href="https://en.wikipedia.org/wiki/Occam%27s_razor">Occam’s razor</a>, which has deep root in information theory that regards effective compression as general intelligence.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://www.youtube.com/watch?v=dO4TPJkeaaU&amp;list=PLSrTvUm384I9PV10koj_cqit9OfbJXEkq&amp;index=79">Compression for AGI - Jack Rae</a></p></li></div></div>
-<p>Copy and paste is just brute force. Information bottleneck is suffering that builds intelligence.</p>
-<p><span class="citation" data-cites="nagraniAttentionBottlenecksMultimodal2022">Nagrani et al. (2022)</span> introduces <code>bottleneck mid fusion</code>. I see it as successor to Gato’s <span class="citation" data-cites="reedGeneralistAgent2022">(Reed et al. 2022)</span> all you can eat style <code>early fusion</code>. This is a beautiful implementation of using bottleneck to foster learning intelligence.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/attn_bottleneck_f1.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="nagraniAttentionBottlenecksMultimodal2022">Nagrani et al. (2022)</span></figcaption><p></p>
-</figure>
-</div>
-<p>The beauty of <code>bottleneck mid fusion</code> comes from few realizations about multimodal learning:</p>
-<blockquote class="blockquote">
-<ol type="1">
-<li>variations in learning dynamics between modalities</li>
-<li>different <code>noise topologies</code>, with some modality streams containing more information for the task at hand than others</li>
-<li>specialized input representations.</li>
-</ol>
-<p>–<span class="citation" data-cites="nagraniAttentionBottlenecksMultimodal2022">Nagrani et al. (2022)</span></p>
-</blockquote>
-<p>Resonate pretty well with <span class="citation" data-cites="rombachHighResolutionImageSynthesis2022">Rombach et al. (2022)</span></p>
-<blockquote class="blockquote">
-<p>Most bits of a digital image correspond to imperceptible details. While DMs allow to suppress this semantically meaningless information by minimizing the responsible loss term, gradients (during training) and the neural network backbone (training and inference) still need to be evaluated on all pixels, leading to superfluous computations and unnecessarily expensive optimization and inference. We propose latent diffusion models (LDMs) as an effective generative model and a separate mild compression stage that only eliminates imperceptible details.</p>
-</blockquote>
-<p>You can see that <code>noise topology</code> exemplified with image. Bits are not equal to information, and human civilization builds semantics only on the subset of all information. Multimodal learning has to deal with different noise topology among different modalities. That’s why early fusion could work, but it would be far from <code>Pareto frontier</code>.</p>
-<p><code>bottleneck mid fusion</code> is making <code>Pareto improvement</code> by doing mid fusion with information bottleneck. Mid fusion affords different modality independent computation to weed out noises. The context window of bottleneck token is global workspace, on which joint representation could be learned. The hope is quality of joint representation could be foster by imposed limitation.</p>
-<p>With basic understandings about the baseline and cutting edge, moving on to juxtaposition.</p>
-</section>
-<section id="text-2017-og-encoder-decoder-hyperscaled-decoder" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="text-2017-og-encoder-decoder-hyperscaled-decoder">Text: 2017 OG encoder-decoder &gt; hyperscaled decoder</h2>
-<p>Text2text treat input text as a modality. Info of input text is fused to text generative model to decide what to generate next. Encoder decoder architecture is basically a forced sparsity that implements a form of mid fusion and information bottleneck.</p>
-<p>The whole encoder stack is isolated representation learning of input text. Regardless how many input tokens, as long as they are within context window, the output is a learned representation, a vector in latent space. Text to vector is a huge bottleneck. Useful information are encoded in the topological relationships in such latent space.</p>
-<div class="page-columns page-full"><p>For example, the T5 model takes input text and transforms it into a learned representation for the decoder stack. This transformation involves mapping a <code>(number_of_token, d_model)</code> tensor to a <code>(d_model)</code> tensor where <code>d_model</code> is 768 according to the model’s configuration<sup>2</sup>. The input goes through several transformer layers before producing this vector.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://huggingface.co/t5-base/blob/main/config.json#L7">config.json</a></p></li></div></div>
-<p>The model’s bottleneck is in the encoder stack, where the input text is transformed into a 768-dimensional latent space. Each input text is represented as a unique vector in this space, and the model’s intelligence depends on the relationships between these vectors, particularly for input texts that the model has not seen before.</p>
-<p>Representation is later used in cross-attention to contribute relevant information to the text generation stack. The relevancy is conditioned on generated text and the relevant info added to the output of masked attention</p>
-<blockquote class="blockquote">
-<p>All modular computation functions can be reduced to function composition: the output of the function <img src="https://latex.codecogs.com/png.latex?f_%7B%5Ctheta_i%7D"> of a model is added to a new term that depends on a learned function <img src="https://latex.codecogs.com/png.latex?f_%7B%5Cvarphi%7D">: <img src="https://latex.codecogs.com/png.latex?f'_i(x)%20=%20f_%7B%5Ctheta%7D(x)%20+%20f_%7B%5Cvarphi_i%7D(x)">.</p>
-<p>–<span class="citation" data-cites="pfeifferModularDeepLearning2023">Pfeiffer et al. (2023)</span></p>
-</blockquote>
-<p>You can see masked attention + cross attention is that addition. The purpose of the whole encoder stack and cross attention is to infuse input info to change how text generative function works. This is what adapters do.</p>
-<p>Why don’t we have 100b+ T5, but many 100b+ decoder only LLM?</p>
-<p>Text only modality doesn’t deal with <code>different noise topology</code>. It has one learning dynamics with coherent input representation. Forced mid fusion is unnecessary engineering. That’s why independent encoder is redundant especially during the push of hyperscaling to squeeze out the last few bits.</p>
-<blockquote class="blockquote">
-<p>…there are benefits to squeezing as much performance as possible out of large generative image models, as significant semantic information may lie in the <code>last few bits</code></p>
-<p>–<span class="citation" data-cites="henighanScalingLawsAutoregressive2020">Henighan et al. (2020)</span></p>
-</blockquote>
-<p>Small model (&lt;20b) is not as powerful as 100b+ model. Forced sparsity could be useful <code>inductive bias</code> to boost performance to a point. That’s why T5 works great for finetuning <span class="citation" data-cites="wangWhatLanguageModel2022a longpreFlanCollectionDesigning2023">(Wang et al. 2022; Longpre et al. 2023)</span>. It’s meant to be specialized. However, when the goal is foundation model that saturates one modality as much as possible, scale is one working formula and the raw performance is self-evident. Big models are more sample efficient, learn faster and compress better.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/llama.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="touvronLLaMAOpenEfficient">Touvron et al. (2023)</span></figcaption><p></p>
-</figure>
-</div>
-</section>
-<section id="multimodal-encoder-decoder-and-early-fusion-decoder" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="multimodal-encoder-decoder-and-early-fusion-decoder">Multimodal: encoder-decoder and early fusion decoder</h2>
-<p>It would be easier to see the basic pattern with few examples.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;"># patterns</span></span>
-<span id="cb1-2">fused_info <span class="op" style="color: #5E5E5E;">=</span> fuse(modality_a, modality_b)</span>
-<span id="cb1-3">output <span class="op" style="color: #5E5E5E;">=</span> task(fused_info)</span></code></pre></div>
-<p>Task itself is not that important. The point is learnable intelligence to get useful multimodal representation. Task is used to gauge whether the learned representation is useful.</p>
-<section id="retro-enc-dec-texttext-text-generation" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="retro-enc-dec-texttext-text-generation"><code>RETRO</code>: enc-dec text|text, text generation</h3>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/RETRO.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="borgeaudImprovingLanguageModels2022">Borgeaud et al. (2022)</span></figcaption><p></p>
-</figure>
-</div>
-<p>External memory as modality to power traditional text generation task. Retrieval as first class citizen not after thought as in-context retrieval <span class="citation" data-cites="mialonAugmentedLanguageModels2023">(Mialon et al. 2023)</span>.</p>
-</section>
-<section id="flamingo-enc-dec-imagetext-text-generation" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="flamingo-enc-dec-imagetext-text-generation"><code>Flamingo</code>: enc-dec image|text, text generation</h3>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/Flamingo.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="alayracFlamingoVisualLanguage2022">Alayrac et al. (2022)</span></figcaption><p></p>
-</figure>
-</div>
-<p>Interleaving image and text. VQA is the logical next step of <code>ChatGPT</code>.</p>
-</section>
-<section id="latent-diffusion-enc-dec-imagetext-image-generation" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="latent-diffusion-enc-dec-imagetext-image-generation"><code>latent diffusion</code>: enc-dec image|text, image generation</h3>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/latent_diffusion_f3.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="rombachHighResolutionImageSynthesis2022">Rombach et al. (2022)</span></figcaption><p></p>
-</figure>
-</div>
-<p>Conditioned diffusion for image generation.</p>
-</section>
-<section id="muse-imagetext-image-generation" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="muse-imagetext-image-generation"><code>Muse</code>: image|text, image generation</h3>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/muse.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="changMuseTextToImageGeneration2023">Chang et al. (2023)</span></figcaption><p></p>
-</figure>
-</div>
-<p>Like 2 layer enc-dec, diffusion free image generation. Very cool.</p>
-</section>
-<section id="speecht5-enc-dec-audiotext-text---audio-generation" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="speecht5-enc-dec-audiotext-text---audio-generation"><code>SpeechT5</code>: enc-dec audio|text, text &lt;-&gt; audio generation</h3>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/speecht5_f2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="aoSpeechT5UnifiedModalEncoderDecoder2022">Ao et al. (2022)</span></figcaption><p></p>
-</figure>
-</div>
-<p>Pre-post processing modules are adapters. Close to the idea:</p>
-<blockquote class="blockquote">
-<p>… image representations from vision models can be transferred as continuous prompts to frozen LMs by training only a single linear projection.</p>
-<p>–<span class="citation" data-cites="merulloLinearlyMappingImage2022">Merullo et al. (2022)</span></p>
-</blockquote>
-</section>
-<section id="gato-decoder-only-all2all" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="gato-decoder-only-all2all"><code>Gato</code>: decoder only all2all</h3>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/Gato.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="reedGeneralistAgent2022">Reed et al. (2022)</span></figcaption><p></p>
-</figure>
-</div>
-<p>A 1.2B parameter decoder-only transformer with 24 layers, an embedding size of 2048, and a post-attention feedforward hidden size of 8196.</p>
-<p>The major contributions are multimodal tokenization, embedding and training objectives. Pretty sure DeepMind didn’t expect naive <code>early fusion</code> decoder to be the final answer of multimodal learning.</p>
-<p>Or it’s that easy… Just few missing pieces to deal with such as limited context window, quadruple computation of self-attention and so on. Given recent light speed of AI progress, I don’t think Gato is the answer but I’m not so sure anymore LoL.</p>
-<hr>
-<p>All above are interesting. The holy grail is to find a scaling friendly formula for multimodal learning just like GPT3 did to text. Scaling friendly in terms of:</p>
-<ul>
-<li>Simple, easy, parallelizable architecture.</li>
-<li>BIG data.</li>
-<li>Self supervised objective function.</li>
-</ul>
-<p>Current multimodal models are far from settling down on the architecture. Image caption dataset is great but one simply can’t expect to find enough <code>(x, natural language)</code> supervision for every modality. Too many hard to describe intelligence going on daily. Try to explain the internal state of playing piano or the touch of a perfect golf swing. There would always be some modalities that have small cross-modal latent representation. Language is useful but not the universal multimodal substrate.</p>
-<p>I just don’t see current mutation of multimodal enc-dec or simple multimodal decoder architecture are there yet. To be fair, some are already very useful.</p>
-</section>
-</section>
-<section id="back-to-bottleneck-mid-fusion" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="back-to-bottleneck-mid-fusion">Back to bottleneck mid fusion</h2>
-<p>Both architecture and choice of modalities are interesting.</p>
-<section id="architecture" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="architecture">architecture</h3>
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/attn_bottleneck_f2.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="nagraniAttentionBottlenecksMultimodal2022">Nagrani et al. (2022)</span></figcaption><p></p>
-</figure>
-</div>
-<p>Intuitively, late fusion and early fusion can’t be optimal. Remember we want to scale like crazy. Manually engineered enc-dec is not optimal as well. The paper use few <code>bottleneck token</code> and <code>bottleneck transformer</code> to replace the whole encoder plus cross attention to decoder. The size of bottleneck token could be a hyperparameter to control the size of cross-modal latent space as in <span class="citation" data-cites="aoSpeechT5UnifiedModalEncoderDecoder2022">Ao et al. (2022)</span>.</p>
-<p>The architecture is simple and elegant.</p>
-</section>
-<section id="modality" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="modality">modality</h3>
-<p>Given the following context:</p>
-<ul>
-<li>Text is done. Mobile phone kind of done that innovations are still expected but the field is a perfect competition market. The speed, price and quality of <code>ChatGPT API</code> is crazy.<sup>3</sup></li>
-<li><code>(text, image) -&gt; image</code> is in the instruction finetuning stage <span class="citation" data-cites="zhangAddingConditionalControl2023">(Zhang and Agrawala 2023)</span>.<br>
-</li>
-<li><code>(text, image) -&gt; text</code> is improving super fast <span class="citation" data-cites="kohGroundingLanguageModels2023 liBLIP2BootstrappingLanguageImage2023 huangLanguageNotAll2023">(Koh, Salakhutdinov, and Fried 2023; Li et al. 2023; Huang et al. 2023)</span></li>
-</ul>
-<div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;<a href="https://openai.com/blog/introducing-chatgpt-and-whisper-apis">Introducing ChatGPT and Whisper APIs</a></p></li></div><p><code>(image, audio) -&gt; x</code> is a good proxy to think about how and what &lt;12 month baby could learn. It is right at the multimodal research frontier. I see this as the last frontier before embodied learning and some even argue body is not necessary for high intelligence. Reviewing my daily activity, input and output, the idea of body is not necessary for average level intelligence finds support lol.</p>
-<p>Video is abundant. Learning dynamics and noise topology of image and audio are real challenges. Yes we could use natural language to bridge them but that is boring and even it works to an extend, better solution is expected.</p>
-</section>
-</section>
-<section id="outro" class="level2">
-<h2 class="anchored" data-anchor-id="outro">Outro</h2>
-<p>I’m facing 2 problems to further exploring this track of research:</p>
-<ol type="1">
-<li>Weak information theory understanding.</li>
-<li>Weak engineering capabilities to carry on experiments effectively.</li>
-</ol>
-<p><span class="citation" data-cites="aghajanyanScalingLawsGenerative2023">Aghajanyan et al. (2023)</span> could help me get oriented to information theory wrt multimodal research but the theoretical gap is too big to bridge with just one paper. Time to read textbooks.</p>
-<p>End of procrastination. Back to code and read.</p>
-
-
-
-</section>
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-aghajanyanScalingLawsGenerative2023" class="csl-entry">
-Aghajanyan, Armen, Lili Yu, Alexis Conneau, Wei-Ning Hsu, Karen Hambardzumyan, Susan Zhang, Stephen Roller, Naman Goyal, Omer Levy, and Luke Zettlemoyer. 2023. <span>“Scaling <span>Laws</span> for <span>Generative Mixed-Modal Language Models</span>.”</span> January 9, 2023. <a href="http://arxiv.org/abs/2301.03728">http://arxiv.org/abs/2301.03728</a>.
-</div>
-<div id="ref-alayracFlamingoVisualLanguage2022" class="csl-entry">
-Alayrac, Jean-Baptiste, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, et al. 2022. <span>“🦩 <span>Flamingo</span>: A <span>Visual Language Model</span> for <span>Few-Shot Learning</span>,”</span> April, 66.
-</div>
-<div id="ref-aoSpeechT5UnifiedModalEncoderDecoder2022" class="csl-entry">
-Ao, Junyi, Rui Wang, Long Zhou, Chengyi Wang, Shuo Ren, Yu Wu, Shujie Liu, et al. 2022. <span>“<span>SpeechT5</span>: <span>Unified-Modal Encoder-Decoder Pre-Training</span> for <span>Spoken Language Processing</span>.”</span> May 24, 2022. <a href="http://arxiv.org/abs/2110.07205">http://arxiv.org/abs/2110.07205</a>.
-</div>
-<div id="ref-baarsGlobalWorkspaceTheory2017" class="csl-entry">
-Baars, Bernard J. 2017. <span>“The <span>Global Workspace Theory</span> of <span>Consciousness</span>.”</span> In <em>The <span>Blackwell Companion</span> to <span>Consciousness</span></em>, 227–42. <span>John Wiley &amp; Sons, Ltd</span>. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119132363.ch16">https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119132363.ch16</a>.
-</div>
-<div id="ref-borgeaudImprovingLanguageModels2022" class="csl-entry">
-Borgeaud, Sebastian, Arthur Mensch, Jordan Hoffmann, Trevor Cai, Eliza Rutherford, Katie Millican, George van den Driessche, et al. 2022. <span>“Improving Language Models by Retrieving from Trillions of Tokens.”</span> February 7, 2022. <a href="http://arxiv.org/abs/2112.04426">http://arxiv.org/abs/2112.04426</a>.
-</div>
-<div id="ref-changMuseTextToImageGeneration2023" class="csl-entry">
-Chang, Huiwen, Han Zhang, Jarred Barber, A. J. Maschinot, Jose Lezama, Lu Jiang, Ming-Hsuan Yang, et al. 2023. <span>“Muse: <span>Text-To-Image Generation</span> via <span>Masked Generative Transformers</span>.”</span> January 2, 2023. <a href="http://arxiv.org/abs/2301.00704">http://arxiv.org/abs/2301.00704</a>.
-</div>
-<div id="ref-henighanScalingLawsAutoregressive2020" class="csl-entry">
-Henighan, Tom, Jared Kaplan, Mor Katz, Mark Chen, Christopher Hesse, Jacob Jackson, Heewoo Jun, et al. 2020. <span>“Scaling <span>Laws</span> for <span>Autoregressive Generative Modeling</span>.”</span> November 5, 2020. <a href="http://arxiv.org/abs/2010.14701">http://arxiv.org/abs/2010.14701</a>.
-</div>
-<div id="ref-huangLanguageNotAll2023" class="csl-entry">
-Huang, Shaohan, Li Dong, Wenhui Wang, Yaru Hao, Saksham Singhal, Shuming Ma, Tengchao Lv, et al. 2023. <span>“Language <span>Is Not All You Need</span>: <span>Aligning Perception</span> with <span>Language Models</span>.”</span> March 1, 2023. <a href="http://arxiv.org/abs/2302.14045">http://arxiv.org/abs/2302.14045</a>.
-</div>
-<div id="ref-kohGroundingLanguageModels2023" class="csl-entry">
-Koh, Jing Yu, Ruslan Salakhutdinov, and Daniel Fried. 2023. <span>“Grounding <span>Language Models</span> to <span>Images</span> for <span>Multimodal Generation</span>.”</span> January 31, 2023. <a href="http://arxiv.org/abs/2301.13823">http://arxiv.org/abs/2301.13823</a>.
-</div>
-<div id="ref-liBLIP2BootstrappingLanguageImage2023" class="csl-entry">
-Li, Junnan, Dongxu Li, Silvio Savarese, and Steven Hoi. 2023. <span>“<span>BLIP-2</span>: <span class="nocase">Bootstrapping Language-Image Pre-training</span> with <span>Frozen Image Encoders</span> and <span>Large Language Models</span>.”</span> January 29, 2023. <a href="http://arxiv.org/abs/2301.12597">http://arxiv.org/abs/2301.12597</a>.
-</div>
-<div id="ref-longpreFlanCollectionDesigning2023" class="csl-entry">
-Longpre, Shayne, Le Hou, Tu Vu, Albert Webson, Hyung Won Chung, Yi Tay, Denny Zhou, et al. 2023. <span>“The <span>Flan Collection</span>: <span>Designing Data</span> and <span>Methods</span> for <span>Effective Instruction Tuning</span>.”</span> January 31, 2023. <a href="http://arxiv.org/abs/2301.13688">http://arxiv.org/abs/2301.13688</a>.
-</div>
-<div id="ref-merulloLinearlyMappingImage2022" class="csl-entry">
-Merullo, Jack, Louis Castricato, Carsten Eickhoff, and Ellie Pavlick. 2022. <span>“Linearly <span>Mapping</span> from <span>Image</span> to <span>Text Space</span>.”</span> September 29, 2022. <a href="http://arxiv.org/abs/2209.15162">http://arxiv.org/abs/2209.15162</a>.
-</div>
-<div id="ref-mialonAugmentedLanguageModels2023" class="csl-entry">
-Mialon, Grégoire, Roberto Dessì, Maria Lomeli, Christoforos Nalmpantis, Ram Pasunuru, Roberta Raileanu, Baptiste Rozière, et al. 2023. <span>“Augmented <span>Language Models</span>: A <span>Survey</span>.”</span> February 15, 2023. <a href="http://arxiv.org/abs/2302.07842">http://arxiv.org/abs/2302.07842</a>.
-</div>
-<div id="ref-nagraniAttentionBottlenecksMultimodal2022" class="csl-entry">
-Nagrani, Arsha, Shan Yang, Anurag Arnab, Aren Jansen, Cordelia Schmid, and Chen Sun. 2022. <span>“Attention <span>Bottlenecks</span> for <span>Multimodal Fusion</span>.”</span> November 30, 2022. <a href="http://arxiv.org/abs/2107.00135">http://arxiv.org/abs/2107.00135</a>.
-</div>
-<div id="ref-pfeifferModularDeepLearning2023" class="csl-entry">
-Pfeiffer, Jonas, Sebastian Ruder, Ivan Vulić, and Edoardo Maria Ponti. 2023. <span>“Modular <span>Deep Learning</span>.”</span> February 22, 2023. <a href="http://arxiv.org/abs/2302.11529">http://arxiv.org/abs/2302.11529</a>.
-</div>
-<div id="ref-reedGeneralistAgent2022" class="csl-entry">
-Reed, Scott, Konrad Zolna, Emilio Parisotto, Sergio Gomez Colmenarejo, Alexander Novikov, Gabriel Barth-Maron, Mai Gimenez, et al. 2022. <span>“A <span>Generalist Agent</span>.”</span> May 19, 2022. <a href="http://arxiv.org/abs/2205.06175">http://arxiv.org/abs/2205.06175</a>.
-</div>
-<div id="ref-rombachHighResolutionImageSynthesis2022" class="csl-entry">
-Rombach, Robin, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn Ommer. 2022. <span>“High-<span>Resolution Image Synthesis</span> with <span>Latent Diffusion Models</span>.”</span> April 13, 2022. <a href="http://arxiv.org/abs/2112.10752">http://arxiv.org/abs/2112.10752</a>.
-</div>
-<div id="ref-touvronLLaMAOpenEfficient" class="csl-entry">
-Touvron, Hugo, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothee Lacroix, Baptiste Rozière, et al. 2023. <span>“<span>LLaMA</span>: <span>Open</span> and <span>Efficient Foundation Language Models</span>,”</span> February.
-</div>
-<div id="ref-vaswaniAttentionAllYou2017" class="csl-entry">
-Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017. <span>“Attention <span>Is All You Need</span>.”</span> <a href="http://arxiv.org/abs/1706.03762">http://arxiv.org/abs/1706.03762</a>.
-</div>
-<div id="ref-wangWhatLanguageModel2022a" class="csl-entry">
-Wang, Thomas, Adam Roberts, Daniel Hesslow, Teven Le Scao, Hyung Won Chung, Iz Beltagy, Julien Launay, and Colin Raffel. 2022. <span>“What <span>Language Model Architecture</span> and <span>Pretraining Objective Work Best</span> for <span>Zero-Shot Generalization</span>?”</span> April 12, 2022. <a href="http://arxiv.org/abs/2204.05832">http://arxiv.org/abs/2204.05832</a>.
-</div>
-<div id="ref-zhangAddingConditionalControl2023" class="csl-entry">
-Zhang, Lvmin, and Maneesh Agrawala. 2023. <span>“Adding <span>Conditional Control</span> to <span class="nocase">Text-to-Image Diffusion Models</span>.”</span> February 10, 2023. <a href="http://arxiv.org/abs/2302.05543">http://arxiv.org/abs/2302.05543</a>.
-</div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
-  title = {From Vanilla Text Encoder Decoder to Multimodal Mid Fusion
-    Attention Bottleneck},
-  date = {2023-03-06},
-  url = {https://lukaemon.github.io/posts/2023/from-text-to-multimodal},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“From Vanilla Text Encoder Decoder to Multimodal
-Mid Fusion Attention Bottleneck.”</span> March 6, 2023. <a href="https://lukaemon.github.io/posts/2023/from-text-to-multimodal">https://lukaemon.github.io/posts/2023/from-text-to-multimodal</a>.
-</div></div></section></div> ]]></description>
-  <category>multimodal</category>
-  <guid>https://lukaemon.github.io/posts/2023/from-text-to-multimodal/index.html</guid>
-  <pubDate>Sun, 05 Mar 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023/from-text-to-multimodal/cover.png" medium="image" type="image/png" height="82" width="144"/>
+  <guid>https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/</guid>
+  <pubDate>Sat, 01 Apr 2023 07:00:00 GMT</pubDate>
+  <media:content url="https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/cover.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Learning to learn</title>
   <dc:creator>Lucas Shen</dc:creator>
-  <link>https://lukaemon.github.io/posts/2023/learning-to-learn/index.html</link>
+  <link>https://lukaemon.github.io/posts/2023/feb_14_learning-to-learn/</link>
   <description><![CDATA[ 
+
 
 
 
 
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/learning-to-learn/hands.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption">M.C. Escher’s “Drawing Hands,” a lithograph from 1948. Collection of Experience in Visual Arts, Cordon Art B.V., Baarn, The Netherlands.</figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/feb_14_learning-to-learn/hands.jpg" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">M.C. Escher’s “Drawing Hands,” a lithograph from 1948. Collection of Experience in Visual Arts, Cordon Art B.V., Baarn, The Netherlands.</figcaption>
 </figure>
 </div>
 <blockquote class="blockquote">
@@ -645,8 +349,8 @@ Mid Fusion Attention Bottleneck.”</span> March 6, 2023. <a href="https://lukae
 </section>
 <section id="structure-and-interpretation-of-computer-programs" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="structure-and-interpretation-of-computer-programs">Structure and Interpretation of Computer Programs</h2>
-<div class="page-columns page-full"><p>In the first great SICP<sup>1</sup> course<sup>2</sup>, the professor shares how to learn a new computer language. I believe it applies to all learnings. 3 simple principles are key to manage complexity, experiment and build new things:</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<img src="https://lukaemon.github.io/posts/2023/learning-to-learn/https:/upload.wikimedia.org/wikipedia/commons/9/9d/SICP_cover.jpg" class="img-fluid"></p></li><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://youtu.be/-J_xL4IGhJA?t=1670">youtube: 2 min</a></p></li></div></div>
-<ol type="1">
+<p>In the first great SICP<sup>1</sup> course<sup>2</sup>, the professor shares how to learn a new computer language. I believe it applies to all learnings. 3 simple principles are key to manage complexity, experiment and build new things:</p>
+<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/SICP_cover.jpg" class="img-fluid"></p><p><sup>2</sup>&nbsp;<a href="https://youtu.be/-J_xL4IGhJA?t=1670">youtube: 2 min</a></p></div><ol type="1">
 <li>Primitive elements<br>
 </li>
 <li>Means of combination<br>
@@ -662,8 +366,8 @@ Mid Fusion Attention Bottleneck.”</span> March 6, 2023. <a href="https://lukae
 <h2 class="anchored" data-anchor-id="the-nature-of-creation-is-remix">The nature of creation is remix</h2>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/learning-to-learn/copy_transform_combined.jpeg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption">Everything is a Remix: <a href="https://www.youtube.com/watch?v=MZ2GuvUWaP8">part1</a>, <a href="https://www.youtube.com/watch?v=HhMar_eYnNY">part2</a>, <a href="https://www.youtube.com/watch?v=dwxtW1Aio68">part3</a>, <a href="https://www.youtube.com/watch?v=rswxcDyotXA">part4</a></figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/feb_14_learning-to-learn/copy_transform_combined.jpeg" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">Everything is a Remix: <a href="https://www.youtube.com/watch?v=MZ2GuvUWaP8">part1</a>, <a href="https://www.youtube.com/watch?v=HhMar_eYnNY">part2</a>, <a href="https://www.youtube.com/watch?v=dwxtW1Aio68">part3</a>, <a href="https://www.youtube.com/watch?v=rswxcDyotXA">part4</a></figcaption>
 </figure>
 </div>
 <p>The series do an incredible job to explain the nature of creation from cultural perspective. Artists first would copy lots of previous works to learn the basics and build up muscle memories, primitive elements. Then they could start tweaking old ideas, and fit different ideas together to create new one, means of combination and abstraction.</p>
@@ -671,14 +375,14 @@ Mid Fusion Attention Bottleneck.”</span> March 6, 2023. <a href="https://lukae
 </section>
 <section id="evergreen-notes-and-spaced-repetition" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="evergreen-notes-and-spaced-repetition">Evergreen notes and spaced repetition</h2>
-<div class="page-columns page-full"><p>The idea of evergreen notes<sup>3</sup> is keeping notes on ideas, let them evolve and connect. The process could easily be supported by software such as Obsidian<sup>4</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;<a href="https://notes.andymatuschak.org/z4SDCZQeRo4xFEQ8H4qrSqd68ucpgE6LU155C">Andy Matuschak - Evergreen notes</a></p></li><li id="fn4"><p><sup>4</sup>&nbsp;<a href="https://obsidian.md/">obsidian.md</a></p></li></div></div>
-<p>Think of every idea as primitive. For example, treat the idea about <code>learning to learn</code> as atomic. If one could keep notes about <code>learning to learn</code> whenever it’s triggered and connect it to other ideas, the knowledge graph would become organic. It will function like a mental fusion reactor, reinforcing one idea while making connections to others, even trigger conflicts among ideas. This is super valuable process to sustain. Especially treasure and cultivate the internal conflicts.</p>
+<p>The idea of evergreen notes<sup>3</sup> is keeping notes on ideas, let them evolve and connect. The process could easily be supported by software such as Obsidian<sup>4</sup>.</p>
+<div class="no-row-height column-margin column-container"><p><sup>3</sup>&nbsp;<a href="https://notes.andymatuschak.org/z4SDCZQeRo4xFEQ8H4qrSqd68ucpgE6LU155C">Andy Matuschak - Evergreen notes</a></p><p><sup>4</sup>&nbsp;<a href="https://obsidian.md/">obsidian.md</a></p></div><p>Think of every idea as primitive. For example, treat the idea about <code>learning to learn</code> as atomic. If one could keep notes about <code>learning to learn</code> whenever it’s triggered and connect it to other ideas, the knowledge graph would become organic. It will function like a mental fusion reactor, reinforcing one idea while making connections to others, even trigger conflicts among ideas. This is super valuable process to sustain. Especially treasure and cultivate the internal conflicts.</p>
 <blockquote class="blockquote">
 <p>The test of a first-rate intelligence is the ability to hold two opposed ideas in mind at the same time and still retain the ability to function.</p>
 <p><cite>F. Scott Fitzgerald</cite></p>
 </blockquote>
-<div class="page-columns page-full"><p>Spaced repetition<sup>5</sup> resonates well with understanding primitives and the copy phase. Find the rhythm to reinforce fundamentals and grow the network density.</p><div class="no-row-height column-margin column-container"><li id="fn5"><p><sup>5</sup>&nbsp;<a href="https://numinous.productions/ttft/">Andy Matuschak - How can we develop transformative tools for thought?</a></p></li></div></div>
-<div class="page-columns page-full"><p>It could be unintentional repetition or deliberate practice<sup>6</sup>. Experiment and find the right mix.</p><div class="no-row-height column-margin column-container"><li id="fn6"><p><sup>6</sup>&nbsp;<a href="https://en.wikipedia.org/wiki/Practice_(learning_method)#Deliberate_practice">wiki</a></p></li></div></div>
+<p>Spaced repetition<sup>5</sup> resonates well with understanding primitives and the copy phase. Find the rhythm to reinforce fundamentals and grow the network density.</p>
+<div class="no-row-height column-margin column-container"><p><sup>5</sup>&nbsp;<a href="https://numinous.productions/ttft/">Andy Matuschak - How can we develop transformative tools for thought?</a></p><p><sup>6</sup>&nbsp;<a href="https://en.wikipedia.org/wiki/Practice_(learning_method)#Deliberate_practice">wiki</a></p></div><p>It could be unintentional repetition or deliberate practice<sup>6</sup>. Experiment and find the right mix.</p>
 </section>
 <section id="bootstrapping-with-delta" class="level2">
 <h2 class="anchored" data-anchor-id="bootstrapping-with-delta">Bootstrapping with <img src="https://latex.codecogs.com/png.latex?%5CDelta"></h2>
@@ -732,542 +436,63 @@ Mid Fusion Attention Bottleneck.”</span> March 6, 2023. <a href="https://lukae
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
+  author = {Shen, Lucas},
   title = {Learning to Learn},
   date = {2023-02-14},
-  url = {https://lukaemon.github.io/posts/2023/learning-to-learn},
+  url = {https://lukaemon.github.io/posts/2023/feb_14_learning-to-learn},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“Learning to Learn.”</span> February 14, 2023.
-<a href="https://lukaemon.github.io/posts/2023/learning-to-learn">https://lukaemon.github.io/posts/2023/learning-to-learn</a>.
+Shen, Lucas. 2023. <span>“Learning to Learn.”</span> February 14, 2023.
+<a href="https://lukaemon.github.io/posts/2023/feb_14_learning-to-learn">https://lukaemon.github.io/posts/2023/feb_14_learning-to-learn</a>.
 </div></div></section></div> ]]></description>
   <category>meta-learning</category>
-  <guid>https://lukaemon.github.io/posts/2023/learning-to-learn/index.html</guid>
-  <pubDate>Mon, 13 Feb 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023/learning-to-learn/hands.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Hello, world! Huggingface T5 finetuning</title>
-  <dc:creator>Lucas Shen</dc:creator>
-  <link>https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/samsum.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/cover.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption">MJ: computer scientist coding to train AI model, studio ghibli –ar 16:9 –niji</figcaption><p></p>
-</figure>
-</div>
-<div class="page-columns page-full"><p><sup>1</sup></p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;MidJourney implies the future belongs to children playing Scratch lol.</p></li></div></div>
-<p>A learning note from reproducing this <a href="https://www.philschmid.de/fine-tune-flan-t5">amazing post by Philipp Schmid</a>.</p>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;">import</span> os</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="im" style="color: #00769E;">from</span> transformers <span class="im" style="color: #00769E;">import</span> (</span>
-<span id="cb1-4">    AutoTokenizer,</span>
-<span id="cb1-5">    AutoModelForSeq2SeqLM,</span>
-<span id="cb1-6">    Seq2SeqTrainingArguments,</span>
-<span id="cb1-7">    DataCollatorForSeq2Seq,</span>
-<span id="cb1-8">    Seq2SeqTrainer,</span>
-<span id="cb1-9">)</span>
-<span id="cb1-10"><span class="im" style="color: #00769E;">from</span> datasets <span class="im" style="color: #00769E;">import</span> load_dataset</span>
-<span id="cb1-11"><span class="im" style="color: #00769E;">import</span> evaluate</span>
-<span id="cb1-12"><span class="im" style="color: #00769E;">import</span> nltk</span>
-<span id="cb1-13"><span class="im" style="color: #00769E;">import</span> numpy <span class="im" style="color: #00769E;">as</span> np</span>
-<span id="cb1-14"><span class="im" style="color: #00769E;">import</span> pandas <span class="im" style="color: #00769E;">as</span> pd</span>
-<span id="cb1-15"><span class="im" style="color: #00769E;">import</span> wandb</span>
-<span id="cb1-16"></span>
-<span id="cb1-17">nltk.download(<span class="st" style="color: #20794D;">"punkt"</span>, quiet<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span></code></pre></div>
-</details>
-</div>
-<div class="cell" data-execution_count="2">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">checkpoint <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"google/flan-t5-base"</span></span>
-<span id="cb2-2">dataset_name <span class="op" style="color: #5E5E5E;">=</span> <span class="st" style="color: #20794D;">"samsum"</span></span>
-<span id="cb2-3"></span>
-<span id="cb2-4">ft_output_dir <span class="op" style="color: #5E5E5E;">=</span> os.getenv(<span class="st" style="color: #20794D;">"HF_FINETUNE_OUTPUT_DIR"</span>)</span>
-<span id="cb2-5">model_name <span class="op" style="color: #5E5E5E;">=</span> checkpoint.split(<span class="st" style="color: #20794D;">"/"</span>)[<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>]</span>
-<span id="cb2-6">hub_model_id <span class="op" style="color: #5E5E5E;">=</span> <span class="ss" style="color: #20794D;">f"</span><span class="sc" style="color: #5E5E5E;">{</span>model_name<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;">-</span><span class="sc" style="color: #5E5E5E;">{</span>dataset_name<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;">"</span></span>
-<span id="cb2-7">model_output_dir <span class="op" style="color: #5E5E5E;">=</span> os.path.join(ft_output_dir, hub_model_id)</span>
-<span id="cb2-8"></span>
-<span id="cb2-9">os.environ[<span class="st" style="color: #20794D;">"WANDB_PROJECT"</span>] <span class="op" style="color: #5E5E5E;">=</span> hub_model_id</span></code></pre></div>
-</details>
-</div>
-<section id="load-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="load-dataset">Load dataset</h2>
-<p><code>samsum</code> is a conversation dataset. The goal is to summarize a conversation. Dataset is available on <a href="https://huggingface.co/datasets/samsum">Huggingface</a>.</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">ds <span class="op" style="color: #5E5E5E;">=</span> load_dataset(dataset_name)</span>
-<span id="cb3-2">ds</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"d8e2dd6627d6431f8867e0616b3ced63","version_major":2,"version_minor":0}
-</script>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>DatasetDict({
-    train: Dataset({
-        features: ['id', 'dialogue', 'summary'],
-        num_rows: 14732
-    })
-    test: Dataset({
-        features: ['id', 'dialogue', 'summary'],
-        num_rows: 819
-    })
-    validation: Dataset({
-        features: ['id', 'dialogue', 'summary'],
-        num_rows: 818
-    })
-})</code></pre>
-</div>
-</div>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">example <span class="op" style="color: #5E5E5E;">=</span> ds[<span class="st" style="color: #20794D;">"train"</span>][<span class="dv" style="color: #AD0000;">0</span>]</span>
-<span id="cb5-2">example</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>{'id': '13818513',
- 'dialogue': "Amanda: I baked  cookies. Do you want some?\r\nJerry: Sure!\r\nAmanda: I'll bring you tomorrow :-)",
- 'summary': 'Amanda baked cookies and will bring Jerry some tomorrow.'}</code></pre>
-</div>
-</div>
-</section>
-<section id="max_length-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="max_length-analysis"><code>max_length</code> analysis</h2>
-<p>Investigate <a href="https://huggingface.co/docs/transformers/main/en/pad_truncation#padding-and-truncation">truncation and padding</a> to get statistics on dialogue and summary token length.</p>
-<p>Outlier long input may cause out of memory error during training.</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1">model <span class="op" style="color: #5E5E5E;">=</span> AutoModelForSeq2SeqLM.from_pretrained(checkpoint)</span>
-<span id="cb7-2">model.parallelize()</span>
-<span id="cb7-3"></span>
-<span id="cb7-4">tokenizer <span class="op" style="color: #5E5E5E;">=</span> AutoTokenizer.from_pretrained(checkpoint)</span></code></pre></div>
-</div>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">tk_dialogue <span class="op" style="color: #5E5E5E;">=</span> tokenizer(ds[<span class="st" style="color: #20794D;">"train"</span>][<span class="st" style="color: #20794D;">"dialogue"</span>])[<span class="st" style="color: #20794D;">"input_ids"</span>]</span>
-<span id="cb8-2">tk_summary <span class="op" style="color: #5E5E5E;">=</span> tokenizer(ds[<span class="st" style="color: #20794D;">"train"</span>][<span class="st" style="color: #20794D;">"summary"</span>])[<span class="st" style="color: #20794D;">"input_ids"</span>]</span>
-<span id="cb8-3">pd.set_option(<span class="st" style="color: #20794D;">'display.float_format'</span>, <span class="kw" style="color: #003B4F;">lambda</span> x: <span class="st" style="color: #20794D;">'</span><span class="sc" style="color: #5E5E5E;">%.1f</span><span class="st" style="color: #20794D;">'</span> <span class="op" style="color: #5E5E5E;">%</span> x)</span>
-<span id="cb8-4"></span>
-<span id="cb8-5">df <span class="op" style="color: #5E5E5E;">=</span> pd.DataFrame(</span>
-<span id="cb8-6">    {<span class="st" style="color: #20794D;">"dialogue"</span>: [<span class="bu" style="color: null;">len</span>(d) <span class="cf" style="color: #003B4F;">for</span> d <span class="kw" style="color: #003B4F;">in</span> tk_dialogue], <span class="st" style="color: #20794D;">"summary"</span>: [<span class="bu" style="color: null;">len</span>(s) <span class="cf" style="color: #003B4F;">for</span> s <span class="kw" style="color: #003B4F;">in</span> tk_summary]}</span>
-<span id="cb8-7">)</span>
-<span id="cb8-8"><span class="bu" style="color: null;">print</span>(df.describe())</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       dialogue  summary
-count   14732.0  14732.0
-mean      149.0     28.9
-std       110.7     15.1
-min         1.0      2.0
-25%        66.0     17.0
-50%       120.0     26.0
-75%       202.0     37.0
-max      1153.0     94.0</code></pre>
-</div>
-</div>
-<p>My first hunch is I shouldn’t truncate the input. Just need to pad to the longest of the batch. The setting would be <code>tokenizer(batch_sentences, padding=True)</code>.</p>
-<p>However, it seems that <a href="https://twitter.com/RamaswmySridhar/status/1621870502766858241">truncation is inevitable in production</a>. You need to find a balance and curb the long input outlier.</p>
-<p>For this dataset, 1153 max is not too crazy.</p>
-<section id="padding-experiments" class="level3">
-<h3 class="anchored" data-anchor-id="padding-experiments">Padding experiments</h3>
-<p>Let’s experiment with different padding strategy and how it affects the following batching and training.</p>
-<p>First, do it without truncation:</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1">tk_dialogue <span class="op" style="color: #5E5E5E;">=</span> tokenizer(ds[<span class="st" style="color: #20794D;">"train"</span>][<span class="st" style="color: #20794D;">"dialogue"</span>], padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)[<span class="st" style="color: #20794D;">"input_ids"</span>]</span>
-<span id="cb10-2">tk_summary <span class="op" style="color: #5E5E5E;">=</span> tokenizer(ds[<span class="st" style="color: #20794D;">"train"</span>][<span class="st" style="color: #20794D;">"summary"</span>], padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)[<span class="st" style="color: #20794D;">"input_ids"</span>]</span>
-<span id="cb10-3">pd.set_option(<span class="st" style="color: #20794D;">'display.float_format'</span>, <span class="kw" style="color: #003B4F;">lambda</span> x: <span class="st" style="color: #20794D;">'</span><span class="sc" style="color: #5E5E5E;">%.1f</span><span class="st" style="color: #20794D;">'</span> <span class="op" style="color: #5E5E5E;">%</span> x)</span>
-<span id="cb10-4"></span>
-<span id="cb10-5">df <span class="op" style="color: #5E5E5E;">=</span> pd.DataFrame(</span>
-<span id="cb10-6">    {<span class="st" style="color: #20794D;">"dialogue"</span>: [<span class="bu" style="color: null;">len</span>(d) <span class="cf" style="color: #003B4F;">for</span> d <span class="kw" style="color: #003B4F;">in</span> tk_dialogue], <span class="st" style="color: #20794D;">"summary"</span>: [<span class="bu" style="color: null;">len</span>(s) <span class="cf" style="color: #003B4F;">for</span> s <span class="kw" style="color: #003B4F;">in</span> tk_summary]}</span>
-<span id="cb10-7">)</span>
-<span id="cb10-8"><span class="bu" style="color: null;">print</span>(df.describe())</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>       dialogue  summary
-count   14732.0  14732.0
-mean     1153.0     94.0
-std         0.0      0.0
-min      1153.0     94.0
-25%      1153.0     94.0
-50%      1153.0     94.0
-75%      1153.0     94.0
-max      1153.0     94.0</code></pre>
-</div>
-</div>
-<p>Expected result. This is literally treating the whole training corpus as one full batch. All sequences are pad to the max length, 1153.</p>
-<p>Try this idea with <code>batch_size = 8</code> in dataloader.</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="im" style="color: #00769E;">from</span> torch.utils.data <span class="im" style="color: #00769E;">import</span> DataLoader</span>
-<span id="cb12-2"></span>
-<span id="cb12-3">collator <span class="op" style="color: #5E5E5E;">=</span> DataCollatorForSeq2Seq(tokenizer, padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
-<span id="cb12-4">dl <span class="op" style="color: #5E5E5E;">=</span> DataLoader(ds[<span class="st" style="color: #20794D;">'train'</span>].with_transform(<span class="kw" style="color: #003B4F;">lambda</span> x: tokenizer(x[<span class="st" style="color: #20794D;">'dialogue'</span>])), batch_size<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>, collate_fn<span class="op" style="color: #5E5E5E;">=</span>collator)</span>
-<span id="cb12-5"></span>
-<span id="cb12-6"></span>
-<span id="cb12-7">tk_batched <span class="op" style="color: #5E5E5E;">=</span> np.array([batch[<span class="st" style="color: #20794D;">'input_ids'</span>].shape[<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>] <span class="cf" style="color: #003B4F;">for</span> batch <span class="kw" style="color: #003B4F;">in</span> dl])</span>
-<span id="cb12-8"></span>
-<span id="cb12-9"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(tk_batched), <span class="bu" style="color: null;">len</span>(dl))</span>
-<span id="cb12-10"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(np.unique(tk_batched)))</span>
-<span id="cb12-11"></span>
-<span id="cb12-12">np.unique(tk_batched).<span class="bu" style="color: null;">max</span>(), np.unique(tk_batched).mean(), np.unique(tk_batched).<span class="bu" style="color: null;">min</span>()b</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>1842 1842
-482</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>(1153, 389.02904564315355, 92)</code></pre>
-</div>
-</div>
-<p>1842 batches, with 482 unique length. This is fine for <code>pytorch</code> but would be brutal for jax jit since every change of input shape would <a href="https://huggingface.co/docs/transformers/main/en/model_doc/t5#training">trigger jit recompilation</a>.</p>
-<blockquote class="blockquote">
-<p>If training on TPU, it is recommended to pad all examples of the dataset to the same length or make use of pad_to_multiple_of to have a small number of predefined bucket sizes to fit all examples in. Dynamically padding batches to the longest example is not recommended on TPU as it triggers a recompilation for every batch shape that is encountered during training thus significantly slowing down the training. only padding up to the longest example in a batch) leads to very slow training on TPU.</p>
-</blockquote>
-<p>The part of only padding to the longest leads to slow training applies to <code>pytorch</code> as well.</p>
-<p>Try <code>pad_to_multiple_of=8</code> to curb the variance of token length in batches.</p>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1">collator <span class="op" style="color: #5E5E5E;">=</span> DataCollatorForSeq2Seq(tokenizer, padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>, pad_to_multiple_of<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>)</span>
-<span id="cb15-2">dl <span class="op" style="color: #5E5E5E;">=</span> DataLoader(ds[<span class="st" style="color: #20794D;">'train'</span>].with_transform(<span class="kw" style="color: #003B4F;">lambda</span> x: tokenizer(x[<span class="st" style="color: #20794D;">'dialogue'</span>])), batch_size<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>, collate_fn<span class="op" style="color: #5E5E5E;">=</span>collator)</span>
-<span id="cb15-3"></span>
-<span id="cb15-4"></span>
-<span id="cb15-5">tk_batched <span class="op" style="color: #5E5E5E;">=</span> np.array([batch[<span class="st" style="color: #20794D;">'input_ids'</span>].shape[<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>] <span class="cf" style="color: #003B4F;">for</span> batch <span class="kw" style="color: #003B4F;">in</span> dl])</span>
-<span id="cb15-6"></span>
-<span id="cb15-7"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(tk_batched), <span class="bu" style="color: null;">len</span>(dl))</span>
-<span id="cb15-8"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(np.unique(tk_batched)))</span>
-<span id="cb15-9"></span>
-<span id="cb15-10">np.unique(tk_batched).<span class="bu" style="color: null;">max</span>(), np.unique(tk_batched).mean(), np.unique(tk_batched).<span class="bu" style="color: null;">min</span>()</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>1842 1842
-91</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>(1160, 485.27472527472526, 96)</code></pre>
-</div>
-</div>
-<p>1842 batches with 91 unique lengths, much better.</p>
-</section>
-<section id="truncation-experiment" class="level3">
-<h3 class="anchored" data-anchor-id="truncation-experiment">Truncation experiment</h3>
-<p>How does <code>truncation=True</code> change anything? According to huggingface doc: <code>tokenizer(batch_sentences, padding=True, truncation=True)</code> has the same effect as <code>tokenizer(batch_sentences, padding=True)</code>, both padding to max sequence in batch.</p>
-<p>Let’s try it out.</p>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1">collator <span class="op" style="color: #5E5E5E;">=</span> DataCollatorForSeq2Seq(tokenizer, padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>, pad_to_multiple_of<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>)</span>
-<span id="cb18-2">dl <span class="op" style="color: #5E5E5E;">=</span> DataLoader(ds[<span class="st" style="color: #20794D;">'train'</span>].with_transform(<span class="kw" style="color: #003B4F;">lambda</span> x: tokenizer(x[<span class="st" style="color: #20794D;">'dialogue'</span>], truncation<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)), batch_size<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>, collate_fn<span class="op" style="color: #5E5E5E;">=</span>collator)</span>
-<span id="cb18-3"></span>
-<span id="cb18-4"></span>
-<span id="cb18-5">tk_batched <span class="op" style="color: #5E5E5E;">=</span> np.array([batch[<span class="st" style="color: #20794D;">'input_ids'</span>].shape[<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>] <span class="cf" style="color: #003B4F;">for</span> batch <span class="kw" style="color: #003B4F;">in</span> dl])</span>
-<span id="cb18-6"></span>
-<span id="cb18-7"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(tk_batched), <span class="bu" style="color: null;">len</span>(dl))</span>
-<span id="cb18-8"><span class="bu" style="color: null;">print</span>(<span class="bu" style="color: null;">len</span>(np.unique(tk_batched)))</span>
-<span id="cb18-9"></span>
-<span id="cb18-10">np.unique(tk_batched).<span class="bu" style="color: null;">max</span>(), np.unique(tk_batched).mean(), np.unique(tk_batched).<span class="bu" style="color: null;">min</span>()</span></code></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>1842 1842
-51</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>(512, 311.52941176470586, 96)</code></pre>
-</div>
-</div>
-<p><code>truncation=True</code> in the tokenizer truncates the dialogue to 512 tokens, which is the max length of the T5. However, by default T5 should not have a set maximum length. This is imposed, artificial limitation by transformers library.</p>
-<p>Be careful to this behavior. Since unnoticed truncation means unnoticed loss input information during training.</p>
-</section>
-<section id="source-implementation" class="level3">
-<h3 class="anchored" data-anchor-id="source-implementation">Source implementation</h3>
-<p>In <a href="https://www.philschmid.de/fine-tune-flan-t5">source ipynb</a>:</p>
-<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1">tokenized_inputs <span class="op" style="color: #5E5E5E;">=</span> concatenate_datasets([dataset[<span class="st" style="color: #20794D;">"train"</span>], dataset[<span class="st" style="color: #20794D;">"test"</span>]]).<span class="bu" style="color: null;">map</span>(<span class="kw" style="color: #003B4F;">lambda</span> x: tokenizer(x[<span class="st" style="color: #20794D;">"dialogue"</span>], truncation<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>), batched<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>, remove_columns<span class="op" style="color: #5E5E5E;">=</span>[<span class="st" style="color: #20794D;">"dialogue"</span>, <span class="st" style="color: #20794D;">"summary"</span>])</span>
-<span id="cb21-2">max_source_length <span class="op" style="color: #5E5E5E;">=</span> <span class="bu" style="color: null;">max</span>([<span class="bu" style="color: null;">len</span>(x) <span class="cf" style="color: #003B4F;">for</span> x <span class="kw" style="color: #003B4F;">in</span> tokenized_inputs[<span class="st" style="color: #20794D;">"input_ids"</span>]])</span>
-<span id="cb21-3"></span>
-<span id="cb21-4"><span class="kw" style="color: #003B4F;">def</span> preprocess_function(sample,padding<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"max_length"</span>):</span>
-<span id="cb21-5">    <span class="co" style="color: #5E5E5E;"># add prefix to the input for t5</span></span>
-<span id="cb21-6">    inputs <span class="op" style="color: #5E5E5E;">=</span> [<span class="st" style="color: #20794D;">"summarize: "</span> <span class="op" style="color: #5E5E5E;">+</span> item <span class="cf" style="color: #003B4F;">for</span> item <span class="kw" style="color: #003B4F;">in</span> sample[<span class="st" style="color: #20794D;">"dialogue"</span>]]</span>
-<span id="cb21-7"></span>
-<span id="cb21-8">    <span class="co" style="color: #5E5E5E;"># tokenize inputs</span></span>
-<span id="cb21-9">    model_inputs <span class="op" style="color: #5E5E5E;">=</span> tokenizer(inputs, max_length<span class="op" style="color: #5E5E5E;">=</span>max_source_length, padding<span class="op" style="color: #5E5E5E;">=</span>padding, truncation<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
-<span id="cb21-10">    <span class="cf" style="color: #003B4F;">pass</span></span></code></pre></div>
-<ol type="1">
-<li>It pads every input to absolute corpus max length. Would waste tons of memory and computation. The mean of dialogue is 149, meaning on average, 1k unnecessary tokens would be processed for each instance, and we have 14732 instances in training set.</li>
-<li>I use <code>flan-t5</code> which is the heir of LM adopted T5, that makes prepending <code>summarize:</code> to the input not necessary.</li>
-</ol>
-</section>
-</section>
-<section id="training" class="level2">
-<h2 class="anchored" data-anchor-id="training">Training</h2>
-<section id="prepare-for-trainer" class="level3">
-<h3 class="anchored" data-anchor-id="prepare-for-trainer">Prepare for trainer</h3>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><span class="co" style="color: #5E5E5E;"># no truncation, since the max_length in the training set is only 1153. Should be fine.</span></span>
-<span id="cb22-2"><span class="kw" style="color: #003B4F;">def</span> preprocess(examples):</span>
-<span id="cb22-3">    output <span class="op" style="color: #5E5E5E;">=</span> tokenizer(examples[<span class="st" style="color: #20794D;">"dialogue"</span>])</span>
-<span id="cb22-4">    output[<span class="st" style="color: #20794D;">"labels"</span>] <span class="op" style="color: #5E5E5E;">=</span> tokenizer(examples[<span class="st" style="color: #20794D;">"summary"</span>])[<span class="st" style="color: #20794D;">"input_ids"</span>]</span>
-<span id="cb22-5">    <span class="cf" style="color: #003B4F;">return</span> output</span>
-<span id="cb22-6"></span>
-<span id="cb22-7"><span class="co" style="color: #5E5E5E;"># tokenize the dataset</span></span>
-<span id="cb22-8">tk_ds <span class="op" style="color: #5E5E5E;">=</span> ds.<span class="bu" style="color: null;">map</span>(preprocess, batched<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>).remove_columns(ds[<span class="st" style="color: #20794D;">'train'</span>].column_names)</span>
-<span id="cb22-9"></span>
-<span id="cb22-10"><span class="co" style="color: #5E5E5E;"># load the evaluation metric</span></span>
-<span id="cb22-11">rouge <span class="op" style="color: #5E5E5E;">=</span> evaluate.load(<span class="st" style="color: #20794D;">'rouge'</span>)</span>
-<span id="cb22-12"></span>
-<span id="cb22-13"><span class="co" style="color: #5E5E5E;"># postprocessing necessary for rouge</span></span>
-<span id="cb22-14"><span class="kw" style="color: #003B4F;">def</span> compute_metrics(eval_preds):</span>
-<span id="cb22-15">    preds, labels <span class="op" style="color: #5E5E5E;">=</span> eval_preds</span>
-<span id="cb22-16"></span>
-<span id="cb22-17">    labels <span class="op" style="color: #5E5E5E;">=</span> np.where(labels <span class="op" style="color: #5E5E5E;">!=</span> <span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">100</span>, labels, tokenizer.pad_token_id)</span>
-<span id="cb22-18">    decoded_preds <span class="op" style="color: #5E5E5E;">=</span> tokenizer.batch_decode(preds, skip_special_tokens<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
-<span id="cb22-19">    decoded_labels <span class="op" style="color: #5E5E5E;">=</span> tokenizer.batch_decode(labels, skip_special_tokens<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>)</span>
-<span id="cb22-20"></span>
-<span id="cb22-21">    decoded_preds <span class="op" style="color: #5E5E5E;">=</span> [</span>
-<span id="cb22-22">        <span class="st" style="color: #20794D;">"</span><span class="ch" style="color: #20794D;">\n</span><span class="st" style="color: #20794D;">"</span>.join(nltk.sent_tokenize(pred.strip())) <span class="cf" style="color: #003B4F;">for</span> pred <span class="kw" style="color: #003B4F;">in</span> decoded_preds</span>
-<span id="cb22-23">    ]</span>
-<span id="cb22-24">    decoded_labels <span class="op" style="color: #5E5E5E;">=</span> [</span>
-<span id="cb22-25">        <span class="st" style="color: #20794D;">"</span><span class="ch" style="color: #20794D;">\n</span><span class="st" style="color: #20794D;">"</span>.join(nltk.sent_tokenize(label.strip())) <span class="cf" style="color: #003B4F;">for</span> label <span class="kw" style="color: #003B4F;">in</span> decoded_labels</span>
-<span id="cb22-26">    ]</span>
-<span id="cb22-27"></span>
-<span id="cb22-28">    result <span class="op" style="color: #5E5E5E;">=</span> rouge.compute(</span>
-<span id="cb22-29">        predictions<span class="op" style="color: #5E5E5E;">=</span>decoded_preds, references<span class="op" style="color: #5E5E5E;">=</span>decoded_labels, use_stemmer<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span></span>
-<span id="cb22-30">    )</span>
-<span id="cb22-31">    <span class="cf" style="color: #003B4F;">return</span> result</span>
-<span id="cb22-32"></span>
-<span id="cb22-33">collator <span class="op" style="color: #5E5E5E;">=</span> DataCollatorForSeq2Seq(tokenizer, padding<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span> pad_to_multiple_of<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>)</span>
-<span id="cb22-34"></span>
-<span id="cb22-35">args <span class="op" style="color: #5E5E5E;">=</span> Seq2SeqTrainingArguments(</span>
-<span id="cb22-36">    output_dir<span class="op" style="color: #5E5E5E;">=</span>model_output_dir,</span>
-<span id="cb22-37">    evaluation_strategy<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"epoch"</span>,</span>
-<span id="cb22-38">    learning_rate<span class="op" style="color: #5E5E5E;">=</span><span class="fl" style="color: #AD0000;">5e-5</span>,</span>
-<span id="cb22-39">    per_device_train_batch_size<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>,</span>
-<span id="cb22-40">    per_device_eval_batch_size<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">8</span>,</span>
-<span id="cb22-41">    weight_decay<span class="op" style="color: #5E5E5E;">=</span><span class="fl" style="color: #AD0000;">0.01</span>,</span>
-<span id="cb22-42">    save_total_limit<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">2</span>,</span>
-<span id="cb22-43">    num_train_epochs<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">1</span>,</span>
-<span id="cb22-44">    bf16<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>,</span>
-<span id="cb22-45">    gradient_accumulation_steps<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">4</span>,</span>
-<span id="cb22-46">    predict_with_generate<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>,</span>
-<span id="cb22-47">    save_strategy<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"epoch"</span>,</span>
-<span id="cb22-48">    load_best_model_at_end<span class="op" style="color: #5E5E5E;">=</span><span class="va" style="color: #111111;">True</span>,</span>
-<span id="cb22-49">    hub_model_id<span class="op" style="color: #5E5E5E;">=</span>hub_model_id,</span>
-<span id="cb22-50">    report_to<span class="op" style="color: #5E5E5E;">=</span><span class="st" style="color: #20794D;">"wandb"</span>,</span>
-<span id="cb22-51">)</span></code></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"></span>
-<span id="cb23-2">trainer <span class="op" style="color: #5E5E5E;">=</span> Seq2SeqTrainer(</span>
-<span id="cb23-3">    model<span class="op" style="color: #5E5E5E;">=</span>model,</span>
-<span id="cb23-4">    args<span class="op" style="color: #5E5E5E;">=</span>args,</span>
-<span id="cb23-5">    train_dataset<span class="op" style="color: #5E5E5E;">=</span>tk_ds[<span class="st" style="color: #20794D;">"train"</span>],</span>
-<span id="cb23-6">    eval_dataset<span class="op" style="color: #5E5E5E;">=</span>tk_ds[<span class="st" style="color: #20794D;">"validation"</span>],</span>
-<span id="cb23-7">    tokenizer<span class="op" style="color: #5E5E5E;">=</span>tokenizer,</span>
-<span id="cb23-8">    data_collator<span class="op" style="color: #5E5E5E;">=</span>collator,</span>
-<span id="cb23-9">    compute_metrics<span class="op" style="color: #5E5E5E;">=</span>compute_metrics,</span>
-<span id="cb23-10">)</span></code></pre></div>
-</div>
-</section>
-<section id="fire-up-the-training" class="level3">
-<h3 class="anchored" data-anchor-id="fire-up-the-training">Fire up the training</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1">trainer.train()</span></code></pre></div>
-</div>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1">wandb.finish()</span>
-<span id="cb25-2"></span>
-<span id="cb25-3">total_flos <span class="op" style="color: #5E5E5E;">=</span> trainer.state.total_flos</span>
-<span id="cb25-4">runtime <span class="op" style="color: #5E5E5E;">=</span> trainer.state.log_history[<span class="dv" style="color: #AD0000;">1</span>][<span class="st" style="color: #20794D;">'train_runtime'</span>]</span>
-<span id="cb25-5">utilization <span class="op" style="color: #5E5E5E;">=</span> total_flos <span class="op" style="color: #5E5E5E;">/</span> <span class="fl" style="color: #AD0000;">1e12</span> <span class="op" style="color: #5E5E5E;">/</span> runtime <span class="co" style="color: #5E5E5E;"># in tflops</span></span></code></pre></div>
-</details>
-</div>
-</section>
-</section>
-<section id="result" class="level2">
-<h2 class="anchored" data-anchor-id="result">Result</h2>
-<p><code>rouge-1: 47.8%</code> is in the same range with the source blog. However, to save time it’s only trained for 1 epoch.</p>
-<section id="about-tflops" class="level3">
-<h3 class="anchored" data-anchor-id="about-tflops">About TFLOPS</h3>
-<ul>
-<li><code>model.parallelize()</code>
-<ul>
-<li><code>20.43</code> tflops.</li>
-<li>Peak memory: GPU1: 16.6G, GPU2: 14.9G</li>
-</ul></li>
-<li>No <code>m.parallelize()</code>, vanilla huggingface trainer.
-<ul>
-<li><code>16.66</code> tflops.</li>
-<li>Peak memory: GPU1: 22.27, GPU2: 21.93G</li>
-<li>Higher GPU utilization, ~90%, slower training, more memory footprint. Why…?</li>
-</ul></li>
-<li><code>pad_to_multiple_of=64</code> -&gt; <code>19.72</code> tflops
-<ul>
-<li>Not ready to innovate on <a href="https://twitter.com/karpathy/status/1621578354024677377">dark magic</a> yet LoL.</li>
-</ul></li>
-<li>No <code>pad_to_multiple_of=8</code> -&gt; <code>20.38</code> tflops
-<ul>
-<li>No need to do this religiously. Make no difference with <code>pytorch</code> and this dataset.</li>
-</ul></li>
-</ul>
-
-
-</section>
-</section>
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
-  title = {Hello, World! {Huggingface} {T5} Finetuning},
-  date = {2023-02-10},
-  url = {https://lukaemon.github.io/samsum.html},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“Hello, World! Huggingface T5
-Finetuning.”</span> February 10, 2023. <a href="https://lukaemon.github.io/samsum.html">https://lukaemon.github.io/samsum.html</a>.
-</div></div></section></div> ]]></description>
-  <category>tutorial</category>
-  <guid>https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/samsum.html</guid>
-  <pubDate>Thu, 09 Feb 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/cover.png" medium="image" type="image/png" height="82" width="144"/>
+  <guid>https://lukaemon.github.io/posts/2023/feb_14_learning-to-learn/</guid>
+  <pubDate>Tue, 14 Feb 2023 08:00:00 GMT</pubDate>
+  <media:content url="https://lukaemon.github.io/posts/2023/feb_14_learning-to-learn/hands.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Humor AI</title>
   <dc:creator>Lucas Shen</dc:creator>
-  <link>https://lukaemon.github.io/posts/2023/humor-ai/index.html</link>
+  <link>https://lukaemon.github.io/posts/2023/feb_5_humor-ai/</link>
   <description><![CDATA[ 
+
 
 
 
 
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/humor-ai/cover.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption">MJ: abstract art, picasso’s expression about humor –ar 16:9</figcaption><p></p>
+<p><img src="https://lukaemon.github.io/posts/2023/feb_5_humor-ai/cover.png" class="img-fluid figure-img"></p>
+<figcaption class="margin-caption">MJ: abstract art, picasso’s expression about humor –ar 16:9</figcaption>
 </figure>
 </div>
 <p>Humor is preconditioned on the ability to see the bright side of something. One has to be able to see many sides, consciously choose the funny, optimistic interpretation and express in a way that resonates with target audiences. It shows both raw intelligence and wisdom.</p>
 <p>To detect humor and be humorous, grounding is necessary. Grounding to me is weaving modalities. Just a fancy way of saying having sampled variety of experiences of certain things or events.</p>
 <p>For example, to know what it really means about apple, one could write “apple”, read about it, draw, hold, throw, smell, eat, plant, cook, even share it with others. Without grounding, one can’t have acute and diversified perspectives on a thing or an event. It would be very hard to see ironic yet optimistic interpretation, be it human or AI.</p>
-<div class="page-columns page-full"><p>Grounding AI to full set of human experience is aligning computational humor to humans’. They may be able to see a kind of digital humor that is a bridge too far for us. Literally why Samantha in Her leaving Theodore<sup>1</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://www.youtube.com/watch?v=PXTQwRf7iRg">youtube</a></p></li></div></div>
-<div class="page-columns page-full"><p>Humor is the ultimate Turing test. I see this as the source of Yann’s recent debate with others<sup>2</sup>. It’s the most difficult test to pass. It’s the most difficult test to create.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;<a href="https://twitter.com/ylecun/status/1621805604900585472">tweet</a></p></li></div></div>
+<p>Grounding AI to full set of human experience is aligning computational humor to humans’. They may be able to see a kind of digital humor that is a bridge too far for us. Literally why Samantha in Her leaving Theodore<sup>1</sup>.</p>
+<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;<a href="https://www.youtube.com/watch?v=PXTQwRf7iRg">youtube</a></p><p><sup>2</sup>&nbsp;<a href="https://twitter.com/ylecun/status/1621805604900585472">tweet</a></p></div><p>Humor is the ultimate Turing test. I see this as the source of Yann’s recent debate with others<sup>2</sup>. It’s the most difficult test to pass. It’s the most difficult test to create.</p>
 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/were-all-leaving/1553022037?i=1553022378">
 </iframe>
 
 
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
+  author = {Shen, Lucas},
   title = {Humor {AI}},
   date = {2023-02-05},
-  url = {https://lukaemon.github.io/posts/2023/humor-ai},
+  url = {https://lukaemon.github.io/posts/2023/feb_5_humor-ai},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“Humor AI.”</span> February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/humor-ai">https://lukaemon.github.io/posts/2023/humor-ai</a>.
+Shen, Lucas. 2023. <span>“Humor AI.”</span> February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/feb_5_humor-ai">https://lukaemon.github.io/posts/2023/feb_5_humor-ai</a>.
 </div></div></section></div> ]]></description>
   <category>grounding</category>
-  <guid>https://lukaemon.github.io/posts/2023/humor-ai/index.html</guid>
-  <pubDate>Sat, 04 Feb 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023/humor-ai/cover.png" medium="image" type="image/png" height="82" width="144"/>
-</item>
-<item>
-  <title>Self-consistency and chain of thought</title>
-  <dc:creator>Lucas Shen</dc:creator>
-  <link>https://lukaemon.github.io/posts/2023/sc-cot/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-center page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="https://lukaemon.github.io/posts/2023/sc-cot/cover.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">Wang et al. (2022)</span></figcaption><p></p>
-</figure>
-</div>
-<section id="reasoning" class="level2">
-<h2 class="anchored" data-anchor-id="reasoning">Reasoning</h2>
-<blockquote class="blockquote">
-<p>Scale has a reduced benefit for tasks in the Maths, Logical Reasoning, and Common Sense categories. Our results suggest that for certain flavours of mathematical or logical reasoning tasks, it is unlikely that scale alone will lead to performance breakthroughs. –<span class="citation" data-cites="raeScalingLanguageModels2022">(Rae et al. 2022)</span></p>
-</blockquote>
-<p>It points out flat scaling curve of few task categories. Since then, google has been very creative to push the frontier with CoT <span class="citation" data-cites="weiChainThoughtPrompting2022">(Wei et al. 2022)</span>, SC <span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">(Wang et al. 2022)</span> and least to most <span class="citation" data-cites="zhouLeasttoMostPromptingEnables2022">(Zhou et al. 2022)</span>. CoT is the most exciting method to scale computation on tasks since few-shot in-context learning.</p>
-<p>Informal reasoning would be solved. DeepMind and OpenAI are all into solving formal reasoning, the last frontier wrt reasoning if AI could get logic and math right.</p>
-<p>Codex family model is the first step on solving formal reasoning. In SC and BBH <span class="citation" data-cites="suzgunChallengingBIGBenchTasks2022">(Suzgun et al. 2022)</span>, code-davinci-002 performs better than InstructGPT families on reasoning tasks. DeepMind even dives into GNN to explore architecture other than transformer. Reasoning in general would be solved as a modality in near future. It may require a specialized model, but would ultimately be fused into general LLM like image, audio and the like.</p>
-<blockquote class="blockquote">
-<p>The approach to the irreducible loss does not necessarily indicate diminishing returns for representation quality or semantic content as significant semantic information may lie in the last few bits. –<span class="citation" data-cites="henighanScalingLawsAutoregressive2020">(Henighan et al. 2020)</span></p>
-</blockquote>
-<p>To get natural language understanding right, scale is necessary. This also explains why CoT only works with scale. Small model makes too many semantic mistakes that render scaling computation with CoT worthless. SC could cancel out mistakes by majority vote to improve performance for model of all size but the increased computational cost far out weight possible gain for small model. Self-ensemble weak reasoner is a waste of resource.</p>
-</section>
-<section id="retrieval" class="level2">
-<h2 class="anchored" data-anchor-id="retrieval">Retrieval</h2>
-<p>Scale may not be the most effective method to solve world knowledge problem. 1T param model may get the last few bit of semantics but it won’t get the facts 100% right. That’s why retrieval is necessary. One could treat external knowledge database as one modality and figure out how to fuse it with general LLM.</p>
-<p>Think about how existing multimodal model fuses modalities, ex: Dall-E <span class="citation" data-cites="rameshHierarchicalTextConditionalImage2022">(Ramesh et al. 2022)</span>, Diffusion <span class="citation" data-cites="rombachHighResolutionImageSynthesis2022">(Rombach et al. 2022)</span>, MusicLM <span class="citation" data-cites="agostinelliMusicLMGeneratingMusic2023">(Agostinelli et al. 2023)</span>. RETRO <span class="citation" data-cites="borgeaudImprovingLanguageModels2022">(Borgeaud et al. 2022)</span> is a great example of treating external memory as modality and fuse it with general LM deeply. Of course it’s not plug and play but still a very interesting direction.</p>
-<p>In-context retrieval dominates current research output because of light resource requirement. Its value is similar to prompt engineering: the most effective method to probe LLM to find new gains, but prompt engineering would never be the ultimate solution. It’s a tentative exploration process. Like instruction finetuning makes LLM to follow human instruction and do CoT in 0 shot, rather than few shot, RETRO like solution may render methods such as recitaiton <span class="citation" data-cites="sunRecitationAugmentedLanguageModels2022a">(Sun et al. 2022)</span> unnecessary. However, recitation to me is like SC for open ended text generation, which is one great first step into retrieval world by scaling computation on retrieval tasks, like CoT to rationale engineering.</p>
-</section>
-<section id="multimodal" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="multimodal">Multimodal</h2>
-<div class="page-columns page-full"><p>500b+ dense LLM, 1T+ MoE, text-davinci-003 are great and useful but not enough. Have to find a way to fuse modalities. Small model like T5-11b, yes 11b is the new small lol, is still important for controlling latency and cost. Imagine doing 40 path SC on a 540b model per response for interactive UX. Not ideal. A good production example: Neeva<sup>1</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://twitter.com/ramaswmysridhar/status/1621870491945533440?s=12&amp;t=nyAGas8S6bDKS1eLUw9I7Q">T5 for serving ChatGPT like search</a></p></li></div></div>
-<p>Multimodal is on fire. One big end to end model may be enough, ex: Gato <span class="citation" data-cites="reedGeneralistAgent2022">(Reed et al. 2022)</span>. On the other hand, modular approach with glue architecture may work, ex: Flamingo <span class="citation" data-cites="alayracFlamingoVisualLanguage2022">(Alayrac et al. 2022)</span> and RETRO. It’s great to be alive in this era of AI.</p>
-
-
-
-</section>
-
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-agostinelliMusicLMGeneratingMusic2023" class="csl-entry">
-Agostinelli, Andrea, Timo I. Denk, Zalán Borsos, Jesse Engel, Mauro Verzetti, Antoine Caillon, Qingqing Huang, et al. 2023. <span>“<span>MusicLM</span>: <span>Generating Music From Text</span>.”</span> January 26, 2023. <a href="http://arxiv.org/abs/2301.11325">http://arxiv.org/abs/2301.11325</a>.
-</div>
-<div id="ref-alayracFlamingoVisualLanguage2022" class="csl-entry">
-Alayrac, Jean-Baptiste, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, et al. 2022. <span>“🦩 <span>Flamingo</span>: A <span>Visual Language Model</span> for <span>Few-Shot Learning</span>,”</span> April, 66.
-</div>
-<div id="ref-borgeaudImprovingLanguageModels2022" class="csl-entry">
-Borgeaud, Sebastian, Arthur Mensch, Jordan Hoffmann, Trevor Cai, Eliza Rutherford, Katie Millican, George van den Driessche, et al. 2022. <span>“Improving Language Models by Retrieving from Trillions of Tokens.”</span> February 7, 2022. <a href="http://arxiv.org/abs/2112.04426">http://arxiv.org/abs/2112.04426</a>.
-</div>
-<div id="ref-henighanScalingLawsAutoregressive2020" class="csl-entry">
-Henighan, Tom, Jared Kaplan, Mor Katz, Mark Chen, Christopher Hesse, Jacob Jackson, Heewoo Jun, et al. 2020. <span>“Scaling <span>Laws</span> for <span>Autoregressive Generative Modeling</span>.”</span> November 5, 2020. <a href="http://arxiv.org/abs/2010.14701">http://arxiv.org/abs/2010.14701</a>.
-</div>
-<div id="ref-raeScalingLanguageModels2022" class="csl-entry">
-Rae, Jack W., Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, et al. 2022. <span>“Scaling <span>Language Models</span>: <span>Methods</span>, <span>Analysis</span> &amp; <span>Insights</span> from <span>Training Gopher</span>.”</span> <a href="http://arxiv.org/abs/2112.11446">http://arxiv.org/abs/2112.11446</a>.
-</div>
-<div id="ref-rameshHierarchicalTextConditionalImage2022" class="csl-entry">
-Ramesh, Aditya, Prafulla Dhariwal, Alex Nichol, Casey Chu, and Mark Chen. 2022. <span>“Hierarchical <span>Text-Conditional Image Generation</span> with <span>CLIP Latents</span>,”</span> 26.
-</div>
-<div id="ref-reedGeneralistAgent2022" class="csl-entry">
-Reed, Scott, Konrad Zolna, Emilio Parisotto, Sergio Gomez Colmenarejo, Alexander Novikov, Gabriel Barth-Maron, Mai Gimenez, et al. 2022. <span>“A <span>Generalist Agent</span>.”</span> May 19, 2022. <a href="http://arxiv.org/abs/2205.06175">http://arxiv.org/abs/2205.06175</a>.
-</div>
-<div id="ref-rombachHighResolutionImageSynthesis2022" class="csl-entry">
-Rombach, Robin, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn Ommer. 2022. <span>“High-<span>Resolution Image Synthesis</span> with <span>Latent Diffusion Models</span>.”</span> April 13, 2022. <a href="http://arxiv.org/abs/2112.10752">http://arxiv.org/abs/2112.10752</a>.
-</div>
-<div id="ref-sunRecitationAugmentedLanguageModels2022a" class="csl-entry">
-Sun, Zhiqing, Xuezhi Wang, Yi Tay, Yiming Yang, and Denny Zhou. 2022. <span>“Recitation-<span>Augmented Language Models</span>.”</span> October 3, 2022. <a href="http://arxiv.org/abs/2210.01296">http://arxiv.org/abs/2210.01296</a>.
-</div>
-<div id="ref-suzgunChallengingBIGBenchTasks2022" class="csl-entry">
-Suzgun, Mirac, Nathan Scales, Nathanael Schärli, Sebastian Gehrmann, Yi Tay, Hyung Won Chung, Aakanksha Chowdhery, et al. 2022. <span>“Challenging <span>BIG-Bench Tasks</span> and <span class="nocase">Whether Chain-of-Thought Can Solve Them</span>,”</span> October. <a href="https://arxiv.org/abs/2210.09261v1">https://arxiv.org/abs/2210.09261v1</a>.
-</div>
-<div id="ref-wangSelfConsistencyImprovesChain2022a" class="csl-entry">
-Wang, Xuezhi, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang, Aakanksha Chowdhery, and Denny Zhou. 2022. <span>“Self-<span>Consistency Improves Chain</span> of <span>Thought Reasoning</span> in <span>Language Models</span>.”</span> October 4, 2022. <a href="http://arxiv.org/abs/2203.11171">http://arxiv.org/abs/2203.11171</a>.
-</div>
-<div id="ref-weiChainThoughtPrompting2022" class="csl-entry">
-Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc Le, and Denny Zhou. 2022. <span>“Chain of <span>Thought Prompting Elicits Reasoning</span> in <span>Large Language Models</span>.”</span> January 28, 2022. <a href="https://arxiv.org/abs/2201.11903v5">https://arxiv.org/abs/2201.11903v5</a>.
-</div>
-<div id="ref-zhouLeasttoMostPromptingEnables2022" class="csl-entry">
-Zhou, Denny, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, et al. 2022. <span>“Least-to-<span>Most Prompting Enables Complex Reasoning</span> in <span>Large Language Models</span>.”</span> October 6, 2022. <a href="http://arxiv.org/abs/2205.10625">http://arxiv.org/abs/2205.10625</a>.
-</div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
-  title = {Self-Consistency and Chain of Thought},
-  date = {2023-02-05},
-  url = {https://lukaemon.github.io/posts/2023/sc-cot},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas">
-Lucas Shen. 2023. <span>“Self-Consistency and Chain of Thought.”</span>
-February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/sc-cot">https://lukaemon.github.io/posts/2023/sc-cot</a>.
-</div></div></section></div> ]]></description>
-  <category>rationale engineering</category>
-  <guid>https://lukaemon.github.io/posts/2023/sc-cot/index.html</guid>
-  <pubDate>Sat, 04 Feb 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://lukaemon.github.io/posts/2023/sc-cot/cover.png" medium="image" type="image/png" height="86" width="144"/>
+  <guid>https://lukaemon.github.io/posts/2023/feb_5_humor-ai/</guid>
+  <pubDate>Sun, 05 Feb 2023 08:00:00 GMT</pubDate>
+  <media:content url="https://lukaemon.github.io/posts/2023/feb_5_humor-ai/cover.png" medium="image" type="image/png" height="82" width="144"/>
 </item>
 </channel>
 </rss>

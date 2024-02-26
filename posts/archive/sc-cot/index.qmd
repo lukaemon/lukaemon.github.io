@@ -4,6 +4,7 @@ date: "2023-02-05"
 description: Lesson learned from CoT and SC. 
 categories: [rationale engineering]
 image: "cover.png"
+draft: true
 ---
 ![@wangSelfConsistencyImprovesChain2022a](cover.png)
 

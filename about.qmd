@@ -8,5 +8,3 @@ about:
 > -- <cite>Jill Lepore, These Truths: A History of the United States</cite>
 
 I'm an independent researcher interested in **cryptography** and **AI**.
-
-![Modern agrarian utopianism and the ideal form of AGI: [Doraemon: Story of Seasons](https://www.youtube.com/watch?v=YuKO0tUVoQI)](asset/about.webp)

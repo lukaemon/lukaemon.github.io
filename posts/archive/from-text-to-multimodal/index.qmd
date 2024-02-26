@@ -4,6 +4,7 @@ description: Quick note to recap what I've learned recently about multimodal res
 date: "2023-03-06"
 categories: [multimodal]
 image: "cover.png"
+draft: true
 ---
 ![midjourney: fusion of multimodal sensory information --ar 16:9](cover.png)
 

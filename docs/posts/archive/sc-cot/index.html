@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,14 +20,16 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -41,8 +43,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -70,7 +71,12 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -79,21 +85,23 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
 
 <meta property="og:title" content="Lucas Shen - Self-consistency and chain of thought">
 <meta property="og:description" content="Lesson learned from CoT and SC.">
-<meta property="og:image" content="https://lukaemon.github.io/posts/2023/sc-cot/cover.png">
-<meta property="og:site-name" content="Lucas Shen">
+<meta property="og:image" content="https://lukaemon.github.io/posts/archive/sc-cot/cover.png">
+<meta property="og:site_name" content="Lucas Shen">
 <meta property="og:image:height" content="1009">
 <meta property="og:image:width" content="1687">
 <meta name="twitter:title" content="Lucas Shen - Self-consistency and chain of thought">
 <meta name="twitter:description" content="Lesson learned from CoT and SC.">
-<meta name="twitter:image" content="https://lukaemon.github.io/posts/2023/sc-cot/cover.png">
+<meta name="twitter:image" content="https://lukaemon.github.io/posts/archive/sc-cot/cover.png">
 <meta name="twitter:image-height" content="1009">
 <meta name="twitter:image-width" content="1687">
 <meta name="twitter:card" content="summary_large_image">
@@ -102,44 +110,44 @@ div.csl-indent {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Lucas Shen</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../about.html">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/lukaemon"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/lukaemon"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/luka_emon"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/luka_emon"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../../index.xml"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -192,7 +200,7 @@ div.csl-indent {
   <li><a href="#retrieval" id="toc-retrieval" class="nav-link" data-scroll-target="#retrieval">Retrieval</a></li>
   <li><a href="#multimodal" id="toc-multimodal" class="nav-link" data-scroll-target="#multimodal">Multimodal</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/lukaemon/lukaemon.github.io/blob/main/posts/2023/sc-cot/index.qmd" class="toc-action">View source</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/lukaemon/lukaemon.github.io/blob/main/posts/archive/sc-cot/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
@@ -200,10 +208,11 @@ div.csl-indent {
 
 
 
+
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="cover.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption"><span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">Wang et al. (<a href="#ref-wangSelfConsistencyImprovesChain2022a" role="doc-biblioref">2022</a>)</span></figcaption><p></p>
+<figcaption class="margin-caption"><span class="citation" data-cites="wangSelfConsistencyImprovesChain2022a">Wang et al. (<a href="#ref-wangSelfConsistencyImprovesChain2022a" role="doc-biblioref">2022</a>)</span></figcaption>
 </figure>
 </div>
 <section id="reasoning" class="level2">
@@ -227,64 +236,64 @@ div.csl-indent {
 </section>
 <section id="multimodal" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="multimodal">Multimodal</h2>
-<div class="page-columns page-full"><p>500b+ dense LLM, 1T+ MoE, text-davinci-003 are great and useful but not enough. Have to find a way to fuse modalities. Small model like T5-11b, yes 11b is the new small lol, is still important for controlling latency and cost. Imagine doing 40 path SC on a 540b model per response for interactive UX. Not ideal. A good production example: Neeva<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;<a href="https://twitter.com/ramaswmysridhar/status/1621870491945533440?s=12&amp;t=nyAGas8S6bDKS1eLUw9I7Q">T5 for serving ChatGPT like search</a></p></li></div></div>
-<p>Multimodal is on fire. One big end to end model may be enough, ex: Gato <span class="citation" data-cites="reedGeneralistAgent2022">(<a href="#ref-reedGeneralistAgent2022" role="doc-biblioref">Reed et al. 2022</a>)</span>. On the other hand, modular approach with glue architecture may work, ex: Flamingo <span class="citation" data-cites="alayracFlamingoVisualLanguage2022">(<a href="#ref-alayracFlamingoVisualLanguage2022" role="doc-biblioref">Alayrac et al. 2022</a>)</span> and RETRO. It’s great to be alive in this era of AI.</p>
+<p>500b+ dense LLM, 1T+ MoE, text-davinci-003 are great and useful but not enough. Have to find a way to fuse modalities. Small model like T5-11b, yes 11b is the new small lol, is still important for controlling latency and cost. Imagine doing 40 path SC on a 540b model per response for interactive UX. Not ideal. A good production example: Neeva<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;<a href="https://twitter.com/ramaswmysridhar/status/1621870491945533440?s=12&amp;t=nyAGas8S6bDKS1eLUw9I7Q">T5 for serving ChatGPT like search</a></p></div><p>Multimodal is on fire. One big end to end model may be enough, ex: Gato <span class="citation" data-cites="reedGeneralistAgent2022">(<a href="#ref-reedGeneralistAgent2022" role="doc-biblioref">Reed et al. 2022</a>)</span>. On the other hand, modular approach with glue architecture may work, ex: Flamingo <span class="citation" data-cites="alayracFlamingoVisualLanguage2022">(<a href="#ref-alayracFlamingoVisualLanguage2022" role="doc-biblioref">Alayrac et al. 2022</a>)</span> and RETRO. It’s great to be alive in this era of AI.</p>
 
 
 
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-agostinelliMusicLMGeneratingMusic2023" class="csl-entry" role="doc-biblioentry">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-agostinelliMusicLMGeneratingMusic2023" class="csl-entry" role="listitem">
 Agostinelli, Andrea, Timo I. Denk, Zalán Borsos, Jesse Engel, Mauro Verzetti, Antoine Caillon, Qingqing Huang, et al. 2023. <span>“<span>MusicLM</span>: <span>Generating Music From Text</span>.”</span> January 26, 2023. <a href="http://arxiv.org/abs/2301.11325">http://arxiv.org/abs/2301.11325</a>.
 </div>
-<div id="ref-alayracFlamingoVisualLanguage2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-alayracFlamingoVisualLanguage2022" class="csl-entry" role="listitem">
 Alayrac, Jean-Baptiste, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, et al. 2022. <span>“🦩 <span>Flamingo</span>: A <span>Visual Language Model</span> for <span>Few-Shot Learning</span>,”</span> April, 66.
 </div>
-<div id="ref-borgeaudImprovingLanguageModels2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-borgeaudImprovingLanguageModels2022" class="csl-entry" role="listitem">
 Borgeaud, Sebastian, Arthur Mensch, Jordan Hoffmann, Trevor Cai, Eliza Rutherford, Katie Millican, George van den Driessche, et al. 2022. <span>“Improving Language Models by Retrieving from Trillions of Tokens.”</span> February 7, 2022. <a href="http://arxiv.org/abs/2112.04426">http://arxiv.org/abs/2112.04426</a>.
 </div>
-<div id="ref-henighanScalingLawsAutoregressive2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-henighanScalingLawsAutoregressive2020" class="csl-entry" role="listitem">
 Henighan, Tom, Jared Kaplan, Mor Katz, Mark Chen, Christopher Hesse, Jacob Jackson, Heewoo Jun, et al. 2020. <span>“Scaling <span>Laws</span> for <span>Autoregressive Generative Modeling</span>.”</span> November 5, 2020. <a href="http://arxiv.org/abs/2010.14701">http://arxiv.org/abs/2010.14701</a>.
 </div>
-<div id="ref-raeScalingLanguageModels2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-raeScalingLanguageModels2022" class="csl-entry" role="listitem">
 Rae, Jack W., Sebastian Borgeaud, Trevor Cai, Katie Millican, Jordan Hoffmann, Francis Song, John Aslanides, et al. 2022. <span>“Scaling <span>Language Models</span>: <span>Methods</span>, <span>Analysis</span> &amp; <span>Insights</span> from <span>Training Gopher</span>.”</span> <a href="http://arxiv.org/abs/2112.11446">http://arxiv.org/abs/2112.11446</a>.
 </div>
-<div id="ref-rameshHierarchicalTextConditionalImage2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-rameshHierarchicalTextConditionalImage2022" class="csl-entry" role="listitem">
 Ramesh, Aditya, Prafulla Dhariwal, Alex Nichol, Casey Chu, and Mark Chen. 2022. <span>“Hierarchical <span>Text-Conditional Image Generation</span> with <span>CLIP Latents</span>,”</span> 26.
 </div>
-<div id="ref-reedGeneralistAgent2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-reedGeneralistAgent2022" class="csl-entry" role="listitem">
 Reed, Scott, Konrad Zolna, Emilio Parisotto, Sergio Gomez Colmenarejo, Alexander Novikov, Gabriel Barth-Maron, Mai Gimenez, et al. 2022. <span>“A <span>Generalist Agent</span>.”</span> May 19, 2022. <a href="http://arxiv.org/abs/2205.06175">http://arxiv.org/abs/2205.06175</a>.
 </div>
-<div id="ref-rombachHighResolutionImageSynthesis2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-rombachHighResolutionImageSynthesis2022" class="csl-entry" role="listitem">
 Rombach, Robin, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn Ommer. 2022. <span>“High-<span>Resolution Image Synthesis</span> with <span>Latent Diffusion Models</span>.”</span> April 13, 2022. <a href="http://arxiv.org/abs/2112.10752">http://arxiv.org/abs/2112.10752</a>.
 </div>
-<div id="ref-sunRecitationAugmentedLanguageModels2022a" class="csl-entry" role="doc-biblioentry">
+<div id="ref-sunRecitationAugmentedLanguageModels2022a" class="csl-entry" role="listitem">
 Sun, Zhiqing, Xuezhi Wang, Yi Tay, Yiming Yang, and Denny Zhou. 2022. <span>“Recitation-<span>Augmented Language Models</span>.”</span> October 3, 2022. <a href="http://arxiv.org/abs/2210.01296">http://arxiv.org/abs/2210.01296</a>.
 </div>
-<div id="ref-suzgunChallengingBIGBenchTasks2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-suzgunChallengingBIGBenchTasks2022" class="csl-entry" role="listitem">
 Suzgun, Mirac, Nathan Scales, Nathanael Schärli, Sebastian Gehrmann, Yi Tay, Hyung Won Chung, Aakanksha Chowdhery, et al. 2022. <span>“Challenging <span>BIG-Bench Tasks</span> and <span class="nocase">Whether Chain-of-Thought Can Solve Them</span>,”</span> October. <a href="https://arxiv.org/abs/2210.09261v1">https://arxiv.org/abs/2210.09261v1</a>.
 </div>
-<div id="ref-wangSelfConsistencyImprovesChain2022a" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wangSelfConsistencyImprovesChain2022a" class="csl-entry" role="listitem">
 Wang, Xuezhi, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang, Aakanksha Chowdhery, and Denny Zhou. 2022. <span>“Self-<span>Consistency Improves Chain</span> of <span>Thought Reasoning</span> in <span>Language Models</span>.”</span> October 4, 2022. <a href="http://arxiv.org/abs/2203.11171">http://arxiv.org/abs/2203.11171</a>.
 </div>
-<div id="ref-weiChainThoughtPrompting2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-weiChainThoughtPrompting2022" class="csl-entry" role="listitem">
 Wei, Jason, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc Le, and Denny Zhou. 2022. <span>“Chain of <span>Thought Prompting Elicits Reasoning</span> in <span>Large Language Models</span>.”</span> January 28, 2022. <a href="https://arxiv.org/abs/2201.11903v5">https://arxiv.org/abs/2201.11903v5</a>.
 </div>
-<div id="ref-zhouLeasttoMostPromptingEnables2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-zhouLeasttoMostPromptingEnables2022" class="csl-entry" role="listitem">
 Zhou, Denny, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, et al. 2022. <span>“Least-to-<span>Most Prompting Enables Complex Reasoning</span> in <span>Large Language Models</span>.”</span> October 6, 2022. <a href="http://arxiv.org/abs/2205.10625">http://arxiv.org/abs/2205.10625</a>.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
-  author = {Lucas Shen},
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{shen2023,
+  author = {Shen, Lucas},
   title = {Self-Consistency and Chain of Thought},
   date = {2023-02-05},
-  url = {https://lukaemon.github.io/posts/2023/sc-cot},
+  url = {https://lukaemon.github.io/posts/archive/sc-cot},
   langid = {en}
 }
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
-Lucas Shen. 2023. <span>“Self-Consistency and Chain of Thought.”</span>
-February 5, 2023. <a href="https://lukaemon.github.io/posts/2023/sc-cot">https://lukaemon.github.io/posts/2023/sc-cot</a>.
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-shen2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Shen, Lucas. 2023. <span>“Self-Consistency and Chain of Thought.”</span>
+February 5, 2023. <a href="https://lukaemon.github.io/posts/archive/sc-cot">https://lukaemon.github.io/posts/archive/sc-cot</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -327,6 +336,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -395,13 +431,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -428,9 +466,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -466,10 +518,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -479,8 +530,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -495,6 +555,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -538,4 +830,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lukaemon/lukaemon.github.io/blob/main/posts/archive/sc-cot/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lukaemon.github.io/posts/2023/learning-to-learn/index.html</loc>
-    <lastmod>2023-04-01T16:43:46.340Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lukaemon.github.io/posts/2023/humor-ai/index.html</loc>
-    <lastmod>2023-04-01T16:43:47.111Z</lastmod>
+    <loc>https://lukaemon.github.io/about.html</loc>
+    <lastmod>2024-02-26T22:00:13.967Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/posts/2023/from-text-to-multimodal/index.html</loc>
-    <lastmod>2023-04-01T16:43:48.084Z</lastmod>
+    <lastmod>2024-02-26T21:47:25.253Z</lastmod>
   </url>
   <url>
-    <loc>https://lukaemon.github.io/posts/2023/t5-finetuning-hello-world/samsum.html</loc>
-    <lastmod>2023-04-01T16:43:48.932Z</lastmod>
+    <loc>https://lukaemon.github.io/posts/2023/learning-to-learn/index.html</loc>
+    <lastmod>2024-02-26T21:47:25.264Z</lastmod>
   </url>
   <url>
-    <loc>https://lukaemon.github.io/posts/2023/sc-cot/index.html</loc>
-    <lastmod>2023-04-01T16:43:49.761Z</lastmod>
+    <loc>https://lukaemon.github.io/posts/2023/humor-ai/index.html</loc>
+    <lastmod>2024-02-26T21:47:25.258Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/posts/2023/on-gpt4/index.html</loc>
-    <lastmod>2023-04-01T16:43:50.840Z</lastmod>
+    <lastmod>2024-02-26T21:47:25.272Z</lastmod>
   </url>
   <url>
     <loc>https://lukaemon.github.io/index.html</loc>
-    <lastmod>2023-04-01T16:43:52.229Z</lastmod>
+    <lastmod>2024-02-26T21:47:25.248Z</lastmod>
   </url>
   <url>
-    <loc>https://lukaemon.github.io/about.html</loc>
-    <lastmod>2023-04-01T16:43:52.828Z</lastmod>
+    <loc>https://lukaemon.github.io/posts/2023/feb_14_learning-to-learn/index.html</loc>
+    <lastmod>2024-02-26T21:47:25.264Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukaemon.github.io/posts/2023/feb_5_humor-ai/index.html</loc>
+    <lastmod>2024-02-26T21:47:25.258Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lukaemon.github.io/posts/2023/apr_1_on-gpt4/index.html</loc>
+    <lastmod>2024-02-26T21:47:25.272Z</lastmod>
   </url>
 </urlset>
