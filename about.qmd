@@ -7,4 +7,4 @@ about:
 >
 > -- <cite>Jill Lepore, These Truths: A History of the United States</cite>
 
-I'm an independent researcher interested in **cryptography** and **AI**.
+I'm having fun grokking AI.
