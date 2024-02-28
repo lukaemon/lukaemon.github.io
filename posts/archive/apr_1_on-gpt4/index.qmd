@@ -4,6 +4,7 @@ description: My takeaway of gpt4 release
 date: "2023-04-01"
 categories: [opinion]
 image: "cover.png"
+draft: True
 ---
 ![MJ: abstract art, artificial general intelligence --ar 3:2 --v 5. This generation is interesting. It captures the shape of vector space, which is the foundation of modern AI. The shape at the center is more ordered, well organized, but blurry and chaotic close to the edge.](cover.png)
 
