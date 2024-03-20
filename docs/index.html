@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -192,7 +192,7 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
+    <div class="quarto-title column-page">
       <h1 class="title">🖖 Welcome</h1>
                   <div>
         <div class="description">
@@ -203,7 +203,7 @@ window.Quarto = {
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta column-page">
 
       
     
@@ -214,11 +214,11 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="grounding">grounding <span class="quarto-category-count">(1)</span></div><div class="category" data-category="meta-learning">meta-learning <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
@@ -230,7 +230,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="meta-learning" data-listing-date-sort="1676361600000" data-listing-file-modified-sort="1708984045264" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1258">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1676361600000" data-listing-file-modified-sort="1710959407248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1258">
 <div class="thumbnail">
 <p><a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external"></a></p><a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external">
 <p><img src="./posts/2023/feb_14_learning-to-learn/hands.jpg" class="thumbnail-image" style="height: 8em;"></p>
@@ -242,11 +242,6 @@ window.Quarto = {
 </h3>
 <div class="listing-subtitle">
 <a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('meta-learning'); return false;">
-meta-learning
-</div>
 </div>
 <div class="listing-description">
 <a href="./posts/2023/feb_14_learning-to-learn/index.html" class="no-external">So much to learn. How to learn more effectively?</a>
@@ -263,7 +258,7 @@ Lucas Shen
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="grounding" data-listing-date-sort="1675584000000" data-listing-file-modified-sort="1709154085712" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="227">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1675584000000" data-listing-file-modified-sort="1710959396568" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="227">
 <div class="thumbnail">
 <p><a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external"></a></p><a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external">
 <p><img src="./posts/2023/feb_5_humor-ai/cover.png" class="thumbnail-image" style="height: 8em;"></p>
@@ -275,11 +270,6 @@ Lucas Shen
 </h3>
 <div class="listing-subtitle">
 <a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('grounding'); return false;">
-grounding
-</div>
 </div>
 <div class="listing-description">
 <a href="./posts/2023/feb_5_humor-ai/index.html" class="no-external">Computational humor?</a>

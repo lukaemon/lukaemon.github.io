@@ -2,7 +2,6 @@
 title: "Learning to learn"
 description: So much to learn. How to learn more effectively?
 date: "2023-02-14"
-categories: [meta-learning]
 image: "hands.jpg"
 ---
 ![M.C. Escher’s “Drawing Hands,” a lithograph from 1948. Collection of Experience in Visual Arts, Cordon Art B.V., Baarn, The Netherlands.](hands.jpg)
